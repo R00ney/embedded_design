@@ -1,0 +1,1176 @@
+###############################################################################
+#                                                                             #
+# IAR C/C++ Compiler V1.30.5.50715 for RL78             22/Feb/2014  23:14:23 #
+# Copyright 2011-2013 IAR Systems AB.                                         #
+# Network license: ece-lic-19.ece.ncsu.edu (STD)                              #
+#                                                                             #
+#    Core         =  rl78_2                                                   #
+#    Code model   =  Near                                                     #
+#    Data model   =  Near                                                     #
+#                 =                                                           #
+#    Source file  =  C:\Users\Suddenlink\Dropbox\git_files\embedded_design\pr #
+#                    oject1\modified_RTCSched-G14\Queu\decode.c               #
+#    Command line =  C:\Users\Suddenlink\Dropbox\git_files\embedded_design\pr #
+#                    oject1\modified_RTCSched-G14\Queu\decode.c --core        #
+#                    rl78_2 --code_model near --data_model near               #
+#                    --near_const_location rom0 -o                            #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\pr #
+#                    oject1\modified_RTCSched-G14\Debug\Obj\ --dlib_config    #
+#                    "C:\Program Files\IAR Systems\Embedded Workbench         #
+#                    6.5\rl78\LIB\dlrl78nn2n.h" -e -Ohz --no_scheduling       #
+#                    --debug -lCN C:\Users\Suddenlink\Dropbox\git_files\embed #
+#                    ded_design\project1\modified_RTCSched-G14\Debug\List\    #
+#                    -I C:\Users\Suddenlink\Dropbox\git_files\embedded_design #
+#                    \project1\modified_RTCSched-G14/applilet3_src/\ -I       #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\pr #
+#                    oject1\modified_RTCSched-G14/Glyph/\ -I                  #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\pr #
+#                    oject1\modified_RTCSched-G14/Glyph/Drivers/\ -I          #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\pr #
+#                    oject1\modified_RTCSched-G14/user_include/\ -I           #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\pr #
+#                    oject1\modified_RTCSched-G14/RTC/\ -I                    #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\pr #
+#                    oject1\modified_RTCSched-G14/Queu/\                      #
+#    List file    =  C:\Users\Suddenlink\Dropbox\git_files\embedded_design\pr #
+#                    oject1\modified_RTCSched-G14\Debug\List\decode.lst       #
+#    Object file  =  C:\Users\Suddenlink\Dropbox\git_files\embedded_design\pr #
+#                    oject1\modified_RTCSched-G14\Debug\Obj\decode.r87        #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+C:\Users\Suddenlink\Dropbox\git_files\embedded_design\project1\modified_RTCSched-G14\Queu\decode.c
+      1          //decode NMEA functions
+      2          //Neal O'Hara
+      3          
+      4          #include "r_cg_macrodriver.h"
+
+   \                                 In  segment SADDR_A, at 0xfff04
+   \   union <unnamed> volatile __saddr _A_P4
+   \                     _A_P4:
+   \   000000                       DS 1
+      5          #include "r_cg_userdefine.h"
+      6          
+      7          #include "rtc_sched.h"
+      8          #include "lcd.h"
+      9          #include "r_cg_serial.h"
+     10          #include "queu.h"
+     11          #include "tasks.h"
+     12          
+     13          
+     14          extern Q_T  rx_q;      //recieve queu
+     15          extern var_NMEA gps_message;
+     16          
+
+   \                                 In  segment CODE, align 1, keep-with-next
+     17          extern void Debug_Decode(void){
+   \                     Debug_Decode:
+   \   000000                       ; * Stack frame (at entry) *
+   \   000000                       ; Param size: 0
+   \   000000 C3                    PUSH      BC                 ;; 1 cycle
+   \   000001 C5                    PUSH      DE                 ;; 1 cycle
+   \   000002                       ; Auto size: 0
+     18            static char message[100] = "$GPRMC,123519,A,4807.038,N,01131.000,E,022.4,084.4,230394,003.1,W*6A";
+     19            int i=0;
+   \   000002 F6                    CLRW      AX                 ;; 1 cycle
+   \   000003 14                    MOVW      DE, AX             ;; 1 cycle
+     20            char next_char;
+     21            
+     22            for(i=0;message[i]!='\0';i++){
+   \   000004 EF08                  BR        S:??Init_NMEA_0    ;; 3 cycles
+   \   000006                       ; ------------------------------------- Block: 7 cycles
+     23              Q_Enqueue(&rx_q , message[i]);
+   \                     ??Debug_Decode_0:
+   \   000006 73                    MOV       B, A               ;; 1 cycle
+   \   000007 30....                MOVW      AX, #rx_q          ;; 1 cycle
+   \   00000A FD....                CALL      Q_Enqueue          ;; 3 cycles
+     24              
+     25            }
+   \   00000D A5                    INCW      DE                 ;; 1 cycle
+   \   00000E                       ; ------------------------------------- Block: 6 cycles
+   \                     ??Init_NMEA_0:
+   \   00000E C5                    PUSH      DE                 ;; 1 cycle
+   \   00000F C2                    POP       BC                 ;; 1 cycle
+   \   000010 49....                MOV       A, (??message & 0xFFFF)[BC]  ;; 1 cycle
+   \   000013 D1                    CMP0      A                  ;; 1 cycle
+   \   000014 DFF0                  BNZ       ??Debug_Decode_0   ;; 4 cycles
+   \   000016                       ; ------------------------------------- Block: 8 cycles
+     26            while(!Q_Empty(&rx_q)){
+   \                     ??Debug_Decode_1:
+   \   000016 30....                MOVW      AX, #rx_q          ;; 1 cycle
+   \   000019 FD....                CALL      Q_Empty            ;; 3 cycles
+   \   00001C F7                    CLRW      BC                 ;; 1 cycle
+   \   00001D 43                    CMPW      AX, BC             ;; 1 cycle
+   \   00001E DF0F                  BNZ       ??Init_NMEA_1      ;; 4 cycles
+   \   000020                       ; ------------------------------------- Block: 10 cycles
+     27              next_char = Q_Dequeue(&rx_q );
+   \   000020 30....                MOVW      AX, #rx_q          ;; 1 cycle
+   \   000023 FD....                CALL      Q_Dequeue          ;; 3 cycles
+   \   000026 73                    MOV       B, A               ;; 1 cycle
+     28              DecodeNMEA(& gps_message, next_char);
+   \   000027 30....                MOVW      AX, #gps_message   ;; 1 cycle
+   \   00002A FD....                CALL      DecodeNMEA         ;; 3 cycles
+     29              i = 0;
+   \   00002D EFE7                  BR        S:??Debug_Decode_1  ;; 3 cycles
+   \   00002F                       ; ------------------------------------- Block: 12 cycles
+     30            }
+     31            i=0;
+     32            
+     33          }
+   \                     ??Init_NMEA_1:
+   \   00002F C4                    POP       DE                 ;; 1 cycle
+   \   000030 C2                    POP       BC                 ;; 1 cycle
+   \   000031 D7                    RET                          ;; 6 cycles
+   \   000032                       ; ------------------------------------- Block: 8 cycles
+   \   000032                       ; ------------------------------------- Total: 51 cycles
+   \   000032                       REQUIRE ?CLRL78_V1_0_L00
+
+   \                                 In  segment NEAR_I, align 2, align-sorted
+   \                     ??message:
+   \   000000                       DS 100
+   \   000064                       REQUIRE `?<Initializer for message>`
+   \   000064                       REQUIRE __INIT_NEAR_I
+     34          
+     35          
+     36          //decode NMEA message like this one:
+     37          //$GPRMC,123519,A,4807.038,N,01131.000,E,022.4,084.4,230394,003.1,W*6A
+     38          //Note, Decode runs on one char from queu rx_q at a time,
+     39          //reading sentence from left to right.
+
+   \                                 In  segment CODE, align 1, keep-with-next
+     40          void DecodeNMEA(var_NMEA * my, char next_char){
+   \                     DecodeNMEA:
+   \   000000                       ; * Stack frame (at entry) *
+   \   000000                       ; Param size: 0
+   \   000000 C3                    PUSH      BC                 ;; 1 cycle
+   \   000001 C5                    PUSH      DE                 ;; 1 cycle
+   \   000002 C1                    PUSH      AX                 ;; 1 cycle
+   \   000003                       ; Auto size: 4
+   \   000003 C1                    PUSH      AX                 ;; 1 cycle
+     41            static char comma = ','; 
+     42            static int temp;
+     43          
+     44            static char led_state=0;
+     45            LED_6_G = led_state;
+   \   000004 FD....                CALL      N:?Subroutine0     ;; 3 cycles
+   \   000007                       ; ------------------------------------- Block: 7 cycles
+     46            led_state ^= 1;
+     47                  
+     48            
+     49           // next_char = Q_Dequeue(& rx_q);
+     50            //determine if check update neccesary
+     51            if( (next_char != '$') && (next_char != '*') && (my->state != CHECK))
+   \                     ??CrossCallReturnLabel_0:
+   \   000007 63                    MOV       A, B               ;; 1 cycle
+   \   000008 4C24                  CMP       A, #0x24           ;; 1 cycle
+   \   00000A DD18                  BZ        ??Init_NMEA_2      ;; 4 cycles
+   \   00000C                       ; ------------------------------------- Block: 6 cycles
+   \   00000C 4C2A                  CMP       A, #0x2A           ;; 1 cycle
+   \   00000E DD14                  BZ        ??Init_NMEA_2      ;; 4 cycles
+   \   000010                       ; ------------------------------------- Block: 5 cycles
+   \   000010 A802                  MOVW      AX, [SP+0x02]      ;; 1 cycle
+   \   000012 16                    MOVW      HL, AX             ;; 1 cycle
+   \   000013 AB                    MOVW      AX, [HL]           ;; 1 cycle
+   \   000014 440D00                CMPW      AX, #0xD           ;; 1 cycle
+   \   000017 61F8                  SKNZ                         ;; 4 cycles
+   \   000019 ED....                BR        N:??Init_NMEA_3    ;; 4 cycles
+   \   00001C                       ; ------------------------------------- Block: 8 cycles
+     52              my->check =  my->check ^ next_char; //calculate check of sentence
+   \   00001C 17                    MOVW      AX, HL             ;; 1 cycle
+   \   00001D 043C00                ADDW      AX, #0x3C          ;; 1 cycle
+   \   000020 16                    MOVW      HL, AX             ;; 1 cycle
+   \   000021 63                    MOV       A, B               ;; 1 cycle
+   \   000022 7D                    XOR       A, [HL]            ;; 1 cycle
+   \   000023 9B                    MOV       [HL], A            ;; 1 cycle
+   \   000024                       ; ------------------------------------- Block: 6 cycles
+     53              
+     54            switch(my->state){
+   \                     ??Init_NMEA_2:
+   \   000024 A802                  MOVW      AX, [SP+0x02]      ;; 1 cycle
+   \   000026 16                    MOVW      HL, AX             ;; 1 cycle
+   \   000027 AB                    MOVW      AX, [HL]           ;; 1 cycle
+   \   000028 36....                MOVW      HL, #LWRD(??DecodeNMEA_0)  ;; 1 cycle
+   \   00002B 41..                  MOV       ES, #BYTE3(??DecodeNMEA_0)  ;; 1 cycle
+   \   00002D CEFC..                MOV       CS, #BYTE3(DecodeNMEA)  ;; 1 cycle
+   \   000030 ED....                BR        N:?I_SSWITCH_L10   ;; 3 cycles
+   \   000033                       ; ------------------------------------- Block: 9 cycles
+     55                case(START):
+     56                  if(next_char=='$')
+   \                     ??DecodeNMEA_1:
+   \   000033 63                    MOV       A, B               ;; 1 cycle
+   \   000034 4C24                  CMP       A, #0x24           ;; 1 cycle
+   \   000036 DF78                  BNZ       ??Init_NMEA_4      ;; 4 cycles
+   \   000038                       ; ------------------------------------- Block: 6 cycles
+     57                  {               
+     58                    Init_NMEA(my );
+   \   000038 A802                  MOVW      AX, [SP+0x02]      ;; 1 cycle
+   \   00003A FD....                CALL      Init_NMEA          ;; 3 cycles
+     59                    my->state = SENTENCE;
+   \   00003D A802                  MOVW      AX, [SP+0x02]      ;; 1 cycle
+   \   00003F 16                    MOVW      HL, AX             ;; 1 cycle
+   \   000040 E6                    ONEW      AX                 ;; 1 cycle
+   \   000041 ED....                BR        N:??Init_NMEA_5    ;; 3 cycles
+   \   000044                       ; ------------------------------------- Block: 10 cycles
+     60                  }
+     61                  else {
+     62                    my->state = START;
+     63                  }
+     64                  break;
+     65                
+     66                //Each NMEA string is a specific sentence type.
+     67                //We only care about RMC sentences
+     68                case(SENTENCE ):
+     69                  if(next_char==comma){
+   \                     ??DecodeNMEA_2:
+   \   000044 FD....                CALL      N:?Subroutine1     ;; 3 cycles
+   \   000047                       ; ------------------------------------- Block: 3 cycles
+   \                     ??CrossCallReturnLabel_2:
+   \   000047 A802                  MOVW      AX, [SP+0x02]      ;; 1 cycle
+   \   000049 16                    MOVW      HL, AX             ;; 1 cycle
+   \   00004A DF18                  BNZ       ??Init_NMEA_6      ;; 4 cycles
+   \   00004C                       ; ------------------------------------- Block: 6 cycles
+     70                    if((my->sentence[2]=='R')&(my->sentence[3]=='M')&(my->sentence[4]=='C'))
+   \   00004C 8C04                  MOV       A, [HL+0x04]       ;; 1 cycle
+   \   00004E 4C52                  CMP       A, #0x52           ;; 1 cycle
+   \   000050 DF5E                  BNZ       ??Init_NMEA_4      ;; 4 cycles
+   \   000052                       ; ------------------------------------- Block: 6 cycles
+   \   000052 8C05                  MOV       A, [HL+0x05]       ;; 1 cycle
+   \   000054 4C4D                  CMP       A, #0x4D           ;; 1 cycle
+   \   000056 DF58                  BNZ       ??Init_NMEA_4      ;; 4 cycles
+   \   000058                       ; ------------------------------------- Block: 6 cycles
+   \   000058 8C06                  MOV       A, [HL+0x06]       ;; 1 cycle
+   \   00005A 4C43                  CMP       A, #0x43           ;; 1 cycle
+   \   00005C DF52                  BNZ       ??Init_NMEA_4      ;; 4 cycles
+   \   00005E                       ; ------------------------------------- Block: 6 cycles
+     71                      my->state = TIME;
+   \   00005E 300200                MOVW      AX, #0x2           ;; 1 cycle
+   \   000061 ED....                BR        N:??Init_NMEA_5    ;; 3 cycles
+   \   000064                       ; ------------------------------------- Block: 4 cycles
+     72                    else
+     73                      my->state = START;
+     74                  }
+     75                  else{
+     76                    my->sentence[my->si] = next_char; //store chares between $ and ,
+   \                     ??Init_NMEA_6:
+   \   000064 AC08                  MOVW      AX, [HL+0x08]      ;; 1 cycle
+   \   000066 14                    MOVW      DE, AX             ;; 1 cycle
+   \   000067 17                    MOVW      AX, HL             ;; 1 cycle
+   \   000068 05                    ADDW      AX, DE             ;; 1 cycle
+   \   000069 16                    MOVW      HL, AX             ;; 1 cycle
+   \   00006A 63                    MOV       A, B               ;; 1 cycle
+   \   00006B 9C02                  MOV       [HL+0x02], A       ;; 1 cycle
+     77                    my->si++;
+   \   00006D A802                  MOVW      AX, [SP+0x02]      ;; 1 cycle
+   \   00006F 14                    MOVW      DE, AX             ;; 1 cycle
+   \   000070 AA08                  MOVW      AX, [DE+0x08]      ;; 1 cycle
+   \   000072 A1                    INCW      AX                 ;; 1 cycle
+   \   000073 BA08                  MOVW      [DE+0x08], AX      ;; 1 cycle
+   \   000075 ED....                BR        N:??Init_NMEA_7    ;; 3 cycles
+   \   000078                       ; ------------------------------------- Block: 15 cycles
+     78                  }
+     79                  break;
+     80                 
+     81                //Each RMC sentence has a time fix
+     82                // 123519    =>  Fix taken at 12:35:19 UTC
+     83                case(TIME ):
+     84                  if(next_char==comma)
+   \                     ??DecodeNMEA_3:
+   \   000078 FD....                CALL      N:?Subroutine1     ;; 3 cycles
+   \   00007B                       ; ------------------------------------- Block: 3 cycles
+   \                     ??CrossCallReturnLabel_3:
+   \   00007B DF09                  BNZ       ??Init_NMEA_8      ;; 4 cycles
+   \   00007D                       ; ------------------------------------- Block: 4 cycles
+     85                    my->state = STATUS;
+   \   00007D A802                  MOVW      AX, [SP+0x02]      ;; 1 cycle
+   \   00007F 16                    MOVW      HL, AX             ;; 1 cycle
+   \   000080 300300                MOVW      AX, #0x3           ;; 1 cycle
+   \   000083 ED....                BR        N:??Init_NMEA_5    ;; 3 cycles
+   \   000086                       ; ------------------------------------- Block: 6 cycles
+     86                  else //store time as int eg. 123519  
+     87                    my->time = char2int(my->time, next_char ); 
+   \                     ??Init_NMEA_8:
+   \   000086 75                    MOV       D, A               ;; 1 cycle
+   \   000087 A802                  MOVW      AX, [SP+0x02]      ;; 1 cycle
+   \   000089 16                    MOVW      HL, AX             ;; 1 cycle
+   \   00008A AC0C                  MOVW      AX, [HL+0x0C]      ;; 1 cycle
+   \   00008C 12                    MOVW      BC, AX             ;; 1 cycle
+   \   00008D AC0A                  MOVW      AX, [HL+0x0A]      ;; 1 cycle
+   \   00008F FD....                CALL      char2int           ;; 3 cycles
+   \   000092 16                    MOVW      HL, AX             ;; 1 cycle
+   \   000093 A802                  MOVW      AX, [SP+0x02]      ;; 1 cycle
+   \   000095 37                    XCHW      AX, HL             ;; 1 cycle
+   \   000096 BC0A                  MOVW      [HL+0x0A], AX      ;; 1 cycle
+   \   000098 13                    MOVW      AX, BC             ;; 1 cycle
+   \   000099 BC0C                  MOVW      [HL+0x0C], AX      ;; 1 cycle
+   \   00009B ED....                BR        N:??Init_NMEA_7    ;; 3 cycles
+   \   00009E                       ; ------------------------------------- Block: 18 cycles
+     88                  break;
+     89                
+     90                //Each RMC sentence has a status flag
+     91                //Status A=active or V=Void.
+     92                case(STATUS) :
+     93                  if(next_char==comma)
+   \                     ??DecodeNMEA_4:
+   \   00009E FD....                CALL      N:?Subroutine1     ;; 3 cycles
+   \   0000A1                       ; ------------------------------------- Block: 3 cycles
+   \                     ??CrossCallReturnLabel_4:
+   \   0000A1 DF09                  BNZ       ??Init_NMEA_9      ;; 4 cycles
+   \   0000A3                       ; ------------------------------------- Block: 4 cycles
+     94                    my->state = LAT_NUM;
+   \   0000A3 A802                  MOVW      AX, [SP+0x02]      ;; 1 cycle
+   \   0000A5 16                    MOVW      HL, AX             ;; 1 cycle
+   \   0000A6 300400                MOVW      AX, #0x4           ;; 1 cycle
+   \   0000A9 ED....                BR        N:??Init_NMEA_5    ;; 3 cycles
+   \   0000AC                       ; ------------------------------------- Block: 6 cycles
+     95                  else if(next_char=='V')
+   \                     ??Init_NMEA_9:
+   \   0000AC 4C56                  CMP       A, #0x56           ;; 1 cycle
+   \   0000AE DF07                  BNZ       ??Init_NMEA_10     ;; 4 cycles
+   \   0000B0                       ; ------------------------------------- Block: 5 cycles
+     96                    my->state = START;    //Discard Void sentences
+   \                     ??Init_NMEA_4:
+   \   0000B0 A802                  MOVW      AX, [SP+0x02]      ;; 1 cycle
+   \   0000B2 16                    MOVW      HL, AX             ;; 1 cycle
+   \   0000B3 F6                    CLRW      AX                 ;; 1 cycle
+   \   0000B4 ED....                BR        N:??Init_NMEA_5    ;; 3 cycles
+   \   0000B7                       ; ------------------------------------- Block: 6 cycles
+     97                  else
+     98                    my->status = next_char; //store single status char
+   \                     ??Init_NMEA_10:
+   \   0000B7 A802                  MOVW      AX, [SP+0x02]      ;; 1 cycle
+   \   0000B9 16                    MOVW      HL, AX             ;; 1 cycle
+   \   0000BA 63                    MOV       A, B               ;; 1 cycle
+   \   0000BB 9C0E                  MOV       [HL+0x0E], A       ;; 1 cycle
+   \   0000BD ED....                BR        N:??Init_NMEA_7    ;; 3 cycles
+   \   0000C0                       ; ------------------------------------- Block: 7 cycles
+     99                  break;
+    100                
+    101                //Each RMC sentence has a latitude 
+    102                //4807.038,N   Latitude 48 deg 07.038' N
+    103                case(LAT_NUM ):
+    104                  if(next_char==comma){
+   \                     ??DecodeNMEA_5:
+   \   0000C0 FD....                CALL      N:?Subroutine1     ;; 3 cycles
+   \   0000C3                       ; ------------------------------------- Block: 3 cycles
+   \                     ??CrossCallReturnLabel_5:
+   \   0000C3 DF0A                  BNZ       ??Init_NMEA_11     ;; 4 cycles
+   \   0000C5                       ; ------------------------------------- Block: 4 cycles
+    105                    my->state = LAT_DIR;
+   \   0000C5 A802                  MOVW      AX, [SP+0x02]      ;; 1 cycle
+   \   0000C7 16                    MOVW      HL, AX             ;; 1 cycle
+   \   0000C8 300500                MOVW      AX, #0x5           ;; 1 cycle
+   \   0000CB BB                    MOVW      [HL], AX           ;; 1 cycle
+    106                    my->lat_dec = FALSE; //reset decimal boolean
+   \   0000CC F6                    CLRW      AX                 ;; 1 cycle
+   \   0000CD EF08                  BR        S:??Init_NMEA_12   ;; 3 cycles
+   \   0000CF                       ; ------------------------------------- Block: 8 cycles
+    107                  }
+    108                  else{
+    109                    if(next_char=='.')
+   \                     ??Init_NMEA_11:
+   \   0000CF 4C2E                  CMP       A, #0x2E           ;; 1 cycle
+   \   0000D1 A802                  MOVW      AX, [SP+0x02]      ;; 1 cycle
+   \   0000D3 DF07                  BNZ       ??Init_NMEA_13     ;; 4 cycles
+   \   0000D5                       ; ------------------------------------- Block: 6 cycles
+    110                      my->lat_dec = TRUE;
+   \   0000D5 16                    MOVW      HL, AX             ;; 1 cycle
+   \   0000D6 E6                    ONEW      AX                 ;; 1 cycle
+   \   0000D7                       ; ------------------------------------- Block: 2 cycles
+   \                     ??Init_NMEA_12:
+   \   0000D7 BC14                  MOVW      [HL+0x14], AX      ;; 1 cycle
+   \   0000D9 ED....                BR        N:??Init_NMEA_7    ;; 3 cycles
+   \   0000DC                       ; ------------------------------------- Block: 4 cycles
+    111                    else  //create float of latitude eg. 4807.038
+    112                      my->lat_num = char2float(my->lat_num,next_char,&(my->lat_dec));
+   \                     ??Init_NMEA_13:
+   \   0000DC 041400                ADDW      AX, #0x14          ;; 1 cycle
+   \   0000DF C1                    PUSH      AX                 ;; 1 cycle
+   \   0000E0 63                    MOV       A, B               ;; 1 cycle
+   \   0000E1 75                    MOV       D, A               ;; 1 cycle
+   \   0000E2 A804                  MOVW      AX, [SP+0x04]      ;; 1 cycle
+   \   0000E4 16                    MOVW      HL, AX             ;; 1 cycle
+   \   0000E5 AC12                  MOVW      AX, [HL+0x12]      ;; 1 cycle
+   \   0000E7 12                    MOVW      BC, AX             ;; 1 cycle
+   \   0000E8 AC10                  MOVW      AX, [HL+0x10]      ;; 1 cycle
+   \   0000EA FD....                CALL      char2float         ;; 3 cycles
+   \   0000ED 16                    MOVW      HL, AX             ;; 1 cycle
+   \   0000EE A802                  MOVW      AX, [SP+0x02]      ;; 1 cycle
+   \   0000F0 37                    XCHW      AX, HL             ;; 1 cycle
+   \   0000F1 BC10                  MOVW      [HL+0x10], AX      ;; 1 cycle
+   \   0000F3 13                    MOVW      AX, BC             ;; 1 cycle
+   \   0000F4 BC12                  MOVW      [HL+0x12], AX      ;; 1 cycle
+   \   0000F6 ED....                BR        N:??Init_NMEA_7    ;; 3 cycles
+   \   0000F9                       ; ------------------------------------- Block: 21 cycles
+    113                  }
+    114                  break;
+    115                  
+    116                case(LAT_DIR ):
+    117                  if(next_char==comma)
+   \                     ??DecodeNMEA_6:
+   \   0000F9 FD....                CALL      N:?Subroutine1     ;; 3 cycles
+   \   0000FC                       ; ------------------------------------- Block: 3 cycles
+   \                     ??CrossCallReturnLabel_6:
+   \   0000FC A802                  MOVW      AX, [SP+0x02]      ;; 1 cycle
+   \   0000FE 16                    MOVW      HL, AX             ;; 1 cycle
+   \   0000FF DF06                  BNZ       ??Init_NMEA_14     ;; 4 cycles
+   \   000101                       ; ------------------------------------- Block: 6 cycles
+    118                    my->state = LONG_NUM;
+   \   000101 300600                MOVW      AX, #0x6           ;; 1 cycle
+   \   000104 ED....                BR        N:??Init_NMEA_5    ;; 3 cycles
+   \   000107                       ; ------------------------------------- Block: 4 cycles
+    119                  else
+    120                    my->lat_dir = next_char; //store direction char
+   \                     ??Init_NMEA_14:
+   \   000107 63                    MOV       A, B               ;; 1 cycle
+   \   000108 9C16                  MOV       [HL+0x16], A       ;; 1 cycle
+   \   00010A ED....                BR        N:??Init_NMEA_7    ;; 3 cycles
+   \   00010D                       ; ------------------------------------- Block: 5 cycles
+    121                  break;
+    122                  
+    123                //Each RMC sentence has a longitude
+    124                //01131.000,E  Longitude 11 deg 31.000' E
+    125                case(LONG_NUM) :
+    126                  if(next_char==comma){
+   \                     ??DecodeNMEA_7:
+   \   00010D FD....                CALL      N:?Subroutine1     ;; 3 cycles
+   \   000110                       ; ------------------------------------- Block: 3 cycles
+   \                     ??CrossCallReturnLabel_7:
+   \   000110 DF0A                  BNZ       ??Init_NMEA_15     ;; 4 cycles
+   \   000112                       ; ------------------------------------- Block: 4 cycles
+    127                    my->state = LONG_DIR;
+   \   000112 A802                  MOVW      AX, [SP+0x02]      ;; 1 cycle
+   \   000114 16                    MOVW      HL, AX             ;; 1 cycle
+   \   000115 300700                MOVW      AX, #0x7           ;; 1 cycle
+   \   000118 BB                    MOVW      [HL], AX           ;; 1 cycle
+    128                    my->long_dec = FALSE; //reset decimal boolean
+   \   000119 F6                    CLRW      AX                 ;; 1 cycle
+   \   00011A EF08                  BR        S:??Init_NMEA_16   ;; 3 cycles
+   \   00011C                       ; ------------------------------------- Block: 8 cycles
+    129                  }
+    130                  else{
+    131                    if(next_char=='.')
+   \                     ??Init_NMEA_15:
+   \   00011C 4C2E                  CMP       A, #0x2E           ;; 1 cycle
+   \   00011E A802                  MOVW      AX, [SP+0x02]      ;; 1 cycle
+   \   000120 DF07                  BNZ       ??Init_NMEA_17     ;; 4 cycles
+   \   000122                       ; ------------------------------------- Block: 6 cycles
+    132                      my->long_dec = TRUE;
+   \   000122 16                    MOVW      HL, AX             ;; 1 cycle
+   \   000123 E6                    ONEW      AX                 ;; 1 cycle
+   \   000124                       ; ------------------------------------- Block: 2 cycles
+   \                     ??Init_NMEA_16:
+   \   000124 BC1C                  MOVW      [HL+0x1C], AX      ;; 1 cycle
+   \   000126 ED....                BR        N:??Init_NMEA_7    ;; 3 cycles
+   \   000129                       ; ------------------------------------- Block: 4 cycles
+    133                    else  //create float of longitude eg. 01131.000
+    134                      my->long_num = char2float(my->long_num,next_char,&(my->long_dec));
+   \                     ??Init_NMEA_17:
+   \   000129 041C00                ADDW      AX, #0x1C          ;; 1 cycle
+   \   00012C C1                    PUSH      AX                 ;; 1 cycle
+   \   00012D 63                    MOV       A, B               ;; 1 cycle
+   \   00012E 75                    MOV       D, A               ;; 1 cycle
+   \   00012F A804                  MOVW      AX, [SP+0x04]      ;; 1 cycle
+   \   000131 16                    MOVW      HL, AX             ;; 1 cycle
+   \   000132 AC1A                  MOVW      AX, [HL+0x1A]      ;; 1 cycle
+   \   000134 12                    MOVW      BC, AX             ;; 1 cycle
+   \   000135 AC18                  MOVW      AX, [HL+0x18]      ;; 1 cycle
+   \   000137 FD....                CALL      char2float         ;; 3 cycles
+   \   00013A 16                    MOVW      HL, AX             ;; 1 cycle
+   \   00013B A802                  MOVW      AX, [SP+0x02]      ;; 1 cycle
+   \   00013D 37                    XCHW      AX, HL             ;; 1 cycle
+   \   00013E BC18                  MOVW      [HL+0x18], AX      ;; 1 cycle
+   \   000140 13                    MOVW      AX, BC             ;; 1 cycle
+   \   000141 BC1A                  MOVW      [HL+0x1A], AX      ;; 1 cycle
+   \   000143 ED....                BR        N:??Init_NMEA_7    ;; 3 cycles
+   \   000146                       ; ------------------------------------- Block: 21 cycles
+    135                  }
+    136                  break;
+    137                  
+    138                case(LONG_DIR) :
+    139                  if(next_char==comma)
+   \                     ??DecodeNMEA_8:
+   \   000146 FD....                CALL      N:?Subroutine1     ;; 3 cycles
+   \   000149                       ; ------------------------------------- Block: 3 cycles
+   \                     ??CrossCallReturnLabel_8:
+   \   000149 A802                  MOVW      AX, [SP+0x02]      ;; 1 cycle
+   \   00014B 16                    MOVW      HL, AX             ;; 1 cycle
+   \   00014C DF06                  BNZ       ??Init_NMEA_18     ;; 4 cycles
+   \   00014E                       ; ------------------------------------- Block: 6 cycles
+    140                    my->state = SPEED;
+   \   00014E 300800                MOVW      AX, #0x8           ;; 1 cycle
+   \   000151 ED....                BR        N:??Init_NMEA_5    ;; 3 cycles
+   \   000154                       ; ------------------------------------- Block: 4 cycles
+    141                  else
+    142                    my->long_dir = next_char; //store longitude direction char
+   \                     ??Init_NMEA_18:
+   \   000154 63                    MOV       A, B               ;; 1 cycle
+   \   000155 9C1E                  MOV       [HL+0x1E], A       ;; 1 cycle
+   \   000157 ED....                BR        N:??Init_NMEA_7    ;; 3 cycles
+   \   00015A                       ; ------------------------------------- Block: 5 cycles
+    143                  break;
+    144                
+    145                //Each RMC sentence has a speed 
+    146                  //022.4        Speed over the ground in knots
+    147                case(SPEED ):
+    148                  if(next_char==comma){
+   \                     ??DecodeNMEA_9:
+   \   00015A FD....                CALL      N:?Subroutine1     ;; 3 cycles
+   \   00015D                       ; ------------------------------------- Block: 3 cycles
+   \                     ??CrossCallReturnLabel_9:
+   \   00015D DF0A                  BNZ       ??Init_NMEA_19     ;; 4 cycles
+   \   00015F                       ; ------------------------------------- Block: 4 cycles
+    149                    my->state = ANGLE;
+   \   00015F A802                  MOVW      AX, [SP+0x02]      ;; 1 cycle
+   \   000161 16                    MOVW      HL, AX             ;; 1 cycle
+   \   000162 300900                MOVW      AX, #0x9           ;; 1 cycle
+   \   000165 BB                    MOVW      [HL], AX           ;; 1 cycle
+    150                    my->speed_dec = FALSE; //reset speed_dec
+   \   000166 F6                    CLRW      AX                 ;; 1 cycle
+   \   000167 EF08                  BR        S:??Init_NMEA_20   ;; 3 cycles
+   \   000169                       ; ------------------------------------- Block: 8 cycles
+    151                  }
+    152                  else{
+    153                    if(next_char=='.')
+   \                     ??Init_NMEA_19:
+   \   000169 4C2E                  CMP       A, #0x2E           ;; 1 cycle
+   \   00016B A802                  MOVW      AX, [SP+0x02]      ;; 1 cycle
+   \   00016D DF07                  BNZ       ??Init_NMEA_21     ;; 4 cycles
+   \   00016F                       ; ------------------------------------- Block: 6 cycles
+    154                      my->speed_dec = TRUE;
+   \   00016F 16                    MOVW      HL, AX             ;; 1 cycle
+   \   000170 E6                    ONEW      AX                 ;; 1 cycle
+   \   000171                       ; ------------------------------------- Block: 2 cycles
+   \                     ??Init_NMEA_20:
+   \   000171 BC24                  MOVW      [HL+0x24], AX      ;; 1 cycle
+   \   000173 ED....                BR        N:??Init_NMEA_7    ;; 3 cycles
+   \   000176                       ; ------------------------------------- Block: 4 cycles
+    155                    else  //create float of speed eg. 022.4 
+    156                      my->speed = char2float(my->speed,next_char,&(my->speed_dec));
+   \                     ??Init_NMEA_21:
+   \   000176 042400                ADDW      AX, #0x24          ;; 1 cycle
+   \   000179 C1                    PUSH      AX                 ;; 1 cycle
+   \   00017A 63                    MOV       A, B               ;; 1 cycle
+   \   00017B 75                    MOV       D, A               ;; 1 cycle
+   \   00017C A804                  MOVW      AX, [SP+0x04]      ;; 1 cycle
+   \   00017E 16                    MOVW      HL, AX             ;; 1 cycle
+   \   00017F AC22                  MOVW      AX, [HL+0x22]      ;; 1 cycle
+   \   000181 12                    MOVW      BC, AX             ;; 1 cycle
+   \   000182 AC20                  MOVW      AX, [HL+0x20]      ;; 1 cycle
+   \   000184 FD....                CALL      char2float         ;; 3 cycles
+   \   000187 16                    MOVW      HL, AX             ;; 1 cycle
+   \   000188 A802                  MOVW      AX, [SP+0x02]      ;; 1 cycle
+   \   00018A 37                    XCHW      AX, HL             ;; 1 cycle
+   \   00018B BC20                  MOVW      [HL+0x20], AX      ;; 1 cycle
+   \   00018D 13                    MOVW      AX, BC             ;; 1 cycle
+   \   00018E BC22                  MOVW      [HL+0x22], AX      ;; 1 cycle
+   \   000190 ED....                BR        N:??Init_NMEA_7    ;; 3 cycles
+   \   000193                       ; ------------------------------------- Block: 21 cycles
+    157                  }  
+    158                  break;
+    159                
+    160                //Each RMC sentence has an angle
+    161                //084.4        Track angle in degrees True
+    162                case(ANGLE ):
+    163                  if(next_char==comma){
+   \                     ??DecodeNMEA_10:
+   \   000193 FD....                CALL      N:?Subroutine1     ;; 3 cycles
+   \   000196                       ; ------------------------------------- Block: 3 cycles
+   \                     ??CrossCallReturnLabel_10:
+   \   000196 DF0A                  BNZ       ??Init_NMEA_22     ;; 4 cycles
+   \   000198                       ; ------------------------------------- Block: 4 cycles
+    164                    my->state = DATE;
+   \   000198 A802                  MOVW      AX, [SP+0x02]      ;; 1 cycle
+   \   00019A 16                    MOVW      HL, AX             ;; 1 cycle
+   \   00019B 300A00                MOVW      AX, #0xA           ;; 1 cycle
+   \   00019E BB                    MOVW      [HL], AX           ;; 1 cycle
+    165                    my->angle_dec = FALSE; //reset angle_dec
+   \   00019F F6                    CLRW      AX                 ;; 1 cycle
+   \   0001A0 EF08                  BR        S:??Init_NMEA_23   ;; 3 cycles
+   \   0001A2                       ; ------------------------------------- Block: 8 cycles
+    166                  }
+    167                  else{
+    168                    if(next_char=='.')
+   \                     ??Init_NMEA_22:
+   \   0001A2 4C2E                  CMP       A, #0x2E           ;; 1 cycle
+   \   0001A4 A802                  MOVW      AX, [SP+0x02]      ;; 1 cycle
+   \   0001A6 DF07                  BNZ       ??Init_NMEA_24     ;; 4 cycles
+   \   0001A8                       ; ------------------------------------- Block: 6 cycles
+    169                      my->angle_dec = TRUE;
+   \   0001A8 16                    MOVW      HL, AX             ;; 1 cycle
+   \   0001A9 E6                    ONEW      AX                 ;; 1 cycle
+   \   0001AA                       ; ------------------------------------- Block: 2 cycles
+   \                     ??Init_NMEA_23:
+   \   0001AA BC2A                  MOVW      [HL+0x2A], AX      ;; 1 cycle
+   \   0001AC ED....                BR        N:??Init_NMEA_7    ;; 3 cycles
+   \   0001AF                       ; ------------------------------------- Block: 4 cycles
+    170                    else  //create float of angle eg. 084.4  
+    171                      my->angle = char2float(my->angle,next_char,&(my->angle_dec));
+   \                     ??Init_NMEA_24:
+   \   0001AF 042A00                ADDW      AX, #0x2A          ;; 1 cycle
+   \   0001B2 C1                    PUSH      AX                 ;; 1 cycle
+   \   0001B3 63                    MOV       A, B               ;; 1 cycle
+   \   0001B4 75                    MOV       D, A               ;; 1 cycle
+   \   0001B5 A804                  MOVW      AX, [SP+0x04]      ;; 1 cycle
+   \   0001B7 16                    MOVW      HL, AX             ;; 1 cycle
+   \   0001B8 AC28                  MOVW      AX, [HL+0x28]      ;; 1 cycle
+   \   0001BA 12                    MOVW      BC, AX             ;; 1 cycle
+   \   0001BB AC26                  MOVW      AX, [HL+0x26]      ;; 1 cycle
+   \   0001BD FD....                CALL      char2float         ;; 3 cycles
+   \   0001C0 16                    MOVW      HL, AX             ;; 1 cycle
+   \   0001C1 A802                  MOVW      AX, [SP+0x02]      ;; 1 cycle
+   \   0001C3 37                    XCHW      AX, HL             ;; 1 cycle
+   \   0001C4 BC26                  MOVW      [HL+0x26], AX      ;; 1 cycle
+   \   0001C6 13                    MOVW      AX, BC             ;; 1 cycle
+   \   0001C7 BC28                  MOVW      [HL+0x28], AX      ;; 1 cycle
+   \   0001C9 ED....                BR        N:??Init_NMEA_7    ;; 3 cycles
+   \   0001CC                       ; ------------------------------------- Block: 21 cycles
+    172                  }  
+    173                  break;
+    174                
+    175                 //Each RMC sentence has a Date segement
+    176                //230394       Date - 23rd of March 1994
+    177                case(DATE ):
+    178                  if(next_char==comma)
+   \                     ??DecodeNMEA_11:
+   \   0001CC FD....                CALL      N:?Subroutine1     ;; 3 cycles
+   \   0001CF                       ; ------------------------------------- Block: 3 cycles
+   \                     ??CrossCallReturnLabel_11:
+   \   0001CF DF08                  BNZ       ??Init_NMEA_25     ;; 4 cycles
+   \   0001D1                       ; ------------------------------------- Block: 4 cycles
+    179                    my->state = MAG;
+   \   0001D1 A802                  MOVW      AX, [SP+0x02]      ;; 1 cycle
+   \   0001D3 16                    MOVW      HL, AX             ;; 1 cycle
+   \   0001D4 300B00                MOVW      AX, #0xB           ;; 1 cycle
+   \   0001D7 EF5B                  BR        S:??Init_NMEA_5    ;; 3 cycles
+   \   0001D9                       ; ------------------------------------- Block: 6 cycles
+    180                  else //store date as int eg. 230394 
+    181                    my->date = char2int(my->date, next_char ); 
+   \                     ??Init_NMEA_25:
+   \   0001D9 75                    MOV       D, A               ;; 1 cycle
+   \   0001DA A802                  MOVW      AX, [SP+0x02]      ;; 1 cycle
+   \   0001DC 16                    MOVW      HL, AX             ;; 1 cycle
+   \   0001DD AC2E                  MOVW      AX, [HL+0x2E]      ;; 1 cycle
+   \   0001DF 12                    MOVW      BC, AX             ;; 1 cycle
+   \   0001E0 AC2C                  MOVW      AX, [HL+0x2C]      ;; 1 cycle
+   \   0001E2 FD....                CALL      char2int           ;; 3 cycles
+   \   0001E5 16                    MOVW      HL, AX             ;; 1 cycle
+   \   0001E6 A802                  MOVW      AX, [SP+0x02]      ;; 1 cycle
+   \   0001E8 37                    XCHW      AX, HL             ;; 1 cycle
+   \   0001E9 BC2C                  MOVW      [HL+0x2C], AX      ;; 1 cycle
+   \   0001EB 13                    MOVW      AX, BC             ;; 1 cycle
+   \   0001EC BC2E                  MOVW      [HL+0x2E], AX      ;; 1 cycle
+   \   0001EE ED....                BR        N:??Init_NMEA_7    ;; 3 cycles
+   \   0001F1                       ; ------------------------------------- Block: 18 cycles
+    182                  break;
+    183                
+    184                //Each RMC sentence has magnetic strentgh segment
+    185                //003.1,W      Magnetic Variation
+    186                case(MAG) :
+    187                  if(next_char==comma){
+   \                     ??DecodeNMEA_12:
+   \   0001F1 FD....                CALL      N:?Subroutine1     ;; 3 cycles
+   \   0001F4                       ; ------------------------------------- Block: 3 cycles
+   \                     ??CrossCallReturnLabel_12:
+   \   0001F4 DF0A                  BNZ       ??Init_NMEA_26     ;; 4 cycles
+   \   0001F6                       ; ------------------------------------- Block: 4 cycles
+    188                    my->state = MAG_CHAR;
+   \   0001F6 A802                  MOVW      AX, [SP+0x02]      ;; 1 cycle
+   \   0001F8 16                    MOVW      HL, AX             ;; 1 cycle
+   \   0001F9 300C00                MOVW      AX, #0xC           ;; 1 cycle
+   \   0001FC BB                    MOVW      [HL], AX           ;; 1 cycle
+    189                    my->mag_dec = FALSE; //reset decimal
+   \   0001FD F6                    CLRW      AX                 ;; 1 cycle
+   \   0001FE EF08                  BR        S:??Init_NMEA_27   ;; 3 cycles
+   \   000200                       ; ------------------------------------- Block: 8 cycles
+    190                  }
+    191                  else{
+    192                    if(next_char=='.')
+   \                     ??Init_NMEA_26:
+   \   000200 4C2E                  CMP       A, #0x2E           ;; 1 cycle
+   \   000202 A802                  MOVW      AX, [SP+0x02]      ;; 1 cycle
+   \   000204 DF07                  BNZ       ??Init_NMEA_28     ;; 4 cycles
+   \   000206                       ; ------------------------------------- Block: 6 cycles
+    193                      my->mag_dec = TRUE;
+   \   000206 16                    MOVW      HL, AX             ;; 1 cycle
+   \   000207 E6                    ONEW      AX                 ;; 1 cycle
+   \   000208                       ; ------------------------------------- Block: 2 cycles
+   \                     ??Init_NMEA_27:
+   \   000208 BC34                  MOVW      [HL+0x34], AX      ;; 1 cycle
+   \   00020A ED....                BR        N:??Init_NMEA_7    ;; 3 cycles
+   \   00020D                       ; ------------------------------------- Block: 4 cycles
+    194                    else
+    195                      my->mag = char2float(my->mag,next_char,&(my->mag_dec));
+   \                     ??Init_NMEA_28:
+   \   00020D 043400                ADDW      AX, #0x34          ;; 1 cycle
+   \   000210 C1                    PUSH      AX                 ;; 1 cycle
+   \   000211 63                    MOV       A, B               ;; 1 cycle
+   \   000212 75                    MOV       D, A               ;; 1 cycle
+   \   000213 A804                  MOVW      AX, [SP+0x04]      ;; 1 cycle
+   \   000215 16                    MOVW      HL, AX             ;; 1 cycle
+   \   000216 AC32                  MOVW      AX, [HL+0x32]      ;; 1 cycle
+   \   000218 12                    MOVW      BC, AX             ;; 1 cycle
+   \   000219 AC30                  MOVW      AX, [HL+0x30]      ;; 1 cycle
+   \   00021B FD....                CALL      char2float         ;; 3 cycles
+   \   00021E 16                    MOVW      HL, AX             ;; 1 cycle
+   \   00021F A802                  MOVW      AX, [SP+0x02]      ;; 1 cycle
+   \   000221 37                    XCHW      AX, HL             ;; 1 cycle
+   \   000222 BC30                  MOVW      [HL+0x30], AX      ;; 1 cycle
+   \   000224 13                    MOVW      AX, BC             ;; 1 cycle
+   \   000225 BC32                  MOVW      [HL+0x32], AX      ;; 1 cycle
+   \   000227 EF75                  BR        S:??Init_NMEA_7    ;; 3 cycles
+   \   000229                       ; ------------------------------------- Block: 21 cycles
+    196                  }  
+    197                  break;
+    198                  
+    199                case(MAG_CHAR) :
+    200                  if(next_char == '*')
+   \                     ??DecodeNMEA_13:
+   \   000229 63                    MOV       A, B               ;; 1 cycle
+   \   00022A 4C2A                  CMP       A, #0x2A           ;; 1 cycle
+   \   00022C A802                  MOVW      AX, [SP+0x02]      ;; 1 cycle
+   \   00022E 16                    MOVW      HL, AX             ;; 1 cycle
+   \   00022F DF06                  BNZ       ??Init_NMEA_29     ;; 4 cycles
+   \   000231                       ; ------------------------------------- Block: 8 cycles
+    201                    my->state = CHECK;
+   \   000231 300D00                MOVW      AX, #0xD           ;; 1 cycle
+   \   000234                       ; ------------------------------------- Block: 1 cycles
+   \                     ??Init_NMEA_5:
+   \   000234 BB                    MOVW      [HL], AX           ;; 1 cycle
+   \   000235 EF67                  BR        S:??Init_NMEA_7    ;; 3 cycles
+   \   000237                       ; ------------------------------------- Block: 4 cycles
+    202                  else 
+    203                    my->mag_char = next_char;  //store char in mag_char
+   \                     ??Init_NMEA_29:
+   \   000237 63                    MOV       A, B               ;; 1 cycle
+   \   000238 9C36                  MOV       [HL+0x36], A       ;; 1 cycle
+   \   00023A EF62                  BR        S:??Init_NMEA_7    ;; 3 cycles
+   \   00023C                       ; ------------------------------------- Block: 5 cycles
+    204                  break;
+    205                  
+    206                case(CHECK ):
+    207                  my->checksum[my->ci] = next_char;
+   \                     ??Init_NMEA_3:
+   \   00023C A802                  MOVW      AX, [SP+0x02]      ;; 1 cycle
+   \   00023E 043A00                ADDW      AX, #0x3A          ;; 1 cycle
+   \   000241 B800                  MOVW      [SP], AX           ;; 1 cycle
+   \   000243 16                    MOVW      HL, AX             ;; 1 cycle
+   \   000244 AB                    MOVW      AX, [HL]           ;; 1 cycle
+   \   000245 14                    MOVW      DE, AX             ;; 1 cycle
+   \   000246 A802                  MOVW      AX, [SP+0x02]      ;; 1 cycle
+   \   000248 05                    ADDW      AX, DE             ;; 1 cycle
+   \   000249 16                    MOVW      HL, AX             ;; 1 cycle
+   \   00024A 63                    MOV       A, B               ;; 1 cycle
+   \   00024B 9C37                  MOV       [HL+0x37], A       ;; 1 cycle
+    208                  if(my->checksum[my->ci] >= 'A')
+   \   00024D A800                  MOVW      AX, [SP]           ;; 1 cycle
+   \   00024F 16                    MOVW      HL, AX             ;; 1 cycle
+   \   000250 AB                    MOVW      AX, [HL]           ;; 1 cycle
+   \   000251 14                    MOVW      DE, AX             ;; 1 cycle
+   \   000252 A802                  MOVW      AX, [SP+0x02]      ;; 1 cycle
+   \   000254 05                    ADDW      AX, DE             ;; 1 cycle
+   \   000255 043700                ADDW      AX, #0x37          ;; 1 cycle
+   \   000258 16                    MOVW      HL, AX             ;; 1 cycle
+   \   000259 8B                    MOV       A, [HL]            ;; 1 cycle
+   \   00025A 4C41                  CMP       A, #0x41           ;; 1 cycle
+   \   00025C DC04                  BC        ??Init_NMEA_30     ;; 4 cycles
+   \   00025E                       ; ------------------------------------- Block: 25 cycles
+    209                    my->checksum[my->ci] = (my->checksum[my->ci]- 55); //convert A-F to 10-15
+   \   00025E 0CC9                  ADD       A, #0xC9           ;; 1 cycle
+   \   000260 EF06                  BR        S:??Init_NMEA_31   ;; 3 cycles
+   \   000262                       ; ------------------------------------- Block: 4 cycles
+    210                  else if(my->checksum[my->ci] >= '0')
+   \                     ??Init_NMEA_30:
+   \   000262 4C30                  CMP       A, #0x30           ;; 1 cycle
+   \   000264 DC03                  BC        ??Init_NMEA_32     ;; 4 cycles
+   \   000266                       ; ------------------------------------- Block: 5 cycles
+    211                    my->checksum[my->ci] = (my->checksum[my->ci] - '0');//convert Ox0-9 to 0-9
+   \   000266 0CD0                  ADD       A, #0xD0           ;; 1 cycle
+   \   000268                       ; ------------------------------------- Block: 1 cycles
+   \                     ??Init_NMEA_31:
+   \   000268 9B                    MOV       [HL], A            ;; 1 cycle
+   \   000269                       ; ------------------------------------- Block: 1 cycles
+    212                  my->ci++;
+   \                     ??Init_NMEA_32:
+   \   000269 A800                  MOVW      AX, [SP]           ;; 1 cycle
+   \   00026B 14                    MOVW      DE, AX             ;; 1 cycle
+   \   00026C A9                    MOVW      AX, [DE]           ;; 1 cycle
+   \   00026D A1                    INCW      AX                 ;; 1 cycle
+   \   00026E B9                    MOVW      [DE], AX           ;; 1 cycle
+    213                  if(my->ci >= 2){//checksum only has two chars
+   \   00026F 7C80                  XOR       A, #0x80           ;; 1 cycle
+   \   000271 440280                CMPW      AX, #0x8002        ;; 1 cycle
+   \   000274 DC28                  BC        ??Init_NMEA_7      ;; 4 cycles
+   \   000276                       ; ------------------------------------- Block: 11 cycles
+    214                    my->state = START;
+   \   000276 A802                  MOVW      AX, [SP+0x02]      ;; 1 cycle
+   \   000278 16                    MOVW      HL, AX             ;; 1 cycle
+   \   000279 F6                    CLRW      AX                 ;; 1 cycle
+   \   00027A BB                    MOVW      [HL], AX           ;; 1 cycle
+    215                    temp = (my->checksum[0]<<4|my->checksum[1]); //shift checksum chars to match check format
+   \   00027B 8C38                  MOV       A, [HL+0x38]       ;; 1 cycle
+   \   00027D 76                    MOV       L, A               ;; 1 cycle
+   \   00027E A802                  MOVW      AX, [SP+0x02]      ;; 1 cycle
+   \   000280 14                    MOVW      DE, AX             ;; 1 cycle
+   \   000281 8A37                  MOV       A, [DE+0x37]       ;; 1 cycle
+   \   000283 70                    MOV       X, A               ;; 1 cycle
+   \   000284 F1                    CLRB      A                  ;; 1 cycle
+   \   000285 314D                  SHLW      AX, 0x4            ;; 1 cycle
+   \   000287 08                    XCH       A, X               ;; 1 cycle
+   \   000288 616E                  OR        A, L               ;; 1 cycle
+   \   00028A 08                    XCH       A, X               ;; 1 cycle
+   \   00028B BF....                MOVW      N:??temp, AX       ;; 1 cycle
+    216                    if(temp == my->check)  //Discard Sentences that fail checksum
+   \   00028E C5                    PUSH      DE                 ;; 1 cycle
+   \   00028F C6                    POP       HL                 ;; 1 cycle
+   \   000290 8C3C                  MOV       A, [HL+0x3C]       ;; 1 cycle
+   \   000292 70                    MOV       X, A               ;; 1 cycle
+   \   000293 F1                    CLRB      A                  ;; 1 cycle
+   \   000294 FB....                MOVW      HL, N:??temp       ;; 1 cycle
+   \   000297 47                    CMPW      AX, HL             ;; 1 cycle
+   \   000298 DF04                  BNZ       ??Init_NMEA_7      ;; 4 cycles
+   \   00029A                       ; ------------------------------------- Block: 27 cycles
+    217                      Run_TaskN(1);
+   \   00029A E6                    ONEW      AX                 ;; 1 cycle
+   \   00029B FD....                CALL      Run_TaskN          ;; 3 cycles
+   \   00029E                       ; ------------------------------------- Block: 4 cycles
+    218                  }
+    219                  break;
+    220            }
+    221          
+    222            LED_6_G = led_state;
+   \                     ??Init_NMEA_7:
+   \   00029E FD....                CALL      N:?Subroutine0     ;; 3 cycles
+   \   0002A1                       ; ------------------------------------- Block: 3 cycles
+    223            led_state ^= 1;
+    224            
+    225            
+    226          }//end DecodeNMEA
+   \                     ??CrossCallReturnLabel_1:
+   \   0002A1 1004                  ADDW      SP, #0x4           ;; 1 cycle
+   \   0002A3 C4                    POP       DE                 ;; 1 cycle
+   \   0002A4 C2                    POP       BC                 ;; 1 cycle
+   \   0002A5 D7                    RET                          ;; 6 cycles
+   \   0002A6                       ; ------------------------------------- Block: 9 cycles
+   \   0002A6                       ; ------------------------------------- Total: 580 cycles
+   \   0002A6                       REQUIRE ?CLRL78_V1_0_L00
+   \   0002A6                       REQUIRE _A_P4
+
+   \                                 In  segment CODE, align 1, keep-with-next
+   \                     ?Subroutine1:
+   \   000000 63                    MOV       A, B               ;; 1 cycle
+   \   000001 4F....                CMP       A, N:??comma       ;; 1 cycle
+   \   000004 D7                    RET                          ;; 6 cycles
+   \   000005                       ; ------------------------------------- Block: 8 cycles
+   \   000005                       ; ------------------------------------- Total: 8 cycles
+   \   000005                       REQUIRE ?CLRL78_V1_0_L00
+
+   \                                 In  segment CODE, align 1, keep-with-next
+   \                     ?Subroutine0:
+   \   000000 8F....                MOV       A, N:??led_state   ;; 1 cycle
+   \   000003 36....                MOVW      HL, #??led_state   ;; 1 cycle
+   \   000006 718C                  MOV1      CY, A.0            ;; 1 cycle
+   \   000008 713104                MOV1      S:0xFFF04.3, CY    ;; 2 cycles
+   \   00000B E1                    ONEB      A                  ;; 1 cycle
+   \   00000C 7D                    XOR       A, [HL]            ;; 1 cycle
+   \   00000D 9B                    MOV       [HL], A            ;; 1 cycle
+   \   00000E D7                    RET                          ;; 6 cycles
+   \   00000F                       ; ------------------------------------- Block: 14 cycles
+   \   00000F                       ; ------------------------------------- Total: 14 cycles
+   \   00000F                       REQUIRE ?CLRL78_V1_0_L00
+
+   \                                 In  segment NEAR_I, align 1, align-sorted
+   \                     ??comma:
+   \   000000                       DS 1
+   \   000001                       REQUIRE `?<Initializer for comma>`
+   \   000001                       REQUIRE __INIT_NEAR_I
+
+   \                                 In  segment NEAR_Z, align 2, align-sorted
+   \                     ??temp:
+   \   000000                       DS 2
+   \   000002                       REQUIRE __INIT_NEAR_Z
+
+   \                                 In  segment NEAR_Z, align 1, align-sorted
+   \                     ??led_state:
+   \   000000                       DS 1
+   \   000001                       REQUIRE __INIT_NEAR_Z
+    227          
+    228          //shift value by 10s place, and add char's numeric value
+
+   \                                 In  segment CODE, align 1, keep-with-next
+    229          double char2int(double value, char c){
+   \                     char2int:
+   \   000000                       ; * Stack frame (at entry) *
+   \   000000                       ; Param size: 0
+   \   000000 C3                    PUSH      BC                 ;; 1 cycle
+   \   000001 C1                    PUSH      AX                 ;; 1 cycle
+   \   000002                       ; Auto size: 4
+    230            return (value*10 + c - '0'); //convert next char ascii to int
+   \   000002 3040C2                MOVW      AX, #0xC240        ;; 1 cycle
+   \   000005 C1                    PUSH      AX                 ;; 1 cycle
+   \   000006 F6                    CLRW      AX                 ;; 1 cycle
+   \   000007 C1                    PUSH      AX                 ;; 1 cycle
+   \   000008 65                    MOV       A, D               ;; 1 cycle
+   \   000009 08                    XCH       A, X               ;; 1 cycle
+   \   00000A F7                    CLRW      BC                 ;; 1 cycle
+   \   00000B FD....                CALL      N:?F_UL2F          ;; 3 cycles
+   \   00000E C3                    PUSH      BC                 ;; 1 cycle
+   \   00000F C1                    PUSH      AX                 ;; 1 cycle
+   \   000010 302041                MOVW      AX, #0x4120        ;; 1 cycle
+   \   000013 C1                    PUSH      AX                 ;; 1 cycle
+   \   000014 F6                    CLRW      AX                 ;; 1 cycle
+   \   000015 C1                    PUSH      AX                 ;; 1 cycle
+   \   000016 A80E                  MOVW      AX, [SP+0x0E]      ;; 1 cycle
+   \   000018 12                    MOVW      BC, AX             ;; 1 cycle
+   \   000019 A80C                  MOVW      AX, [SP+0x0C]      ;; 1 cycle
+   \   00001B FD....                CALL      N:?F_MUL           ;; 3 cycles
+   \   00001E 1004                  ADDW      SP, #0x4           ;; 1 cycle
+   \   000020 FD....                CALL      N:?F_ADD           ;; 3 cycles
+   \   000023 1004                  ADDW      SP, #0x4           ;; 1 cycle
+   \   000025 FD....                CALL      N:?F_ADD           ;; 3 cycles
+   \   000028 1008                  ADDW      SP, #0x8           ;; 1 cycle
+   \   00002A D7                    RET                          ;; 6 cycles
+   \   00002B                       ; ------------------------------------- Block: 39 cycles
+   \   00002B                       ; ------------------------------------- Total: 39 cycles
+   \   00002B                       REQUIRE ?CLRL78_V1_0_L00
+    231          }
+    232          
+    233          //shift whole value left by 10s place, after decimal
+    234          // shift fractions right by 10s places
+
+   \                                 In  segment CODE, align 1, keep-with-next
+    235          float char2float(float value, char c, int * decimal){
+   \                     char2float:
+   \   000000                       ; * Stack frame (at entry) *
+   \   000000                       ; Param size: 2
+   \   000000 C3                    PUSH      BC                 ;; 1 cycle
+   \   000001 C1                    PUSH      AX                 ;; 1 cycle
+   \   000002                       ; Auto size: 4
+    236          
+    237            //decimal portion
+    238             if(*decimal > 0){ //after comma, decimal =1, so *10 for a divede by 10
+   \   000002 A808                  MOVW      AX, [SP+0x08]      ;; 1 cycle
+   \   000004 16                    MOVW      HL, AX             ;; 1 cycle
+   \   000005 AB                    MOVW      AX, [HL]           ;; 1 cycle
+   \   000006 7C80                  XOR       A, #0x80           ;; 1 cycle
+   \   000008 440180                CMPW      AX, #0x8001        ;; 1 cycle
+   \   00000B DC2A                  BC        ??Init_NMEA_33     ;; 4 cycles
+   \   00000D                       ; ------------------------------------- Block: 11 cycles
+    239              *decimal = (*decimal)*10;
+   \   00000D AB                    MOVW      AX, [HL]           ;; 1 cycle
+   \   00000E 320A00                MOVW      BC, #0xA           ;; 1 cycle
+   \   000011 CEFB01                MULHU                        ;; 2 cycles
+   \   000014 12                    MOVW      BC, AX             ;; 1 cycle
+   \   000015 BB                    MOVW      [HL], AX           ;; 1 cycle
+    240              return (value + ((float)(c - '0'))/(*decimal));
+   \   000016 A802                  MOVW      AX, [SP+0x02]      ;; 1 cycle
+   \   000018 C1                    PUSH      AX                 ;; 1 cycle
+   \   000019 A802                  MOVW      AX, [SP+0x02]      ;; 1 cycle
+   \   00001B C1                    PUSH      AX                 ;; 1 cycle
+   \   00001C 13                    MOVW      AX, BC             ;; 1 cycle
+   \   00001D 31FF                  SARW      AX, 0xF            ;; 1 cycle
+   \   00001F 33                    XCHW      AX, BC             ;; 1 cycle
+   \   000020 FD....                CALL      N:?F_SL2F          ;; 3 cycles
+   \   000023 C3                    PUSH      BC                 ;; 1 cycle
+   \   000024 C1                    PUSH      AX                 ;; 1 cycle
+   \   000025 65                    MOV       A, D               ;; 1 cycle
+   \   000026 70                    MOV       X, A               ;; 1 cycle
+   \   000027 F1                    CLRB      A                  ;; 1 cycle
+   \   000028 04D0FF                ADDW      AX, #0xFFD0        ;; 1 cycle
+   \   00002B 12                    MOVW      BC, AX             ;; 1 cycle
+   \   00002C 31FF                  SARW      AX, 0xF            ;; 1 cycle
+   \   00002E 33                    XCHW      AX, BC             ;; 1 cycle
+   \   00002F FD....                CALL      N:?F_SL2F          ;; 3 cycles
+   \   000032 FD....                CALL      N:?F_DIV           ;; 3 cycles
+   \   000035 EF21                  BR        S:??Init_NMEA_34   ;; 3 cycles
+   \   000037                       ; ------------------------------------- Block: 34 cycles
+    241             }
+    242            else
+    243              return (value*10 + c - '0'); 
+   \                     ??Init_NMEA_33:
+   \   000037 3040C2                MOVW      AX, #0xC240        ;; 1 cycle
+   \   00003A C1                    PUSH      AX                 ;; 1 cycle
+   \   00003B F6                    CLRW      AX                 ;; 1 cycle
+   \   00003C C1                    PUSH      AX                 ;; 1 cycle
+   \   00003D 65                    MOV       A, D               ;; 1 cycle
+   \   00003E 08                    XCH       A, X               ;; 1 cycle
+   \   00003F F7                    CLRW      BC                 ;; 1 cycle
+   \   000040 FD....                CALL      N:?F_UL2F          ;; 3 cycles
+   \   000043 C3                    PUSH      BC                 ;; 1 cycle
+   \   000044 C1                    PUSH      AX                 ;; 1 cycle
+   \   000045 302041                MOVW      AX, #0x4120        ;; 1 cycle
+   \   000048 C1                    PUSH      AX                 ;; 1 cycle
+   \   000049 F6                    CLRW      AX                 ;; 1 cycle
+   \   00004A C1                    PUSH      AX                 ;; 1 cycle
+   \   00004B A80E                  MOVW      AX, [SP+0x0E]      ;; 1 cycle
+   \   00004D 12                    MOVW      BC, AX             ;; 1 cycle
+   \   00004E A80C                  MOVW      AX, [SP+0x0C]      ;; 1 cycle
+   \   000050 FD....                CALL      N:?F_MUL           ;; 3 cycles
+   \   000053 1004                  ADDW      SP, #0x4           ;; 1 cycle
+   \   000055 FD....                CALL      N:?F_ADD           ;; 3 cycles
+   \   000058                       ; ------------------------------------- Block: 26 cycles
+   \                     ??Init_NMEA_34:
+   \   000058 1004                  ADDW      SP, #0x4           ;; 1 cycle
+   \   00005A FD....                CALL      N:?F_ADD           ;; 3 cycles
+   \   00005D 1004                  ADDW      SP, #0x4           ;; 1 cycle
+   \   00005F 1004                  ADDW      SP, #0x4           ;; 1 cycle
+   \   000061 FD....                CALL      N:?FUNC_LEAVE_L06
+   \   000064 0200                  DW        0x2                ;; 3 cycles
+   \   000066                       ; ------------------------------------- Block: 9 cycles
+   \   000066                       ; ------------------------------------- Total: 80 cycles
+   \   000066                       REQUIRE ?CLRL78_V1_0_L00
+    244          }
+    245          
+    246          //used to setup new NMEA structs
+
+   \                                 In  segment CODE, align 1, keep-with-next
+    247          void Init_NMEA(var_NMEA * n ){
+   \                     Init_NMEA:
+   \   000000                       ; * Stack frame (at entry) *
+   \   000000                       ; Param size: 0
+   \   000000                       ; Auto size: 0
+   \   000000 16                    MOVW      HL, AX             ;; 1 cycle
+    248            n->state = START;
+   \   000001 F6                    CLRW      AX                 ;; 1 cycle
+   \   000002 BB                    MOVW      [HL], AX           ;; 1 cycle
+    249            // sentence[6];
+    250            n->si = 0;
+   \   000003 BC08                  MOVW      [HL+0x08], AX      ;; 1 cycle
+    251            n->time = 0;
+   \   000005 BC0A                  MOVW      [HL+0x0A], AX      ;; 1 cycle
+   \   000007 BC0C                  MOVW      [HL+0x0C], AX      ;; 1 cycle
+    252            // status;
+    253            n->lat_num = 0;
+   \   000009 BC10                  MOVW      [HL+0x10], AX      ;; 1 cycle
+   \   00000B BC12                  MOVW      [HL+0x12], AX      ;; 1 cycle
+    254            n->lat_dec = FALSE;
+   \   00000D BC14                  MOVW      [HL+0x14], AX      ;; 1 cycle
+    255            //lat_dir;
+    256            n->long_num = 0;
+   \   00000F BC18                  MOVW      [HL+0x18], AX      ;; 1 cycle
+   \   000011 BC1A                  MOVW      [HL+0x1A], AX      ;; 1 cycle
+    257            n->long_dec = FALSE;
+   \   000013 BC1C                  MOVW      [HL+0x1C], AX      ;; 1 cycle
+    258            //long_dir;
+    259            n->speed = 0;
+   \   000015 BC20                  MOVW      [HL+0x20], AX      ;; 1 cycle
+   \   000017 BC22                  MOVW      [HL+0x22], AX      ;; 1 cycle
+    260            n->speed_dec = FALSE;
+   \   000019 BC24                  MOVW      [HL+0x24], AX      ;; 1 cycle
+    261            n->angle = 0;
+   \   00001B BC26                  MOVW      [HL+0x26], AX      ;; 1 cycle
+   \   00001D BC28                  MOVW      [HL+0x28], AX      ;; 1 cycle
+    262            n->angle_dec = FALSE;
+   \   00001F BC2A                  MOVW      [HL+0x2A], AX      ;; 1 cycle
+    263            n->date = 0;
+   \   000021 BC2C                  MOVW      [HL+0x2C], AX      ;; 1 cycle
+   \   000023 BC2E                  MOVW      [HL+0x2E], AX      ;; 1 cycle
+    264            n->mag = 0;
+   \   000025 BC30                  MOVW      [HL+0x30], AX      ;; 1 cycle
+   \   000027 BC32                  MOVW      [HL+0x32], AX      ;; 1 cycle
+    265            n->mag_dec = FALSE;
+   \   000029 BC34                  MOVW      [HL+0x34], AX      ;; 1 cycle
+    266            //mag_char;
+    267            //checksum[2];
+    268            n->ci = 0;
+   \   00002B BC3A                  MOVW      [HL+0x3A], AX      ;; 1 cycle
+    269            n->check = 0;    //reset interal check for checksum compare
+   \   00002D 9C3C                  MOV       [HL+0x3C], A       ;; 1 cycle
+    270          
+    271          }
+   \   00002F D7                    RET                          ;; 6 cycles
+   \   000030                       ; ------------------------------------- Block: 31 cycles
+   \   000030                       ; ------------------------------------- Total: 31 cycles
+   \   000030                       REQUIRE ?CLRL78_V1_0_L00
+
+   \                                 In  segment NEAR_ID, align 2, align-sorted
+   \                     `?<Initializer for message>`:
+   \   000000 244750524D43          DB 24H, 47H, 50H, 52H, 4DH, 43H, 2CH, 31H
+   \   000008 32333531392C          DB 32H, 33H, 35H, 31H, 39H, 2CH, 41H, 2CH
+   \   000010 343830372E30          DB 34H, 38H, 30H, 37H, 2EH, 30H, 33H, 38H
+   \   000018 2C4E2C303131          DB 2CH, 4EH, 2CH, 30H, 31H, 31H, 33H, 31H
+   \   000020 2E3030302C45          DB 2EH, 30H, 30H, 30H, 2CH, 45H, 2CH, 30H
+   \   000028 32322E342C30          DB 32H, 32H, 2EH, 34H, 2CH, 30H, 38H, 34H
+   \   000030 2E342C323330          DB 2EH, 34H, 2CH, 32H, 33H, 30H, 33H, 39H
+   \   000038 342C3030332E          DB 34H, 2CH, 30H, 30H, 33H, 2EH, 31H, 2CH
+   \   000040 572A364100            DB 57H, 2AH, 36H, 41H, 0
+   \   000045 000000000000          DB 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+   \   000055 000000000000          DB 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+
+   \                                 In  segment NEAR_ID, align 1, align-sorted
+   \                     `?<Initializer for comma>`:
+   \   000000 2C                    DB 44
+
+   \                                 In  segment SWITCH, align 2
+   \                     ??DecodeNMEA_0:
+   \   000000 0000                  DW        0
+   \   000002 0E00                  DW        14
+   \   000004 ....                  DW        ??Init_NMEA_7
+   \   000006 ....                  DW        ??DecodeNMEA_1
+   \   000008 ....                  DW        ??DecodeNMEA_2
+   \   00000A ....                  DW        ??DecodeNMEA_3
+   \   00000C ....                  DW        ??DecodeNMEA_4
+   \   00000E ....                  DW        ??DecodeNMEA_5
+   \   000010 ....                  DW        ??DecodeNMEA_6
+   \   000012 ....                  DW        ??DecodeNMEA_7
+   \   000014 ....                  DW        ??DecodeNMEA_8
+   \   000016 ....                  DW        ??DecodeNMEA_9
+   \   000018 ....                  DW        ??DecodeNMEA_10
+   \   00001A ....                  DW        ??DecodeNMEA_11
+   \   00001C ....                  DW        ??DecodeNMEA_12
+   \   00001E ....                  DW        ??DecodeNMEA_13
+   \   000020 ....                  DW        ??Init_NMEA_3
+
+   Maximum stack usage in bytes:
+
+   CSTACK Function
+   ------ --------
+      4   Debug_Decode
+        4   -> DecodeNMEA
+        4   -> Q_Dequeue
+        4   -> Q_Empty
+        4   -> Q_Enqueue
+     10   DecodeNMEA
+        8   -> Init_NMEA
+        8   -> Run_TaskN
+       10   -> char2float
+        8   -> char2int
+      0   Init_NMEA
+     18   char2float
+     16   char2int
+
+
+   Segment part sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       1  ?<Initializer for comma>
+     100  ?<Initializer for message>
+      34  ??DecodeNMEA_0
+      15  ?Subroutine0
+       5  ?Subroutine1
+      50  Debug_Decode
+     678  DecodeNMEA
+      48  Init_NMEA
+       1  _A_P4
+     102  char2float
+      43  char2int
+       1  comma
+       1  led_state
+     100  message
+       2  temp
+
+ 
+ 941 bytes in segment CODE
+ 101 bytes in segment NEAR_I
+ 101 bytes in segment NEAR_ID
+   3 bytes in segment NEAR_Z
+   1 byte  in segment SADDR_A
+  34 bytes in segment SWITCH
+ 
+ 941 bytes of CODE  memory
+ 135 bytes of CONST memory
+ 104 bytes of DATA  memory (+ 1 byte shared)
+
+Errors: none
+Warnings: none

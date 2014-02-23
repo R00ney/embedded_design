@@ -1,0 +1,958 @@
+###############################################################################
+#                                                                             #
+# IAR C/C++ Compiler V1.30.5.50715 for RL78             22/Feb/2014  22:15:04 #
+# Copyright 2011-2013 IAR Systems AB.                                         #
+# Network license: ece-lic-19.ece.ncsu.edu (STD)                              #
+#                                                                             #
+#    Core         =  rl78_2                                                   #
+#    Code model   =  Near                                                     #
+#    Data model   =  Near                                                     #
+#                 =                                                           #
+#    Source file  =  C:\Users\Suddenlink\Dropbox\git_files\embedded_design\pr #
+#                    oject1\modified_RTCSched-G14\RTC\rtc_sched.c             #
+#    Command line =  C:\Users\Suddenlink\Dropbox\git_files\embedded_design\pr #
+#                    oject1\modified_RTCSched-G14\RTC\rtc_sched.c --core      #
+#                    rl78_2 --code_model near --data_model near               #
+#                    --near_const_location rom0 -o                            #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\pr #
+#                    oject1\modified_RTCSched-G14\Debug\Obj\ --dlib_config    #
+#                    "C:\Program Files\IAR Systems\Embedded Workbench         #
+#                    6.5\rl78\LIB\dlrl78nn2n.h" -e -Ohz --no_scheduling       #
+#                    --debug -lCN C:\Users\Suddenlink\Dropbox\git_files\embed #
+#                    ded_design\project1\modified_RTCSched-G14\Debug\List\    #
+#                    -I C:\Users\Suddenlink\Dropbox\git_files\embedded_design #
+#                    \project1\modified_RTCSched-G14/applilet3_src/\ -I       #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\pr #
+#                    oject1\modified_RTCSched-G14/Glyph/\ -I                  #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\pr #
+#                    oject1\modified_RTCSched-G14/Glyph/Drivers/\ -I          #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\pr #
+#                    oject1\modified_RTCSched-G14/user_include/\ -I           #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\pr #
+#                    oject1\modified_RTCSched-G14/RTC/\ -I                    #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\pr #
+#                    oject1\modified_RTCSched-G14/Queu/\                      #
+#    List file    =  C:\Users\Suddenlink\Dropbox\git_files\embedded_design\pr #
+#                    oject1\modified_RTCSched-G14\Debug\List\rtc_sched.lst    #
+#    Object file  =  C:\Users\Suddenlink\Dropbox\git_files\embedded_design\pr #
+#                    oject1\modified_RTCSched-G14\Debug\Obj\rtc_sched.r87     #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+C:\Users\Suddenlink\Dropbox\git_files\embedded_design\project1\modified_RTCSched-G14\RTC\rtc_sched.c
+      1          #include "r_cg_macrodriver.h"
+
+   \                                 In  segment SADDR_A, at 0xfff04
+   \   union <unnamed> volatile __saddr _A_P4
+   \                     _A_P4:
+   \   000000                       DS 1
+
+   \                                 In  segment NEAR_A, at 0xfff24
+   \   union <unnamed> volatile __sfr _A_PM4
+   \                     _A_PM4:
+   \   000000                       DS 1
+      2          #include "r_cg_userdefine.h"
+      3          
+      4          #include "rtc_sched.h"
+      5          
+      6          typedef struct {
+      7            int period;
+      8            int delay;
+      9            int ready;
+     10            int enabled;
+     11            void (* task)(void);
+     12          } task_t;
+     13          
+     14          typedef unsigned char byte;
+     15          
+     16          
+     17          /* =================== Global variables ======================= */
+
+   \                                 In  segment NEAR_Z, align 2, align-sorted
+     18          task_t GBL_task_list[MAX_TASKS];
+   \                     GBL_task_list:
+   \   000000                       DS 100
+   \   000064                       REQUIRE __INIT_NEAR_Z
+
+   \                                 In  segment NEAR_Z, align 2, align-sorted
+     19          int    GBL_run_scheduler=0;
+   \                     GBL_run_scheduler:
+   \   000000                       DS 2
+   \   000002                       REQUIRE __INIT_NEAR_Z
+
+   \                                 In  segment NEAR_Z, align 2, align-sorted
+     20          unsigned num_ticks=0;
+   \                     num_ticks:
+   \   000000                       DS 2
+   \   000002                       REQUIRE __INIT_NEAR_Z
+
+   \                                 In  segment NEAR_Z, align 2, align-sorted
+     21          unsigned ticks_into_sec=0;
+   \                     ticks_into_sec:
+   \   000000                       DS 2
+   \   000002                       REQUIRE __INIT_NEAR_Z
+     22          
+     23          
+     24          /* ==================== Function prototypes ==================== */
+     25          void tick_timer_intr(void);
+     26          
+     27          /*****************************************************************************
+     28          Name:            void Init_RTC_Scheduler(void)
+     29          Parameters:
+     30          Returns:
+     31          Description:     Intializes board support firmware for scheduler.
+     32          
+     33          *****************************************************************************/
+
+   \                                 In  segment CODE, align 1, keep-with-next
+     34          void Init_RTC_Scheduler(void)
+   \                     Init_RTC_Scheduler:
+     35          {
+   \   000000                       ; * Stack frame (at entry) *
+   \   000000                       ; Param size: 0
+   \   000000                       ; Auto size: 0
+     36            num_ticks = 0;
+   \   000000 F6                    CLRW      AX                 ;; 1 cycle
+   \   000001 BF....                MOVW      N:num_ticks, AX    ;; 1 cycle
+     37            Init_Task_Timers();
+   \   000004 FD....                CALL      Init_Task_Timers   ;; 3 cycles
+     38          #if RTC_MONITOR_STANDBY
+     39          	RTC_STANDBY_OUTPUT_MODE = DIR_OUT; // Set port bit to output
+     40          	RTC_STANDBY_OUTPUT = 1; // Not currently sleeping
+     41          #endif
+     42          
+     43          #if RTC_MONITOR_ACTIVITY
+     44          	RTC_ACTIVE_OUTPUT_MODE = DIR_OUT; // set port bit to output
+   \   000007 711B24                CLR1      0xFFF24.1          ;; 2 cycles
+     45          	RTC_ACTIVE_OUTPUT = 1; // No task is currently active
+   \   00000A 711204                SET1      S:0xFFF04.1        ;; 2 cycles
+     46          #endif
+     47          }
+   \   00000D D7                    RET                          ;; 6 cycles
+   \   00000E                       ; ------------------------------------- Block: 15 cycles
+   \   00000E                       ; ------------------------------------- Total: 15 cycles
+   \   00000E                       REQUIRE ?CLRL78_V1_0_L00
+   \   00000E                       REQUIRE _A_PM4
+   \   00000E                       REQUIRE _A_P4
+     48          
+     49          /*****************************************************************************
+     50          Name:           tick_timer_intr
+     51          Parameters:     none
+     52          Returns:        none
+     53          Description:    ISR for periodic timer tick.  Decrements the timer value for all
+     54          valid and enabled tasks. If timer value reaches 0, set run flag and reset timer
+     55          value to initial value to allow periodic execution.
+     56          *****************************************************************************/
+
+   \                                 In  segment CODE, align 1, keep-with-next
+     57          void tick_timer_intr(void)
+   \                     tick_timer_intr:
+     58          {
+   \   000000                       ; * Stack frame (at entry) *
+   \   000000                       ; Param size: 0
+   \   000000 C3                    PUSH      BC                 ;; 1 cycle
+   \   000001 C5                    PUSH      DE                 ;; 1 cycle
+   \   000002                       ; Auto size: 0
+     59            static char i;
+     60          
+     61            num_ticks++;
+   \   000002 A2....                INCW      N:num_ticks        ;; 2 cycles
+     62            for (i=0 ; i<MAX_TASKS ; i++) {		 /* If this is a scheduled task */
+   \   000005 F5....                CLRB      N:??i              ;; 1 cycle
+   \   000008                       ; ------------------------------------- Block: 5 cycles
+     63              if (GBL_task_list[i].task != NULL) {
+   \                     ??tick_timer_intr_0:
+   \   000008 8F....                MOV       A, N:??i           ;; 1 cycle
+   \   00000B 70                    MOV       X, A               ;; 1 cycle
+   \   00000C F1                    CLRB      A                  ;; 1 cycle
+   \   00000D 320A00                MOVW      BC, #0xA           ;; 1 cycle
+   \   000010 CEFB01                MULHU                        ;; 2 cycles
+   \   000013 FD....                CALL      N:?Subroutine2     ;; 3 cycles
+   \   000016                       ; ------------------------------------- Block: 9 cycles
+   \                     ??CrossCallReturnLabel_2:
+   \   000016 AA08                  MOVW      AX, [DE+0x08]      ;; 1 cycle
+   \   000018 F7                    CLRW      BC                 ;; 1 cycle
+   \   000019 43                    CMPW      AX, BC             ;; 1 cycle
+   \   00001A DD19                  BZ        ??Disable_Task_0   ;; 4 cycles
+   \   00001C                       ; ------------------------------------- Block: 7 cycles
+     64               if (GBL_task_list[i].enabled == 1) {
+   \   00001C AA06                  MOVW      AX, [DE+0x06]      ;; 1 cycle
+   \   00001E E7                    ONEW      BC                 ;; 1 cycle
+   \   00001F 43                    CMPW      AX, BC             ;; 1 cycle
+   \   000020 DF13                  BNZ       ??Disable_Task_0   ;; 4 cycles
+   \   000022                       ; ------------------------------------- Block: 7 cycles
+     65                 if (GBL_task_list[i].delay) {
+   \   000022 C5                    PUSH      DE                 ;; 1 cycle
+   \   000023 C6                    POP       HL                 ;; 1 cycle
+   \   000024 A7                    INCW      HL                 ;; 1 cycle
+   \   000025 A7                    INCW      HL                 ;; 1 cycle
+   \   000026 AB                    MOVW      AX, [HL]           ;; 1 cycle
+   \   000027 F7                    CLRW      BC                 ;; 1 cycle
+   \   000028 43                    CMPW      AX, BC             ;; 1 cycle
+   \   000029 DD0A                  BZ        ??Disable_Task_0   ;; 4 cycles
+   \   00002B                       ; ------------------------------------- Block: 11 cycles
+     66                   if (--GBL_task_list[i].delay == 0){
+   \   00002B B1                    DECW      AX                 ;; 1 cycle
+   \   00002C BB                    MOVW      [HL], AX           ;; 1 cycle
+   \   00002D 43                    CMPW      AX, BC             ;; 1 cycle
+   \   00002E DF05                  BNZ       ??Disable_Task_0   ;; 4 cycles
+   \   000030                       ; ------------------------------------- Block: 7 cycles
+     67                     GBL_task_list[i].ready = 1;
+   \   000030 E6                    ONEW      AX                 ;; 1 cycle
+   \   000031 BA04                  MOVW      [DE+0x04], AX      ;; 1 cycle
+     68                     GBL_task_list[i].delay = GBL_task_list[i].period;
+   \   000033 A9                    MOVW      AX, [DE]           ;; 1 cycle
+   \   000034 BB                    MOVW      [HL], AX           ;; 1 cycle
+   \   000035                       ; ------------------------------------- Block: 4 cycles
+     69                    }
+     70                  }
+     71                }
+     72              }
+     73            }
+   \                     ??Disable_Task_0:
+   \   000035 A0....                INC       N:??i              ;; 2 cycles
+   \   000038 8F....                MOV       A, N:??i           ;; 1 cycle
+   \   00003B 4C0A                  CMP       A, #0xA            ;; 1 cycle
+   \   00003D DCC9                  BC        ??tick_timer_intr_0  ;; 4 cycles
+   \   00003F                       ; ------------------------------------- Block: 8 cycles
+     74          }
+   \   00003F C4                    POP       DE                 ;; 1 cycle
+   \   000040 C2                    POP       BC                 ;; 1 cycle
+   \   000041 D7                    RET                          ;; 6 cycles
+   \   000042                       ; ------------------------------------- Block: 8 cycles
+   \   000042                       ; ------------------------------------- Total: 66 cycles
+   \   000042                       REQUIRE ?CLRL78_V1_0_L00
+
+   \                                 In  segment CODE, align 1, keep-with-next
+   \                     ?Subroutine2:
+   \   000000 04....                ADDW      AX, #GBL_task_list  ;; 1 cycle
+   \   000003 14                    MOVW      DE, AX             ;; 1 cycle
+   \   000004 D7                    RET                          ;; 6 cycles
+   \   000005                       ; ------------------------------------- Block: 8 cycles
+   \   000005                       ; ------------------------------------- Total: 8 cycles
+   \   000005                       REQUIRE ?CLRL78_V1_0_L00
+
+   \                                 In  segment NEAR_Z, align 1, align-sorted
+   \                     ??i:
+   \   000000                       DS 1
+   \   000001                       REQUIRE __INIT_NEAR_Z
+     75          
+     76          /*****************************************************************************
+     77          Name:   	Add_Task
+     78          Parameters:     void (*task)(void),
+     79                          int period (milliseconds),
+     80                          int priority
+     81          
+     82          Returns:        1 executed ok, 0 unable to load task.  priority already assigned.
+     83          Description:    Adds task to Round Robin Scheduler.
+     84          
+     85          *****************************************************************************/
+
+   \                                 In  segment CODE, align 1, keep-with-next
+     86          int	Add_Task(void (*task)(void), int period, int priority)
+   \                     Add_Task:
+     87          {
+   \   000000                       ; * Stack frame (at entry) *
+   \   000000                       ; Param size: 0
+   \   000000 C1                    PUSH      AX                 ;; 1 cycle
+   \   000001 C3                    PUSH      BC                 ;; 1 cycle
+   \   000002                       ; Auto size: 4
+   \   000002 15                    MOVW      AX, DE             ;; 1 cycle
+     88            /* Check for valid priority */
+     89            if (priority >= MAX_TASKS || priority < 0)
+   \   000003 440A00                CMPW      AX, #0xA           ;; 1 cycle
+   \   000006 DE0B                  BNC       ??Disable_Task_1   ;; 4 cycles
+   \   000008                       ; ------------------------------------- Block: 8 cycles
+     90              return 0;
+     91            /* Check to see if we are overwriting an already scheduled task */
+     92            if (GBL_task_list[priority].task != NULL)
+   \   000008 320A00                MOVW      BC, #0xA           ;; 1 cycle
+   \   00000B CEFB01                MULHU                        ;; 2 cycles
+   \   00000E FD....                CALL      N:?Subroutine1     ;; 3 cycles
+   \   000011                       ; ------------------------------------- Block: 6 cycles
+   \                     ??CrossCallReturnLabel_0:
+   \   000011 DD03                  BZ        ??Disable_Task_2   ;; 4 cycles
+   \   000013                       ; ------------------------------------- Block: 4 cycles
+     93              return 0;
+   \                     ??Disable_Task_1:
+   \   000013 F6                    CLRW      AX                 ;; 1 cycle
+   \   000014 EF11                  BR        S:??Disable_Task_3  ;; 3 cycles
+   \   000016                       ; ------------------------------------- Block: 4 cycles
+     94            /* Schedule the task */
+     95            	GBL_task_list[priority].task = task;
+   \                     ??Disable_Task_2:
+   \   000016 A802                  MOVW      AX, [SP+0x02]      ;; 1 cycle
+   \   000018 BB                    MOVW      [HL], AX           ;; 1 cycle
+     96            	GBL_task_list[priority].ready  = 0;
+   \   000019 F6                    CLRW      AX                 ;; 1 cycle
+   \   00001A BA04                  MOVW      [DE+0x04], AX      ;; 1 cycle
+     97          	GBL_task_list[priority].delay = period;
+   \   00001C A800                  MOVW      AX, [SP]           ;; 1 cycle
+   \   00001E BA02                  MOVW      [DE+0x02], AX      ;; 1 cycle
+     98          	GBL_task_list[priority].enabled = 1;
+   \   000020 E6                    ONEW      AX                 ;; 1 cycle
+   \   000021 BA06                  MOVW      [DE+0x06], AX      ;; 1 cycle
+     99            	GBL_task_list[priority].period = period;
+   \   000023 A800                  MOVW      AX, [SP]           ;; 1 cycle
+   \   000025 B9                    MOVW      [DE], AX           ;; 1 cycle
+    100              return 1;
+   \   000026 E6                    ONEW      AX                 ;; 1 cycle
+   \   000027                       ; ------------------------------------- Block: 11 cycles
+   \                     ??Disable_Task_3:
+   \   000027 1004                  ADDW      SP, #0x4           ;; 1 cycle
+   \   000029 D7                    RET                          ;; 6 cycles
+   \   00002A                       ; ------------------------------------- Block: 7 cycles
+   \   00002A                       ; ------------------------------------- Total: 40 cycles
+   \   00002A                       REQUIRE ?CLRL78_V1_0_L00
+    101          }
+
+   \                                 In  segment CODE, align 1, keep-with-next
+   \                     ?Subroutine1:
+   \   000000 04....                ADDW      AX, #GBL_task_list  ;; 1 cycle
+   \   000003 14                    MOVW      DE, AX             ;; 1 cycle
+   \   000004 040800                ADDW      AX, #0x8           ;; 1 cycle
+   \   000007 16                    MOVW      HL, AX             ;; 1 cycle
+   \   000008 AB                    MOVW      AX, [HL]           ;; 1 cycle
+   \   000009 F7                    CLRW      BC                 ;; 1 cycle
+   \   00000A 43                    CMPW      AX, BC             ;; 1 cycle
+   \   00000B D7                    RET                          ;; 6 cycles
+   \   00000C                       ; ------------------------------------- Block: 13 cycles
+   \   00000C                       ; ------------------------------------- Total: 13 cycles
+   \   00000C                       REQUIRE ?CLRL78_V1_0_L00
+    102          /*****************************************************************************
+    103          Name:        Remove_Task
+    104          Parameters:  void (* task)(void)  "task name"
+    105          Returns:     none
+    106          Description: Removes task from Round Robin Scheduler.
+    107          *****************************************************************************/
+
+   \                                 In  segment CODE, align 1, keep-with-next
+    108          void Remove_Task(void (* task)(void))
+   \                     Remove_Task:
+    109          {
+   \   000000                       ; * Stack frame (at entry) *
+   \   000000                       ; Param size: 0
+   \   000000 C3                    PUSH      BC                 ;; 1 cycle
+   \   000001 C5                    PUSH      DE                 ;; 1 cycle
+   \   000002 C1                    PUSH      AX                 ;; 1 cycle
+   \   000003                       ; Auto size: 4
+   \   000003 C1                    PUSH      AX                 ;; 1 cycle
+    110            int i;
+    111          
+    112            for (i=0 ; i<MAX_TASKS ; i++) {
+   \   000004 F6                    CLRW      AX                 ;; 1 cycle
+   \   000005 16                    MOVW      HL, AX             ;; 1 cycle
+   \   000006                       ; ------------------------------------- Block: 6 cycles
+    113              if (GBL_task_list[i].task == task) {
+   \                     ??Remove_Task_0:
+   \   000006 17                    MOVW      AX, HL             ;; 1 cycle
+   \   000007 320A00                MOVW      BC, #0xA           ;; 1 cycle
+   \   00000A CEFB01                MULHU                        ;; 2 cycles
+   \   00000D 04....                ADDW      AX, #GBL_task_list  ;; 1 cycle
+   \   000010 B800                  MOVW      [SP], AX           ;; 1 cycle
+   \   000012 040800                ADDW      AX, #0x8           ;; 1 cycle
+   \   000015 14                    MOVW      DE, AX             ;; 1 cycle
+   \   000016 A802                  MOVW      AX, [SP+0x02]      ;; 1 cycle
+   \   000018 12                    MOVW      BC, AX             ;; 1 cycle
+   \   000019 A9                    MOVW      AX, [DE]           ;; 1 cycle
+   \   00001A 43                    CMPW      AX, BC             ;; 1 cycle
+   \   00001B DF0F                  BNZ       ??Disable_Task_4   ;; 4 cycles
+   \   00001D                       ; ------------------------------------- Block: 16 cycles
+    114                GBL_task_list[i].task = NULL;
+   \   00001D F6                    CLRW      AX                 ;; 1 cycle
+   \   00001E B9                    MOVW      [DE], AX           ;; 1 cycle
+    115                GBL_task_list[i].delay = 0;
+   \   00001F A800                  MOVW      AX, [SP]           ;; 1 cycle
+   \   000021 16                    MOVW      HL, AX             ;; 1 cycle
+   \   000022 F6                    CLRW      AX                 ;; 1 cycle
+   \   000023 BC02                  MOVW      [HL+0x02], AX      ;; 1 cycle
+    116                GBL_task_list[i].period = 0;
+   \   000025 BB                    MOVW      [HL], AX           ;; 1 cycle
+    117                GBL_task_list[i].enabled = 0;
+   \   000026 BC06                  MOVW      [HL+0x06], AX      ;; 1 cycle
+    118                GBL_task_list[i].ready = 0;
+   \   000028 BC04                  MOVW      [HL+0x04], AX      ;; 1 cycle
+    119                return;
+   \   00002A EF05                  BR        S:??Disable_Task_5  ;; 3 cycles
+   \   00002C                       ; ------------------------------------- Block: 12 cycles
+    120              } }
+   \                     ??Disable_Task_4:
+   \   00002C FD....                CALL      N:?Subroutine3     ;; 3 cycles
+   \   00002F                       ; ------------------------------------- Block: 3 cycles
+   \                     ??CrossCallReturnLabel_9:
+   \   00002F DCD5                  BC        ??Remove_Task_0    ;; 4 cycles
+   \   000031                       ; ------------------------------------- Block: 4 cycles
+    121          }
+   \                     ??Disable_Task_5:
+   \   000031 1004                  ADDW      SP, #0x4           ;; 1 cycle
+   \   000033 C4                    POP       DE                 ;; 1 cycle
+   \   000034 C2                    POP       BC                 ;; 1 cycle
+   \   000035 D7                    RET                          ;; 6 cycles
+   \   000036                       ; ------------------------------------- Block: 9 cycles
+   \   000036                       ; ------------------------------------- Total: 50 cycles
+   \   000036                       REQUIRE ?CLRL78_V1_0_L00
+
+   \                                 In  segment CODE, align 1, keep-with-next
+   \                     ?Subroutine3:
+   \   000000 A7                    INCW      HL                 ;; 1 cycle
+   \   000001 17                    MOVW      AX, HL             ;; 1 cycle
+   \   000002 7C80                  XOR       A, #0x80           ;; 1 cycle
+   \   000004 440A80                CMPW      AX, #0x800A        ;; 1 cycle
+   \   000007 D7                    RET                          ;; 6 cycles
+   \   000008                       ; ------------------------------------- Block: 10 cycles
+   \   000008                       ; ------------------------------------- Total: 10 cycles
+   \   000008                       REQUIRE ?CLRL78_V1_0_L00
+    122          /*****************************************************************************
+    123          Name:      Init_Task_Timers
+    124          Parameters: none
+    125          Returns:    none
+    126          Description: Initializes task information structure to null and zeroes.
+    127          *****************************************************************************/
+
+   \                                 In  segment CODE, align 1, keep-with-next
+    128          void Init_Task_Timers(void)
+   \                     Init_Task_Timers:
+    129          {
+   \   000000                       ; * Stack frame (at entry) *
+   \   000000                       ; Param size: 0
+   \   000000 C3                    PUSH      BC                 ;; 1 cycle
+   \   000001 C5                    PUSH      DE                 ;; 1 cycle
+   \   000002                       ; Auto size: 0
+    130            int i;
+    131            /* Initialize all tasks */
+    132            for (i=0 ; i<MAX_TASKS ; i++) {
+   \   000002 F6                    CLRW      AX                 ;; 1 cycle
+   \   000003 16                    MOVW      HL, AX             ;; 1 cycle
+   \   000004                       ; ------------------------------------- Block: 4 cycles
+    133              GBL_task_list[i].period = 0;
+   \                     ??Init_Task_Timers_0:
+   \   000004 17                    MOVW      AX, HL             ;; 1 cycle
+   \   000005 320A00                MOVW      BC, #0xA           ;; 1 cycle
+   \   000008 CEFB01                MULHU                        ;; 2 cycles
+   \   00000B FD....                CALL      N:?Subroutine2     ;; 3 cycles
+   \   00000E                       ; ------------------------------------- Block: 7 cycles
+   \                     ??CrossCallReturnLabel_3:
+   \   00000E F6                    CLRW      AX                 ;; 1 cycle
+   \   00000F B9                    MOVW      [DE], AX           ;; 1 cycle
+    134              GBL_task_list[i].ready = 0;
+   \   000010 BA04                  MOVW      [DE+0x04], AX      ;; 1 cycle
+    135              GBL_task_list[i].delay = 0;
+   \   000012 BA02                  MOVW      [DE+0x02], AX      ;; 1 cycle
+    136              GBL_task_list[i].enabled = 0;
+   \   000014 BA06                  MOVW      [DE+0x06], AX      ;; 1 cycle
+    137              GBL_task_list[i].task = NULL;
+   \   000016 BA08                  MOVW      [DE+0x08], AX      ;; 1 cycle
+    138            }
+   \   000018 FD....                CALL      N:?Subroutine3     ;; 3 cycles
+   \   00001B                       ; ------------------------------------- Block: 9 cycles
+   \                     ??CrossCallReturnLabel_10:
+   \   00001B DCE7                  BC        ??Init_Task_Timers_0  ;; 4 cycles
+   \   00001D                       ; ------------------------------------- Block: 4 cycles
+    139          }
+   \   00001D C4                    POP       DE                 ;; 1 cycle
+   \   00001E C2                    POP       BC                 ;; 1 cycle
+   \   00001F D7                    RET                          ;; 6 cycles
+   \   000020                       ; ------------------------------------- Block: 8 cycles
+   \   000020                       ; ------------------------------------- Total: 32 cycles
+   \   000020                       REQUIRE ?CLRL78_V1_0_L00
+    140          /*****************************************************************************
+    141          Name:         Run_RTC_Scheduler
+    142          Parameters:   none
+    143          Returns:      none
+    144          Description:  Starts Round Robin Scheduler.  Should be call in Main program after
+    145          completing initialization.  Only enabled tasks will be scheduled and run.
+    146          *****************************************************************************/
+
+   \                                 In  segment CODE, align 1, keep-with-next
+    147          void Run_RTC_Scheduler(void)
+   \                     Run_RTC_Scheduler:
+    148          {
+   \   000000                       ; * Stack frame (at entry) *
+   \   000000                       ; Param size: 0
+   \   000000 C3                    PUSH      BC                 ;; 1 cycle
+   \   000001 C5                    PUSH      DE                 ;; 1 cycle
+   \   000002                       ; Auto size: 4
+   \   000002 2004                  SUBW      SP, #0x4           ;; 1 cycle
+    149            int i;
+    150            GBL_run_scheduler = 1;
+   \   000004 E6                    ONEW      AX                 ;; 1 cycle
+   \   000005 BF....                MOVW      N:GBL_run_scheduler, AX  ;; 1 cycle
+   \   000008 EF0F                  BR        S:??Disable_Task_6  ;; 3 cycles
+   \   00000A                       ; ------------------------------------- Block: 8 cycles
+    151            /* Loop forever */
+    152            while (1) {
+    153              /* Check each task */
+    154              for (i=0 ; i<MAX_TASKS ; i++) {
+    155          
+    156                /* If this is a scheduled task */
+    157                if (GBL_task_list[i].task != NULL) { /* valid task */
+    158                    if (GBL_task_list[i].enabled == 1) { /* enabled */
+    159                      if (GBL_task_list[i].ready >= 1) {  /* ready to run */
+    160          #if RTC_MONITOR_ACTIVITY
+    161                                    RTC_ACTIVE_OUTPUT = 0; // Indicate task is active
+   \                     ??Run_RTC_Scheduler_0:
+   \   00000A 711304                CLR1      S:0xFFF04.1        ;; 2 cycles
+    162          #endif // RTC_MONITOR_ACTIVITY
+    163          
+    164                        /* Run the task */
+    165                        GBL_task_list[i].task();
+   \   00000D AB                    MOVW      AX, [HL]           ;; 1 cycle
+   \   00000E CEFC00                MOV       CS, #0x0           ;; 1 cycle
+   \   000011 61CA                  CALL      AX                 ;; 3 cycles
+    166          
+    167          #if RTC_MONITOR_ACTIVITY
+    168                                    RTC_ACTIVE_OUTPUT = 1; // Indicate task is inactive
+   \   000013 711204                SET1      S:0xFFF04.1        ;; 2 cycles
+    169          #endif // RTC_MONITOR_ACTIVITY
+    170          
+    171                        /* Reset the task ready flag */
+    172                        GBL_task_list[i].ready --;
+   \   000016 A9                    MOVW      AX, [DE]           ;; 1 cycle
+   \   000017 B1                    DECW      AX                 ;; 1 cycle
+   \   000018 B9                    MOVW      [DE], AX           ;; 1 cycle
+    173                        break;
+   \   000019                       ; ------------------------------------- Block: 12 cycles
+    174                    }
+   \                     ??Disable_Task_6:
+   \   000019 F6                    CLRW      AX                 ;; 1 cycle
+   \   00001A B800                  MOVW      [SP], AX           ;; 1 cycle
+   \   00001C                       ; ------------------------------------- Block: 2 cycles
+   \                     ??Run_RTC_Scheduler_1:
+   \   00001C A800                  MOVW      AX, [SP]           ;; 1 cycle
+   \   00001E 320A00                MOVW      BC, #0xA           ;; 1 cycle
+   \   000021 CEFB01                MULHU                        ;; 2 cycles
+   \   000024 FD....                CALL      N:?Subroutine1     ;; 3 cycles
+   \   000027                       ; ------------------------------------- Block: 7 cycles
+   \                     ??CrossCallReturnLabel_1:
+   \   000027 DD16                  BZ        ??Disable_Task_7   ;; 4 cycles
+   \   000029                       ; ------------------------------------- Block: 4 cycles
+   \   000029 AA06                  MOVW      AX, [DE+0x06]      ;; 1 cycle
+   \   00002B E7                    ONEW      BC                 ;; 1 cycle
+   \   00002C 43                    CMPW      AX, BC             ;; 1 cycle
+   \   00002D DF10                  BNZ       ??Disable_Task_7   ;; 4 cycles
+   \   00002F                       ; ------------------------------------- Block: 7 cycles
+   \   00002F A5                    INCW      DE                 ;; 1 cycle
+   \   000030 A5                    INCW      DE                 ;; 1 cycle
+   \   000031 A5                    INCW      DE                 ;; 1 cycle
+   \   000032 15                    MOVW      AX, DE             ;; 1 cycle
+   \   000033 A1                    INCW      AX                 ;; 1 cycle
+   \   000034 B802                  MOVW      [SP+0x02], AX      ;; 1 cycle
+   \   000036 A5                    INCW      DE                 ;; 1 cycle
+   \   000037 A9                    MOVW      AX, [DE]           ;; 1 cycle
+   \   000038 7C80                  XOR       A, #0x80           ;; 1 cycle
+   \   00003A 440180                CMPW      AX, #0x8001        ;; 1 cycle
+   \   00003D DECB                  BNC       ??Run_RTC_Scheduler_0  ;; 4 cycles
+   \   00003F                       ; ------------------------------------- Block: 14 cycles
+    175                  }
+    176                }
+    177              }
+   \                     ??Disable_Task_7:
+   \   00003F A800                  MOVW      AX, [SP]           ;; 1 cycle
+   \   000041 A1                    INCW      AX                 ;; 1 cycle
+   \   000042 B800                  MOVW      [SP], AX           ;; 1 cycle
+   \   000044 7C80                  XOR       A, #0x80           ;; 1 cycle
+   \   000046 440A80                CMPW      AX, #0x800A        ;; 1 cycle
+   \   000049 DECE                  BNC       ??Disable_Task_6   ;; 4 cycles
+   \   00004B                       ; ------------------------------------- Block: 9 cycles
+   \   00004B EFCF                  BR        S:??Run_RTC_Scheduler_1  ;; 3 cycles
+   \   00004D                       ; ------------------------------------- Block: 3 cycles
+   \   00004D                       ; ------------------------------------- Total: 66 cycles
+   \   00004D                       REQUIRE ?CLRL78_V1_0_L00
+   \   00004D                       REQUIRE _A_P4
+    178          		// reached end of loop, so start at top again
+    179                  #if RTC_HALT_WHEN_IDLE
+    180          		RTC_STANDBY_OUTPUT = 0; // Sleeping
+    181          		__halt();
+    182          		RTC_STANDBY_OUTPUT = 1; // Not sleeping
+    183                  #endif // RTC_HALT_WHEN_IDLE
+    184          
+    185                  #if RTC_STOP_WHEN_IDLE
+    186          		RTC_STANDBY_OUTPUT = 0; // Sleeping
+    187          		__stop();
+    188          		RTC_STANDBY_OUTPUT = 1; // Not sleeping
+    189                  #endif // RTC_STOP_WHEN_IDLE
+    190          
+    191            }
+    192          }
+    193          
+    194          /*****************************************************************************
+    195          Name:         Run_Task
+    196          Parameters:   task_number
+    197          Returns:      none
+    198          Description:  Set the run flag for the specified task. This will tell the
+    199           scheduler it is ready to run without further delay.
+    200          *****************************************************************************/
+
+   \                                 In  segment CODE, align 1, keep-with-next
+    201          void Run_TaskN(int task_number)
+   \                     Run_TaskN:
+    202          {
+   \   000000                       ; * Stack frame (at entry) *
+   \   000000                       ; Param size: 0
+   \   000000 C3                    PUSH      BC                 ;; 1 cycle
+   \   000001 C5                    PUSH      DE                 ;; 1 cycle
+   \   000002                       ; Auto size: 0
+    203            GBL_task_list[task_number].ready ++;
+   \   000002 320A00                MOVW      BC, #0xA           ;; 1 cycle
+   \   000005 CEFB01                MULHU                        ;; 2 cycles
+   \   000008 FD....                CALL      N:?Subroutine2     ;; 3 cycles
+   \   00000B                       ; ------------------------------------- Block: 8 cycles
+   \                     ??CrossCallReturnLabel_4:
+   \   00000B 16                    MOVW      HL, AX             ;; 1 cycle
+   \   00000C A7                    INCW      HL                 ;; 1 cycle
+   \   00000D A7                    INCW      HL                 ;; 1 cycle
+   \   00000E A7                    INCW      HL                 ;; 1 cycle
+   \   00000F A7                    INCW      HL                 ;; 1 cycle
+   \   000010 AB                    MOVW      AX, [HL]           ;; 1 cycle
+   \   000011 A1                    INCW      AX                 ;; 1 cycle
+   \   000012 BB                    MOVW      [HL], AX           ;; 1 cycle
+    204            GBL_task_list[task_number].enabled = 1;
+   \   000013 E6                    ONEW      AX                 ;; 1 cycle
+   \   000014 BA06                  MOVW      [DE+0x06], AX      ;; 1 cycle
+    205          }
+   \   000016 C4                    POP       DE                 ;; 1 cycle
+   \   000017 C2                    POP       BC                 ;; 1 cycle
+   \   000018 D7                    RET                          ;; 6 cycles
+   \   000019                       ; ------------------------------------- Block: 18 cycles
+   \   000019                       ; ------------------------------------- Total: 26 cycles
+   \   000019                       REQUIRE ?CLRL78_V1_0_L00
+    206          
+    207          /*****************************************************************************
+    208          Name:         Reschedule_TaskN
+    209          Parameters:   task number, new_timer_val
+    210          Returns:      none
+    211          Description:  Modifies the period at which a task will run.
+    212          *****************************************************************************/
+
+   \                                 In  segment CODE, align 1, keep-with-next
+    213          void Reschedule_TaskN(int n, int new_timer_val)
+   \                     Reschedule_TaskN:
+    214          {
+   \   000000                       ; * Stack frame (at entry) *
+   \   000000                       ; Param size: 0
+   \   000000 C5                    PUSH      DE                 ;; 1 cycle
+   \   000001                       ; Auto size: 0
+   \   000001 C3                    PUSH      BC                 ;; 1 cycle
+   \   000002 C6                    POP       HL                 ;; 1 cycle
+    215          	GBL_task_list[n].period = new_timer_val;
+   \   000003 320A00                MOVW      BC, #0xA           ;; 1 cycle
+   \   000006 CEFB01                MULHU                        ;; 2 cycles
+   \   000009 FD....                CALL      N:?Subroutine2     ;; 3 cycles
+   \   00000C                       ; ------------------------------------- Block: 9 cycles
+   \                     ??CrossCallReturnLabel_5:
+   \   00000C 17                    MOVW      AX, HL             ;; 1 cycle
+   \   00000D B9                    MOVW      [DE], AX           ;; 1 cycle
+    216            GBL_task_list[n].delay = new_timer_val;
+   \   00000E BA02                  MOVW      [DE+0x02], AX      ;; 1 cycle
+    217          }
+   \   000010 C4                    POP       DE                 ;; 1 cycle
+   \   000011 D7                    RET                          ;; 6 cycles
+   \   000012                       ; ------------------------------------- Block: 10 cycles
+   \   000012                       ; ------------------------------------- Total: 19 cycles
+   \   000012                       REQUIRE ?CLRL78_V1_0_L00
+    218          
+    219          /*****************************************************************************
+    220          Name:         Enable_TaskN
+    221          Parameters:   task_number
+    222          Returns:      none
+    223          Description:  Set the "enabled" flag for the task, allowing it to be scheduled.
+    224          *****************************************************************************/
+
+   \                                 In  segment CODE, align 1, keep-with-next
+    225          void Enable_TaskN(int n)
+   \                     Enable_TaskN:
+    226          {
+   \   000000                       ; * Stack frame (at entry) *
+   \   000000                       ; Param size: 0
+   \   000000 C3                    PUSH      BC                 ;; 1 cycle
+   \   000001                       ; Auto size: 0
+    227            GBL_task_list[n].enabled = 1;
+   \   000001 320A00                MOVW      BC, #0xA           ;; 1 cycle
+   \   000004 CEFB01                MULHU                        ;; 2 cycles
+   \   000007 04....                ADDW      AX, #GBL_task_list+6  ;; 1 cycle
+   \   00000A 16                    MOVW      HL, AX             ;; 1 cycle
+   \   00000B E6                    ONEW      AX                 ;; 1 cycle
+   \   00000C BB                    MOVW      [HL], AX           ;; 1 cycle
+    228          }
+   \   00000D C2                    POP       BC                 ;; 1 cycle
+   \   00000E D7                    RET                          ;; 6 cycles
+   \   00000F                       ; ------------------------------------- Block: 15 cycles
+   \   00000F                       ; ------------------------------------- Total: 15 cycles
+   \   00000F                       REQUIRE ?CLRL78_V1_0_L00
+    229          
+    230          /*****************************************************************************
+    231          Name:         Disable_TaskN
+    232          Parameters:   task_number
+    233          Returns:      none
+    234          Description:  Clear the "enabled" flag for the task, keeping it from being
+    235          scheduled.
+    236          *****************************************************************************/
+
+   \                                 In  segment CODE, align 1, keep-with-next
+    237          void Disable_TaskN(int n)
+   \                     Disable_TaskN:
+    238          {
+   \   000000                       ; * Stack frame (at entry) *
+   \   000000                       ; Param size: 0
+   \   000000 C3                    PUSH      BC                 ;; 1 cycle
+   \   000001                       ; Auto size: 0
+    239            GBL_task_list[n].enabled = 0;
+   \   000001 320A00                MOVW      BC, #0xA           ;; 1 cycle
+   \   000004 CEFB01                MULHU                        ;; 2 cycles
+   \   000007 04....                ADDW      AX, #GBL_task_list+6  ;; 1 cycle
+   \   00000A 16                    MOVW      HL, AX             ;; 1 cycle
+   \   00000B F6                    CLRW      AX                 ;; 1 cycle
+   \   00000C BB                    MOVW      [HL], AX           ;; 1 cycle
+    240          }
+   \   00000D C2                    POP       BC                 ;; 1 cycle
+   \   00000E D7                    RET                          ;; 6 cycles
+   \   00000F                       ; ------------------------------------- Block: 15 cycles
+   \   00000F                       ; ------------------------------------- Total: 15 cycles
+   \   00000F                       REQUIRE ?CLRL78_V1_0_L00
+    241          
+    242          /*****************************************************************************
+    243          Name:         Reschedule_Task
+    244          Parameters:   task pointer, new_timer_val
+    245          Returns:      none
+    246          Description:  Modifies the period at which a task will run.
+    247          *****************************************************************************/
+
+   \                                 In  segment CODE, align 1, keep-with-next
+    248          void Reschedule_Task(void (*task)(void), int new_timer_val)
+   \                     Reschedule_Task:
+    249          {
+   \   000000                       ; * Stack frame (at entry) *
+   \   000000                       ; Param size: 0
+   \   000000 C5                    PUSH      DE                 ;; 1 cycle
+   \   000001 C1                    PUSH      AX                 ;; 1 cycle
+   \   000002 C3                    PUSH      BC                 ;; 1 cycle
+   \   000003                       ; Auto size: 4
+    250            int i;
+    251            for (i=0; i<MAX_TASKS; i++) {
+   \   000003 F6                    CLRW      AX                 ;; 1 cycle
+   \   000004 16                    MOVW      HL, AX             ;; 1 cycle
+   \   000005                       ; ------------------------------------- Block: 5 cycles
+    252              if (GBL_task_list[i].task == task) {
+   \                     ??Reschedule_Task_0:
+   \   000005 17                    MOVW      AX, HL             ;; 1 cycle
+   \   000006 320A00                MOVW      BC, #0xA           ;; 1 cycle
+   \   000009 CEFB01                MULHU                        ;; 2 cycles
+   \   00000C FD....                CALL      N:?Subroutine2     ;; 3 cycles
+   \   00000F                       ; ------------------------------------- Block: 7 cycles
+   \                     ??CrossCallReturnLabel_6:
+   \   00000F A802                  MOVW      AX, [SP+0x02]      ;; 1 cycle
+   \   000011 12                    MOVW      BC, AX             ;; 1 cycle
+   \   000012 AA08                  MOVW      AX, [DE+0x08]      ;; 1 cycle
+   \   000014 43                    CMPW      AX, BC             ;; 1 cycle
+   \   000015 DF07                  BNZ       ??Disable_Task_8   ;; 4 cycles
+   \   000017                       ; ------------------------------------- Block: 8 cycles
+    253                GBL_task_list[i].period = new_timer_val;
+   \   000017 A800                  MOVW      AX, [SP]           ;; 1 cycle
+   \   000019 B9                    MOVW      [DE], AX           ;; 1 cycle
+    254                GBL_task_list[i].delay = new_timer_val;
+   \   00001A BA02                  MOVW      [DE+0x02], AX      ;; 1 cycle
+    255                return;
+   \   00001C EF05                  BR        S:??Disable_Task_9  ;; 3 cycles
+   \   00001E                       ; ------------------------------------- Block: 6 cycles
+    256              }
+    257            }
+   \                     ??Disable_Task_8:
+   \   00001E FD....                CALL      N:?Subroutine3     ;; 3 cycles
+   \   000021                       ; ------------------------------------- Block: 3 cycles
+   \                     ??CrossCallReturnLabel_11:
+   \   000021 DCE2                  BC        ??Reschedule_Task_0  ;; 4 cycles
+   \   000023                       ; ------------------------------------- Block: 4 cycles
+    258          }
+   \                     ??Disable_Task_9:
+   \   000023 1004                  ADDW      SP, #0x4           ;; 1 cycle
+   \   000025 C4                    POP       DE                 ;; 1 cycle
+   \   000026 D7                    RET                          ;; 6 cycles
+   \   000027                       ; ------------------------------------- Block: 8 cycles
+   \   000027                       ; ------------------------------------- Total: 41 cycles
+   \   000027                       REQUIRE ?CLRL78_V1_0_L00
+    259          
+    260          /*****************************************************************************
+    261          Name:         Enable_Task
+    262          Parameters:   task_number
+    263          Returns:      none
+    264          Description:  Set the "enabled" flag for the task, allowing it to be scheduled.
+    265          *****************************************************************************/
+
+   \                                 In  segment CODE, align 1, keep-with-next
+    266          void Enable_Task(void (*task)(void))
+   \                     Enable_Task:
+    267          {
+   \   000000                       ; * Stack frame (at entry) *
+   \   000000                       ; Param size: 0
+   \   000000 C3                    PUSH      BC                 ;; 1 cycle
+   \   000001 C5                    PUSH      DE                 ;; 1 cycle
+   \   000002 C1                    PUSH      AX                 ;; 1 cycle
+   \   000003                       ; Auto size: 2
+    268            int i;
+    269            for (i=0; i<MAX_TASKS; i++)
+   \   000003 F6                    CLRW      AX                 ;; 1 cycle
+   \   000004 16                    MOVW      HL, AX             ;; 1 cycle
+   \   000005                       ; ------------------------------------- Block: 5 cycles
+    270              if (GBL_task_list[i].task == task) {
+   \                     ??Enable_Task_0:
+   \   000005 17                    MOVW      AX, HL             ;; 1 cycle
+   \   000006 320A00                MOVW      BC, #0xA           ;; 1 cycle
+   \   000009 CEFB01                MULHU                        ;; 2 cycles
+   \   00000C FD....                CALL      N:?Subroutine2     ;; 3 cycles
+   \   00000F                       ; ------------------------------------- Block: 7 cycles
+   \                     ??CrossCallReturnLabel_7:
+   \   00000F A800                  MOVW      AX, [SP]           ;; 1 cycle
+   \   000011 12                    MOVW      BC, AX             ;; 1 cycle
+   \   000012 AA08                  MOVW      AX, [DE+0x08]      ;; 1 cycle
+   \   000014 43                    CMPW      AX, BC             ;; 1 cycle
+   \   000015 DF05                  BNZ       ??Disable_Task_10  ;; 4 cycles
+   \   000017                       ; ------------------------------------- Block: 8 cycles
+    271                GBL_task_list[i].enabled = 1;
+   \   000017 E6                    ONEW      AX                 ;; 1 cycle
+   \   000018 BA06                  MOVW      [DE+0x06], AX      ;; 1 cycle
+    272                return;
+   \   00001A EF05                  BR        S:??Disable_Task_11  ;; 3 cycles
+   \   00001C                       ; ------------------------------------- Block: 5 cycles
+    273              }
+   \                     ??Disable_Task_10:
+   \   00001C FD....                CALL      N:?Subroutine3     ;; 3 cycles
+   \   00001F                       ; ------------------------------------- Block: 3 cycles
+   \                     ??CrossCallReturnLabel_12:
+   \   00001F DCE4                  BC        ??Enable_Task_0    ;; 4 cycles
+   \   000021                       ; ------------------------------------- Total: 32 cycles
+   \   000021                       ; ------------------------------------- Block: 4 cycles
+    274          }
+   \                     ??Disable_Task_11:
+   \   000021                       REQUIRE ?CLRL78_V1_0_L00
+   \   000021                       REQUIRE ?Subroutine0
+   \   000021                       ; // Fall through to label ?Subroutine0
+
+   \                                 In  segment CODE, align 1, keep-with-next
+   \                     ?Subroutine0:
+   \   000000 1002                  ADDW      SP, #0x2           ;; 1 cycle
+   \   000002 C4                    POP       DE                 ;; 1 cycle
+   \   000003 C2                    POP       BC                 ;; 1 cycle
+   \   000004 D7                    RET                          ;; 6 cycles
+   \   000005                       ; ------------------------------------- Block: 9 cycles
+   \   000005                       ; ------------------------------------- Total: 9 cycles
+   \   000005                       REQUIRE ?CLRL78_V1_0_L00
+    275          
+    276          /*****************************************************************************
+    277          Name:         Disable_Task
+    278          Parameters:   task_number
+    279          Returns:      none
+    280          Description:  Clear the "enabled" flag for the task, keeping it from being
+    281          scheduled.
+    282          *****************************************************************************/
+
+   \                                 In  segment CODE, align 1, keep-with-next
+    283          void Disable_Task(void (*task)(void))
+   \                     Disable_Task:
+    284          {
+   \   000000                       ; * Stack frame (at entry) *
+   \   000000                       ; Param size: 0
+   \   000000 C3                    PUSH      BC                 ;; 1 cycle
+   \   000001 C5                    PUSH      DE                 ;; 1 cycle
+   \   000002 C1                    PUSH      AX                 ;; 1 cycle
+   \   000003                       ; Auto size: 2
+    285            int i;
+    286            for (i=0; i<MAX_TASKS; i++)
+   \   000003 F6                    CLRW      AX                 ;; 1 cycle
+   \   000004 16                    MOVW      HL, AX             ;; 1 cycle
+   \   000005                       ; ------------------------------------- Block: 5 cycles
+    287              if (GBL_task_list[i].task == task) {
+   \                     ??Disable_Task_12:
+   \   000005 17                    MOVW      AX, HL             ;; 1 cycle
+   \   000006 320A00                MOVW      BC, #0xA           ;; 1 cycle
+   \   000009 CEFB01                MULHU                        ;; 2 cycles
+   \   00000C FD....                CALL      N:?Subroutine2     ;; 3 cycles
+   \   00000F                       ; ------------------------------------- Block: 7 cycles
+   \                     ??CrossCallReturnLabel_8:
+   \   00000F A800                  MOVW      AX, [SP]           ;; 1 cycle
+   \   000011 12                    MOVW      BC, AX             ;; 1 cycle
+   \   000012 AA08                  MOVW      AX, [DE+0x08]      ;; 1 cycle
+   \   000014 43                    CMPW      AX, BC             ;; 1 cycle
+   \   000015 DF05                  BNZ       ??Disable_Task_13  ;; 4 cycles
+   \   000017                       ; ------------------------------------- Block: 8 cycles
+    288                GBL_task_list[i].enabled = 0;
+   \   000017 F6                    CLRW      AX                 ;; 1 cycle
+   \   000018 BA06                  MOVW      [DE+0x06], AX      ;; 1 cycle
+    289                return;
+   \   00001A EF05                  BR        S:??Disable_Task_14  ;; 3 cycles
+   \   00001C                       ; ------------------------------------- Block: 5 cycles
+    290              }
+   \                     ??Disable_Task_13:
+   \   00001C FD....                CALL      N:?Subroutine3     ;; 3 cycles
+   \   00001F                       ; ------------------------------------- Block: 3 cycles
+   \                     ??CrossCallReturnLabel_13:
+   \   00001F DCE4                  BC        ??Disable_Task_12  ;; 4 cycles
+   \   000021                       ; ------------------------------------- Block: 4 cycles
+    291          }
+   \                     ??Disable_Task_14:
+   \   000021 ED....                BR        N:?Subroutine0     ;; 3 cycles
+   \   000024                       ; ------------------------------------- Block: 3 cycles
+   \   000024                       ; ------------------------------------- Total: 35 cycles
+   \   000024                       REQUIRE ?CLRL78_V1_0_L00
+
+   Maximum stack usage in bytes:
+
+   CSTACK Function
+   ------ --------
+      4   Add_Task
+      6   Disable_Task
+      2   Disable_TaskN
+      6   Enable_Task
+      2   Enable_TaskN
+      0   Init_RTC_Scheduler
+        0   -> Init_Task_Timers
+      4   Init_Task_Timers
+      8   Remove_Task
+      6   Reschedule_Task
+      2   Reschedule_TaskN
+      8   Run_RTC_Scheduler
+        8   -- Indirect call
+      4   Run_TaskN
+      4   tick_timer_intr
+
+
+   Segment part sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       5  ?Subroutine0
+      12  ?Subroutine1
+       5  ?Subroutine2
+       8  ?Subroutine3
+      42  Add_Task
+      36  Disable_Task
+      15  Disable_TaskN
+      33  Enable_Task
+      15  Enable_TaskN
+       2  GBL_run_scheduler
+     100  GBL_task_list
+      14  Init_RTC_Scheduler
+      32  Init_Task_Timers
+      54  Remove_Task
+      39  Reschedule_Task
+      18  Reschedule_TaskN
+      77  Run_RTC_Scheduler
+      25  Run_TaskN
+       1  _A_P4
+       1  _A_PM4
+       1  i
+       2  num_ticks
+      66  tick_timer_intr
+       2  ticks_into_sec
+
+ 
+ 496 bytes in segment CODE
+   1 byte  in segment NEAR_A
+ 107 bytes in segment NEAR_Z
+   1 byte  in segment SADDR_A
+ 
+ 496 bytes of CODE memory
+ 107 bytes of DATA memory (+ 2 bytes shared)
+
+Errors: none
+Warnings: none

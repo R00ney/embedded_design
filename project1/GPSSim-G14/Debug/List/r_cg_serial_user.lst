@@ -1,0 +1,540 @@
+###############################################################################
+#                                                                             #
+# IAR C/C++ Compiler V1.30.5.50715 for RL78             19/Feb/2014  19:39:57 #
+# Copyright 2011-2013 IAR Systems AB.                                         #
+# Network license: ece-lic-19.ece.ncsu.edu (STD)                              #
+#                                                                             #
+#    Core         =  rl78_2                                                   #
+#    Code model   =  Near                                                     #
+#    Data model   =  Near                                                     #
+#                 =                                                           #
+#    Source file  =  C:\Users\Suddenlink\Dropbox\git_files\embedded_design\pr #
+#                    oject1\GPSSim-G14\applilet3_src\r_cg_serial_user.c       #
+#    Command line =  C:\Users\Suddenlink\Dropbox\git_files\embedded_design\pr #
+#                    oject1\GPSSim-G14\applilet3_src\r_cg_serial_user.c       #
+#                    --core rl78_2 --code_model near --data_model near        #
+#                    --near_const_location rom0 -o                            #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\pr #
+#                    oject1\GPSSim-G14\Debug\Obj\ --dlib_config "C:\Program   #
+#                    Files\IAR Systems\Embedded Workbench                     #
+#                    6.5\rl78\LIB\dlrl78nn2n.h" -e -Ohz --no_scheduling       #
+#                    --debug -lCN C:\Users\Suddenlink\Dropbox\git_files\embed #
+#                    ded_design\project1\GPSSim-G14\Debug\List\ -I            #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\pr #
+#                    oject1\GPSSim-G14/applilet3_src/\ -I                     #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\pr #
+#                    oject1\GPSSim-G14/Glyph/\ -I                             #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\pr #
+#                    oject1\GPSSim-G14/Glyph/Drivers/\ -I                     #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\pr #
+#                    oject1\GPSSim-G14/user_include/\ -I                      #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\pr #
+#                    oject1\GPSSim-G14/RTC/\                                  #
+#    List file    =  C:\Users\Suddenlink\Dropbox\git_files\embedded_design\pr #
+#                    oject1\GPSSim-G14\Debug\List\r_cg_serial_user.lst        #
+#    Object file  =  C:\Users\Suddenlink\Dropbox\git_files\embedded_design\pr #
+#                    oject1\GPSSim-G14\Debug\Obj\r_cg_serial_user.r87         #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+C:\Users\Suddenlink\Dropbox\git_files\embedded_design\project1\GPSSim-G14\applilet3_src\r_cg_serial_user.c
+      1          /***********************************************************************************************************************
+      2          * DISCLAIMER
+      3          * This software is supplied by Renesas Electronics Corporation and is only 
+      4          * intended for use with Renesas products. No other uses are authorized. This 
+      5          * software is owned by Renesas Electronics Corporation and is protected under 
+      6          * all applicable laws, including copyright laws.
+      7          * THIS SOFTWARE IS PROVIDED "AS IS" AND RENESAS MAKES NO WARRANTIES REGARDING 
+      8          * THIS SOFTWARE, WHETHER EXPRESS, IMPLIED OR STATUTORY, INCLUDING BUT NOT 
+      9          * LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE 
+     10          * AND NON-INFRINGEMENT.  ALL SUCH WARRANTIES ARE EXPRESSLY DISCLAIMED.
+     11          * TO THE MAXIMUM EXTENT PERMITTED NOT PROHIBITED BY LAW, NEITHER RENESAS 
+     12          * ELECTRONICS CORPORATION NOR ANY OF ITS AFFILIATED COMPANIES SHALL BE LIABLE 
+     13          * FOR ANY DIRECT, INDIRECT, SPECIAL, INCIDENTAL OR CONSEQUENTIAL DAMAGES FOR 
+     14          * ANY REASON RELATED TO THIS SOFTWARE, EVEN IF RENESAS OR ITS AFFILIATES HAVE 
+     15          * BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+     16          * Renesas reserves the right, without notice, to make changes to this software 
+     17          * and to discontinue the availability of this software.  By using this software, 
+     18          * you agree to the additional terms and conditions found by accessing the 
+     19          * following link:
+     20          * http://www.renesas.com/disclaimer
+     21          *
+     22          * Copyright (C) 2011, 2013 Renesas Electronics Corporation. All rights reserved.
+     23          ***********************************************************************************************************************/
+     24          
+     25          /***********************************************************************************************************************
+     26          * File Name    : r_cg_serial_user.c
+     27          * Version      : Applilet3 for RL78/G14 V2.00.00.08 [12 Apr 2013]
+     28          * Device(s)    : R5F104PJ
+     29          * Tool-Chain   : IAR Systems iccrl78
+     30          * Description  : This file implements device driver for Serial module.
+     31          * Creation Date: 2/7/2014
+     32          ***********************************************************************************************************************/
+     33          
+     34          /***********************************************************************************************************************
+     35          Includes
+     36          ***********************************************************************************************************************/
+     37          #include "r_cg_macrodriver.h"
+
+   \                                 In  segment NEAR_A, at 0xfff44
+   \   union <unnamed> volatile __sfr __no_bit_access _A_SDR02
+   \                     _A_SDR02:
+   \   000000                       DS 2
+
+   \                                 In  segment NEAR_A, at 0xfff46
+   \   union <unnamed> volatile __sfr __no_bit_access _A_SDR03
+   \                     _A_SDR03:
+   \   000000                       DS 2
+
+   \                                 In  segment NEAR_A, at 0xfff4a
+   \   union <unnamed> volatile __sfr __no_bit_access _A_SDR11
+   \                     _A_SDR11:
+   \   000000                       DS 2
+
+   \                                 In  segment NEAR_A, at 0xf0106
+   \   union <unnamed> const volatile __no_bit_access _A_SSR03
+   \                     _A_SSR03:
+   \   000000                       DS 2
+
+   \                                 In  segment NEAR_A, at 0xf010e
+   \   union <unnamed> volatile __no_bit_access _A_SIR03
+   \                     _A_SIR03:
+   \   000000                       DS 2
+
+   \                                 In  segment NEAR_A, at 0xf0142
+   \   union <unnamed> const volatile __no_bit_access _A_SSR11
+   \                     _A_SSR11:
+   \   000000                       DS 2
+
+   \                                 In  segment NEAR_A, at 0xf014a
+   \   union <unnamed> volatile __no_bit_access _A_SIR11
+   \                     _A_SIR11:
+   \   000000                       DS 2
+     38          #include "r_cg_serial.h"
+     39          /* Start user code for include. Do not edit comment generated here */
+     40          /* End user code. Do not edit comment generated here */
+     41          #include "r_cg_userdefine.h"
+     42          
+     43          /***********************************************************************************************************************
+     44          Global variables and functions
+     45          ***********************************************************************************************************************/
+     46          extern uint8_t * gp_uart1_tx_address;         /* uart1 send buffer address */
+     47          extern uint16_t  g_uart1_tx_count;            /* uart1 send data number */
+     48          extern uint8_t * gp_uart1_rx_address;         /* uart1 receive buffer address */
+     49          extern uint16_t  g_uart1_rx_count;            /* uart1 receive data number */
+     50          extern uint16_t  g_uart1_rx_length;           /* uart1 receive data length */
+     51          extern uint8_t * gp_csi21_rx_address;         /* csi21 receive buffer address */
+     52          extern uint16_t  g_csi21_rx_length;           /* csi21 receive data length */
+     53          extern uint16_t  g_csi21_rx_count;            /* csi21 receive data count */
+     54          extern uint8_t * gp_csi21_tx_address;         /* csi21 send buffer address */
+     55          extern uint16_t  g_csi21_send_length;         /* csi21 send data length */
+     56          extern uint16_t  g_csi21_tx_count;            /* csi21 send data count */
+     57          /* Start user code for global. Do not edit comment generated here */
+
+   \                                 In  segment NEAR_Z, align 1, align-sorted
+     58          volatile uint8_t G_UART_SendingData = 0;
+   \                     G_UART_SendingData:
+   \   000000                       DS 1
+   \   000001                       REQUIRE __INIT_NEAR_Z
+
+   \                                 In  segment NEAR_Z, align 1, align-sorted
+     59          volatile uint8_t G_UART_ReceivingData = 0;
+   \                     G_UART_ReceivingData:
+   \   000000                       DS 1
+   \   000001                       REQUIRE __INIT_NEAR_Z
+
+   \                                 In  segment NEAR_Z, align 1, align-sorted
+     60          volatile uint8_t G_SPI_SendingData = 0;
+   \                     G_SPI_SendingData:
+   \   000000                       DS 1
+   \   000001                       REQUIRE __INIT_NEAR_Z
+
+   \                                 In  segment NEAR_Z, align 1, align-sorted
+     61          volatile uint8_t G_SPI_ReceivingData = 0;
+   \                     G_SPI_ReceivingData:
+   \   000000                       DS 1
+   \   000001                       REQUIRE __INIT_NEAR_Z
+
+   \                                 In  segment NEAR_Z, align 1, align-sorted
+     62          volatile uint8_t G_IIC_SendingData = 0;
+   \                     G_IIC_SendingData:
+   \   000000                       DS 1
+   \   000001                       REQUIRE __INIT_NEAR_Z
+
+   \                                 In  segment NEAR_Z, align 1, align-sorted
+     63          volatile uint8_t G_IIC_ReceivingData = 0;
+   \                     G_IIC_ReceivingData:
+   \   000000                       DS 1
+   \   000001                       REQUIRE __INIT_NEAR_Z
+     64          /* End user code. Do not edit comment generated here */
+     65          
+     66          /***********************************************************************************************************************
+     67          * Function Name: r_uart1_interrupt_receive
+     68          * Description  : This function is INTSR1 interrupt service routine.
+     69          * Arguments    : None
+     70          * Return Value : None
+     71          ***********************************************************************************************************************/
+     72          #pragma vector = INTSR1_vect
+
+   \                                 In  segment CODE, align 1, keep-with-next
+     73          __interrupt static void r_uart1_interrupt_receive(void)
+   \                     r_uart1_interrupt_receive:
+     74          {
+   \   000000                       ; * Stack frame (at entry) *
+   \   000000                       ; Param size: 0
+   \   000000 C1                    PUSH      AX                 ;; 1 cycle
+   \   000001 C5                    PUSH      DE                 ;; 1 cycle
+   \   000002 C7                    PUSH      HL                 ;; 1 cycle
+   \   000003                       ; Auto size: 0
+     75              uint8_t rx_data;
+     76              uint8_t err_type;
+     77              
+     78              err_type = (uint8_t)(SSR03 & 0x0007U);
+     79              SIR03 = (uint16_t)err_type;
+   \   000003 AF0601                MOVW      AX, 0x106          ;; 1 cycle
+   \   000006 60                    MOV       A, X               ;; 1 cycle
+   \   000007 5C07                  AND       A, #0x7            ;; 1 cycle
+   \   000009 70                    MOV       X, A               ;; 1 cycle
+   \   00000A F1                    CLRB      A                  ;; 1 cycle
+   \   00000B BF0E01                MOVW      0x10E, AX          ;; 1 cycle
+     80          
+     81              if (err_type != 0U)
+     82              {
+     83                  r_uart1_callback_error(err_type);
+     84              }
+     85              
+     86              rx_data = RXD1;
+   \   00000E 8E46                  MOV       A, 0xFFF46         ;; 1 cycle
+     87          
+     88              if (g_uart1_rx_length > g_uart1_rx_count)
+   \   000010 EB....                MOVW      DE, N:g_uart1_rx_length  ;; 1 cycle
+   \   000013 FB....                MOVW      HL, N:g_uart1_rx_count  ;; 1 cycle
+   \   000016 37                    XCHW      AX, HL             ;; 1 cycle
+   \   000017 45                    CMPW      AX, DE             ;; 1 cycle
+   \   000018 17                    MOVW      AX, HL             ;; 1 cycle
+   \   000019 DE0E                  BNC       ??r_csi21_interrupt_0  ;; 4 cycles
+   \   00001B                       ; ------------------------------------- Block: 19 cycles
+     89              {
+     90                  *gp_uart1_rx_address = rx_data;
+   \   00001B FB....                MOVW      HL, N:gp_uart1_rx_address  ;; 1 cycle
+   \   00001E 9B                    MOV       [HL], A            ;; 1 cycle
+     91                  gp_uart1_rx_address++;
+   \   00001F AF....                MOVW      AX, N:gp_uart1_rx_address  ;; 1 cycle
+   \   000022 A1                    INCW      AX                 ;; 1 cycle
+   \   000023 BF....                MOVW      N:gp_uart1_rx_address, AX  ;; 1 cycle
+     92                  g_uart1_rx_count++;
+   \   000026 A2....                INCW      N:g_uart1_rx_count  ;; 2 cycles
+     93          
+     94                  if (g_uart1_rx_length == g_uart1_rx_count)
+   \   000029                       ; ------------------------------------- Block: 7 cycles
+     95                  {
+     96                      r_uart1_callback_receiveend();
+     97                  }
+     98              }
+     99              else
+    100              {
+    101                  r_uart1_callback_softwareoverrun(rx_data);
+    102              }
+    103          }
+   \                     ??r_csi21_interrupt_0:
+   \   000029 C6                    POP       HL                 ;; 1 cycle
+   \   00002A C4                    POP       DE                 ;; 1 cycle
+   \   00002B C0                    POP       AX                 ;; 1 cycle
+   \   00002C 61FC                  RETI                         ;; 6 cycles
+   \   00002E                       ; ------------------------------------- Block: 9 cycles
+   \   00002E                       ; ------------------------------------- Total: 35 cycles
+   \   00002E                       REQUIRE ?CLRL78_V1_0_L00
+   \   00002E                       REQUIRE _A_SSR03
+   \   00002E                       REQUIRE _A_SIR03
+   \   00002E                       REQUIRE _A_SDR03
+    104          
+    105          /***********************************************************************************************************************
+    106          * Function Name: r_uart1_interrupt_send
+    107          * Description  : This function is INTST1 interrupt service routine.
+    108          * Arguments    : None
+    109          * Return Value : None
+    110          ***********************************************************************************************************************/
+    111          #pragma vector = INTST1_vect
+
+   \                                 In  segment CODE, align 1, keep-with-next
+    112          __interrupt static void r_uart1_interrupt_send(void)
+   \                     r_uart1_interrupt_send:
+    113          {
+   \   000000                       ; * Stack frame (at entry) *
+   \   000000                       ; Param size: 0
+   \   000000 C1                    PUSH      AX                 ;; 1 cycle
+   \   000001 C7                    PUSH      HL                 ;; 1 cycle
+   \   000002                       ; Auto size: 0
+    114              if (g_uart1_tx_count > 0U)
+   \   000002 F6                    CLRW      AX                 ;; 1 cycle
+   \   000003 42....                CMPW      AX, N:g_uart1_tx_count  ;; 1 cycle
+   \   000006 DD0E                  BZ        ??r_csi21_interrupt_1  ;; 4 cycles
+   \   000008                       ; ------------------------------------- Block: 8 cycles
+    115              {
+    116                  TXD1 = *gp_uart1_tx_address;
+   \   000008 FB....                MOVW      HL, N:gp_uart1_tx_address  ;; 1 cycle
+   \   00000B 8B                    MOV       A, [HL]            ;; 1 cycle
+   \   00000C 9E44                  MOV       0xFFF44, A         ;; 1 cycle
+    117                  gp_uart1_tx_address++;
+   \   00000E 17                    MOVW      AX, HL             ;; 1 cycle
+   \   00000F A1                    INCW      AX                 ;; 1 cycle
+   \   000010 BF....                MOVW      N:gp_uart1_tx_address, AX  ;; 1 cycle
+    118                  g_uart1_tx_count--;
+   \   000013 B2....                DECW      N:g_uart1_tx_count  ;; 2 cycles
+   \   000016                       ; ------------------------------------- Block: 8 cycles
+    119              }
+    120              else
+    121              {
+    122                  r_uart1_callback_sendend();
+    123              }
+    124          }
+   \                     ??r_csi21_interrupt_1:
+   \   000016 C6                    POP       HL                 ;; 1 cycle
+   \   000017 C0                    POP       AX                 ;; 1 cycle
+   \   000018 61FC                  RETI                         ;; 6 cycles
+   \   00001A                       ; ------------------------------------- Block: 8 cycles
+   \   00001A                       ; ------------------------------------- Total: 24 cycles
+   \   00001A                       REQUIRE ?CLRL78_V1_0_L00
+   \   00001A                       REQUIRE _A_SDR02
+    125          
+    126          /***********************************************************************************************************************
+    127          * Function Name: r_uart1_callback_receiveend
+    128          * Description  : This function is a callback function when UART1 finishes reception.
+    129          * Arguments    : None
+    130          * Return Value : None
+    131          ***********************************************************************************************************************/
+    132          static void r_uart1_callback_receiveend(void)
+    133          {
+    134              /* Start user code. Do not edit comment generated here */
+    135              /* End user code. Do not edit comment generated here */
+    136          }
+    137          
+    138          /***********************************************************************************************************************
+    139          * Function Name: r_uart1_callback_softwareoverrun
+    140          * Description  : This function is a callback function when UART1 receives an overflow data.
+    141          * Arguments    : rx_data -
+    142          *                    receive data
+    143          * Return Value : None
+    144          ***********************************************************************************************************************/
+    145          static void r_uart1_callback_softwareoverrun(uint16_t rx_data)
+    146          {
+    147              /* Start user code. Do not edit comment generated here */
+    148              /* End user code. Do not edit comment generated here */
+    149          }
+    150          
+    151          /***********************************************************************************************************************
+    152          * Function Name: r_uart1_callback_sendend
+    153          * Description  : This function is a callback function when UART1 finishes transmission.
+    154          * Arguments    : None
+    155          * Return Value : None
+    156          ***********************************************************************************************************************/
+    157          static void r_uart1_callback_sendend(void)
+    158          {
+    159              /* Start user code. Do not edit comment generated here */
+    160              /* End user code. Do not edit comment generated here */
+    161          }
+    162          
+    163          /***********************************************************************************************************************
+    164          * Function Name: r_uart1_callback_error
+    165          * Description  : This function is a callback function when UART1 reception error occurs.
+    166          * Arguments    : err_type -
+    167          *                    error type value
+    168          * Return Value : None
+    169          ***********************************************************************************************************************/
+    170          static void r_uart1_callback_error(uint8_t err_type)
+    171          {
+    172              /* Start user code. Do not edit comment generated here */
+    173              /* End user code. Do not edit comment generated here */
+    174          }
+    175          
+    176          /***********************************************************************************************************************
+    177          * Function Name: r_csi21_interrupt
+    178          * Description  : This function is INTCSI21 interrupt service routine.
+    179          * Arguments    : None
+    180          * Return Value : None
+    181          ***********************************************************************************************************************/
+    182          #pragma vector = INTCSI21_vect
+
+   \                                 In  segment CODE, align 1, keep-with-next
+    183          __interrupt static void r_csi21_interrupt(void)
+   \                     r_csi21_interrupt:
+    184          {
+   \   000000                       ; * Stack frame (at entry) *
+   \   000000                       ; Param size: 0
+   \   000000 C1                    PUSH      AX                 ;; 1 cycle
+   \   000001 C7                    PUSH      HL                 ;; 1 cycle
+   \   000002                       ; Auto size: 2
+   \   000002 C1                    PUSH      AX                 ;; 1 cycle
+    185              uint8_t err_type;
+    186          
+    187              err_type = (uint8_t)(SSR11 & _0001_SAU_OVERRUN_ERROR);
+   \   000003 AF4201                MOVW      AX, 0x142          ;; 1 cycle
+   \   000006 60                    MOV       A, X               ;; 1 cycle
+   \   000007 5C01                  AND       A, #0x1            ;; 1 cycle
+   \   000009 9800                  MOV       [SP], A            ;; 1 cycle
+    188              SIR11 = (uint16_t)err_type;
+   \   00000B 70                    MOV       X, A               ;; 1 cycle
+   \   00000C F1                    CLRB      A                  ;; 1 cycle
+   \   00000D BF4A01                MOVW      0x14A, AX          ;; 1 cycle
+    189          
+    190              if (1U == err_type)
+   \   000010 AEF8                  MOVW      AX, SP             ;; 1 cycle
+   \   000012 16                    MOVW      HL, AX             ;; 1 cycle
+   \   000013 318329                BT        [HL].0, ??r_csi21_interrupt_2  ;; 5 cycles
+   \   000016                       ; ------------------------------------- Block: 17 cycles
+    191              {
+    192                  r_csi21_callback_error(err_type);    /* overrun error occurs */
+    193              }
+    194              else
+    195              {
+    196                  if (g_csi21_tx_count > 0U)
+   \   000016 F6                    CLRW      AX                 ;; 1 cycle
+   \   000017 42....                CMPW      AX, N:g_csi21_tx_count  ;; 1 cycle
+   \   00001A 8E4A                  MOV       A, 0xFFF4A         ;; 1 cycle
+   \   00001C FB....                MOVW      HL, N:gp_csi21_rx_address  ;; 1 cycle
+   \   00001F 9B                    MOV       [HL], A            ;; 1 cycle
+   \   000020 DD17                  BZ        ??r_csi21_interrupt_3  ;; 4 cycles
+   \   000022                       ; ------------------------------------- Block: 9 cycles
+    197                  {
+    198                      *gp_csi21_rx_address = SIO21;
+    199                      gp_csi21_rx_address++;
+   \   000022 AF....                MOVW      AX, N:gp_csi21_rx_address  ;; 1 cycle
+   \   000025 A1                    INCW      AX                 ;; 1 cycle
+   \   000026 BF....                MOVW      N:gp_csi21_rx_address, AX  ;; 1 cycle
+    200                      SIO21 = *gp_csi21_tx_address;
+   \   000029 FB....                MOVW      HL, N:gp_csi21_tx_address  ;; 1 cycle
+   \   00002C 8B                    MOV       A, [HL]            ;; 1 cycle
+   \   00002D 9E4A                  MOV       0xFFF4A, A         ;; 1 cycle
+    201                      gp_csi21_tx_address++;
+   \   00002F 17                    MOVW      AX, HL             ;; 1 cycle
+   \   000030 A1                    INCW      AX                 ;; 1 cycle
+   \   000031 BF....                MOVW      N:gp_csi21_tx_address, AX  ;; 1 cycle
+    202                      g_csi21_tx_count--;
+   \   000034 B2....                DECW      N:g_csi21_tx_count  ;; 2 cycles
+   \   000037 EF06                  BR        S:??r_csi21_interrupt_2  ;; 3 cycles
+   \   000039                       ; ------------------------------------- Block: 14 cycles
+    203                  }
+    204                  else 
+    205                  {
+    206                      if (0U == g_csi21_tx_count)
+    207                      {
+    208                          *gp_csi21_rx_address = SIO21;
+    209                      }
+    210          
+    211                      r_csi21_callback_sendend();    /* complete send */
+   \                     ??r_csi21_interrupt_3:
+   \   000039 F5....                CLRB      N:G_SPI_SendingData  ;; 1 cycle
+    212                      r_csi21_callback_receiveend();    /* complete receive */
+   \   00003C F5....                CLRB      N:G_SPI_ReceivingData  ;; 1 cycle
+    213                  }
+    214              }
+   \   00003F                       ; ------------------------------------- Block: 2 cycles
+    215          }
+   \                     ??r_csi21_interrupt_2:
+   \   00003F 1002                  ADDW      SP, #0x2           ;; 1 cycle
+   \   000041 C6                    POP       HL                 ;; 1 cycle
+   \   000042 C0                    POP       AX                 ;; 1 cycle
+   \   000043 61FC                  RETI                         ;; 6 cycles
+   \   000045                       ; ------------------------------------- Block: 9 cycles
+   \   000045                       ; ------------------------------------- Total: 51 cycles
+   \   000045                       REQUIRE ?CLRL78_V1_0_L00
+   \   000045                       REQUIRE _A_SSR11
+   \   000045                       REQUIRE _A_SIR11
+   \   000045                       REQUIRE _A_SDR11
+
+   \                                 In  segment INTVEC, offset 0x16, root
+   \   000016 ....                  DW r_csi21_interrupt
+
+   \                                 In  segment INTVEC, offset 0x24, root
+   \   000024 ....                  DW r_uart1_interrupt_send
+
+   \                                 In  segment INTVEC, offset 0x26, root
+   \   000026 ....                  DW r_uart1_interrupt_receive
+    216          
+    217          /***********************************************************************************************************************
+    218          * Function Name: r_csi21_callback_receiveend
+    219          * Description  : This function is a callback function when CSI21 finishes reception.
+    220          * Arguments    : None
+    221          * Return Value : None
+    222          ***********************************************************************************************************************/
+    223          static void r_csi21_callback_receiveend(void)
+    224          {
+    225              /* Start user code. Do not edit comment generated here */
+    226          	   G_SPI_ReceivingData = 0;
+    227              /* End user code. Do not edit comment generated here */
+    228          }
+    229          
+    230          /***********************************************************************************************************************
+    231          * Function Name: r_csi21_callback_error
+    232          * Description  : This function is a callback function when CSI21 reception error occurs.
+    233          * Arguments    : err_type -
+    234          *                    error type value
+    235          * Return Value : None
+    236          ***********************************************************************************************************************/
+    237          static void r_csi21_callback_error(uint8_t err_type)
+    238          {
+    239              /* Start user code. Do not edit comment generated here */
+    240              /* End user code. Do not edit comment generated here */
+    241          }
+    242          
+    243          /***********************************************************************************************************************
+    244          * Function Name: r_csi21_callback_sendend
+    245          * Description  : This function is a callback function when CSI21 finishes transmission.
+    246          * Arguments    : None
+    247          * Return Value : None
+    248          ***********************************************************************************************************************/
+    249          static void r_csi21_callback_sendend(void)
+    250          {
+    251              /* Start user code. Do not edit comment generated here */
+    252          	  G_SPI_SendingData = 0;
+    253          		/* End user code. Do not edit comment generated here */
+    254          }
+    255          
+    256          /* Start user code for adding. Do not edit comment generated here */
+    257          /* End user code. Do not edit comment generated here */
+
+   Maximum stack usage in bytes:
+
+   CSTACK Function
+   ------ --------
+      6   r_csi21_interrupt
+      6   r_uart1_interrupt_receive
+      4   r_uart1_interrupt_send
+
+
+   Segment part sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       2  ??r_csi21_interrupt??INTVEC 22
+       2  ??r_uart1_interrupt_receive??INTVEC 38
+       2  ??r_uart1_interrupt_send??INTVEC 36
+       1  G_IIC_ReceivingData
+       1  G_IIC_SendingData
+       1  G_SPI_ReceivingData
+       1  G_SPI_SendingData
+       1  G_UART_ReceivingData
+       1  G_UART_SendingData
+       2  _A_SDR02
+       2  _A_SDR03
+       2  _A_SDR11
+       2  _A_SIR03
+       2  _A_SIR11
+       2  _A_SSR03
+       2  _A_SSR11
+      69  r_csi21_interrupt
+      46  r_uart1_interrupt_receive
+      26  r_uart1_interrupt_send
+
+ 
+ 141 bytes in segment CODE
+   6 bytes in segment INTVEC
+  14 bytes in segment NEAR_A
+   6 bytes in segment NEAR_Z
+ 
+ 141 bytes of CODE memory (+  6 bytes shared)
+   6 bytes of DATA memory (+ 14 bytes shared)
+
+Errors: none
+Warnings: none

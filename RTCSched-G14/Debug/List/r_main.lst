@@ -1,0 +1,288 @@
+###############################################################################
+#                                                                             #
+# IAR C/C++ Compiler V1.30.5.50715 for RL78             19/Feb/2014  10:50:36 #
+# Copyright 2011-2013 IAR Systems AB.                                         #
+# Network license: ece-lic-19.ece.ncsu.edu (STD)                              #
+#                                                                             #
+#    Core         =  rl78_2                                                   #
+#    Code model   =  Near                                                     #
+#    Data model   =  Near                                                     #
+#                 =                                                           #
+#    Source file  =  C:\Users\Suddenlink\Dropbox\git_files\embedded_design\RT #
+#                    CSched-G14\applilet3_src\r_main.c                        #
+#    Command line =  C:\Users\Suddenlink\Dropbox\git_files\embedded_design\RT #
+#                    CSched-G14\applilet3_src\r_main.c --core rl78_2          #
+#                    --code_model near --data_model near                      #
+#                    --near_const_location rom0 -o                            #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\RT #
+#                    CSched-G14\Debug\Obj\ --dlib_config "C:\Program          #
+#                    Files\IAR Systems\Embedded Workbench                     #
+#                    6.5\rl78\LIB\dlrl78nn2n.h" -e -Ohz --no_scheduling       #
+#                    --debug -lCN C:\Users\Suddenlink\Dropbox\git_files\embed #
+#                    ded_design\RTCSched-G14\Debug\List\ -I                   #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\RT #
+#                    CSched-G14/applilet3_src/\ -I                            #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\RT #
+#                    CSched-G14/Glyph/\ -I C:\Users\Suddenlink\Dropbox\git_fi #
+#                    les\embedded_design\RTCSched-G14/Glyph/Drivers/\ -I      #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\RT #
+#                    CSched-G14/user_include/\ -I                             #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\RT #
+#                    CSched-G14/RTC/\                                         #
+#    List file    =  C:\Users\Suddenlink\Dropbox\git_files\embedded_design\RT #
+#                    CSched-G14\Debug\List\r_main.lst                         #
+#    Object file  =  C:\Users\Suddenlink\Dropbox\git_files\embedded_design\RT #
+#                    CSched-G14\Debug\Obj\r_main.r87                          #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+C:\Users\Suddenlink\Dropbox\git_files\embedded_design\RTCSched-G14\applilet3_src\r_main.c
+      1          /***********************************************************************************************************************
+      2          * DISCLAIMER
+      3          * This software is supplied by Renesas Electronics Corporation and is only 
+      4          * intended for use with Renesas products. No other uses are authorized. This 
+      5          * software is owned by Renesas Electronics Corporation and is protected under 
+      6          * all applicable laws, including copyright laws.
+      7          * THIS SOFTWARE IS PROVIDED "AS IS" AND RENESAS MAKES NO WARRANTIES REGARDING 
+      8          * THIS SOFTWARE, WHETHER EXPRESS, IMPLIED OR STATUTORY, INCLUDING BUT NOT 
+      9          * LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE 
+     10          * AND NON-INFRINGEMENT.  ALL SUCH WARRANTIES ARE EXPRESSLY DISCLAIMED.
+     11          * TO THE MAXIMUM EXTENT PERMITTED NOT PROHIBITED BY LAW, NEITHER RENESAS 
+     12          * ELECTRONICS CORPORATION NOR ANY OF ITS AFFILIATED COMPANIES SHALL BE LIABLE 
+     13          * FOR ANY DIRECT, INDIRECT, SPECIAL, INCIDENTAL OR CONSEQUENTIAL DAMAGES FOR 
+     14          * ANY REASON RELATED TO THIS SOFTWARE, EVEN IF RENESAS OR ITS AFFILIATES HAVE 
+     15          * BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+     16          * Renesas reserves the right, without notice, to make changes to this software 
+     17          * and to discontinue the availability of this software.  By using this software, 
+     18          * you agree to the additional terms and conditions found by accessing the 
+     19          * following link:
+     20          * http://www.renesas.com/disclaimer
+     21          *
+     22          * Copyright (C) 2011, 2013 Renesas Electronics Corporation. All rights reserved.
+     23          ***********************************************************************************************************************/
+     24          
+     25          /***********************************************************************************************************************
+     26          * File Name    : r_main.c
+     27          * Version      : Applilet3 for RL78/G14 V2.00.00.08 [12 Apr 2013]
+     28          * Device(s)    : R5F104PJ
+     29          * Tool-Chain   : IAR Systems iccrl78
+     30          * Description  : This file implements main function.
+     31          * Creation Date: 2/5/2014
+     32          ***********************************************************************************************************************/
+     33          
+     34          /***********************************************************************************************************************
+     35          Includes
+     36          ***********************************************************************************************************************/
+     37          #include "r_cg_macrodriver.h"
+     38          #include "r_cg_cgc.h"
+     39          #include "r_cg_port.h"
+     40          #include "r_cg_serial.h"
+     41          #include "r_cg_adc.h"
+     42          #include "r_cg_it.h"
+     43          /* Start user code for include. Do not edit comment generated here */
+     44          #include "lcd.h"
+     45          #include "RDKRL78_spi.h"
+     46          #include "tasks.h"
+     47          #include "rtc_sched.h"
+     48          /* End user code. Do not edit comment generated here */
+     49          #include "r_cg_userdefine.h"
+     50          
+     51          /***********************************************************************************************************************
+     52          Global variables and functions
+     53          ***********************************************************************************************************************/
+     54          /* Start user code for global. Do not edit comment generated here */
+     55          /* End user code. Do not edit comment generated here */
+     56          
+     57          /* Set option bytes */
+     58          #pragma location = "OPTBYTE"
+
+   \                                 In  segment OPTBYTE, align 1, root
+     59          __root const uint8_t opbyte0 = 0xEFU;
+   \                     opbyte0:
+   \   000000 EF                    DB 239
+     60          #pragma location = "OPTBYTE"
+
+   \                                 In  segment OPTBYTE, align 1, root
+     61          __root const uint8_t opbyte1 = 0xFFU;
+   \                     opbyte1:
+   \   000000 FF                    DB 255
+     62          #pragma location = "OPTBYTE"
+
+   \                                 In  segment OPTBYTE, align 1, root
+     63          __root const uint8_t opbyte2 = 0xF8U;
+   \                     opbyte2:
+   \   000000 F8                    DB 248
+     64          #pragma location = "OPTBYTE"
+
+   \                                 In  segment OPTBYTE, align 1, root
+     65          __root const uint8_t opbyte3 = 0x85U;
+   \                     opbyte3:
+   \   000000 85                    DB 133
+     66          
+     67          /* Set security ID */
+     68          #pragma location = "SECUID"
+
+   \                                 In  segment SECUID, align 2, root
+     69          __root const uint8_t secuid[10] = 
+   \                     secuid:
+   \   000000 000000000000          DB 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+     70              {0x00U, 0x00U, 0x00U, 0x00U, 0x00U, 0x00U, 0x00U, 0x00U, 0x00U, 0x00U};
+     71          /* Secure trace RAM area */
+
+   \                                 In  segment NEAR_A, at 0xfa300, root
+     72          __no_init __root unsigned char ocdtraceram[1024] @ 0xFA300;
+   \                     ocdtraceram:
+   \   000000                       DS 1024
+     73          
+     74          void R_MAIN_UserInit(void);
+     75          
+     76          /***********************************************************************************************************************
+     77          * Function Name: main
+     78          * Description  : This function implements main function.
+     79          * Arguments    : None
+     80          * Return Value : None
+     81          ***********************************************************************************************************************/
+
+   \                                 In  segment CODE, align 1, keep-with-next
+     82          void main(void)
+   \                     main:
+     83          {
+   \   000000                       ; * Stack frame (at entry) *
+   \   000000                       ; Param size: 0
+   \   000000 C3                    PUSH      BC                 ;; 1 cycle
+   \   000001 C5                    PUSH      DE                 ;; 1 cycle
+   \   000002                       ; Auto size: 0
+     84              R_MAIN_UserInit();
+   \   000002 717AFA                EI                           ;; 2 cycles
+     85              /* Start user code. Do not edit comment generated here */
+     86          
+     87          
+     88              R_IT_Start(); 						/* Start interval timer (for RTC_Scheduler) */
+   \   000005 FD....                CALL      R_IT_Start         ;; 3 cycles
+     89              SPI_Init();               /* LCD SPI initialization */
+   \   000008 FD....                CALL      SPI_Init           ;; 3 cycles
+     90              LCDInit();              	/* LCD controller initialization*/
+   \   00000B FD....                CALL      LCDInit            ;; 3 cycles
+     91          
+     92              LCDFont(FONT_LARGE);
+   \   00000E E1                    ONEB      A                  ;; 1 cycle
+   \   00000F FD....                CALL      LCDFont            ;; 3 cycles
+     93              LCDString("RTC Demo",1,1);
+   \   000012 E2                    ONEB      C                  ;; 1 cycle
+   \   000013 E3                    ONEB      B                  ;; 1 cycle
+   \   000014 30....                MOVW      AX, #`?<Constant "RTC Demo">`  ;; 1 cycle
+   \   000017 FD....                CALL      LCDString          ;; 3 cycles
+     94          
+     95              Init_RTC_Scheduler();
+   \   00001A FD....                CALL      Init_RTC_Scheduler  ;; 3 cycles
+     96          
+     97              Add_Task(Task1, RTC_FREQ_TO_TICKS(11), 1);  /* Flash LED at 5.5 Hz */
+   \   00001D E6                    ONEW      AX                 ;; 1 cycle
+   \   00001E 14                    MOVW      DE, AX             ;; 1 cycle
+   \   00001F 325A00                MOVW      BC, #0x5A          ;; 1 cycle
+   \   000022 30....                MOVW      AX, #Task1         ;; 1 cycle
+   \   000025 FD....                CALL      Add_Task           ;; 3 cycles
+     98              Add_Task(Task2, RTC_FREQ_TO_TICKS(4), 2);   /* Flash LED at 2 Hz */
+   \   000028 340200                MOVW      DE, #0x2           ;; 1 cycle
+   \   00002B 32FA00                MOVW      BC, #0xFA          ;; 1 cycle
+   \   00002E 30....                MOVW      AX, #Task2         ;; 1 cycle
+   \   000031 FD....                CALL      Add_Task           ;; 3 cycles
+     99              Add_Task(Task3, RTC_FREQ_TO_TICKS(1), 3);   /* Update LCD at 1 Hz task frequency */
+   \   000034 340300                MOVW      DE, #0x3           ;; 1 cycle
+   \   000037 32E803                MOVW      BC, #0x3E8         ;; 1 cycle
+   \   00003A 30....                MOVW      AX, #Task3         ;; 1 cycle
+   \   00003D FD....                CALL      Add_Task           ;; 3 cycles
+    100          
+    101              Run_RTC_Scheduler();
+   \   000040 FD....                CALL      Run_RTC_Scheduler  ;; 3 cycles
+   \   000043                       ; ------------------------------------- Block: 48 cycles
+    102          
+    103              while (1U)
+   \                     ??main_0:
+   \   000043 EFFE                  BR        S:??main_0         ;; 3 cycles
+   \   000045                       ; ------------------------------------- Block: 3 cycles
+   \   000045                       ; ------------------------------------- Total: 51 cycles
+   \   000045                       REQUIRE ?CLRL78_V1_0_L00
+    104              {
+    105                ;
+    106              }
+    107              /* End user code. Do not edit comment generated here */
+    108          }
+    109          
+    110          
+    111          /***********************************************************************************************************************
+    112          * Function Name: R_MAIN_UserInit
+    113          * Description  : This function adds user code before implementing main function.
+    114          * Arguments    : None
+    115          * Return Value : None
+    116          ***********************************************************************************************************************/
+
+   \                                 In  segment CODE, align 1, keep-with-next
+    117          void R_MAIN_UserInit(void)
+   \                     R_MAIN_UserInit:
+    118          {
+   \   000000                       ; * Stack frame (at entry) *
+   \   000000                       ; Param size: 0
+   \   000000                       ; Auto size: 0
+    119              /* Start user code. Do not edit comment generated here */
+    120              EI();
+   \   000000 717AFA                EI                           ;; 2 cycles
+    121              /* End user code. Do not edit comment generated here */
+    122          }
+   \   000003 D7                    RET                          ;; 6 cycles
+   \   000004                       ; ------------------------------------- Block: 8 cycles
+   \   000004                       ; ------------------------------------- Total: 8 cycles
+   \   000004                       REQUIRE ?CLRL78_V1_0_L00
+
+   \                                 In  segment NEAR_CONST, align 2
+   \                     `?<Constant "RTC Demo">`:
+   \   000000 525443204465          DB "RTC Demo"
+   \   000009 00                    DB 0
+    123          
+    124          /* Start user code for adding. Do not edit comment generated here */
+    125          /* End user code. Do not edit comment generated here */
+
+   Maximum stack usage in bytes:
+
+   CSTACK Function
+   ------ --------
+      0   R_MAIN_UserInit
+      4   main
+        4   -> Add_Task
+        4   -> Init_RTC_Scheduler
+        4   -> LCDFont
+        4   -> LCDInit
+        4   -> LCDString
+        4   -> R_IT_Start
+        4   -> Run_RTC_Scheduler
+        4   -> SPI_Init
+
+
+   Segment part sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+      10  ?<Constant "RTC Demo">
+       4  R_MAIN_UserInit
+      69  main
+    1024  ocdtraceram
+       1  opbyte0
+       1  opbyte1
+       1  opbyte2
+       1  opbyte3
+      10  secuid
+
+ 
+    73 bytes in segment CODE
+ 1 024 bytes in segment NEAR_A
+    10 bytes in segment NEAR_CONST
+     4 bytes in segment OPTBYTE
+    10 bytes in segment SECUID
+ 
+ 73 bytes of CODE  memory
+ 24 bytes of CONST memory
+  0 bytes of DATA  memory (+ 1 024 bytes shared)
+
+Errors: none
+Warnings: none

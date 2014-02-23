@@ -1,0 +1,322 @@
+###############################################################################
+#                                                                             #
+# IAR C/C++ Compiler V1.30.5.50715 for RL78             22/Feb/2014  22:48:56 #
+# Copyright 2011-2013 IAR Systems AB.                                         #
+# Network license: ece-lic-19.ece.ncsu.edu (STD)                              #
+#                                                                             #
+#    Core         =  rl78_2                                                   #
+#    Code model   =  Near                                                     #
+#    Data model   =  Near                                                     #
+#                 =                                                           #
+#    Source file  =  C:\Users\Suddenlink\Dropbox\git_files\embedded_design\pr #
+#                    oject1\modified_RTCSched-G14\applilet3_src\r_main.c      #
+#    Command line =  C:\Users\Suddenlink\Dropbox\git_files\embedded_design\pr #
+#                    oject1\modified_RTCSched-G14\applilet3_src\r_main.c      #
+#                    --core rl78_2 --code_model near --data_model near        #
+#                    --near_const_location rom0 -o                            #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\pr #
+#                    oject1\modified_RTCSched-G14\Debug\Obj\ --dlib_config    #
+#                    "C:\Program Files\IAR Systems\Embedded Workbench         #
+#                    6.5\rl78\LIB\dlrl78nn2n.h" -e -Ohz --no_scheduling       #
+#                    --debug -lCN C:\Users\Suddenlink\Dropbox\git_files\embed #
+#                    ded_design\project1\modified_RTCSched-G14\Debug\List\    #
+#                    -I C:\Users\Suddenlink\Dropbox\git_files\embedded_design #
+#                    \project1\modified_RTCSched-G14/applilet3_src/\ -I       #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\pr #
+#                    oject1\modified_RTCSched-G14/Glyph/\ -I                  #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\pr #
+#                    oject1\modified_RTCSched-G14/Glyph/Drivers/\ -I          #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\pr #
+#                    oject1\modified_RTCSched-G14/user_include/\ -I           #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\pr #
+#                    oject1\modified_RTCSched-G14/RTC/\ -I                    #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\pr #
+#                    oject1\modified_RTCSched-G14/Queu/\                      #
+#    List file    =  C:\Users\Suddenlink\Dropbox\git_files\embedded_design\pr #
+#                    oject1\modified_RTCSched-G14\Debug\List\r_main.lst       #
+#    Object file  =  C:\Users\Suddenlink\Dropbox\git_files\embedded_design\pr #
+#                    oject1\modified_RTCSched-G14\Debug\Obj\r_main.r87        #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+C:\Users\Suddenlink\Dropbox\git_files\embedded_design\project1\modified_RTCSched-G14\applilet3_src\r_main.c
+      1          /***********************************************************************************************************************
+      2          * DISCLAIMER
+      3          * This software is supplied by Renesas Electronics Corporation and is only 
+      4          * intended for use with Renesas products. No other uses are authorized. This 
+      5          * software is owned by Renesas Electronics Corporation and is protected under 
+      6          * all applicable laws, including copyright laws.
+      7          * THIS SOFTWARE IS PROVIDED "AS IS" AND RENESAS MAKES NO WARRANTIES REGARDING 
+      8          * THIS SOFTWARE, WHETHER EXPRESS, IMPLIED OR STATUTORY, INCLUDING BUT NOT 
+      9          * LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE 
+     10          * AND NON-INFRINGEMENT.  ALL SUCH WARRANTIES ARE EXPRESSLY DISCLAIMED.
+     11          * TO THE MAXIMUM EXTENT PERMITTED NOT PROHIBITED BY LAW, NEITHER RENESAS 
+     12          * ELECTRONICS CORPORATION NOR ANY OF ITS AFFILIATED COMPANIES SHALL BE LIABLE 
+     13          * FOR ANY DIRECT, INDIRECT, SPECIAL, INCIDENTAL OR CONSEQUENTIAL DAMAGES FOR 
+     14          * ANY REASON RELATED TO THIS SOFTWARE, EVEN IF RENESAS OR ITS AFFILIATES HAVE 
+     15          * BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+     16          * Renesas reserves the right, without notice, to make changes to this software 
+     17          * and to discontinue the availability of this software.  By using this software, 
+     18          * you agree to the additional terms and conditions found by accessing the 
+     19          * following link:
+     20          * http://www.renesas.com/disclaimer
+     21          *
+     22          * Copyright (C) 2011, 2013 Renesas Electronics Corporation. All rights reserved.
+     23          ***********************************************************************************************************************/
+     24          
+     25          /***********************************************************************************************************************
+     26          * File Name    : r_main.c
+     27          * Version      : Applilet3 for RL78/G14 V2.01.00.02 [09 Aug 2013]
+     28          * Device(s)    : R5F104PJ
+     29          * Tool-Chain   : IAR Systems iccrl78
+     30          * Description  : This file implements main function.
+     31          * Creation Date: 2/19/2014
+     32          ***********************************************************************************************************************/
+     33          
+     34          /***********************************************************************************************************************
+     35          Includes
+     36          ***********************************************************************************************************************/
+     37          #include "r_cg_macrodriver.h"
+     38          #include "r_cg_cgc.h"
+     39          #include "r_cg_port.h"
+     40          #include "r_cg_serial.h"
+     41          #include "r_cg_adc.h"
+     42          #include "r_cg_it.h"
+     43          /* Start user code for include. Do not edit comment generated here */
+     44          #include "lcd.h"
+     45          #include "RDKRL78_spi.h"
+     46          #include "tasks.h"
+     47          #include "rtc_sched.h"
+     48          #include "queu.h"
+     49          /* End user code. Do not edit comment generated here */
+     50          #include "r_cg_userdefine.h"
+     51          
+     52          /***********************************************************************************************************************
+     53          Global variables and functions
+     54          ***********************************************************************************************************************/
+     55          /* Start user code for global. Do not edit comment generated here */
+     56          extern Q_T  rx_q;      //recieve queu
+     57          /* End user code. Do not edit comment generated here */
+     58          
+     59          /* Set option bytes */
+     60          #pragma location = "OPTBYTE"
+
+   \                                 In  segment OPTBYTE, align 1, root
+     61          __root const uint8_t opbyte0 = 0xEFU;
+   \                     opbyte0:
+   \   000000 EF                    DB 239
+     62          #pragma location = "OPTBYTE"
+
+   \                                 In  segment OPTBYTE, align 1, root
+     63          __root const uint8_t opbyte1 = 0xFFU;
+   \                     opbyte1:
+   \   000000 FF                    DB 255
+     64          #pragma location = "OPTBYTE"
+
+   \                                 In  segment OPTBYTE, align 1, root
+     65          __root const uint8_t opbyte2 = 0xF8U;
+   \                     opbyte2:
+   \   000000 F8                    DB 248
+     66          #pragma location = "OPTBYTE"
+
+   \                                 In  segment OPTBYTE, align 1, root
+     67          __root const uint8_t opbyte3 = 0x85U;
+   \                     opbyte3:
+   \   000000 85                    DB 133
+     68          
+     69          /* Set security ID */
+     70          #pragma location = "SECUID"
+
+   \                                 In  segment SECUID, align 2, root
+     71          __root const uint8_t secuid[10] = 
+   \                     secuid:
+   \   000000 000000000000          DB 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+     72              {0x00U, 0x00U, 0x00U, 0x00U, 0x00U, 0x00U, 0x00U, 0x00U, 0x00U, 0x00U};
+     73          /* Secure trace RAM area */
+
+   \                                 In  segment NEAR_A, at 0xfa300, root
+     74          __no_init __root unsigned char ocdtraceram[1024] @ 0xFA300;
+   \                     ocdtraceram:
+   \   000000                       DS 1024
+     75          
+     76          void R_MAIN_UserInit(void);
+     77          
+     78          /***********************************************************************************************************************
+     79          * Function Name: main
+     80          * Description  : This function implements main function.
+     81          * Arguments    : None
+     82          * Return Value : None
+     83          ***********************************************************************************************************************/
+
+   \                                 In  segment CODE, align 1, keep-with-next
+     84          void main(void)
+   \                     main:
+     85          {
+   \   000000                       ; * Stack frame (at entry) *
+   \   000000                       ; Param size: 0
+   \   000000 C3                    PUSH      BC                 ;; 1 cycle
+   \   000001 C5                    PUSH      DE                 ;; 1 cycle
+   \   000002                       ; Auto size: 2
+   \   000002 C1                    PUSH      AX                 ;; 1 cycle
+     86              R_MAIN_UserInit();
+   \   000003 717AFA                EI                           ;; 2 cycles
+     87              /* Start user code. Do not edit comment generated here */
+     88          
+     89          
+     90              R_IT_Start(); 						/* Start interval timer (for RTC_Scheduler) */
+   \   000006 FD....                CALL      R_IT_Start         ;; 3 cycles
+     91              SPI_Init();               /* LCD SPI initialization */
+   \   000009 FD....                CALL      SPI_Init           ;; 3 cycles
+     92              LCDInit();              	/* LCD controller initialization*/
+   \   00000C FD....                CALL      LCDInit            ;; 3 cycles
+     93          
+     94              LCDFont(FONT_SMALL);
+   \   00000F F1                    CLRB      A                  ;; 1 cycle
+   \   000010 FD....                CALL      LCDFont            ;; 3 cycles
+     95              LCDString("ngohara",1,1);
+   \   000013 E2                    ONEB      C                  ;; 1 cycle
+   \   000014 E3                    ONEB      B                  ;; 1 cycle
+   \   000015 30....                MOVW      AX, #`?<Constant "ngohara">`  ;; 1 cycle
+   \   000018 FD....                CALL      LCDString          ;; 3 cycles
+     96          
+     97              //Debug_Decode();
+     98              
+     99              Init_RTC_Scheduler();
+   \   00001B FD....                CALL      Init_RTC_Scheduler  ;; 3 cycles
+    100              
+    101              //start Queu
+    102              Q_Init( &rx_q);
+   \   00001E 30....                MOVW      AX, #rx_q          ;; 1 cycle
+   \   000021 FD....                CALL      Q_Init             ;; 3 cycles
+    103              ///*  
+    104              //Start Serial Recieve 
+    105              //uint8_t * const rx_buf, uint16_t rx_num
+    106               uint8_t * rx_address;
+    107               uint8_t rx_buff[2];
+    108               rx_address = rx_buff; 
+    109              R_UART1_Receive(rx_address, 2);
+   \   000024 320200                MOVW      BC, #0x2           ;; 1 cycle
+   \   000027 AEF8                  MOVW      AX, SP             ;; 1 cycle
+   \   000029 FD....                CALL      R_UART1_Receive    ;; 3 cycles
+    110              //*/  
+    111              //Add_Task(Task1, RTC_FREQ_TO_TICKS(11), 1);  // Flash LED at 5.5 Hz 
+    112              Add_Task(Task1, 0, 1);
+   \   00002C E6                    ONEW      AX                 ;; 1 cycle
+   \   00002D 14                    MOVW      DE, AX             ;; 1 cycle
+   \   00002E F7                    CLRW      BC                 ;; 1 cycle
+   \   00002F 30....                MOVW      AX, #Task1         ;; 1 cycle
+   \   000032 FD....                CALL      Add_Task           ;; 3 cycles
+    113              //Add_Task(Task2, RTC_FREQ_TO_TICKS(4), 2);   // Flash LED at 2 Hz 
+    114              ///*
+    115              Add_Task(Task2, 0, 2);  //decode NMEA 
+   \   000035 340200                MOVW      DE, #0x2           ;; 1 cycle
+   \   000038 F7                    CLRW      BC                 ;; 1 cycle
+   \   000039 30....                MOVW      AX, #Task2         ;; 1 cycle
+   \   00003C FD....                CALL      Add_Task           ;; 3 cycles
+    116              Add_Task(Task3, RTC_FREQ_TO_TICKS(10), 3);   // Update LCD at 1 Hz task frequency 
+   \   00003F 340300                MOVW      DE, #0x3           ;; 1 cycle
+   \   000042 326400                MOVW      BC, #0x64          ;; 1 cycle
+   \   000045 30....                MOVW      AX, #Task3         ;; 1 cycle
+   \   000048 FD....                CALL      Add_Task           ;; 3 cycles
+    117          
+    118              
+    119              
+    120              R_UART1_Start();
+   \   00004B FD....                CALL      R_UART1_Start      ;; 3 cycles
+    121              //*/
+    122              Run_RTC_Scheduler();
+   \   00004E FD....                CALL      Run_RTC_Scheduler  ;; 3 cycles
+   \   000051                       ; ------------------------------------- Block: 61 cycles
+    123              
+    124              
+    125              while (1U)
+   \                     ??main_0:
+   \   000051 EFFE                  BR        S:??main_0         ;; 3 cycles
+   \   000053                       ; ------------------------------------- Block: 3 cycles
+   \   000053                       ; ------------------------------------- Total: 64 cycles
+   \   000053                       REQUIRE ?CLRL78_V1_0_L00
+    126              {
+    127                ;
+    128              }
+    129              /* End user code. Do not edit comment generated here */
+    130          }
+    131          
+    132          
+    133          /***********************************************************************************************************************
+    134          * Function Name: R_MAIN_UserInit
+    135          * Description  : This function adds user code before implementing main function.
+    136          * Arguments    : None
+    137          * Return Value : None
+    138          ***********************************************************************************************************************/
+
+   \                                 In  segment CODE, align 1, keep-with-next
+    139          void R_MAIN_UserInit(void)
+   \                     R_MAIN_UserInit:
+    140          {
+   \   000000                       ; * Stack frame (at entry) *
+   \   000000                       ; Param size: 0
+   \   000000                       ; Auto size: 0
+    141              /* Start user code. Do not edit comment generated here */
+    142              EI();
+   \   000000 717AFA                EI                           ;; 2 cycles
+    143              /* End user code. Do not edit comment generated here */
+    144          }
+   \   000003 D7                    RET                          ;; 6 cycles
+   \   000004                       ; ------------------------------------- Block: 8 cycles
+   \   000004                       ; ------------------------------------- Total: 8 cycles
+   \   000004                       REQUIRE ?CLRL78_V1_0_L00
+
+   \                                 In  segment NEAR_CONST, align 2
+   \                     `?<Constant "ngohara">`:
+   \   000000 6E676F686172          DB "ngohara"
+    145          
+    146          /* Start user code for adding. Do not edit comment generated here */
+    147          /* End user code. Do not edit comment generated here */
+
+   Maximum stack usage in bytes:
+
+   CSTACK Function
+   ------ --------
+      0   R_MAIN_UserInit
+      6   main
+        6   -> Add_Task
+        6   -> Init_RTC_Scheduler
+        6   -> LCDFont
+        6   -> LCDInit
+        6   -> LCDString
+        6   -> Q_Init
+        6   -> R_IT_Start
+        6   -> R_UART1_Receive
+        6   -> R_UART1_Start
+        6   -> Run_RTC_Scheduler
+        6   -> SPI_Init
+
+
+   Segment part sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       8  ?<Constant "ngohara">
+       4  R_MAIN_UserInit
+      83  main
+    1024  ocdtraceram
+       1  opbyte0
+       1  opbyte1
+       1  opbyte2
+       1  opbyte3
+      10  secuid
+
+ 
+    87 bytes in segment CODE
+ 1 024 bytes in segment NEAR_A
+     8 bytes in segment NEAR_CONST
+     4 bytes in segment OPTBYTE
+    10 bytes in segment SECUID
+ 
+ 87 bytes of CODE  memory
+ 22 bytes of CONST memory
+  0 bytes of DATA  memory (+ 1 024 bytes shared)
+
+Errors: none
+Warnings: none
