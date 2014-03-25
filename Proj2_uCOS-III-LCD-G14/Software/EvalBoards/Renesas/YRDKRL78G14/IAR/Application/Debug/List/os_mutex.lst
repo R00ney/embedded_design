@@ -1,0 +1,1610 @@
+###############################################################################
+#                                                                             #
+# IAR C/C++ Compiler V1.30.5.50715 for RL78             23/Mar/2014  17:08:42 #
+# Copyright 2011-2013 IAR Systems AB.                                         #
+# Network license: ece-lic-19.ece.ncsu.edu (STD)                              #
+#                                                                             #
+#    Core         =  rl78_2                                                   #
+#    Code model   =  Near                                                     #
+#    Data model   =  Near                                                     #
+#                 =                                                           #
+#    Source file  =  C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\uCOS-III\Source\os_mutex.c #
+#    Command line =  C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\uCOS-III\Source\os_mutex.c #
+#                     --core rl78_2 --code_model near --data_model near       #
+#                    --near_const_location rom0 -o                            #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\Debug\Obj\ --dlib_config            #
+#                    "C:\Program Files\IAR Systems\Embedded Workbench         #
+#                    6.5\rl78\LIB\dlrl78nn2n.h" -e -Ohz --no_scheduling       #
+#                    --no_clustering --debug -lC                              #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\Debug\List\ -I                      #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\ -I C:\Users\Suddenlink\Dropbox\git #
+#                    _files\embedded_design\Proj2_uCOS-III-LCD-G14\Software\E #
+#                    valBoards\Renesas\YRDKRL78G14\IAR\Application\Source\    #
+#                    -I C:\Users\Suddenlink\Dropbox\git_files\embedded_design #
+#                    \Proj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDK #
+#                    RL78G14\IAR\Application\..\uCOS-III\ -I                  #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\..\BSP\ -I                          #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\..\BSP\applilet3_src\ -I            #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\..\BSP\Glyph\Drivers\ -I            #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\..\BSP\Glyph\glyph\ -I              #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\..\..\..\..\..\uC-CPU\ -I           #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\..\..\..\..\..\uC-CPU\RL78\IAR\ -I  #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\..\..\..\..\..\uC-LIB\ -I           #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\..\..\..\..\..\uCOS-III\Ports\Renes #
+#                    as\RL78\IAR\ -I C:\Users\Suddenlink\Dropbox\git_files\em #
+#                    bedded_design\Proj2_uCOS-III-LCD-G14\Software\EvalBoards #
+#                    \Renesas\YRDKRL78G14\IAR\Application\..\..\..\..\..\uCOS #
+#                    -III\Source\ --relaxed_fp                                #
+#    List file    =  C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\Debug\List\os_mutex.lst             #
+#    Object file  =  C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\Debug\Obj\os_mutex.r87              #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Proj2_uCOS-III-LCD-G14\Software\uCOS-III\Source\os_mutex.c
+      1          /*
+      2          ************************************************************************************************************************
+      3          *                                                      uC/OS-III
+      4          *                                                 The Real-Time Kernel
+      5          *
+      6          *                                  (c) Copyright 2009-2011; Micrium, Inc.; Weston, FL
+      7          *                           All rights reserved.  Protected by international copyright laws.
+      8          *
+      9          *                                                   MUTEX MANAGEMENT
+     10          *
+     11          * File    : OS_MUTEX.C
+     12          * By      : JJL
+     13          * Version : V3.02.00
+     14          *
+     15          * LICENSING TERMS:
+     16          * ---------------
+     17          *           uC/OS-III is provided in source form for FREE short-term evaluation, for educational use or 
+     18          *           for peaceful research.  If you plan or intend to use uC/OS-III in a commercial application/
+     19          *           product then, you need to contact Micrium to properly license uC/OS-III for its use in your 
+     20          *           application/product.   We provide ALL the source code for your convenience and to help you 
+     21          *           experience uC/OS-III.  The fact that the source is provided does NOT mean that you can use 
+     22          *           it commercially without paying a licensing fee.
+     23          *
+     24          *           Knowledge of the source code may NOT be used to develop a similar product.
+     25          *
+     26          *           Please help us continue to provide the embedded community with the finest software available.
+     27          *           Your honesty is greatly appreciated.
+     28          *
+     29          *           You can contact us at www.micrium.com, or by phone at +1 (954) 217-2036.
+     30          ************************************************************************************************************************
+     31          */
+     32          
+     33          #include <os.h>
+     34          
+     35          #ifdef VSC_INCLUDE_SOURCE_FILE_NAMES
+     36          const  CPU_CHAR  *os_mutex__c = "$Id: $";
+     37          #endif
+     38          
+     39          
+     40          #if OS_CFG_MUTEX_EN > 0u
+     41          /*
+     42          ************************************************************************************************************************
+     43          *                                                   CREATE A MUTEX
+     44          *
+     45          * Description: This function creates a mutex.
+     46          *
+     47          * Arguments  : p_mutex       is a pointer to the mutex to initialize.  Your application is responsible for allocating
+     48          *                            storage for the mutex.
+     49          *
+     50          *              p_name        is a pointer to the name you would like to give the mutex.
+     51          *
+     52          *              p_err         is a pointer to a variable that will contain an error code returned by this function.
+     53          *
+     54          *                                OS_ERR_NONE                    if the call was successful
+     55          *                                OS_ERR_CREATE_ISR              if you called this function from an ISR
+     56          *                                OS_ERR_ILLEGAL_CREATE_RUN_TIME if you are trying to create the Mutex after you called
+     57          *                                                                 OSSafetyCriticalStart().
+     58          *                                OS_ERR_NAME                    if 'p_name'  is a NULL pointer
+     59          *                                OS_ERR_OBJ_CREATED             if the mutex has already been created
+     60          *                                OS_ERR_OBJ_PTR_NULL            if 'p_mutex' is a NULL pointer
+     61          *
+     62          * Returns    : none
+     63          ************************************************************************************************************************
+     64          */
+     65          
+
+   \                                 In  segment CODE, align 1, keep-with-next
+     66          void  OSMutexCreate (OS_MUTEX    *p_mutex,
+   \                     OSMutexCreate:
+     67                               CPU_CHAR    *p_name,
+     68                               OS_ERR      *p_err)
+     69          {
+   \   000000                       ; * Stack frame (at entry) *
+   \   000000                       ; Param size: 0
+   \   000000 C1                    PUSH      AX                 ;; 1 cycle
+   \   000001 C3                    PUSH      BC                 ;; 1 cycle
+   \   000002                       ; Auto size: 4
+     70              CPU_SR_ALLOC();
+     71          
+     72          
+     73          
+     74          #ifdef OS_SAFETY_CRITICAL
+     75              if (p_err == (OS_ERR *)0) {
+     76                  OS_SAFETY_CRITICAL_EXCEPTION();
+     77                  return;
+     78              }
+     79          #endif
+     80          
+     81          #ifdef OS_SAFETY_CRITICAL_IEC61508
+     82              if (OSSafetyCriticalStartFlag == DEF_TRUE) {
+     83                 *p_err = OS_ERR_ILLEGAL_CREATE_RUN_TIME;
+     84                  return;
+     85              }
+     86          #endif
+     87          
+     88          #if OS_CFG_CALLED_FROM_ISR_CHK_EN > 0u
+     89              if (OSIntNestingCtr > (OS_NESTING_CTR)0) {              /* Not allowed to be called from an ISR                   */
+     90                  *p_err = OS_ERR_CREATE_ISR;
+     91                  return;
+     92              }
+     93          #endif
+     94          
+     95          #if OS_CFG_ARG_CHK_EN > 0u
+     96              if (p_mutex == (OS_MUTEX *)0) {                         /* Validate 'p_mutex'                                     */
+     97                  *p_err = OS_ERR_OBJ_PTR_NULL;
+     98                  return;
+     99              }
+    100          #endif
+    101          
+    102              CPU_CRITICAL_ENTER();
+   \   000002 8EFA                  MOV       A, PSW             ;; 1 cycle
+   \   000004 73                    MOV       B, A               ;; 1 cycle
+   \   000005 717BFA                DI                           ;; 2 cycles
+   \   000008 FD....                CALL      CPU_IntDisMeasStart  ;; 3 cycles
+    103              p_mutex->Type              =  OS_OBJ_TYPE_MUTEX;        /* Mark the data structure as a mutex                     */
+   \   00000B A802                  MOVW      AX, [SP+0x02]      ;; 1 cycle
+   \   00000D 16                    MOVW      HL, AX             ;; 1 cycle
+   \   00000E 305458                MOVW      AX, #0x5854        ;; 1 cycle
+   \   000011 BB                    MOVW      [HL], AX           ;; 1 cycle
+   \   000012 304D55                MOVW      AX, #0x554D        ;; 1 cycle
+   \   000015 BC02                  MOVW      [HL+0x02], AX      ;; 1 cycle
+    104              p_mutex->NamePtr           =  p_name;
+   \   000017 A800                  MOVW      AX, [SP]           ;; 1 cycle
+   \   000019 FD....                CALL      N:?Subroutine0     ;; 3 cycles
+   \   00001C                       ; ------------------------------------- Block: 19 cycles
+    105              p_mutex->OwnerTCBPtr       = (OS_TCB       *)0;
+    106              p_mutex->OwnerNestingCtr   = (OS_NESTING_CTR)0;         /* Mutex is available                                     */
+    107              p_mutex->TS                = (CPU_TS        )0;
+    108              p_mutex->OwnerOriginalPrio =  OS_CFG_PRIO_MAX;
+    109              OS_PendListInit(&p_mutex->PendList);                    /* Initialize the waiting list                            */
+   \                     ??CrossCallReturnLabel_0:
+   \   00001C FD....                CALL      OS_PendListInit    ;; 3 cycles
+    110          
+    111          #if OS_CFG_DBG_EN > 0u
+    112              OS_MutexDbgListAdd(p_mutex);
+    113          #endif
+    114              OSMutexQty++;
+   \   00001F A2....                INCW      N:OSMutexQty       ;; 2 cycles
+    115          
+    116              CPU_CRITICAL_EXIT();
+   \   000022 FD....                CALL      CPU_IntDisMeasStop  ;; 3 cycles
+   \   000025 63                    MOV       A, B               ;; 1 cycle
+   \   000026 FD....                CALL      N:?Subroutine1     ;; 3 cycles
+   \   000029                       ; ------------------------------------- Block: 12 cycles
+    117              *p_err = OS_ERR_NONE;
+   \                     ??CrossCallReturnLabel_2:
+   \   000029 F6                    CLRW      AX                 ;; 1 cycle
+   \   00002A B9                    MOVW      [DE], AX           ;; 1 cycle
+    118          }
+   \   00002B 1004                  ADDW      SP, #0x4           ;; 1 cycle
+   \   00002D D7                    RET                          ;; 6 cycles
+   \   00002E                       ; ------------------------------------- Block: 9 cycles
+   \   00002E                       ; ------------------------------------- Total: 40 cycles
+   \   00002E                       REQUIRE ?CLRL78_V1_0_L00
+
+   \                                 In  segment CODE, align 1, keep-with-next
+   \                     ?Subroutine1:
+   \   000000 71FC                  MOV1      CY, A.7            ;; 1 cycle
+   \   000002 7179FA                MOV1      PSW.7, CY          ;; 4 cycles
+   \   000005 D7                    RET                          ;; 6 cycles
+   \   000006                       ; ------------------------------------- Block: 11 cycles
+   \   000006                       ; ------------------------------------- Total: 11 cycles
+   \   000006                       REQUIRE ?CLRL78_V1_0_L00
+
+   \                                 In  segment CODE, align 1, keep-with-next
+   \                     ?Subroutine0:
+   \   000000 BC04                  MOVW      [HL+0x04], AX      ;; 1 cycle
+   \   000002 F6                    CLRW      AX                 ;; 1 cycle
+   \   000003 BC0C                  MOVW      [HL+0x0C], AX      ;; 1 cycle
+   \   000005 9C0F                  MOV       [HL+0x0F], A       ;; 1 cycle
+   \   000007 BC10                  MOVW      [HL+0x10], AX      ;; 1 cycle
+   \   000009 BC12                  MOVW      [HL+0x12], AX      ;; 1 cycle
+   \   00000B 5108                  MOV       A, #0x8            ;; 1 cycle
+   \   00000D 9C0E                  MOV       [HL+0x0E], A       ;; 1 cycle
+   \   00000F 17                    MOVW      AX, HL             ;; 1 cycle
+   \   000010 040600                ADDW      AX, #0x6           ;; 1 cycle
+   \   000013 D7                    RET                          ;; 6 cycles
+   \   000014                       ; ------------------------------------- Block: 16 cycles
+   \   000014                       ; ------------------------------------- Total: 16 cycles
+   \   000014                       REQUIRE ?CLRL78_V1_0_L00
+    119          
+    120          /*$PAGE*/
+    121          /*
+    122          ************************************************************************************************************************
+    123          *                                                   DELETE A MUTEX
+    124          *
+    125          * Description: This function deletes a mutex and readies all tasks pending on the mutex.
+    126          *
+    127          * Arguments  : p_mutex       is a pointer to the mutex to delete
+    128          *
+    129          *              opt           determines delete options as follows:
+    130          *
+    131          *                                OS_OPT_DEL_NO_PEND          Delete mutex ONLY if no task pending
+    132          *                                OS_OPT_DEL_ALWAYS           Deletes the mutex even if tasks are waiting.
+    133          *                                                            In this case, all the tasks pending will be readied.
+    134          *
+    135          *              p_err         is a pointer to a variable that will contain an error code returned by this function.
+    136          *
+    137          *                                OS_ERR_NONE                 The call was successful and the mutex was deleted
+    138          *                                OS_ERR_DEL_ISR              If you attempted to delete the mutex from an ISR
+    139          *                                OS_ERR_OBJ_PTR_NULL         If 'p_mutex' is a NULL pointer.
+    140          *                                OS_ERR_OBJ_TYPE             If 'p_mutex' is not pointing to a mutex
+    141          *                                OS_ERR_OPT_INVALID          An invalid option was specified
+    142          *                                OS_ERR_STATE_INVALID        Task is in an invalid state
+    143          *                                OS_ERR_TASK_WAITING         One or more tasks were waiting on the mutex
+    144          *
+    145          * Returns    : == 0          if no tasks were waiting on the mutex, or upon error.
+    146          *              >  0          if one or more tasks waiting on the mutex are now readied and informed.
+    147          *
+    148          * Note(s)    : 1) This function must be used with care.  Tasks that would normally expect the presence of the mutex MUST
+    149          *                 check the return code of OSMutexPend().
+    150          *
+    151          *              2) OSMutexAccept() callers will not know that the intended mutex has been deleted.
+    152          *
+    153          *              3) Because ALL tasks pending on the mutex will be readied, you MUST be careful in applications where the
+    154          *                 mutex is used for mutual exclusion because the resource(s) will no longer be guarded by the mutex.
+    155          ************************************************************************************************************************
+    156          */
+    157          
+    158          #if OS_CFG_MUTEX_DEL_EN > 0u
+    159          OS_OBJ_QTY  OSMutexDel (OS_MUTEX  *p_mutex,
+    160                                  OS_OPT     opt,
+    161                                  OS_ERR    *p_err)
+    162          {
+    163              OS_OBJ_QTY     cnt;
+    164              OS_OBJ_QTY     nbr_tasks;
+    165              OS_PEND_DATA  *p_pend_data;
+    166              OS_PEND_LIST  *p_pend_list;
+    167              OS_TCB        *p_tcb;
+    168              OS_TCB        *p_tcb_owner;
+    169              CPU_TS         ts;
+    170              CPU_SR_ALLOC();
+    171          
+    172          
+    173          
+    174          #ifdef OS_SAFETY_CRITICAL
+    175              if (p_err == (OS_ERR *)0) {
+    176                  OS_SAFETY_CRITICAL_EXCEPTION();
+    177                  return ((OS_OBJ_QTY)0);
+    178              }
+    179          #endif
+    180          
+    181          #if OS_CFG_CALLED_FROM_ISR_CHK_EN > 0u
+    182              if (OSIntNestingCtr > (OS_NESTING_CTR)0) {                   /* Not allowed to delete a mutex from an ISR         */
+    183                 *p_err = OS_ERR_DEL_ISR;
+    184                  return ((OS_OBJ_QTY)0);
+    185              }
+    186          #endif
+    187          
+    188          #if OS_CFG_ARG_CHK_EN > 0u
+    189              if (p_mutex == (OS_MUTEX *)0) {                              /* Validate pointer to mutex                         */
+    190                  *p_err = OS_ERR_OBJ_PTR_NULL;
+    191                  return ((OS_OBJ_QTY)0);
+    192              }
+    193          #endif
+    194          
+    195          #if OS_CFG_OBJ_TYPE_CHK_EN > 0u
+    196              if (p_mutex->Type != OS_OBJ_TYPE_MUTEX) {                    /* Make sure mutex was created                       */
+    197                  *p_err = OS_ERR_OBJ_TYPE;
+    198                  return ((OS_OBJ_QTY)0);
+    199              }
+    200          #endif
+    201          
+    202              OS_CRITICAL_ENTER();
+    203              p_pend_list = &p_mutex->PendList;
+    204              cnt         = p_pend_list->NbrEntries;
+    205              nbr_tasks   = cnt;
+    206              switch (opt) {
+    207                  case OS_OPT_DEL_NO_PEND:                                 /* Delete mutex only if no task waiting              */
+    208                       if (nbr_tasks == (OS_OBJ_QTY)0) {
+    209          #if OS_CFG_DBG_EN > 0u
+    210                           OS_MutexDbgListRemove(p_mutex);
+    211          #endif
+    212                           OSMutexQty--;
+    213                           OS_MutexClr(p_mutex);
+    214                           OS_CRITICAL_EXIT();
+    215                           *p_err = OS_ERR_NONE;
+    216                       } else {
+    217                           OS_CRITICAL_EXIT();
+    218                           *p_err = OS_ERR_TASK_WAITING;
+    219                       }
+    220                       break;
+    221          
+    222                  case OS_OPT_DEL_ALWAYS:                                            /* Always delete the mutex                 */
+    223                       p_tcb_owner = p_mutex->OwnerTCBPtr;                           /* Did we had to change the prio of owner? */
+    224                       if ((p_tcb_owner       != (OS_TCB *)0) &&
+    225                           (p_tcb_owner->Prio !=  p_mutex->OwnerOriginalPrio)) {
+    226                           switch (p_tcb_owner->TaskState) {                         /* yes                                     */
+    227                               case OS_TASK_STATE_RDY:
+    228                                    OS_RdyListRemove(p_tcb_owner);
+    229                                    p_tcb_owner->Prio = p_mutex->OwnerOriginalPrio;  /* Lower owner's prio back                 */
+    230                                    OS_PrioInsert(p_tcb_owner->Prio);
+    231                                    OS_RdyListInsertTail(p_tcb_owner);               /* Insert owner in ready list at new prio  */
+    232                                    break;
+    233          
+    234                               case OS_TASK_STATE_DLY:
+    235                               case OS_TASK_STATE_SUSPENDED:
+    236                               case OS_TASK_STATE_DLY_SUSPENDED:
+    237                                    p_tcb_owner->Prio = p_mutex->OwnerOriginalPrio;  /* Not in any pend list, change the prio   */
+    238                                    break;
+    239          
+    240                               case OS_TASK_STATE_PEND:
+    241                               case OS_TASK_STATE_PEND_TIMEOUT:
+    242                               case OS_TASK_STATE_PEND_SUSPENDED:
+    243                               case OS_TASK_STATE_PEND_TIMEOUT_SUSPENDED:
+    244                                    OS_PendListChangePrio(p_tcb_owner,               /* Owner is pending on another object      */
+    245                                                          p_mutex->OwnerOriginalPrio);
+    246                                    break;
+    247          
+    248                               default:
+    249                                    OS_CRITICAL_EXIT();
+    250                                    *p_err = OS_ERR_STATE_INVALID;
+    251                                    return ((OS_OBJ_QTY)0);
+    252                           }
+    253                       }
+    254          
+    255                       ts = OS_TS_GET();                                             /* Get timestamp                           */
+    256                       while (cnt > 0u) {                                            /* Remove all tasks from the pend list     */
+    257                           p_pend_data = p_pend_list->HeadPtr;
+    258                           p_tcb       = p_pend_data->TCBPtr;
+    259                           OS_PendObjDel((OS_PEND_OBJ *)((void *)p_mutex),
+    260                                         p_tcb,
+    261                                         ts);
+    262                           cnt--;
+    263                       }
+    264          #if OS_CFG_DBG_EN > 0u
+    265                       OS_MutexDbgListRemove(p_mutex);
+    266          #endif
+    267                       OSMutexQty--;
+    268                       OS_MutexClr(p_mutex);
+    269                       OS_CRITICAL_EXIT_NO_SCHED();
+    270                       OSSched();                                                    /* Find highest priority task ready to run */
+    271                       *p_err = OS_ERR_NONE;
+    272                       break;
+    273          
+    274                  default:
+    275                       OS_CRITICAL_EXIT();
+    276                       *p_err = OS_ERR_OPT_INVALID;
+    277                       break;
+    278              }
+    279              return (nbr_tasks);
+    280          }
+    281          #endif
+    282          
+    283          /*$PAGE*/
+    284          /*
+    285          ************************************************************************************************************************
+    286          *                                                    PEND ON MUTEX
+    287          *
+    288          * Description: This function waits for a mutex.
+    289          *
+    290          * Arguments  : p_mutex       is a pointer to the mutex
+    291          *
+    292          *              timeout       is an optional timeout period (in clock ticks).  If non-zero, your task will wait for the
+    293          *                            resource up to the amount of time (in 'ticks') specified by this argument.  If you specify
+    294          *                            0, however, your task will wait forever at the specified mutex or, until the resource
+    295          *                            becomes available.
+    296          *
+    297          *              opt           determines whether the user wants to block if the mutex is not available or not:
+    298          *
+    299          *                                OS_OPT_PEND_BLOCKING
+    300          *                                OS_OPT_PEND_NON_BLOCKING
+    301          *
+    302          *              p_ts          is a pointer to a variable that will receive the timestamp of when the mutex was posted or
+    303          *                            pend aborted or the mutex deleted.  If you pass a NULL pointer (i.e. (CPU_TS *)0) then you
+    304          *                            will not get the timestamp.  In other words, passing a NULL pointer is valid and indicates
+    305          *                            that you don't need the timestamp.
+    306          *
+    307          *              p_err         is a pointer to a variable that will contain an error code returned by this function.
+    308          *
+    309          *                                OS_ERR_NONE               The call was successful and your task owns the resource
+    310          *                                OS_ERR_MUTEX_OWNER        If calling task already owns the mutex
+    311          *                                OS_ERR_OBJ_DEL            If 'p_mutex' was deleted
+    312          *                                OS_ERR_OBJ_PTR_NULL       If 'p_mutex' is a NULL pointer.
+    313          *                                OS_ERR_OBJ_TYPE           If 'p_mutex' is not pointing at a mutex
+    314          *                                OS_ERR_OPT_INVALID        If you didn't specify a valid option
+    315          *                                OS_ERR_PEND_ABORT         If the pend was aborted by another task
+    316          *                                OS_ERR_PEND_ISR           If you called this function from an ISR and the result
+    317          *                                                          would lead to a suspension.
+    318          *                                OS_ERR_PEND_WOULD_BLOCK   If you specified non-blocking but the mutex was not
+    319          *                                                          available.
+    320          *                                OS_ERR_SCHED_LOCKED       If you called this function when the scheduler is locked
+    321          *                                OS_ERR_STATE_INVALID      If the task is in an invalid state
+    322          *                                OS_ERR_STATUS_INVALID     If the pend status has an invalid value
+    323          *                                OS_ERR_TIMEOUT            The mutex was not received within the specified timeout.
+    324          *
+    325          * Returns    : none
+    326          ************************************************************************************************************************
+    327          */
+    328          
+
+   \                                 In  segment CODE, align 1, keep-with-next
+    329          void  OSMutexPend (OS_MUTEX   *p_mutex,
+   \                     OSMutexPend:
+    330                             OS_TICK     timeout,
+    331                             OS_OPT      opt,
+    332                             CPU_TS     *p_ts,
+    333                             OS_ERR     *p_err)
+    334          {
+   \   000000                       ; * Stack frame (at entry) *
+   \   000000                       ; Param size: 6
+   \   000000 C1                    PUSH      AX                 ;; 1 cycle
+   \   000001 C3                    PUSH      BC                 ;; 1 cycle
+   \   000002 C5                    PUSH      DE                 ;; 1 cycle
+   \   000003                       ; Auto size: 30
+   \   000003 2018                  SUBW      SP, #0x18          ;; 1 cycle
+    335              OS_PEND_DATA  pend_data;
+    336              OS_TCB       *p_tcb;
+    337              CPU_SR_ALLOC();
+    338          
+    339          
+    340          
+    341          #ifdef OS_SAFETY_CRITICAL
+    342              if (p_err == (OS_ERR *)0) {
+    343                  OS_SAFETY_CRITICAL_EXCEPTION();
+    344                  return;
+    345              }
+    346          #endif
+    347          
+    348          #if OS_CFG_CALLED_FROM_ISR_CHK_EN > 0u
+    349              if (OSIntNestingCtr > (OS_NESTING_CTR)0) {              /* Not allowed to call from an ISR                        */
+    350                 *p_err = OS_ERR_PEND_ISR;
+    351                  return;
+    352              }
+    353          #endif
+    354          
+    355          #if OS_CFG_ARG_CHK_EN > 0u
+    356              if (p_mutex == (OS_MUTEX *)0) {                         /* Validate arguments                                     */
+    357                  *p_err = OS_ERR_OBJ_PTR_NULL;
+    358                  return;
+    359              }
+    360              switch (opt) {
+    361                  case OS_OPT_PEND_BLOCKING:
+    362                  case OS_OPT_PEND_NON_BLOCKING:
+    363                       break;
+    364          
+    365                  default:
+    366                       *p_err = OS_ERR_OPT_INVALID;
+    367                       return;
+    368              }
+    369          #endif
+    370          
+    371          #if OS_CFG_OBJ_TYPE_CHK_EN > 0u
+    372              if (p_mutex->Type != OS_OBJ_TYPE_MUTEX) {               /* Make sure mutex was created                            */
+    373                  *p_err = OS_ERR_OBJ_TYPE;
+    374                  return;
+    375              }
+    376          #endif
+    377          
+    378              if (p_ts != (CPU_TS *)0) {
+   \   000005 15                    MOVW      AX, DE             ;; 1 cycle
+   \   000006 440000                CMPW      AX, #0x0           ;; 1 cycle
+   \   000009 DD05                  BZ        ??OS_MutexInit_0   ;; 4 cycles
+   \   00000B                       ; ------------------------------------- Block: 10 cycles
+    379                 *p_ts  = (CPU_TS  )0;                                /* Initialize the returned timestamp                      */
+   \   00000B 16                    MOVW      HL, AX             ;; 1 cycle
+   \   00000C F6                    CLRW      AX                 ;; 1 cycle
+   \   00000D BB                    MOVW      [HL], AX           ;; 1 cycle
+   \   00000E BC02                  MOVW      [HL+0x02], AX      ;; 1 cycle
+   \   000010                       ; ------------------------------------- Block: 4 cycles
+    380              }
+    381          
+    382              CPU_CRITICAL_ENTER();
+   \                     ??OS_MutexInit_0:
+   \   000010 8EFA                  MOV       A, PSW             ;; 1 cycle
+   \   000012 70                    MOV       X, A               ;; 1 cycle
+   \   000013 F1                    CLRB      A                  ;; 1 cycle
+   \   000014 B802                  MOVW      [SP+0x02], AX      ;; 1 cycle
+   \   000016 F6                    CLRW      AX                 ;; 1 cycle
+   \   000017 B804                  MOVW      [SP+0x04], AX      ;; 1 cycle
+   \   000019 717BFA                DI                           ;; 2 cycles
+   \   00001C FD....                CALL      CPU_IntDisMeasStart  ;; 3 cycles
+    383              if (p_mutex->OwnerNestingCtr == (OS_NESTING_CTR)0) {    /* Resource available?                                    */
+   \   00001F A81C                  MOVW      AX, [SP+0x1C]      ;; 1 cycle
+   \   000021 16                    MOVW      HL, AX             ;; 1 cycle
+   \   000022 8C0F                  MOV       A, [HL+0x0F]       ;; 1 cycle
+   \   000024 D1                    CMP0      A                  ;; 1 cycle
+   \   000025 DF38                  BNZ       ??OS_MutexInit_1   ;; 4 cycles
+   \   000027                       ; ------------------------------------- Block: 19 cycles
+    384                  p_mutex->OwnerTCBPtr       =  OSTCBCurPtr;          /* Yes, caller may proceed                                */
+   \   000027 FB....                MOVW      HL, N:OSTCBCurPtr  ;; 1 cycle
+   \   00002A A81C                  MOVW      AX, [SP+0x1C]      ;; 1 cycle
+   \   00002C 14                    MOVW      DE, AX             ;; 1 cycle
+   \   00002D 17                    MOVW      AX, HL             ;; 1 cycle
+   \   00002E BA0C                  MOVW      [DE+0x0C], AX      ;; 1 cycle
+    385                  p_mutex->OwnerOriginalPrio =  OSTCBCurPtr->Prio;
+   \   000030 FD....                CALL      N:?Subroutine2     ;; 3 cycles
+   \   000033                       ; ------------------------------------- Block: 8 cycles
+   \                     ??CrossCallReturnLabel_14:
+   \   000033 C5                    PUSH      DE                 ;; 1 cycle
+   \   000034 C6                    POP       HL                 ;; 1 cycle
+   \   000035 9C0E                  MOV       [HL+0x0E], A       ;; 1 cycle
+    386                  p_mutex->OwnerNestingCtr   = (OS_NESTING_CTR)1;
+   \   000037 C5                    PUSH      DE                 ;; 1 cycle
+   \   000038 C6                    POP       HL                 ;; 1 cycle
+   \   000039 E1                    ONEB      A                  ;; 1 cycle
+   \   00003A 9C0F                  MOV       [HL+0x0F], A       ;; 1 cycle
+    387                  if (p_ts != (CPU_TS *)0) {
+   \   00003C A818                  MOVW      AX, [SP+0x18]      ;; 1 cycle
+   \   00003E 440000                CMPW      AX, #0x0           ;; 1 cycle
+   \   000041 DD0D                  BZ        ??CrossCallReturnLabel_22  ;; 4 cycles
+   \   000043                       ; ------------------------------------- Block: 13 cycles
+    388                     *p_ts                   = p_mutex->TS;
+   \   000043 C5                    PUSH      DE                 ;; 1 cycle
+   \   000044 C6                    POP       HL                 ;; 1 cycle
+   \   000045 AC12                  MOVW      AX, [HL+0x12]      ;; 1 cycle
+   \   000047 12                    MOVW      BC, AX             ;; 1 cycle
+   \   000048 AC10                  MOVW      AX, [HL+0x10]      ;; 1 cycle
+   \   00004A 16                    MOVW      HL, AX             ;; 1 cycle
+   \   00004B A818                  MOVW      AX, [SP+0x18]      ;; 1 cycle
+   \   00004D FD....                CALL      N:?Subroutine3     ;; 3 cycles
+    389                  }
+   \   000050                       ; ------------------------------------- Block: 10 cycles
+    390                  CPU_CRITICAL_EXIT();
+   \                     ??CrossCallReturnLabel_22:
+   \   000050 FD....                CALL      CPU_IntDisMeasStop  ;; 3 cycles
+   \   000053 8802                  MOV       A, [SP+0x02]       ;; 1 cycle
+   \   000055 FD....                CALL      N:?Subroutine1     ;; 3 cycles
+   \   000058                       ; ------------------------------------- Block: 7 cycles
+    391                  *p_err                     =  OS_ERR_NONE;
+   \                     ??CrossCallReturnLabel_3:
+   \   000058 A826                  MOVW      AX, [SP+0x26]      ;; 1 cycle
+   \   00005A 16                    MOVW      HL, AX             ;; 1 cycle
+   \   00005B F6                    CLRW      AX                 ;; 1 cycle
+   \   00005C ED....                BR        N:??OS_MutexInit_2  ;; 3 cycles
+   \   00005F                       ; ------------------------------------- Block: 6 cycles
+    392                  return;
+    393              }
+    394          
+    395              if (OSTCBCurPtr == p_mutex->OwnerTCBPtr) {              /* See if current task is already the owner of the mutex  */
+   \                     ??OS_MutexInit_1:
+   \   00005F AC0C                  MOVW      AX, [HL+0x0C]      ;; 1 cycle
+   \   000061 FB....                MOVW      HL, N:OSTCBCurPtr  ;; 1 cycle
+   \   000064 47                    CMPW      AX, HL             ;; 1 cycle
+   \   000065 DF2D                  BNZ       ??OS_MutexInit_3   ;; 4 cycles
+   \   000067                       ; ------------------------------------- Block: 7 cycles
+    396                  p_mutex->OwnerNestingCtr++;
+   \   000067 A81C                  MOVW      AX, [SP+0x1C]      ;; 1 cycle
+   \   000069 040F00                ADDW      AX, #0xF           ;; 1 cycle
+   \   00006C 16                    MOVW      HL, AX             ;; 1 cycle
+   \   00006D 8B                    MOV       A, [HL]            ;; 1 cycle
+   \   00006E 81                    INC       A                  ;; 1 cycle
+   \   00006F 9B                    MOV       [HL], A            ;; 1 cycle
+    397                  if (p_ts != (CPU_TS *)0) {
+   \   000070 15                    MOVW      AX, DE             ;; 1 cycle
+   \   000071 440000                CMPW      AX, #0x0           ;; 1 cycle
+   \   000074 DD0D                  BZ        ??CrossCallReturnLabel_23  ;; 4 cycles
+   \   000076                       ; ------------------------------------- Block: 12 cycles
+    398                     *p_ts  = p_mutex->TS;
+   \   000076 A81C                  MOVW      AX, [SP+0x1C]      ;; 1 cycle
+   \   000078 16                    MOVW      HL, AX             ;; 1 cycle
+   \   000079 AC12                  MOVW      AX, [HL+0x12]      ;; 1 cycle
+   \   00007B 12                    MOVW      BC, AX             ;; 1 cycle
+   \   00007C AC10                  MOVW      AX, [HL+0x10]      ;; 1 cycle
+   \   00007E 16                    MOVW      HL, AX             ;; 1 cycle
+   \   00007F 15                    MOVW      AX, DE             ;; 1 cycle
+   \   000080 FD....                CALL      N:?Subroutine3     ;; 3 cycles
+    399                  }
+   \   000083                       ; ------------------------------------- Block: 10 cycles
+    400                  CPU_CRITICAL_EXIT();
+   \                     ??CrossCallReturnLabel_23:
+   \   000083 FD....                CALL      CPU_IntDisMeasStop  ;; 3 cycles
+   \   000086 8802                  MOV       A, [SP+0x02]       ;; 1 cycle
+   \   000088 FD....                CALL      N:?Subroutine1     ;; 3 cycles
+   \   00008B                       ; ------------------------------------- Block: 7 cycles
+    401                  *p_err = OS_ERR_MUTEX_OWNER;                        /* Indicate that current task already owns the mutex      */
+   \                     ??CrossCallReturnLabel_4:
+   \   00008B A826                  MOVW      AX, [SP+0x26]      ;; 1 cycle
+   \   00008D 16                    MOVW      HL, AX             ;; 1 cycle
+   \   00008E 308257                MOVW      AX, #0x5782        ;; 1 cycle
+   \   000091 ED....                BR        N:??OS_MutexInit_2  ;; 3 cycles
+   \   000094                       ; ------------------------------------- Block: 6 cycles
+    402                  return;
+    403              }
+    404          
+    405              if ((opt & OS_OPT_PEND_NON_BLOCKING) != (OS_OPT)0) {    /* Caller wants to block if not available?                */
+   \                     ??OS_MutexInit_3:
+   \   000094 AEF8                  MOVW      AX, SP             ;; 1 cycle
+   \   000096 041A00                ADDW      AX, #0x1A          ;; 1 cycle
+   \   000099 16                    MOVW      HL, AX             ;; 1 cycle
+   \   00009A A7                    INCW      HL                 ;; 1 cycle
+   \   00009B 31F511                BF        [HL].7, ??OS_MutexInit_4  ;; 5 cycles
+   \   00009E                       ; ------------------------------------- Block: 9 cycles
+    406                  CPU_CRITICAL_EXIT();
+   \   00009E FD....                CALL      CPU_IntDisMeasStop  ;; 3 cycles
+   \   0000A1 8802                  MOV       A, [SP+0x02]       ;; 1 cycle
+   \   0000A3 FD....                CALL      N:?Subroutine1     ;; 3 cycles
+   \   0000A6                       ; ------------------------------------- Block: 7 cycles
+    407                  *p_err = OS_ERR_PEND_WOULD_BLOCK;                   /* No                                                     */
+   \                     ??CrossCallReturnLabel_5:
+   \   0000A6 A826                  MOVW      AX, [SP+0x26]      ;; 1 cycle
+   \   0000A8 16                    MOVW      HL, AX             ;; 1 cycle
+   \   0000A9 30B061                MOVW      AX, #0x61B0        ;; 1 cycle
+   \   0000AC ED....                BR        N:??OS_MutexInit_2  ;; 3 cycles
+   \   0000AF                       ; ------------------------------------- Block: 6 cycles
+    408                  return;
+    409              } else {
+    410                  if (OSSchedLockNestingCtr > (OS_NESTING_CTR)0) {    /* Can't pend when the scheduler is locked                */
+   \                     ??OS_MutexInit_4:
+   \   0000AF D5....                CMP0      N:OSSchedLockNestingCtr  ;; 1 cycle
+   \   0000B2 DD11                  BZ        ??OS_MutexInit_5   ;; 4 cycles
+   \   0000B4                       ; ------------------------------------- Block: 5 cycles
+    411                      CPU_CRITICAL_EXIT();
+   \   0000B4 FD....                CALL      CPU_IntDisMeasStop  ;; 3 cycles
+   \   0000B7 8802                  MOV       A, [SP+0x02]       ;; 1 cycle
+   \   0000B9 FD....                CALL      N:?Subroutine1     ;; 3 cycles
+   \   0000BC                       ; ------------------------------------- Block: 7 cycles
+    412                      *p_err = OS_ERR_SCHED_LOCKED;
+   \                     ??CrossCallReturnLabel_6:
+   \   0000BC A826                  MOVW      AX, [SP+0x26]      ;; 1 cycle
+   \   0000BE 16                    MOVW      HL, AX             ;; 1 cycle
+   \   0000BF 30636D                MOVW      AX, #0x6D63        ;; 1 cycle
+   \   0000C2 ED....                BR        N:??OS_MutexInit_2  ;; 3 cycles
+   \   0000C5                       ; ------------------------------------- Block: 6 cycles
+    413                      return;
+    414                  }
+    415              }
+    416          
+    417              OS_CRITICAL_ENTER_CPU_CRITICAL_EXIT();                  /* Lock the scheduler/re-enable interrupts                */
+    418              p_tcb = p_mutex->OwnerTCBPtr;                           /* Point to the TCB of the Mutex owner                    */
+   \                     ??OS_MutexInit_5:
+   \   0000C5 A81C                  MOVW      AX, [SP+0x1C]      ;; 1 cycle
+   \   0000C7 16                    MOVW      HL, AX             ;; 1 cycle
+   \   0000C8 AC0C                  MOVW      AX, [HL+0x0C]      ;; 1 cycle
+   \   0000CA B800                  MOVW      [SP], AX           ;; 1 cycle
+    419              if (p_tcb->Prio > OSTCBCurPtr->Prio) {                  /* See if mutex owner has a lower priority than current   */
+   \   0000CC 041D00                ADDW      AX, #0x1D          ;; 1 cycle
+   \   0000CF 14                    MOVW      DE, AX             ;; 1 cycle
+   \   0000D0 FD....                CALL      N:?Subroutine2     ;; 3 cycles
+   \   0000D3                       ; ------------------------------------- Block: 9 cycles
+   \                     ??CrossCallReturnLabel_15:
+   \   0000D3 70                    MOV       X, A               ;; 1 cycle
+   \   0000D4 89                    MOV       A, [DE]            ;; 1 cycle
+   \   0000D5 6140                  CMP       X, A               ;; 1 cycle
+   \   0000D7 DE2E                  BNC       ??OS_MutexInit_6   ;; 4 cycles
+   \   0000D9                       ; ------------------------------------- Block: 7 cycles
+    420                  switch (p_tcb->TaskState) {
+   \   0000D9 A800                  MOVW      AX, [SP]           ;; 1 cycle
+   \   0000DB 16                    MOVW      HL, AX             ;; 1 cycle
+   \   0000DC 8C1C                  MOV       A, [HL+0x1C]       ;; 1 cycle
+   \   0000DE D1                    CMP0      A                  ;; 1 cycle
+   \   0000DF DD16                  BZ        ??OS_MutexInit_7   ;; 4 cycles
+   \   0000E1                       ; ------------------------------------- Block: 8 cycles
+   \   0000E1 91                    DEC       A                  ;; 1 cycle
+   \   0000E2 DD76                  BZ        ??OS_MutexInit_8   ;; 4 cycles
+   \   0000E4                       ; ------------------------------------- Block: 5 cycles
+   \   0000E4 91                    DEC       A                  ;; 1 cycle
+   \   0000E5 4C02                  CMP       A, #0x2            ;; 1 cycle
+   \   0000E7 DC77                  BC        ??OS_MutexInit_9   ;; 4 cycles
+   \   0000E9                       ; ------------------------------------- Block: 6 cycles
+   \   0000E9 2C02                  SUB       A, #0x2            ;; 1 cycle
+   \   0000EB 4C02                  CMP       A, #0x2            ;; 1 cycle
+   \   0000ED DC6B                  BC        ??OS_MutexInit_8   ;; 4 cycles
+   \   0000EF                       ; ------------------------------------- Block: 6 cycles
+   \   0000EF 2C02                  SUB       A, #0x2            ;; 1 cycle
+   \   0000F1 4C02                  CMP       A, #0x2            ;; 1 cycle
+   \   0000F3 DC6B                  BC        ??OS_MutexInit_9   ;; 4 cycles
+   \   0000F5                       ; ------------------------------------- Block: 6 cycles
+   \   0000F5 EF74                  BR        S:??OS_MutexInit_10  ;; 3 cycles
+   \   0000F7                       ; ------------------------------------- Block: 3 cycles
+    421                      case OS_TASK_STATE_RDY:
+    422                           OS_RdyListRemove(p_tcb);                   /* Remove from ready list at current priority             */
+   \                     ??OS_MutexInit_7:
+   \   0000F7 17                    MOVW      AX, HL             ;; 1 cycle
+   \   0000F8 FD....                CALL      OS_RdyListRemove   ;; 3 cycles
+    423                           p_tcb->Prio = OSTCBCurPtr->Prio;           /* Raise owner's priority                                 */
+   \   0000FB FD....                CALL      N:?Subroutine2     ;; 3 cycles
+   \   0000FE                       ; ------------------------------------- Block: 7 cycles
+   \                     ??CrossCallReturnLabel_16:
+   \   0000FE 99                    MOV       [DE], A            ;; 1 cycle
+    424                           OS_PrioInsert(p_tcb->Prio);
+   \   0000FF FD....                CALL      OS_PrioInsert      ;; 3 cycles
+    425                           OS_RdyListInsertHead(p_tcb);               /* Insert in ready list at new priority                   */
+   \   000102 A800                  MOVW      AX, [SP]           ;; 1 cycle
+   \   000104 FD....                CALL      OS_RdyListInsertHead  ;; 3 cycles
+    426                           break;
+   \   000107                       ; ------------------------------------- Block: 8 cycles
+    427          
+    428                      case OS_TASK_STATE_DLY:
+    429                      case OS_TASK_STATE_DLY_SUSPENDED:
+    430                      case OS_TASK_STATE_SUSPENDED:
+    431                           p_tcb->Prio = OSTCBCurPtr->Prio;           /* Only need to raise the owner's priority                */
+    432                           break;
+    433          
+    434                      case OS_TASK_STATE_PEND:                        /* Change the position of the task in the wait list       */
+    435                      case OS_TASK_STATE_PEND_TIMEOUT:
+    436                      case OS_TASK_STATE_PEND_SUSPENDED:
+    437                      case OS_TASK_STATE_PEND_TIMEOUT_SUSPENDED:
+    438                           OS_PendListChangePrio(p_tcb,
+    439                                                 OSTCBCurPtr->Prio);
+    440                           break;
+    441          
+    442                      default:
+    443                           OS_CRITICAL_EXIT();
+    444                           *p_err = OS_ERR_STATE_INVALID;
+    445                           return;
+    446                  }
+    447              }
+    448          
+    449              OS_Pend(&pend_data,                                     /* Block task pending on Mutex                            */
+    450                      (OS_PEND_OBJ *)((void *)p_mutex),
+    451                       OS_TASK_PEND_ON_MUTEX,
+    452                       timeout);
+   \                     ??OS_MutexInit_6:
+   \   000107 A824                  MOVW      AX, [SP+0x24]      ;; 1 cycle
+   \   000109 12                    MOVW      BC, AX             ;; 1 cycle
+   \   00010A A822                  MOVW      AX, [SP+0x22]      ;; 1 cycle
+   \   00010C C3                    PUSH      BC                 ;; 1 cycle
+   \   00010D C1                    PUSH      AX                 ;; 1 cycle
+   \   00010E 5504                  MOV       D, #0x4            ;; 1 cycle
+   \   000110 A820                  MOVW      AX, [SP+0x20]      ;; 1 cycle
+   \   000112 12                    MOVW      BC, AX             ;; 1 cycle
+   \   000113 AEF8                  MOVW      AX, SP             ;; 1 cycle
+   \   000115 040A00                ADDW      AX, #0xA           ;; 1 cycle
+   \   000118 FD....                CALL      OS_Pend            ;; 3 cycles
+    453          
+    454              OS_CRITICAL_EXIT_NO_SCHED();
+   \   00011B FD....                CALL      CPU_IntDisMeasStop  ;; 3 cycles
+   \   00011E 8802                  MOV       A, [SP+0x02]       ;; 1 cycle
+   \   000120 FD....                CALL      N:?Subroutine1     ;; 3 cycles
+   \   000123                       ; ------------------------------------- Block: 20 cycles
+    455          
+    456              OSSched();                                              /* Find the next highest priority task ready to run       */
+   \                     ??CrossCallReturnLabel_7:
+   \   000123 FD....                CALL      OSSched            ;; 3 cycles
+    457          
+    458              CPU_CRITICAL_ENTER();
+   \   000126 8EFA                  MOV       A, PSW             ;; 1 cycle
+   \   000128 70                    MOV       X, A               ;; 1 cycle
+   \   000129 F1                    CLRB      A                  ;; 1 cycle
+   \   00012A B802                  MOVW      [SP+0x02], AX      ;; 1 cycle
+   \   00012C 717BFA                DI                           ;; 2 cycles
+   \   00012F FD....                CALL      CPU_IntDisMeasStart  ;; 3 cycles
+    459              switch (OSTCBCurPtr->PendStatus) {
+   \   000132 FB....                MOVW      HL, N:OSTCBCurPtr  ;; 1 cycle
+   \   000135 8C1B                  MOV       A, [HL+0x1B]       ;; 1 cycle
+   \   000137 D1                    CMP0      A                  ;; 1 cycle
+   \   000138 DD0B                  BZ        ??OS_MutexInit_11  ;; 4 cycles
+   \   00013A                       ; ------------------------------------- Block: 19 cycles
+   \   00013A 91                    DEC       A                  ;; 1 cycle
+   \   00013B DD3F                  BZ        ??OS_MutexInit_12  ;; 4 cycles
+   \   00013D                       ; ------------------------------------- Block: 5 cycles
+   \   00013D 91                    DEC       A                  ;; 1 cycle
+   \   00013E DD67                  BZ        ??OS_MutexInit_13  ;; 4 cycles
+   \   000140                       ; ------------------------------------- Block: 5 cycles
+   \   000140 91                    DEC       A                  ;; 1 cycle
+   \   000141 DD50                  BZ        ??OS_MutexInit_14  ;; 4 cycles
+   \   000143                       ; ------------------------------------- Block: 5 cycles
+   \   000143 EF79                  BR        S:??OS_MutexInit_15  ;; 3 cycles
+   \   000145                       ; ------------------------------------- Block: 3 cycles
+    460                  case OS_STATUS_PEND_OK:                             /* We got the mutex                                       */
+    461                       if (p_ts != (CPU_TS *)0) {
+   \                     ??OS_MutexInit_11:
+   \   000145 A818                  MOVW      AX, [SP+0x18]      ;; 1 cycle
+   \   000147 440000                CMPW      AX, #0x0           ;; 1 cycle
+   \   00014A DD08                  BZ        ??CrossCallReturnLabel_24  ;; 4 cycles
+   \   00014C                       ; ------------------------------------- Block: 6 cycles
+    462                          *p_ts  = OSTCBCurPtr->TS;
+   \   00014C FD....                CALL      N:?Subroutine4     ;; 3 cycles
+   \   00014F                       ; ------------------------------------- Block: 3 cycles
+    463                       }
+   \                     ??CrossCallReturnLabel_27:
+   \   00014F A818                  MOVW      AX, [SP+0x18]      ;; 1 cycle
+   \   000151 FD....                CALL      N:?Subroutine3     ;; 3 cycles
+   \   000154                       ; ------------------------------------- Block: 4 cycles
+    464                       *p_err = OS_ERR_NONE;
+   \                     ??CrossCallReturnLabel_24:
+   \   000154 A826                  MOVW      AX, [SP+0x26]      ;; 1 cycle
+   \   000156 16                    MOVW      HL, AX             ;; 1 cycle
+   \   000157 F6                    CLRW      AX                 ;; 1 cycle
+   \   000158 EF6A                  BR        S:??OS_MutexInit_16  ;; 3 cycles
+   \   00015A                       ; ------------------------------------- Block: 6 cycles
+   \                     ??OS_MutexInit_8:
+   \   00015A FD....                CALL      N:?Subroutine2     ;; 3 cycles
+   \   00015D                       ; ------------------------------------- Block: 3 cycles
+   \                     ??CrossCallReturnLabel_17:
+   \   00015D 99                    MOV       [DE], A            ;; 1 cycle
+   \   00015E EFA7                  BR        S:??OS_MutexInit_6  ;; 3 cycles
+   \   000160                       ; ------------------------------------- Block: 4 cycles
+   \                     ??OS_MutexInit_9:
+   \   000160 FD....                CALL      N:?Subroutine2     ;; 3 cycles
+   \   000163                       ; ------------------------------------- Block: 3 cycles
+   \                     ??CrossCallReturnLabel_18:
+   \   000163 73                    MOV       B, A               ;; 1 cycle
+   \   000164 A800                  MOVW      AX, [SP]           ;; 1 cycle
+   \   000166 FD....                CALL      OS_PendListChangePrio  ;; 3 cycles
+   \   000169 EF9C                  BR        S:??OS_MutexInit_6  ;; 3 cycles
+   \   00016B                       ; ------------------------------------- Block: 8 cycles
+   \                     ??OS_MutexInit_10:
+   \   00016B FD....                CALL      CPU_IntDisMeasStop  ;; 3 cycles
+   \   00016E 8802                  MOV       A, [SP+0x02]       ;; 1 cycle
+   \   000170 FD....                CALL      N:?Subroutine1     ;; 3 cycles
+   \   000173                       ; ------------------------------------- Block: 7 cycles
+   \                     ??CrossCallReturnLabel_8:
+   \   000173 A826                  MOVW      AX, [SP+0x26]      ;; 1 cycle
+   \   000175 16                    MOVW      HL, AX             ;; 1 cycle
+   \   000176 302A6E                MOVW      AX, #0x6E2A        ;; 1 cycle
+   \   000179                       ; ------------------------------------- Block: 3 cycles
+   \                     ??OS_MutexInit_2:
+   \   000179 BB                    MOVW      [HL], AX           ;; 1 cycle
+   \   00017A EF51                  BR        S:??CrossCallReturnLabel_9  ;; 3 cycles
+   \   00017C                       ; ------------------------------------- Block: 4 cycles
+    465                       break;
+    466          
+    467                  case OS_STATUS_PEND_ABORT:                          /* Indicate that we aborted                               */
+    468                       if (p_ts != (CPU_TS *)0) {
+   \                     ??OS_MutexInit_12:
+   \   00017C A818                  MOVW      AX, [SP+0x18]      ;; 1 cycle
+   \   00017E 440000                CMPW      AX, #0x0           ;; 1 cycle
+   \   000181 DD08                  BZ        ??CrossCallReturnLabel_25  ;; 4 cycles
+   \   000183                       ; ------------------------------------- Block: 6 cycles
+    469                          *p_ts  = OSTCBCurPtr->TS;
+   \   000183 FD....                CALL      N:?Subroutine4     ;; 3 cycles
+   \   000186                       ; ------------------------------------- Block: 3 cycles
+    470                       }
+   \                     ??CrossCallReturnLabel_28:
+   \   000186 A818                  MOVW      AX, [SP+0x18]      ;; 1 cycle
+   \   000188 FD....                CALL      N:?Subroutine3     ;; 3 cycles
+   \   00018B                       ; ------------------------------------- Block: 4 cycles
+    471                       *p_err = OS_ERR_PEND_ABORT;
+   \                     ??CrossCallReturnLabel_25:
+   \   00018B A826                  MOVW      AX, [SP+0x26]      ;; 1 cycle
+   \   00018D 16                    MOVW      HL, AX             ;; 1 cycle
+   \   00018E 30A961                MOVW      AX, #0x61A9        ;; 1 cycle
+   \   000191 EF31                  BR        S:??OS_MutexInit_16  ;; 3 cycles
+   \   000193                       ; ------------------------------------- Block: 6 cycles
+    472                       break;
+    473          
+    474                  case OS_STATUS_PEND_TIMEOUT:                        /* Indicate that we didn't get mutex within timeout       */
+    475                       if (p_ts != (CPU_TS *)0) {
+   \                     ??OS_MutexInit_14:
+   \   000193 A818                  MOVW      AX, [SP+0x18]      ;; 1 cycle
+   \   000195 440000                CMPW      AX, #0x0           ;; 1 cycle
+   \   000198 DD05                  BZ        ??OS_MutexInit_17  ;; 4 cycles
+   \   00019A                       ; ------------------------------------- Block: 6 cycles
+    476                          *p_ts  = (CPU_TS  )0;
+   \   00019A 16                    MOVW      HL, AX             ;; 1 cycle
+   \   00019B F6                    CLRW      AX                 ;; 1 cycle
+   \   00019C BB                    MOVW      [HL], AX           ;; 1 cycle
+   \   00019D BC02                  MOVW      [HL+0x02], AX      ;; 1 cycle
+   \   00019F                       ; ------------------------------------- Block: 4 cycles
+    477                       }
+    478                       *p_err = OS_ERR_TIMEOUT;
+   \                     ??OS_MutexInit_17:
+   \   00019F A826                  MOVW      AX, [SP+0x26]      ;; 1 cycle
+   \   0001A1 16                    MOVW      HL, AX             ;; 1 cycle
+   \   0001A2 30D972                MOVW      AX, #0x72D9        ;; 1 cycle
+   \   0001A5 EF1D                  BR        S:??OS_MutexInit_16  ;; 3 cycles
+   \   0001A7                       ; ------------------------------------- Block: 6 cycles
+    479                       break;
+    480          
+    481                  case OS_STATUS_PEND_DEL:                            /* Indicate that object pended on has been deleted        */
+    482                       if (p_ts != (CPU_TS *)0) {
+   \                     ??OS_MutexInit_13:
+   \   0001A7 A818                  MOVW      AX, [SP+0x18]      ;; 1 cycle
+   \   0001A9 440000                CMPW      AX, #0x0           ;; 1 cycle
+   \   0001AC DD08                  BZ        ??CrossCallReturnLabel_26  ;; 4 cycles
+   \   0001AE                       ; ------------------------------------- Block: 6 cycles
+    483                          *p_ts  = OSTCBCurPtr->TS;
+   \   0001AE FD....                CALL      N:?Subroutine4     ;; 3 cycles
+   \   0001B1                       ; ------------------------------------- Block: 3 cycles
+    484                       }
+   \                     ??CrossCallReturnLabel_29:
+   \   0001B1 A818                  MOVW      AX, [SP+0x18]      ;; 1 cycle
+   \   0001B3 FD....                CALL      N:?Subroutine3     ;; 3 cycles
+   \   0001B6                       ; ------------------------------------- Block: 4 cycles
+    485                       *p_err = OS_ERR_OBJ_DEL;
+   \                     ??CrossCallReturnLabel_26:
+   \   0001B6 A826                  MOVW      AX, [SP+0x26]      ;; 1 cycle
+   \   0001B8 16                    MOVW      HL, AX             ;; 1 cycle
+   \   0001B9 30C25D                MOVW      AX, #0x5DC2        ;; 1 cycle
+   \   0001BC EF06                  BR        S:??OS_MutexInit_16  ;; 3 cycles
+   \   0001BE                       ; ------------------------------------- Block: 6 cycles
+    486                       break;
+    487          
+    488                  default:
+    489                       *p_err = OS_ERR_STATUS_INVALID;
+   \                     ??OS_MutexInit_15:
+   \   0001BE A826                  MOVW      AX, [SP+0x26]      ;; 1 cycle
+   \   0001C0 16                    MOVW      HL, AX             ;; 1 cycle
+   \   0001C1 302B6E                MOVW      AX, #0x6E2B        ;; 1 cycle
+   \   0001C4                       ; ------------------------------------- Block: 3 cycles
+   \                     ??OS_MutexInit_16:
+   \   0001C4 BB                    MOVW      [HL], AX           ;; 1 cycle
+    490                       break;
+    491              }
+    492              CPU_CRITICAL_EXIT();
+   \   0001C5 FD....                CALL      CPU_IntDisMeasStop  ;; 3 cycles
+   \   0001C8 8802                  MOV       A, [SP+0x02]       ;; 1 cycle
+   \   0001CA FD....                CALL      N:?Subroutine1     ;; 3 cycles
+    493          }
+   \   0001CD                       ; ------------------------------------- Block: 8 cycles
+   \                     ??CrossCallReturnLabel_9:
+   \   0001CD 101E                  ADDW      SP, #0x1E          ;; 1 cycle
+   \   0001CF FD....                CALL      N:?FUNC_LEAVE_L06
+   \   0001D2 0600                  DW        0x6                ;; 3 cycles
+   \   0001D4                       ; ------------------------------------- Block: 4 cycles
+   \   0001D4                       ; ------------------------------------- Total: 401 cycles
+   \   0001D4                       REQUIRE ?CLRL78_V1_0_L00
+
+   \                                 In  segment CODE, align 1, keep-with-next
+   \                     ?Subroutine4:
+   \   000000 AC26                  MOVW      AX, [HL+0x26]      ;; 1 cycle
+   \   000002 12                    MOVW      BC, AX             ;; 1 cycle
+   \   000003 AC24                  MOVW      AX, [HL+0x24]      ;; 1 cycle
+   \   000005 16                    MOVW      HL, AX             ;; 1 cycle
+   \   000006 D7                    RET                          ;; 6 cycles
+   \   000007                       ; ------------------------------------- Block: 10 cycles
+   \   000007                       ; ------------------------------------- Total: 10 cycles
+   \   000007                       REQUIRE ?CLRL78_V1_0_L00
+
+   \                                 In  segment CODE, align 1, keep-with-next
+   \                     ?Subroutine3:
+   \   000000 37                    XCHW      AX, HL             ;; 1 cycle
+   \   000001 BB                    MOVW      [HL], AX           ;; 1 cycle
+   \   000002 13                    MOVW      AX, BC             ;; 1 cycle
+   \   000003 BC02                  MOVW      [HL+0x02], AX      ;; 1 cycle
+   \   000005 D7                    RET                          ;; 6 cycles
+   \   000006                       ; ------------------------------------- Block: 10 cycles
+   \   000006                       ; ------------------------------------- Total: 10 cycles
+   \   000006                       REQUIRE ?CLRL78_V1_0_L00
+
+   \                                 In  segment CODE, align 1, keep-with-next
+   \                     ?Subroutine2:
+   \   000000 FB....                MOVW      HL, N:OSTCBCurPtr  ;; 1 cycle
+   \   000003 8C1D                  MOV       A, [HL+0x1D]       ;; 1 cycle
+   \   000005 D7                    RET                          ;; 6 cycles
+   \   000006                       ; ------------------------------------- Block: 8 cycles
+   \   000006                       ; ------------------------------------- Total: 8 cycles
+   \   000006                       REQUIRE ?CLRL78_V1_0_L00
+    494          
+    495          /*$PAGE*/
+    496          /*
+    497          ************************************************************************************************************************
+    498          *                                               ABORT WAITING ON A MUTEX
+    499          *
+    500          * Description: This function aborts & readies any tasks currently waiting on a mutex.  This function should be used
+    501          *              to fault-abort the wait on the mutex, rather than to normally signal the mutex via OSMutexPost().
+    502          *
+    503          * Arguments  : p_mutex   is a pointer to the mutex
+    504          *
+    505          *              opt       determines the type of ABORT performed:
+    506          *
+    507          *                            OS_OPT_PEND_ABORT_1          ABORT wait for a single task (HPT) waiting on the mutex
+    508          *                            OS_OPT_PEND_ABORT_ALL        ABORT wait for ALL tasks that are  waiting on the mutex
+    509          *                            OS_OPT_POST_NO_SCHED         Do not call the scheduler
+    510          *
+    511          *              p_err     is a pointer to a variable that will contain an error code returned by this function.
+    512          *
+    513          *                            OS_ERR_NONE                  At least one task waiting on the mutex was readied and
+    514          *                                                         informed of the aborted wait; check return value for the
+    515          *                                                         number of tasks whose wait on the mutex was aborted.
+    516          *                            OS_ERR_OBJ_PTR_NULL          If 'p_mutex' is a NULL pointer.
+    517          *                            OS_ERR_OBJ_TYPE              If 'p_mutex' is not pointing at a mutex
+    518          *                            OS_ERR_OPT_INVALID           If you specified an invalid option
+    519          *                            OS_ERR_PEND_ABORT_ISR        If you attempted to call this function from an ISR
+    520          *                            OS_ERR_PEND_ABORT_NONE       No task were pending
+    521          *
+    522          * Returns    : == 0          if no tasks were waiting on the mutex, or upon error.
+    523          *              >  0          if one or more tasks waiting on the mutex are now readied and informed.
+    524          ************************************************************************************************************************
+    525          */
+    526          
+    527          #if OS_CFG_MUTEX_PEND_ABORT_EN > 0u
+    528          OS_OBJ_QTY  OSMutexPendAbort (OS_MUTEX  *p_mutex,
+    529                                        OS_OPT     opt,
+    530                                        OS_ERR    *p_err)
+    531          {
+    532              OS_PEND_LIST  *p_pend_list;
+    533              OS_TCB        *p_tcb;
+    534              CPU_TS         ts;
+    535              OS_OBJ_QTY     nbr_tasks;
+    536              CPU_SR_ALLOC();
+    537          
+    538          
+    539          
+    540          #ifdef OS_SAFETY_CRITICAL
+    541              if (p_err == (OS_ERR *)0) {
+    542                  OS_SAFETY_CRITICAL_EXCEPTION();
+    543                  return ((OS_OBJ_QTY)0u);
+    544              }
+    545          #endif
+    546          
+    547          #if OS_CFG_CALLED_FROM_ISR_CHK_EN > 0u
+    548              if (OSIntNestingCtr > (OS_NESTING_CTR)0u) {             /* Not allowed to Pend Abort from an ISR                  */
+    549                 *p_err =  OS_ERR_PEND_ABORT_ISR;
+    550                  return ((OS_OBJ_QTY)0u);
+    551              }
+    552          #endif
+    553          
+    554          #if OS_CFG_ARG_CHK_EN > 0u
+    555              if (p_mutex == (OS_MUTEX *)0) {                         /* Validate 'p_mutex'                                     */
+    556                 *p_err =  OS_ERR_OBJ_PTR_NULL;
+    557                  return ((OS_OBJ_QTY)0u);
+    558              }
+    559              switch (opt) {                                          /* Validate 'opt'                                         */
+    560                  case OS_OPT_PEND_ABORT_1:
+    561                  case OS_OPT_PEND_ABORT_ALL:
+    562                       break;
+    563          
+    564                  default:
+    565                      *p_err =  OS_ERR_OPT_INVALID;
+    566                       return ((OS_OBJ_QTY)0u);
+    567              }
+    568          #endif
+    569          
+    570          #if OS_CFG_OBJ_TYPE_CHK_EN > 0u
+    571              if (p_mutex->Type != OS_OBJ_TYPE_MUTEX) {               /* Make sure mutex was created                            */
+    572                 *p_err =  OS_ERR_OBJ_TYPE;
+    573                  return ((OS_OBJ_QTY)0u);
+    574              }
+    575          #endif
+    576          
+    577              CPU_CRITICAL_ENTER();
+    578              p_pend_list = &p_mutex->PendList;
+    579              if (p_pend_list->NbrEntries == (OS_OBJ_QTY)0u) {        /* Any task waiting on mutex?                             */
+    580                  CPU_CRITICAL_EXIT();                                /* No                                                     */
+    581                 *p_err =  OS_ERR_PEND_ABORT_NONE;
+    582                  return ((OS_OBJ_QTY)0u);
+    583              }
+    584          
+    585              OS_CRITICAL_ENTER_CPU_CRITICAL_EXIT();
+    586              nbr_tasks = 0u;
+    587              ts        = OS_TS_GET();                                /* Get local time stamp so all tasks get the same time    */
+    588              while (p_pend_list->NbrEntries > (OS_OBJ_QTY)0u) {
+    589                  p_tcb = p_pend_list->HeadPtr->TCBPtr;
+    590                  OS_PendAbort((OS_PEND_OBJ *)((void *)p_mutex),
+    591                               p_tcb,
+    592                               ts);
+    593                  nbr_tasks++;
+    594                  if (opt != OS_OPT_PEND_ABORT_ALL) {                 /* Pend abort all tasks waiting?                          */
+    595                      break;                                          /* No                                                     */
+    596                  }
+    597              }
+    598              OS_CRITICAL_EXIT_NO_SCHED();
+    599          
+    600              if ((opt & OS_OPT_POST_NO_SCHED) == (OS_OPT)0u) {
+    601                  OSSched();                                          /* Run the scheduler                                      */
+    602              }
+    603          
+    604             *p_err = OS_ERR_NONE;
+    605              return (nbr_tasks);
+    606          }
+    607          #endif
+    608          
+    609          /*$PAGE*/
+    610          /*
+    611          ************************************************************************************************************************
+    612          *                                                   POST TO A MUTEX
+    613          *
+    614          * Description: This function signals a mutex
+    615          *
+    616          * Arguments  : p_mutex  is a pointer to the mutex
+    617          *
+    618          *              opt      is an option you can specify to alter the behavior of the post.  The choices are:
+    619          *
+    620          *                           OS_OPT_POST_NONE        No special option selected
+    621          *                           OS_OPT_POST_NO_SCHED    If you don't want the scheduler to be called after the post.
+    622          *
+    623          *              p_err    is a pointer to a variable that will contain an error code returned by this function.
+    624          *
+    625          *                           OS_ERR_NONE             The call was successful and the mutex was signaled.
+    626          *                           OS_ERR_MUTEX_NESTING    Mutex owner nested its use of the mutex
+    627          *                           OS_ERR_MUTEX_NOT_OWNER  If the task posting is not the Mutex owner
+    628          *                           OS_ERR_OBJ_PTR_NULL     If 'p_mutex' is a NULL pointer.
+    629          *                           OS_ERR_OBJ_TYPE         If 'p_mutex' is not pointing at a mutex
+    630          *                           OS_ERR_POST_ISR         If you attempted to post from an ISR
+    631          *
+    632          * Returns    : none
+    633          ************************************************************************************************************************
+    634          */
+    635          
+
+   \                                 In  segment CODE, align 1, keep-with-next
+    636          void  OSMutexPost (OS_MUTEX  *p_mutex,
+   \                     OSMutexPost:
+    637                             OS_OPT     opt,
+    638                             OS_ERR    *p_err)
+    639          {
+   \   000000                       ; * Stack frame (at entry) *
+   \   000000                       ; Param size: 0
+   \   000000 C1                    PUSH      AX                 ;; 1 cycle
+   \   000001 C3                    PUSH      BC                 ;; 1 cycle
+   \   000002 C5                    PUSH      DE                 ;; 1 cycle
+   \   000003                       ; Auto size: 10
+   \   000003 2004                  SUBW      SP, #0x4           ;; 1 cycle
+    640              OS_PEND_LIST  *p_pend_list;
+    641              OS_TCB        *p_tcb;
+    642              CPU_TS         ts;
+    643              CPU_SR_ALLOC();
+    644          
+    645          
+    646          
+    647          #ifdef OS_SAFETY_CRITICAL
+    648              if (p_err == (OS_ERR *)0) {
+    649                  OS_SAFETY_CRITICAL_EXCEPTION();
+    650                  return;
+    651              }
+    652          #endif
+    653          
+    654          #if OS_CFG_CALLED_FROM_ISR_CHK_EN > 0u
+    655              if (OSIntNestingCtr > (OS_NESTING_CTR)0) {              /* Not allowed to call from an ISR                        */
+    656                 *p_err = OS_ERR_POST_ISR;
+    657                  return;
+    658              }
+    659          #endif
+    660          
+    661          #if OS_CFG_ARG_CHK_EN > 0u
+    662              if (p_mutex == (OS_MUTEX *)0) {                         /* Validate 'p_mutex'                                     */
+    663                  *p_err = OS_ERR_OBJ_PTR_NULL;
+    664                  return;
+    665              }
+    666          #endif
+    667          
+    668          #if OS_CFG_OBJ_TYPE_CHK_EN > 0u
+    669              if (p_mutex->Type != OS_OBJ_TYPE_MUTEX) {               /* Make sure mutex was created                            */
+    670                  *p_err = OS_ERR_OBJ_TYPE;
+    671                  return;
+    672              }
+    673          #endif
+    674          
+    675              CPU_CRITICAL_ENTER();
+   \   000005 8EFA                  MOV       A, PSW             ;; 1 cycle
+   \   000007 70                    MOV       X, A               ;; 1 cycle
+   \   000008 F1                    CLRB      A                  ;; 1 cycle
+   \   000009 F7                    CLRW      BC                 ;; 1 cycle
+   \   00000A B800                  MOVW      [SP], AX           ;; 1 cycle
+   \   00000C F6                    CLRW      AX                 ;; 1 cycle
+   \   00000D B802                  MOVW      [SP+0x02], AX      ;; 1 cycle
+   \   00000F 717BFA                DI                           ;; 2 cycles
+   \   000012 FD....                CALL      CPU_IntDisMeasStart  ;; 3 cycles
+    676              if (OSTCBCurPtr != p_mutex->OwnerTCBPtr) {              /* Make sure the mutex owner is releasing the mutex       */
+   \   000015 A808                  MOVW      AX, [SP+0x08]      ;; 1 cycle
+   \   000017 16                    MOVW      HL, AX             ;; 1 cycle
+   \   000018 AC0C                  MOVW      AX, [HL+0x0C]      ;; 1 cycle
+   \   00001A FB....                MOVW      HL, N:OSTCBCurPtr  ;; 1 cycle
+   \   00001D 47                    CMPW      AX, HL             ;; 1 cycle
+   \   00001E DD10                  BZ        ??OS_MutexInit_18  ;; 4 cycles
+   \   000020                       ; ------------------------------------- Block: 25 cycles
+    677                  CPU_CRITICAL_EXIT();
+   \   000020 FD....                CALL      CPU_IntDisMeasStop  ;; 3 cycles
+   \   000023 8800                  MOV       A, [SP]            ;; 1 cycle
+   \   000025 FD....                CALL      N:?Subroutine1     ;; 3 cycles
+   \   000028                       ; ------------------------------------- Block: 7 cycles
+    678                  *p_err = OS_ERR_MUTEX_NOT_OWNER;
+   \                     ??CrossCallReturnLabel_10:
+   \   000028 C5                    PUSH      DE                 ;; 1 cycle
+   \   000029 C6                    POP       HL                 ;; 1 cycle
+   \   00002A 308157                MOVW      AX, #0x5781        ;; 1 cycle
+   \   00002D ED....                BR        N:??OS_MutexInit_19  ;; 3 cycles
+   \   000030                       ; ------------------------------------- Block: 6 cycles
+    679                  return;
+    680              }
+    681          
+    682              OS_CRITICAL_ENTER_CPU_CRITICAL_EXIT();
+    683              ts          = OS_TS_GET();                              /* Get timestamp                                          */
+    684              p_mutex->TS = ts;
+   \                     ??OS_MutexInit_18:
+   \   000030 A808                  MOVW      AX, [SP+0x08]      ;; 1 cycle
+   \   000032 16                    MOVW      HL, AX             ;; 1 cycle
+   \   000033 F6                    CLRW      AX                 ;; 1 cycle
+   \   000034 BC10                  MOVW      [HL+0x10], AX      ;; 1 cycle
+   \   000036 BC12                  MOVW      [HL+0x12], AX      ;; 1 cycle
+    685              p_mutex->OwnerNestingCtr--;                             /* Decrement owner's nesting counter                      */
+   \   000038 17                    MOVW      AX, HL             ;; 1 cycle
+   \   000039 040F00                ADDW      AX, #0xF           ;; 1 cycle
+   \   00003C 16                    MOVW      HL, AX             ;; 1 cycle
+   \   00003D 8B                    MOV       A, [HL]            ;; 1 cycle
+   \   00003E 91                    DEC       A                  ;; 1 cycle
+   \   00003F 9B                    MOV       [HL], A            ;; 1 cycle
+    686              if (p_mutex->OwnerNestingCtr > (OS_NESTING_CTR)0) {     /* Are we done with all nestings?                         */
+   \   000040 A808                  MOVW      AX, [SP+0x08]      ;; 1 cycle
+   \   000042 16                    MOVW      HL, AX             ;; 1 cycle
+   \   000043 DD0F                  BZ        ??OS_MutexInit_20  ;; 4 cycles
+   \   000045                       ; ------------------------------------- Block: 17 cycles
+    687                  OS_CRITICAL_EXIT();                                 /* No                                                     */
+   \   000045 FD....                CALL      CPU_IntDisMeasStop  ;; 3 cycles
+   \   000048 8800                  MOV       A, [SP]            ;; 1 cycle
+   \   00004A FD....                CALL      N:?Subroutine1     ;; 3 cycles
+   \   00004D                       ; ------------------------------------- Block: 7 cycles
+    688                  *p_err = OS_ERR_MUTEX_NESTING;
+   \                     ??CrossCallReturnLabel_11:
+   \   00004D C5                    PUSH      DE                 ;; 1 cycle
+   \   00004E C6                    POP       HL                 ;; 1 cycle
+   \   00004F 308357                MOVW      AX, #0x5783        ;; 1 cycle
+   \   000052 EF7C                  BR        S:??OS_MutexInit_19  ;; 3 cycles
+   \   000054                       ; ------------------------------------- Block: 6 cycles
+    689                  return;
+    690              }
+    691          
+    692              p_pend_list = &p_mutex->PendList;
+   \                     ??OS_MutexInit_20:
+   \   000054 040600                ADDW      AX, #0x6           ;; 1 cycle
+   \   000057 14                    MOVW      DE, AX             ;; 1 cycle
+    693              if (p_pend_list->NbrEntries == (OS_OBJ_QTY)0) {         /* Any task waiting on mutex?                             */
+   \   000058 AA04                  MOVW      AX, [DE+0x04]      ;; 1 cycle
+   \   00005A 43                    CMPW      AX, BC             ;; 1 cycle
+   \   00005B DF0D                  BNZ       ??OS_MutexInit_21  ;; 4 cycles
+   \   00005D                       ; ------------------------------------- Block: 8 cycles
+    694                  p_mutex->OwnerTCBPtr     = (OS_TCB       *)0;       /* No                                                     */
+   \   00005D F6                    CLRW      AX                 ;; 1 cycle
+   \   00005E BC0C                  MOVW      [HL+0x0C], AX      ;; 1 cycle
+    695                  p_mutex->OwnerNestingCtr = (OS_NESTING_CTR)0;
+    696                  OS_CRITICAL_EXIT();
+   \   000060 FD....                CALL      CPU_IntDisMeasStop  ;; 3 cycles
+   \   000063 8800                  MOV       A, [SP]            ;; 1 cycle
+   \   000065 FD....                CALL      N:?Subroutine1     ;; 3 cycles
+   \   000068                       ; ------------------------------------- Block: 9 cycles
+    697                  *p_err = OS_ERR_NONE;
+   \                     ??CrossCallReturnLabel_12:
+   \   000068 EF62                  BR        S:??OS_MutexInit_22  ;; 3 cycles
+   \   00006A                       ; ------------------------------------- Block: 3 cycles
+    698                  return;
+    699              }
+    700                                                                      /* Yes                                                    */
+    701              if (OSTCBCurPtr->Prio != p_mutex->OwnerOriginalPrio) {
+   \                     ??OS_MutexInit_21:
+   \   00006A FD....                CALL      N:?Subroutine2     ;; 3 cycles
+   \   00006D                       ; ------------------------------------- Block: 3 cycles
+   \                     ??CrossCallReturnLabel_19:
+   \   00006D 73                    MOV       B, A               ;; 1 cycle
+   \   00006E A808                  MOVW      AX, [SP+0x08]      ;; 1 cycle
+   \   000070 16                    MOVW      HL, AX             ;; 1 cycle
+   \   000071 8C0E                  MOV       A, [HL+0x0E]       ;; 1 cycle
+   \   000073 6143                  CMP       B, A               ;; 1 cycle
+   \   000075 DD22                  BZ        ??OS_MutexInit_23  ;; 4 cycles
+   \   000077                       ; ------------------------------------- Block: 9 cycles
+    702                  OS_RdyListRemove(OSTCBCurPtr);
+   \   000077 AF....                MOVW      AX, N:OSTCBCurPtr  ;; 1 cycle
+   \   00007A FD....                CALL      OS_RdyListRemove   ;; 3 cycles
+    703                  OSTCBCurPtr->Prio = p_mutex->OwnerOriginalPrio;     /* Lower owner's priority back to its original one        */
+   \   00007D A808                  MOVW      AX, [SP+0x08]      ;; 1 cycle
+   \   00007F 16                    MOVW      HL, AX             ;; 1 cycle
+   \   000080 8C0E                  MOV       A, [HL+0x0E]       ;; 1 cycle
+   \   000082 FB....                MOVW      HL, N:OSTCBCurPtr  ;; 1 cycle
+   \   000085 9C1D                  MOV       [HL+0x1D], A       ;; 1 cycle
+    704                  OS_PrioInsert(OSTCBCurPtr->Prio);
+   \   000087 FD....                CALL      N:?Subroutine2     ;; 3 cycles
+   \   00008A                       ; ------------------------------------- Block: 12 cycles
+   \                     ??CrossCallReturnLabel_20:
+   \   00008A FD....                CALL      OS_PrioInsert      ;; 3 cycles
+    705                  OS_RdyListInsertTail(OSTCBCurPtr);                  /* Insert owner in ready list at new priority             */
+   \   00008D AF....                MOVW      AX, N:OSTCBCurPtr  ;; 1 cycle
+   \   000090 FD....                CALL      OS_RdyListInsertTail  ;; 3 cycles
+    706                  OSPrioCur         = OSTCBCurPtr->Prio;
+   \   000093 FD....                CALL      N:?Subroutine2     ;; 3 cycles
+   \   000096                       ; ------------------------------------- Block: 10 cycles
+    707              }
+   \                     ??CrossCallReturnLabel_21:
+   \   000096 9F....                MOV       N:OSPrioCur, A     ;; 1 cycle
+   \   000099                       ; ------------------------------------- Block: 1 cycles
+    708                                                                      /* Get TCB from head of pend list                         */
+    709              p_tcb                      = p_pend_list->HeadPtr->TCBPtr;
+   \                     ??OS_MutexInit_23:
+   \   000099 A9                    MOVW      AX, [DE]           ;; 1 cycle
+   \   00009A 14                    MOVW      DE, AX             ;; 1 cycle
+   \   00009B AA04                  MOVW      AX, [DE+0x04]      ;; 1 cycle
+   \   00009D 16                    MOVW      HL, AX             ;; 1 cycle
+    710              p_mutex->OwnerTCBPtr       = p_tcb;                     /* Give mutex to new owner                                */
+   \   00009E A808                  MOVW      AX, [SP+0x08]      ;; 1 cycle
+   \   0000A0 14                    MOVW      DE, AX             ;; 1 cycle
+   \   0000A1 17                    MOVW      AX, HL             ;; 1 cycle
+   \   0000A2 BA0C                  MOVW      [DE+0x0C], AX      ;; 1 cycle
+    711              p_mutex->OwnerOriginalPrio = p_tcb->Prio;
+   \   0000A4 8C1D                  MOV       A, [HL+0x1D]       ;; 1 cycle
+   \   0000A6 9A0E                  MOV       [DE+0x0E], A       ;; 1 cycle
+    712              p_mutex->OwnerNestingCtr   = (OS_NESTING_CTR)1;
+   \   0000A8 E1                    ONEB      A                  ;; 1 cycle
+   \   0000A9 9A0F                  MOV       [DE+0x0F], A       ;; 1 cycle
+    713                                                                      /* Post to mutex                                          */
+    714              OS_Post((OS_PEND_OBJ *)((void *)p_mutex),
+    715                      (OS_TCB      *)p_tcb,
+    716                      (void        *)0,
+    717                      (OS_MSG_SIZE  )0,
+    718                      (CPU_TS       )ts);
+   \   0000AB F6                    CLRW      AX                 ;; 1 cycle
+   \   0000AC C1                    PUSH      AX                 ;; 1 cycle
+   \   0000AD C1                    PUSH      AX                 ;; 1 cycle
+   \   0000AE C1                    PUSH      AX                 ;; 1 cycle
+   \   0000AF 14                    MOVW      DE, AX             ;; 1 cycle
+   \   0000B0 C7                    PUSH      HL                 ;; 1 cycle
+   \   0000B1 C2                    POP       BC                 ;; 1 cycle
+   \   0000B2 A80E                  MOVW      AX, [SP+0x0E]      ;; 1 cycle
+   \   0000B4 FD....                CALL      OS_Post            ;; 3 cycles
+    719          
+    720              OS_CRITICAL_EXIT_NO_SCHED();
+   \   0000B7 FD....                CALL      CPU_IntDisMeasStop  ;; 3 cycles
+   \   0000BA 8800                  MOV       A, [SP]            ;; 1 cycle
+   \   0000BC FD....                CALL      N:?Subroutine1     ;; 3 cycles
+   \   0000BF                       ; ------------------------------------- Block: 30 cycles
+    721          
+    722              if ((opt & OS_OPT_POST_NO_SCHED) == (OS_OPT)0) {
+   \                     ??CrossCallReturnLabel_13:
+   \   0000BF AEF8                  MOVW      AX, SP             ;; 1 cycle
+   \   0000C1 040600                ADDW      AX, #0x6           ;; 1 cycle
+   \   0000C4 16                    MOVW      HL, AX             ;; 1 cycle
+   \   0000C5 A7                    INCW      HL                 ;; 1 cycle
+   \   0000C6 31F303                BT        [HL].7, ??OS_MutexInit_22  ;; 5 cycles
+   \   0000C9                       ; ------------------------------------- Block: 9 cycles
+    723                  OSSched();                                          /* Run the scheduler                                      */
+   \   0000C9 FD....                CALL      OSSched            ;; 3 cycles
+   \   0000CC                       ; ------------------------------------- Block: 3 cycles
+    724              }
+    725          
+    726              *p_err = OS_ERR_NONE;
+   \                     ??OS_MutexInit_22:
+   \   0000CC A804                  MOVW      AX, [SP+0x04]      ;; 1 cycle
+   \   0000CE 16                    MOVW      HL, AX             ;; 1 cycle
+   \   0000CF F6                    CLRW      AX                 ;; 1 cycle
+   \   0000D0                       ; ------------------------------------- Block: 3 cycles
+   \                     ??OS_MutexInit_19:
+   \   0000D0 BB                    MOVW      [HL], AX           ;; 1 cycle
+    727          }
+   \   0000D1 100A                  ADDW      SP, #0xA           ;; 1 cycle
+   \   0000D3 D7                    RET                          ;; 6 cycles
+   \   0000D4                       ; ------------------------------------- Block: 8 cycles
+   \   0000D4                       ; ------------------------------------- Total: 176 cycles
+   \   0000D4                       REQUIRE ?CLRL78_V1_0_L00
+    728          
+    729          /*$PAGE*/
+    730          /*
+    731          ************************************************************************************************************************
+    732          *                                            CLEAR THE CONTENTS OF A MUTEX
+    733          *
+    734          * Description: This function is called by OSMutexDel() to clear the contents of a mutex
+    735          *
+    736          
+    737          * Argument(s): p_mutex      is a pointer to the mutex to clear
+    738          *              -------
+    739          *
+    740          * Returns    : none
+    741          *
+    742          * Note(s)    : This function is INTERNAL to uC/OS-III and your application should not call it.
+    743          ************************************************************************************************************************
+    744          */
+    745          
+
+   \                                 In  segment CODE, align 1, keep-with-next
+    746          void  OS_MutexClr (OS_MUTEX  *p_mutex)
+   \                     OS_MutexClr:
+    747          {
+   \   000000                       ; * Stack frame (at entry) *
+   \   000000                       ; Param size: 0
+   \   000000                       ; Auto size: 0
+   \   000000 16                    MOVW      HL, AX             ;; 1 cycle
+    748              p_mutex->Type              =  OS_OBJ_TYPE_NONE;         /* Mark the data structure as a NONE                      */
+   \   000001 304E45                MOVW      AX, #0x454E        ;; 1 cycle
+   \   000004 BB                    MOVW      [HL], AX           ;; 1 cycle
+   \   000005 514F                  MOV       A, #0x4F           ;; 1 cycle
+   \   000007 BC02                  MOVW      [HL+0x02], AX      ;; 1 cycle
+    749              p_mutex->NamePtr           = (CPU_CHAR     *)((void *)"?MUTEX");
+   \   000009 30....                MOVW      AX, #`?<Constant "?MUTEX">`  ;; 1 cycle
+   \   00000C FD....                CALL      N:?Subroutine0     ;; 3 cycles
+   \   00000F                       ; ------------------------------------- Block: 9 cycles
+    750              p_mutex->OwnerTCBPtr       = (OS_TCB       *)0;
+    751              p_mutex->OwnerNestingCtr   = (OS_NESTING_CTR)0;
+    752              p_mutex->TS                = (CPU_TS        )0;
+    753              p_mutex->OwnerOriginalPrio =  OS_CFG_PRIO_MAX;
+    754              OS_PendListInit(&p_mutex->PendList);                    /* Initialize the waiting list                            */
+   \                     ??CrossCallReturnLabel_1:
+   \   00000F ED....                BR        N:OS_PendListInit  ;; 3 cycles
+   \   000012                       ; ------------------------------------- Block: 3 cycles
+   \   000012                       ; ------------------------------------- Total: 12 cycles
+   \   000012                       REQUIRE ?CLRL78_V1_0_L00
+    755          }
+    756          
+    757          /*$PAGE*/
+    758          /*
+    759          ************************************************************************************************************************
+    760          *                                          ADD/REMOVE MUTEX TO/FROM DEBUG LIST
+    761          *
+    762          * Description: These functions are called by uC/OS-III to add or remove a mutex to/from the debug list.
+    763          *
+    764          * Arguments  : p_mutex     is a pointer to the mutex to add/remove
+    765          *
+    766          * Returns    : none
+    767          *
+    768          * Note(s)    : These functions are INTERNAL to uC/OS-III and your application should not call it.
+    769          ************************************************************************************************************************
+    770          */
+    771          
+    772          
+    773          #if OS_CFG_DBG_EN > 0u
+    774          void  OS_MutexDbgListAdd (OS_MUTEX  *p_mutex)
+    775          {
+    776              p_mutex->DbgNamePtr               = (CPU_CHAR *)((void *)" ");
+    777              p_mutex->DbgPrevPtr               = (OS_MUTEX *)0;
+    778              if (OSMutexDbgListPtr == (OS_MUTEX *)0) {
+    779                  p_mutex->DbgNextPtr           = (OS_MUTEX *)0;
+    780              } else {
+    781                  p_mutex->DbgNextPtr           =  OSMutexDbgListPtr;
+    782                  OSMutexDbgListPtr->DbgPrevPtr =  p_mutex;
+    783              }
+    784              OSMutexDbgListPtr                 =  p_mutex;
+    785          }
+    786          
+    787          
+    788          
+    789          void  OS_MutexDbgListRemove (OS_MUTEX  *p_mutex)
+    790          {
+    791              OS_MUTEX  *p_mutex_next;
+    792              OS_MUTEX  *p_mutex_prev;
+    793          
+    794          
+    795              p_mutex_prev = p_mutex->DbgPrevPtr;
+    796              p_mutex_next = p_mutex->DbgNextPtr;
+    797          
+    798              if (p_mutex_prev == (OS_MUTEX *)0) {
+    799                  OSMutexDbgListPtr = p_mutex_next;
+    800                  if (p_mutex_next != (OS_MUTEX *)0) {
+    801                      p_mutex_next->DbgPrevPtr = (OS_MUTEX *)0;
+    802                  }
+    803                  p_mutex->DbgNextPtr = (OS_MUTEX *)0;
+    804          
+    805              } else if (p_mutex_next == (OS_MUTEX *)0) {
+    806                  p_mutex_prev->DbgNextPtr = (OS_MUTEX *)0;
+    807                  p_mutex->DbgPrevPtr      = (OS_MUTEX *)0;
+    808          
+    809              } else {
+    810                  p_mutex_prev->DbgNextPtr =  p_mutex_next;
+    811                  p_mutex_next->DbgPrevPtr =  p_mutex_prev;
+    812                  p_mutex->DbgNextPtr      = (OS_MUTEX *)0;
+    813                  p_mutex->DbgPrevPtr      = (OS_MUTEX *)0;
+    814              }
+    815          }
+    816          #endif
+    817          
+    818          /*$PAGE*/
+    819          /*
+    820          ************************************************************************************************************************
+    821          *                                                MUTEX INITIALIZATION
+    822          *
+    823          * Description: This function is called by OSInit() to initialize the mutex management.
+    824          *
+    825          
+    826          * Argument(s): p_err        is a pointer to a variable that will contain an error code returned by this function.
+    827          *
+    828          *                                OS_ERR_NONE     the call was successful
+    829          *
+    830          * Returns    : none
+    831          *
+    832          * Note(s)    : 1) This function is INTERNAL to uC/OS-III and your application MUST NOT call it.
+    833          ************************************************************************************************************************
+    834          */
+    835          
+
+   \                                 In  segment CODE, align 1, keep-with-next
+    836          void  OS_MutexInit (OS_ERR  *p_err)
+   \                     OS_MutexInit:
+    837          {
+   \   000000                       ; * Stack frame (at entry) *
+   \   000000                       ; Param size: 0
+   \   000000                       ; Auto size: 0
+   \   000000 16                    MOVW      HL, AX             ;; 1 cycle
+    838          #ifdef OS_SAFETY_CRITICAL
+    839              if (p_err == (OS_ERR *)0) {
+    840                  OS_SAFETY_CRITICAL_EXCEPTION();
+    841                  return;
+    842              }
+    843          #endif
+    844          
+    845          #if OS_CFG_DBG_EN > 0u
+    846              OSMutexDbgListPtr = (OS_MUTEX *)0;
+    847          #endif
+    848          
+    849              OSMutexQty        = (OS_OBJ_QTY)0;
+   \   000001 F6                    CLRW      AX                 ;; 1 cycle
+   \   000002 BF....                MOVW      N:OSMutexQty, AX   ;; 1 cycle
+    850              *p_err            =  OS_ERR_NONE;
+   \   000005 BB                    MOVW      [HL], AX           ;; 1 cycle
+    851          }
+   \   000006 D7                    RET                          ;; 6 cycles
+   \   000007                       ; ------------------------------------- Block: 10 cycles
+   \   000007                       ; ------------------------------------- Total: 10 cycles
+   \   000007                       REQUIRE ?CLRL78_V1_0_L00
+
+   \                                 In  segment NEAR_CONST, align 2
+   \                     `?<Constant "?MUTEX">`:
+   \   000000 3F4D55544558          DB "?MUTEX"
+   \   000007 00                    DB 0
+    852          
+    853          #endif                                                      /* OS_CFG_MUTEX_EN                                        */
+
+   Maximum stack usage in bytes:
+
+   CSTACK Function
+   ------ --------
+      4   OSMutexCreate
+        4   -> CPU_IntDisMeasStart
+        4   -> CPU_IntDisMeasStop
+        4   -> OS_PendListInit
+     40   OSMutexPend
+       30   -> CPU_IntDisMeasStart
+       30   -> CPU_IntDisMeasStop
+       30   -> OSSched
+       34   -> OS_Pend
+       30   -> OS_PendListChangePrio
+       30   -> OS_PrioInsert
+       30   -> OS_RdyListInsertHead
+       30   -> OS_RdyListRemove
+     16   OSMutexPost
+       10   -> CPU_IntDisMeasStart
+       10   -> CPU_IntDisMeasStop
+       10   -> OSSched
+       16   -> OS_Post
+       10   -> OS_PrioInsert
+       10   -> OS_RdyListInsertTail
+       10   -> OS_RdyListRemove
+      0   OS_MutexClr
+        0   -> OS_PendListInit
+      0   OS_MutexInit
+
+
+   Segment part sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       8  ?<Constant "?MUTEX">
+      20  ?Subroutine0
+       6  ?Subroutine1
+       6  ?Subroutine2
+       6  ?Subroutine3
+       7  ?Subroutine4
+      46  OSMutexCreate
+     468  OSMutexPend
+     212  OSMutexPost
+      18  OS_MutexClr
+       7  OS_MutexInit
+
+ 
+ 796 bytes in segment CODE
+   8 bytes in segment NEAR_CONST
+ 
+ 796 bytes of CODE  memory
+   8 bytes of CONST memory
+
+Errors: none
+Warnings: none

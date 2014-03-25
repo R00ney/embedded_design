@@ -1,0 +1,996 @@
+###############################################################################
+#                                                                             #
+# IAR C/C++ Compiler V1.30.5.50715 for RL78             23/Mar/2014  17:08:41 #
+# Copyright 2011-2013 IAR Systems AB.                                         #
+# Network license: ece-lic-19.ece.ncsu.edu (STD)                              #
+#                                                                             #
+#    Core         =  rl78_2                                                   #
+#    Code model   =  Near                                                     #
+#    Data model   =  Near                                                     #
+#                 =                                                           #
+#    Source file  =  C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\uCOS-III\Source\os_msg.c   #
+#    Command line =  C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\uCOS-III\Source\os_msg.c   #
+#                    --core rl78_2 --code_model near --data_model near        #
+#                    --near_const_location rom0 -o                            #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\Debug\Obj\ --dlib_config            #
+#                    "C:\Program Files\IAR Systems\Embedded Workbench         #
+#                    6.5\rl78\LIB\dlrl78nn2n.h" -e -Ohz --no_scheduling       #
+#                    --no_clustering --debug -lC                              #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\Debug\List\ -I                      #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\ -I C:\Users\Suddenlink\Dropbox\git #
+#                    _files\embedded_design\Proj2_uCOS-III-LCD-G14\Software\E #
+#                    valBoards\Renesas\YRDKRL78G14\IAR\Application\Source\    #
+#                    -I C:\Users\Suddenlink\Dropbox\git_files\embedded_design #
+#                    \Proj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDK #
+#                    RL78G14\IAR\Application\..\uCOS-III\ -I                  #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\..\BSP\ -I                          #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\..\BSP\applilet3_src\ -I            #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\..\BSP\Glyph\Drivers\ -I            #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\..\BSP\Glyph\glyph\ -I              #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\..\..\..\..\..\uC-CPU\ -I           #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\..\..\..\..\..\uC-CPU\RL78\IAR\ -I  #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\..\..\..\..\..\uC-LIB\ -I           #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\..\..\..\..\..\uCOS-III\Ports\Renes #
+#                    as\RL78\IAR\ -I C:\Users\Suddenlink\Dropbox\git_files\em #
+#                    bedded_design\Proj2_uCOS-III-LCD-G14\Software\EvalBoards #
+#                    \Renesas\YRDKRL78G14\IAR\Application\..\..\..\..\..\uCOS #
+#                    -III\Source\ --relaxed_fp                                #
+#    List file    =  C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\Debug\List\os_msg.lst               #
+#    Object file  =  C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\Debug\Obj\os_msg.r87                #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Proj2_uCOS-III-LCD-G14\Software\uCOS-III\Source\os_msg.c
+      1          /*
+      2          ************************************************************************************************************************
+      3          *                                                      uC/OS-III
+      4          *                                                 The Real-Time Kernel
+      5          *
+      6          *                                  (c) Copyright 2009-2011; Micrium, Inc.; Weston, FL
+      7          *                           All rights reserved.  Protected by international copyright laws.
+      8          *
+      9          *                                              MESSAGE HANDLING SERVICES
+     10          *
+     11          * File    : OS_MSG.C
+     12          * By      : JJL
+     13          * Version : V3.02.00
+     14          *
+     15          * LICENSING TERMS:
+     16          * ---------------
+     17          *           uC/OS-III is provided in source form for FREE short-term evaluation, for educational use or 
+     18          *           for peaceful research.  If you plan or intend to use uC/OS-III in a commercial application/
+     19          *           product then, you need to contact Micrium to properly license uC/OS-III for its use in your 
+     20          *           application/product.   We provide ALL the source code for your convenience and to help you 
+     21          *           experience uC/OS-III.  The fact that the source is provided does NOT mean that you can use 
+     22          *           it commercially without paying a licensing fee.
+     23          *
+     24          *           Knowledge of the source code may NOT be used to develop a similar product.
+     25          *
+     26          *           Please help us continue to provide the embedded community with the finest software available.
+     27          *           Your honesty is greatly appreciated.
+     28          *
+     29          *           You can contact us at www.micrium.com, or by phone at +1 (954) 217-2036.
+     30          ************************************************************************************************************************
+     31          */
+     32          
+     33          #include <os.h>
+     34          
+     35          #ifdef VSC_INCLUDE_SOURCE_FILE_NAMES
+     36          const  CPU_CHAR  *os_msg__c = "$Id: $";
+     37          #endif
+     38          
+     39          
+     40          #if OS_MSG_EN > 0u
+     41          /*
+     42          ************************************************************************************************************************
+     43          *                                            EXTEND THE POOL OF 'OS_MSG'
+     44          *
+     45          * Description: This function is called by your application to add OS_MSGs to the free list of OS_MSGs
+     46          *
+     47          * Arguments  : p_msg        is a pointer to the base address of an array of OS_MSG and should be declared as follows:
+     48          *
+     49          *                           OS_MSG  MyNewMsgTbl[size];
+     50          *
+     51          *              size         is the size of the above array
+     52          *
+     53          *              p_err        is a pointer to a variable that will contain an error code returned by this function.
+     54          *
+     55          *                               OS_ERR_MSG_POOL_NULL_PTR
+     56          *                               OS_ERR_MSG_POOL_EMPTY
+     57          *                               OS_ERR_NONE
+     58          *
+     59          * Returns    : none
+     60          ************************************************************************************************************************
+     61          */
+     62          
+
+   \                                 In  segment CODE, align 1, keep-with-next
+     63          void  OSMsgPoolExtend (OS_MSG      *p_msg,
+   \                     OSMsgPoolExtend:
+     64                                 OS_MSG_QTY   size,
+     65                                 OS_ERR      *p_err)
+     66          {
+   \   000000                       ; * Stack frame (at entry) *
+   \   000000                       ; Param size: 0
+   \   000000 C1                    PUSH      AX                 ;; 1 cycle
+   \   000001 C3                    PUSH      BC                 ;; 1 cycle
+   \   000002                       ; Auto size: 4
+     67          #ifdef OS_SAFETY_CRITICAL
+     68              if (p_err == (OS_ERR *)0) {
+     69                  OS_SAFETY_CRITICAL_EXCEPTION();
+     70                  return;
+     71              }
+     72          #endif
+     73          
+     74          #if OS_CFG_ARG_CHK_EN > 0u
+     75              if (p_msg == (OS_MSG *)0) {
+     76                 *p_err = OS_ERR_MSG_POOL_NULL_PTR;
+     77                  return;
+     78              }
+     79              if (size == (OS_MSG_QTY)0) {
+     80                 *p_err = OS_ERR_MSG_POOL_EMPTY;
+     81                  return;
+     82              }
+     83          #endif
+     84          
+     85              OS_MsgPoolCreate(p_msg,                                 /* Create the singly linked list                          */
+     86                               size);
+   \   000002 FD....                CALL      OS_MsgPoolCreate   ;; 3 cycles
+     87              p_msg[size - 1u].NextPtr = OSMsgPool.NextPtr;           /* Link last OS_MSG of new list to current pool           */
+   \   000005 AF....                MOVW      AX, N:OSMsgPool    ;; 1 cycle
+   \   000008 C1                    PUSH      AX                 ;; 1 cycle
+   \   000009 A802                  MOVW      AX, [SP+0x02]      ;; 1 cycle
+   \   00000B 320A00                MOVW      BC, #0xA           ;; 1 cycle
+   \   00000E CEFB01                MULHU                        ;; 2 cycles
+   \   000011 16                    MOVW      HL, AX             ;; 1 cycle
+   \   000012 A804                  MOVW      AX, [SP+0x04]      ;; 1 cycle
+   \   000014 07                    ADDW      AX, HL             ;; 1 cycle
+   \   000015 04F6FF                ADDW      AX, #0xFFF6        ;; 1 cycle
+   \   000018 16                    MOVW      HL, AX             ;; 1 cycle
+   \   000019 C0                    POP       AX                 ;; 1 cycle
+   \   00001A BB                    MOVW      [HL], AX           ;; 1 cycle
+     88              OSMsgPool.NextPtr       = p_msg;
+   \   00001B A802                  MOVW      AX, [SP+0x02]      ;; 1 cycle
+   \   00001D BF....                MOVW      N:OSMsgPool, AX    ;; 1 cycle
+     89              OSMsgPool.NbrFree      += size;                         /* All new OS_MSGs are now available                      */
+   \   000020 A800                  MOVW      AX, [SP]           ;; 1 cycle
+   \   000022 02....                ADDW      AX, N:OSMsgPool+2  ;; 1 cycle
+   \   000025 BF....                MOVW      N:OSMsgPool+2, AX  ;; 1 cycle
+     90             *p_err                   = OS_ERR_NONE;
+   \   000028 F6                    CLRW      AX                 ;; 1 cycle
+   \   000029 B9                    MOVW      [DE], AX           ;; 1 cycle
+     91          }
+   \   00002A 1004                  ADDW      SP, #0x4           ;; 1 cycle
+   \   00002C D7                    RET                          ;; 6 cycles
+   \   00002D                       ; ------------------------------------- Block: 32 cycles
+   \   00002D                       ; ------------------------------------- Total: 32 cycles
+   \   00002D                       REQUIRE ?CLRL78_V1_0_L00
+     92          
+     93          /*$PAGE*/
+     94          /*
+     95          ************************************************************************************************************************
+     96          *                                           CREATE A LINKED LIST OF 'OS_MSG'
+     97          *
+     98          * Description: This function is called to create a singly linked list of OS_MSGs which is used as a pool of available
+     99          *              OS_MSGs to be used for sending messages.
+    100          *
+    101          * Arguments  : p_msg        is a pointer to the base address of an array of OS_MSG and should be declared as follows:
+    102          *              -----
+    103          *                               OS_MSG  MyMsgTbl[size];
+    104          *
+    105          *              size         is the size of the above array
+    106          *
+    107          * Returns    : none
+    108          *
+    109          * Note(s)    : 1) This function is INTERNAL to uC/OS-III and your application MUST NOT call it.
+    110          ************************************************************************************************************************
+    111          */
+    112          
+
+   \                                 In  segment CODE, align 1, keep-with-next
+    113          void  OS_MsgPoolCreate (OS_MSG      *p_msg,
+   \                     OS_MsgPoolCreate:
+    114                                  OS_MSG_QTY   size)
+    115          {
+   \   000000                       ; * Stack frame (at entry) *
+   \   000000                       ; Param size: 0
+   \   000000 C5                    PUSH      DE                 ;; 1 cycle
+   \   000001                       ; Auto size: 2
+   \   000001 C1                    PUSH      AX                 ;; 1 cycle
+   \   000002 16                    MOVW      HL, AX             ;; 1 cycle
+    116              OS_MSG      *p_msg1;
+    117              OS_MSG      *p_msg2;
+    118              OS_MSG_QTY   i;
+    119              OS_MSG_QTY   loops;
+    120          
+    121          
+    122          
+    123              p_msg1 = p_msg;
+    124              p_msg2 = p_msg;
+    125              p_msg2++;
+   \   000003 040A00                ADDW      AX, #0xA           ;; 1 cycle
+   \   000006 14                    MOVW      DE, AX             ;; 1 cycle
+    126              loops  = size - 1u;
+   \   000007 13                    MOVW      AX, BC             ;; 1 cycle
+   \   000008 B1                    DECW      AX                 ;; 1 cycle
+   \   000009 B800                  MOVW      [SP], AX           ;; 1 cycle
+    127              for (i = 0u; i < loops; i++) {                          /* Init. list of free OS_MSGs                             */
+   \   00000B F7                    CLRW      BC                 ;; 1 cycle
+   \   00000C EF11                  BR        S:??OS_MsgQPut_0   ;; 3 cycles
+   \   00000E                       ; ------------------------------------- Block: 12 cycles
+    128                  p_msg1->NextPtr = p_msg2;
+   \                     ??OS_MsgPoolCreate_0:
+   \   00000E 15                    MOVW      AX, DE             ;; 1 cycle
+   \   00000F BB                    MOVW      [HL], AX           ;; 1 cycle
+    129                  p_msg1->MsgPtr  = (void      *)0;
+   \   000010 F6                    CLRW      AX                 ;; 1 cycle
+   \   000011 FD....                CALL      N:?Subroutine1     ;; 3 cycles
+   \   000014                       ; ------------------------------------- Block: 6 cycles
+    130                  p_msg1->MsgSize = (OS_MSG_SIZE)0u;
+    131                  p_msg1->MsgTS   = (CPU_TS     )0u;
+    132                  p_msg1++;
+   \                     ??CrossCallReturnLabel_1:
+   \   000014 17                    MOVW      AX, HL             ;; 1 cycle
+   \   000015 040A00                ADDW      AX, #0xA           ;; 1 cycle
+   \   000018 16                    MOVW      HL, AX             ;; 1 cycle
+    133                  p_msg2++;
+   \   000019 15                    MOVW      AX, DE             ;; 1 cycle
+   \   00001A 040A00                ADDW      AX, #0xA           ;; 1 cycle
+   \   00001D 14                    MOVW      DE, AX             ;; 1 cycle
+    134              }
+   \   00001E A3                    INCW      BC                 ;; 1 cycle
+   \   00001F                       ; ------------------------------------- Block: 7 cycles
+   \                     ??OS_MsgQPut_0:
+   \   00001F A800                  MOVW      AX, [SP]           ;; 1 cycle
+   \   000021 43                    CMPW      AX, BC             ;; 1 cycle
+   \   000022 61C3E9                BH        ??OS_MsgPoolCreate_0  ;; 4 cycles
+   \   000025                       ; ------------------------------------- Block: 6 cycles
+    135              p_msg1->NextPtr = (OS_MSG    *)0;                       /* Last OS_MSG                                            */
+   \   000025 F6                    CLRW      AX                 ;; 1 cycle
+   \   000026 BB                    MOVW      [HL], AX           ;; 1 cycle
+    136              p_msg1->MsgPtr  = (void      *)0;
+   \   000027 FD....                CALL      N:?Subroutine1     ;; 3 cycles
+   \   00002A                       ; ------------------------------------- Block: 5 cycles
+    137              p_msg1->MsgSize = (OS_MSG_SIZE)0u;
+    138              p_msg1->MsgTS   = (CPU_TS     )0u;
+    139          }
+   \                     ??CrossCallReturnLabel_2:
+   \   00002A 1002                  ADDW      SP, #0x2           ;; 1 cycle
+   \   00002C C4                    POP       DE                 ;; 1 cycle
+   \   00002D D7                    RET                          ;; 6 cycles
+   \   00002E                       ; ------------------------------------- Block: 8 cycles
+   \   00002E                       ; ------------------------------------- Total: 44 cycles
+   \   00002E                       REQUIRE ?CLRL78_V1_0_L00
+
+   \                                 In  segment CODE, align 1, keep-with-next
+   \                     ?Subroutine1:
+   \   000000 BC02                  MOVW      [HL+0x02], AX      ;; 1 cycle
+   \   000002 BC04                  MOVW      [HL+0x04], AX      ;; 1 cycle
+   \   000004 BC06                  MOVW      [HL+0x06], AX      ;; 1 cycle
+   \   000006 BC08                  MOVW      [HL+0x08], AX      ;; 1 cycle
+   \   000008 D7                    RET                          ;; 6 cycles
+   \   000009                       ; ------------------------------------- Block: 10 cycles
+   \   000009                       ; ------------------------------------- Total: 10 cycles
+   \   000009                       REQUIRE ?CLRL78_V1_0_L00
+    140          
+    141          /*$PAGE*/
+    142          /*
+    143          ************************************************************************************************************************
+    144          *                                            INITIALIZE THE POOL OF 'OS_MSG'
+    145          *
+    146          * Description: This function is called by OSInit() to initialize the free list of OS_MSGs.
+    147          *
+    148          * Argument(s): p_err     is a pointer to a variable that will contain an error code returned by this function.
+    149          *
+    150          *                            OS_ERR_MSG_POOL_NULL_PTR
+    151          *                            OS_ERR_MSG_POOL_EMPTY
+    152          *                            OS_ERR_NONE
+    153          *
+    154          * Returns    : none
+    155          *
+    156          * Note(s)    : 1) This function is INTERNAL to uC/OS-III and your application MUST NOT call it.
+    157          ************************************************************************************************************************
+    158          */
+    159          
+
+   \                                 In  segment CODE, align 1, keep-with-next
+    160          void  OS_MsgPoolInit (OS_ERR  *p_err)
+   \                     OS_MsgPoolInit:
+    161          {
+   \   000000                       ; * Stack frame (at entry) *
+   \   000000                       ; Param size: 0
+   \   000000 C3                    PUSH      BC                 ;; 1 cycle
+   \   000001 C5                    PUSH      DE                 ;; 1 cycle
+   \   000002                       ; Auto size: 0
+   \   000002 14                    MOVW      DE, AX             ;; 1 cycle
+    162          #ifdef OS_SAFETY_CRITICAL
+    163              if (p_err == (OS_ERR *)0) {
+    164                  OS_SAFETY_CRITICAL_EXCEPTION();
+    165                  return;
+    166              }
+    167          #endif
+    168          
+    169          #if OS_CFG_ARG_CHK_EN > 0u
+    170              if (OSCfg_MsgPoolBasePtr == (OS_MSG *)0) {
+    171                 *p_err = OS_ERR_MSG_POOL_NULL_PTR;
+    172                  return;
+    173              }
+    174              if (OSCfg_MsgPoolSize == (OS_MSG_QTY)0) {
+    175                 *p_err = OS_ERR_MSG_POOL_EMPTY;
+    176                  return;
+    177              }
+    178          #endif
+    179          
+    180              OS_MsgPoolCreate(OSCfg_MsgPoolBasePtr,
+    181                              OSCfg_MsgPoolSize);
+   \   000003 DB....                MOVW      BC, N:OSCfg_MsgPoolSize  ;; 1 cycle
+   \   000006 AF....                MOVW      AX, N:OSCfg_MsgPoolBasePtr  ;; 1 cycle
+   \   000009 FD....                CALL      OS_MsgPoolCreate   ;; 3 cycles
+    182              OSMsgPool.NextPtr =  OSCfg_MsgPoolBasePtr;
+   \   00000C AF....                MOVW      AX, N:OSCfg_MsgPoolBasePtr  ;; 1 cycle
+   \   00000F BF....                MOVW      N:OSMsgPool, AX    ;; 1 cycle
+    183              OSMsgPool.NbrFree =  OSCfg_MsgPoolSize;
+   \   000012 AF....                MOVW      AX, N:OSCfg_MsgPoolSize  ;; 1 cycle
+   \   000015 BF....                MOVW      N:OSMsgPool+2, AX  ;; 1 cycle
+    184              OSMsgPool.NbrUsed = (OS_MSG_QTY)0;
+   \   000018 F6                    CLRW      AX                 ;; 1 cycle
+   \   000019 BF....                MOVW      N:OSMsgPool+4, AX  ;; 1 cycle
+    185             *p_err             =  OS_ERR_NONE;
+   \   00001C B9                    MOVW      [DE], AX           ;; 1 cycle
+    186          }
+   \   00001D C4                    POP       DE                 ;; 1 cycle
+   \   00001E C2                    POP       BC                 ;; 1 cycle
+   \   00001F D7                    RET                          ;; 6 cycles
+   \   000020                       ; ------------------------------------- Block: 23 cycles
+   \   000020                       ; ------------------------------------- Total: 23 cycles
+   \   000020                       REQUIRE ?CLRL78_V1_0_L00
+    187          
+    188          /*$PAGE*/
+    189          /*
+    190          ************************************************************************************************************************
+    191          *                                        RESET MESSAGE QUEUE ENTRIES PEAK TRACKING
+    192          *
+    193          * Description: This function clear the peak detection mechanism of the message queue
+    194          *
+    195          * Arguments  : p_msg_q       is a pointer to the OS_MSG_Q structure
+    196          *              -------
+    197          *
+    198          * Returns    : none
+    199          *
+    200          * Note(s)    : 1) This function is INTERNAL to uC/OS-III and your application MUST NOT call it.
+    201          ************************************************************************************************************************
+    202          */
+    203          
+
+   \                                 In  segment CODE, align 1, keep-with-next
+    204          void  OS_MsgQEntriesPeakReset (OS_MSG_Q  *p_msg_q)
+   \                     OS_MsgQEntriesPeakReset:
+    205          {
+   \   000000                       ; * Stack frame (at entry) *
+   \   000000                       ; Param size: 0
+   \   000000 C3                    PUSH      BC                 ;; 1 cycle
+   \   000001 C5                    PUSH      DE                 ;; 1 cycle
+   \   000002                       ; Auto size: 0
+   \   000002 14                    MOVW      DE, AX             ;; 1 cycle
+    206              CPU_SR_ALLOC();
+    207          
+    208          
+    209              CPU_CRITICAL_ENTER();
+   \   000003 8EFA                  MOV       A, PSW             ;; 1 cycle
+   \   000005 73                    MOV       B, A               ;; 1 cycle
+   \   000006 717BFA                DI                           ;; 2 cycles
+   \   000009 FD....                CALL      CPU_IntDisMeasStart  ;; 3 cycles
+    210              p_msg_q->NbrEntriesMax = (OS_MSG_QTY)0;
+   \   00000C F6                    CLRW      AX                 ;; 1 cycle
+   \   00000D BA08                  MOVW      [DE+0x08], AX      ;; 1 cycle
+    211              CPU_CRITICAL_EXIT();
+   \   00000F FD....                CALL      CPU_IntDisMeasStop  ;; 3 cycles
+   \   000012 63                    MOV       A, B               ;; 1 cycle
+   \   000013 71FC                  MOV1      CY, A.7            ;; 1 cycle
+   \   000015 7179FA                MOV1      PSW.7, CY          ;; 4 cycles
+    212          }
+   \   000018 C4                    POP       DE                 ;; 1 cycle
+   \   000019 C2                    POP       BC                 ;; 1 cycle
+   \   00001A D7                    RET                          ;; 6 cycles
+   \   00001B                       ; ------------------------------------- Block: 29 cycles
+   \   00001B                       ; ------------------------------------- Total: 29 cycles
+   \   00001B                       REQUIRE ?CLRL78_V1_0_L00
+    213          
+    214          /*$PAGE*/
+    215          /*
+    216          ************************************************************************************************************************
+    217          *                                        RELEASE ALL MESSAGE IN MESSAGE QUEUE
+    218          *
+    219          * Description: This function returns all the messages in a message queue to the free list.
+    220          *
+    221          * Arguments  : p_msg_q       is a pointer to the OS_MSG_Q structure containing messages to free.
+    222          *              -------
+    223          *
+    224          * Returns    : the number of OS_MSGs returned to the free list
+    225          *
+    226          * Note(s)    : 1) This function is INTERNAL to uC/OS-III and your application MUST NOT call it.
+    227          ************************************************************************************************************************
+    228          */
+    229          
+
+   \                                 In  segment CODE, align 1, keep-with-next
+    230          OS_MSG_QTY  OS_MsgQFreeAll (OS_MSG_Q  *p_msg_q)
+   \                     OS_MsgQFreeAll:
+    231          {
+   \   000000                       ; * Stack frame (at entry) *
+   \   000000                       ; Param size: 0
+   \   000000 C3                    PUSH      BC                 ;; 1 cycle
+   \   000001 C5                    PUSH      DE                 ;; 1 cycle
+   \   000002                       ; Auto size: 0
+   \   000002 16                    MOVW      HL, AX             ;; 1 cycle
+   \   000003 AC06                  MOVW      AX, [HL+0x06]      ;; 1 cycle
+   \   000005 12                    MOVW      BC, AX             ;; 1 cycle
+    232              OS_MSG      *p_msg;
+    233              OS_MSG_QTY   qty;
+    234          
+    235          
+    236          
+    237              qty = p_msg_q->NbrEntries;                              /* Get the number of OS_MSGs being freed                  */
+    238              if (p_msg_q->NbrEntries > (OS_MSG_QTY)0) {
+   \   000006 440000                CMPW      AX, #0x0           ;; 1 cycle
+   \   000009 DD20                  BZ        ??CrossCallReturnLabel_0  ;; 4 cycles
+   \   00000B                       ; ------------------------------------- Block: 10 cycles
+    239                  p_msg                   = p_msg_q->InPtr;           /* Point to end of message chain                          */
+    240                  p_msg->NextPtr          = OSMsgPool.NextPtr;
+   \   00000B EB....                MOVW      DE, N:OSMsgPool    ;; 1 cycle
+   \   00000E AB                    MOVW      AX, [HL]           ;; 1 cycle
+   \   00000F 35                    XCHW      AX, DE             ;; 1 cycle
+   \   000010 B9                    MOVW      [DE], AX           ;; 1 cycle
+    241                  OSMsgPool.NextPtr       = p_msg_q->OutPtr;          /* Point to beginning of message chain                    */
+   \   000011 AC02                  MOVW      AX, [HL+0x02]      ;; 1 cycle
+   \   000013 BF....                MOVW      N:OSMsgPool, AX    ;; 1 cycle
+    242                  OSMsgPool.NbrUsed      -= p_msg_q->NbrEntries;      /* Update statistics for free list of messages            */
+   \   000016 AC06                  MOVW      AX, [HL+0x06]      ;; 1 cycle
+   \   000018 14                    MOVW      DE, AX             ;; 1 cycle
+   \   000019 AF....                MOVW      AX, N:OSMsgPool+4  ;; 1 cycle
+   \   00001C 25                    SUBW      AX, DE             ;; 1 cycle
+   \   00001D BF....                MOVW      N:OSMsgPool+4, AX  ;; 1 cycle
+    243                  OSMsgPool.NbrFree      += p_msg_q->NbrEntries;
+   \   000020 AC06                  MOVW      AX, [HL+0x06]      ;; 1 cycle
+   \   000022 02....                ADDW      AX, N:OSMsgPool+2  ;; 1 cycle
+   \   000025 BF....                MOVW      N:OSMsgPool+2, AX  ;; 1 cycle
+    244                  p_msg_q->NbrEntries     = (OS_MSG_QTY)0;            /* Flush the message queue                                */
+   \   000028 FD....                CALL      N:?Subroutine0     ;; 3 cycles
+    245                  p_msg_q->NbrEntriesMax  = (OS_MSG_QTY)0;
+    246                  p_msg_q->InPtr          = (OS_MSG   *)0;
+    247                  p_msg_q->OutPtr         = (OS_MSG   *)0;
+    248              }
+   \   00002B                       ; ------------------------------------- Block: 17 cycles
+    249              return (qty);
+   \                     ??CrossCallReturnLabel_0:
+   \   00002B 13                    MOVW      AX, BC             ;; 1 cycle
+   \   00002C C4                    POP       DE                 ;; 1 cycle
+   \   00002D C2                    POP       BC                 ;; 1 cycle
+   \   00002E D7                    RET                          ;; 6 cycles
+   \   00002F                       ; ------------------------------------- Block: 9 cycles
+   \   00002F                       ; ------------------------------------- Total: 36 cycles
+   \   00002F                       REQUIRE ?CLRL78_V1_0_L00
+    250          }
+
+   \                                 In  segment CODE, align 1, keep-with-next
+   \                     ?Subroutine0:
+   \   000000 F6                    CLRW      AX                 ;; 1 cycle
+   \   000001 BC06                  MOVW      [HL+0x06], AX      ;; 1 cycle
+   \   000003 BC08                  MOVW      [HL+0x08], AX      ;; 1 cycle
+   \   000005 BB                    MOVW      [HL], AX           ;; 1 cycle
+   \   000006 BC02                  MOVW      [HL+0x02], AX      ;; 1 cycle
+   \   000008 D7                    RET                          ;; 6 cycles
+   \   000009                       ; ------------------------------------- Block: 11 cycles
+   \   000009                       ; ------------------------------------- Total: 11 cycles
+   \   000009                       REQUIRE ?CLRL78_V1_0_L00
+    251          
+    252          /*$PAGE*/
+    253          /*
+    254          ************************************************************************************************************************
+    255          *                                               INITIALIZE A MESSAGE QUEUE
+    256          *
+    257          * Description: This function is called to initialize a message queue
+    258          *
+    259          * Arguments  : p_msg_q      is a pointer to the message queue to initialize
+    260          *              -------
+    261          *
+    262          *              max          is the maximum number of entries that a message queue can have.
+    263          *
+    264          * Returns    : none
+    265          *
+    266          * Note(s)    : 1) This function is INTERNAL to uC/OS-III and your application MUST NOT call it.
+    267          ************************************************************************************************************************
+    268          */
+    269          
+
+   \                                 In  segment CODE, align 1, keep-with-next
+    270          void  OS_MsgQInit (OS_MSG_Q     *p_msg_q,
+   \                     OS_MsgQInit:
+    271                             OS_MSG_QTY    size)
+    272          {
+   \   000000                       ; * Stack frame (at entry) *
+   \   000000                       ; Param size: 0
+   \   000000                       ; Auto size: 0
+   \   000000 16                    MOVW      HL, AX             ;; 1 cycle
+    273              p_msg_q->NbrEntriesSize = (OS_MSG_QTY)size;
+   \   000001 13                    MOVW      AX, BC             ;; 1 cycle
+   \   000002 BC04                  MOVW      [HL+0x04], AX      ;; 1 cycle
+   \   000004                       ; ------------------------------------- Block: 3 cycles
+   \   000004                       ; ------------------------------------- Total: 3 cycles
+    274              p_msg_q->NbrEntries     = (OS_MSG_QTY)0;
+   \   000004                       REQUIRE ?CLRL78_V1_0_L00
+   \   000004                       REQUIRE ?Subroutine0
+   \   000004                       ; // Fall through to label ?Subroutine0
+    275              p_msg_q->NbrEntriesMax  = (OS_MSG_QTY)0;
+    276              p_msg_q->InPtr          = (OS_MSG   *)0;
+    277              p_msg_q->OutPtr         = (OS_MSG   *)0;
+    278          }
+    279          
+    280          /*$PAGE*/
+    281          /*
+    282          ************************************************************************************************************************
+    283          *                                           RETRIEVE MESSAGE FROM MESSAGE QUEUE
+    284          *
+    285          * Description: This function retrieves a message from a message queue
+    286          *
+    287          * Arguments  : p_msg_q     is a pointer to the message queue where we want to extract the message from
+    288          *              -------
+    289          *
+    290          *              p_msg_size  is a pointer to where the size (in bytes) of the message will be placed
+    291          *
+    292          *              p_ts        is a pointer to where the time stamp will be placed
+    293          *
+    294          *              p_err       is a pointer to an error code that will be returned from this call.
+    295          *
+    296          *                              OS_ERR_Q_EMPTY
+    297          *                              OS_ERR_NONE
+    298          *
+    299          * Returns    : The message (a pointer)
+    300          *
+    301          * Note(s)    : 1) This function is INTERNAL to uC/OS-III and your application MUST NOT call it.
+    302          ************************************************************************************************************************
+    303          */
+    304          
+
+   \                                 In  segment CODE, align 1, keep-with-next
+    305          void  *OS_MsgQGet (OS_MSG_Q    *p_msg_q,
+   \                     OS_MsgQGet:
+    306                             OS_MSG_SIZE *p_msg_size,
+    307                             CPU_TS      *p_ts,
+    308                             OS_ERR      *p_err)
+    309          {
+   \   000000                       ; * Stack frame (at entry) *
+   \   000000                       ; Param size: 2
+   \   000000 C1                    PUSH      AX                 ;; 1 cycle
+   \   000001 C5                    PUSH      DE                 ;; 1 cycle
+   \   000002                       ; Auto size: 8
+   \   000002 2004                  SUBW      SP, #0x4           ;; 1 cycle
+   \   000004 C3                    PUSH      BC                 ;; 1 cycle
+   \   000005 C6                    POP       HL                 ;; 1 cycle
+    310              OS_MSG  *p_msg;
+    311              void    *p_void;
+    312          
+    313          
+    314          
+    315          #ifdef OS_SAFETY_CRITICAL
+    316              if (p_err == (OS_ERR *)0) {
+    317                  OS_SAFETY_CRITICAL_EXCEPTION();
+    318                  return ((void *)0);
+    319              }
+    320          #endif
+    321          
+    322              if (p_msg_q->NbrEntries == (OS_MSG_QTY)0) {
+   \   000006 040600                ADDW      AX, #0x6           ;; 1 cycle
+   \   000009 B800                  MOVW      [SP], AX           ;; 1 cycle
+   \   00000B 14                    MOVW      DE, AX             ;; 1 cycle
+   \   00000C A9                    MOVW      AX, [DE]           ;; 1 cycle
+   \   00000D F7                    CLRW      BC                 ;; 1 cycle
+   \   00000E 43                    CMPW      AX, BC             ;; 1 cycle
+   \   00000F DF18                  BNZ       ??OS_MsgQPut_1     ;; 4 cycles
+   \   000011                       ; ------------------------------------- Block: 15 cycles
+    323                 *p_msg_size = (OS_MSG_SIZE)0;
+   \   000011 F6                    CLRW      AX                 ;; 1 cycle
+   \   000012 BB                    MOVW      [HL], AX           ;; 1 cycle
+    324                  if (p_ts != (CPU_TS *)0) {
+   \   000013 A804                  MOVW      AX, [SP+0x04]      ;; 1 cycle
+   \   000015 440000                CMPW      AX, #0x0           ;; 1 cycle
+   \   000018 DD05                  BZ        ??OS_MsgQPut_2     ;; 4 cycles
+   \   00001A                       ; ------------------------------------- Block: 8 cycles
+    325                     *p_ts  = (CPU_TS  )0;
+   \   00001A 16                    MOVW      HL, AX             ;; 1 cycle
+   \   00001B F6                    CLRW      AX                 ;; 1 cycle
+   \   00001C BB                    MOVW      [HL], AX           ;; 1 cycle
+   \   00001D BC02                  MOVW      [HL+0x02], AX      ;; 1 cycle
+   \   00001F                       ; ------------------------------------- Block: 4 cycles
+    326                  }
+    327                 *p_err = OS_ERR_Q_EMPTY;
+   \                     ??OS_MsgQPut_2:
+   \   00001F A80C                  MOVW      AX, [SP+0x0C]      ;; 1 cycle
+   \   000021 16                    MOVW      HL, AX             ;; 1 cycle
+   \   000022 309265                MOVW      AX, #0x6592        ;; 1 cycle
+   \   000025 BB                    MOVW      [HL], AX           ;; 1 cycle
+    328                  return ((void *)0);
+   \   000026 F6                    CLRW      AX                 ;; 1 cycle
+   \   000027 EF53                  BR        S:??OS_MsgQPut_3   ;; 3 cycles
+   \   000029                       ; ------------------------------------- Block: 8 cycles
+    329              }
+    330          
+    331              p_msg           = p_msg_q->OutPtr;
+   \                     ??OS_MsgQPut_1:
+   \   000029 A806                  MOVW      AX, [SP+0x06]      ;; 1 cycle
+   \   00002B 14                    MOVW      DE, AX             ;; 1 cycle
+   \   00002C AA02                  MOVW      AX, [DE+0x02]      ;; 1 cycle
+   \   00002E 14                    MOVW      DE, AX             ;; 1 cycle
+    332              p_void          = p_msg->MsgPtr;
+   \   00002F AA02                  MOVW      AX, [DE+0x02]      ;; 1 cycle
+   \   000031 B802                  MOVW      [SP+0x02], AX      ;; 1 cycle
+    333              *p_msg_size     = p_msg->MsgSize;
+   \   000033 AA04                  MOVW      AX, [DE+0x04]      ;; 1 cycle
+   \   000035 BB                    MOVW      [HL], AX           ;; 1 cycle
+    334              if (p_ts != (CPU_TS *)0) {
+   \   000036 A804                  MOVW      AX, [SP+0x04]      ;; 1 cycle
+   \   000038 440000                CMPW      AX, #0x0           ;; 1 cycle
+   \   00003B DD0D                  BZ        ??OS_MsgQPut_4     ;; 4 cycles
+   \   00003D                       ; ------------------------------------- Block: 14 cycles
+    335                 *p_ts  = p_msg->MsgTS;
+   \   00003D AA08                  MOVW      AX, [DE+0x08]      ;; 1 cycle
+   \   00003F 12                    MOVW      BC, AX             ;; 1 cycle
+   \   000040 AA06                  MOVW      AX, [DE+0x06]      ;; 1 cycle
+   \   000042 16                    MOVW      HL, AX             ;; 1 cycle
+   \   000043 A804                  MOVW      AX, [SP+0x04]      ;; 1 cycle
+   \   000045 37                    XCHW      AX, HL             ;; 1 cycle
+   \   000046 BB                    MOVW      [HL], AX           ;; 1 cycle
+   \   000047 13                    MOVW      AX, BC             ;; 1 cycle
+   \   000048 BC02                  MOVW      [HL+0x02], AX      ;; 1 cycle
+   \   00004A                       ; ------------------------------------- Block: 9 cycles
+    336              }
+    337              p_msg_q->OutPtr = p_msg->NextPtr;
+   \                     ??OS_MsgQPut_4:
+   \   00004A A9                    MOVW      AX, [DE]           ;; 1 cycle
+   \   00004B 12                    MOVW      BC, AX             ;; 1 cycle
+   \   00004C A806                  MOVW      AX, [SP+0x06]      ;; 1 cycle
+   \   00004E 16                    MOVW      HL, AX             ;; 1 cycle
+   \   00004F 33                    XCHW      AX, BC             ;; 1 cycle
+   \   000050 BC02                  MOVW      [HL+0x02], AX      ;; 1 cycle
+    338              if (p_msg_q->OutPtr == (OS_MSG *)0) {
+   \   000052 440000                CMPW      AX, #0x0           ;; 1 cycle
+   \   000055 DF0A                  BNZ       ??OS_MsgQPut_5     ;; 4 cycles
+   \   000057                       ; ------------------------------------- Block: 11 cycles
+    339                  p_msg_q->InPtr      = (OS_MSG   *)0;
+   \   000057 C3                    PUSH      BC                 ;; 1 cycle
+   \   000058 C6                    POP       HL                 ;; 1 cycle
+   \   000059 F6                    CLRW      AX                 ;; 1 cycle
+   \   00005A BB                    MOVW      [HL], AX           ;; 1 cycle
+    340                  p_msg_q->NbrEntries = (OS_MSG_QTY)0;
+   \   00005B A800                  MOVW      AX, [SP]           ;; 1 cycle
+   \   00005D 16                    MOVW      HL, AX             ;; 1 cycle
+   \   00005E F6                    CLRW      AX                 ;; 1 cycle
+   \   00005F EF05                  BR        S:??OS_MsgQPut_6   ;; 3 cycles
+   \   000061                       ; ------------------------------------- Block: 10 cycles
+    341              } else {
+    342                  p_msg_q->NbrEntries--;
+   \                     ??OS_MsgQPut_5:
+   \   000061 A800                  MOVW      AX, [SP]           ;; 1 cycle
+   \   000063 16                    MOVW      HL, AX             ;; 1 cycle
+   \   000064 AB                    MOVW      AX, [HL]           ;; 1 cycle
+   \   000065 B1                    DECW      AX                 ;; 1 cycle
+   \   000066                       ; ------------------------------------- Block: 4 cycles
+   \                     ??OS_MsgQPut_6:
+   \   000066 BB                    MOVW      [HL], AX           ;; 1 cycle
+    343              }
+    344              p_msg->NextPtr    = OSMsgPool.NextPtr;                  /* Return message control block to free list              */
+   \   000067 AF....                MOVW      AX, N:OSMsgPool    ;; 1 cycle
+   \   00006A B9                    MOVW      [DE], AX           ;; 1 cycle
+    345              OSMsgPool.NextPtr = p_msg;
+   \   00006B 15                    MOVW      AX, DE             ;; 1 cycle
+   \   00006C BF....                MOVW      N:OSMsgPool, AX    ;; 1 cycle
+    346              OSMsgPool.NbrFree++;
+   \   00006F A2....                INCW      N:OSMsgPool+2      ;; 2 cycles
+    347              OSMsgPool.NbrUsed--;
+   \   000072 B2....                DECW      N:OSMsgPool+4      ;; 2 cycles
+    348              *p_err            = OS_ERR_NONE;
+   \   000075 A80C                  MOVW      AX, [SP+0x0C]      ;; 1 cycle
+   \   000077 16                    MOVW      HL, AX             ;; 1 cycle
+   \   000078 F6                    CLRW      AX                 ;; 1 cycle
+   \   000079 BB                    MOVW      [HL], AX           ;; 1 cycle
+    349              return (p_void);
+   \   00007A A802                  MOVW      AX, [SP+0x02]      ;; 1 cycle
+   \   00007C                       ; ------------------------------------- Block: 14 cycles
+   \                     ??OS_MsgQPut_3:
+   \   00007C 1008                  ADDW      SP, #0x8           ;; 1 cycle
+   \   00007E FD....                CALL      N:?FUNC_LEAVE_L06
+   \   000081 0200                  DW        0x2                ;; 3 cycles
+   \   000083                       ; ------------------------------------- Block: 4 cycles
+   \   000083                       ; ------------------------------------- Total: 101 cycles
+   \   000083                       REQUIRE ?CLRL78_V1_0_L00
+    350          }
+    351          
+    352          /*
+    353          ************************************************************************************************************************
+    354          *                                           DEPOSIT MESSAGE IN MESSAGE QUEUE
+    355          *
+    356          * Description: This function places a message in a message queue
+    357          *
+    358          * Arguments  : p_msg_q     is a pointer to the OS_TCB of the task to post the message to
+    359          *              -------
+    360          *
+    361          *              p_void      is a pointer to the message to send.
+    362          *
+    363          *              msg_size    is the size of the message (in bytes)
+    364          *
+    365          *              opt         specifies whether the message will be posted in FIFO or LIFO order
+    366          *
+    367          *                              OS_OPT_POST_FIFO
+    368          *                              OS_OPT_POST_LIFO
+    369          *
+    370          *              ts          is a timestamp as to when the message was posted
+    371          *
+    372          *              p_err       is a pointer to a variable that will contain an error code returned by this function.
+    373          *
+    374          *                              OS_ERR_Q_MAX           if the queue is full
+    375          *                              OS_ERR_MSG_POOL_EMPTY  if we no longer have any OS_MSG to use
+    376          *                              OS_ERR_NONE            the message was deposited in the queue
+    377          *
+    378          * Returns    : none
+    379          *
+    380          * Note(s)    : 1) This function is INTERNAL to uC/OS-III and your application MUST NOT call it.
+    381          ************************************************************************************************************************
+    382          */
+    383          
+
+   \                                 In  segment CODE, align 1, keep-with-next
+    384          void  OS_MsgQPut (OS_MSG_Q    *p_msg_q,
+   \                     OS_MsgQPut:
+    385                            void        *p_void,
+    386                            OS_MSG_SIZE  msg_size,
+    387                            OS_OPT       opt,
+    388                            CPU_TS       ts,
+    389                            OS_ERR      *p_err)
+    390          {
+   \   000000                       ; * Stack frame (at entry) *
+   \   000000                       ; Param size: 8
+   \   000000 C1                    PUSH      AX                 ;; 1 cycle
+   \   000001 C3                    PUSH      BC                 ;; 1 cycle
+   \   000002 C5                    PUSH      DE                 ;; 1 cycle
+   \   000003                       ; Auto size: 8
+   \   000003 C1                    PUSH      AX                 ;; 1 cycle
+    391              OS_MSG  *p_msg;
+    392              OS_MSG  *p_msg_in;
+    393          
+    394          
+    395          
+    396          #ifdef OS_SAFETY_CRITICAL
+    397              if (p_err == (OS_ERR *)0) {
+    398                  OS_SAFETY_CRITICAL_EXCEPTION();
+    399                  return;
+    400              }
+    401          #endif
+    402          
+    403              if (p_msg_q->NbrEntries >= p_msg_q->NbrEntriesSize) {
+   \   000004 040600                ADDW      AX, #0x6           ;; 1 cycle
+   \   000007 B800                  MOVW      [SP], AX           ;; 1 cycle
+   \   000009 A806                  MOVW      AX, [SP+0x06]      ;; 1 cycle
+   \   00000B 14                    MOVW      DE, AX             ;; 1 cycle
+   \   00000C AA04                  MOVW      AX, [DE+0x04]      ;; 1 cycle
+   \   00000E 16                    MOVW      HL, AX             ;; 1 cycle
+   \   00000F A800                  MOVW      AX, [SP]           ;; 1 cycle
+   \   000011 14                    MOVW      DE, AX             ;; 1 cycle
+   \   000012 A9                    MOVW      AX, [DE]           ;; 1 cycle
+   \   000013 47                    CMPW      AX, HL             ;; 1 cycle
+   \   000014 DC08                  BC        ??OS_MsgQPut_7     ;; 4 cycles
+   \   000016                       ; ------------------------------------- Block: 18 cycles
+    404                 *p_err = OS_ERR_Q_MAX;                               /* Message queue cannot accept any more messages          */
+   \   000016 A812                  MOVW      AX, [SP+0x12]      ;; 1 cycle
+   \   000018 16                    MOVW      HL, AX             ;; 1 cycle
+   \   000019 309365                MOVW      AX, #0x6593        ;; 1 cycle
+   \   00001C EF7A                  BR        S:??OS_MsgQPut_8   ;; 3 cycles
+   \   00001E                       ; ------------------------------------- Block: 6 cycles
+    405                  return;
+    406              }
+    407          
+    408              if (OSMsgPool.NbrFree == (OS_MSG_QTY)0) {
+   \                     ??OS_MsgQPut_7:
+   \   00001E AF....                MOVW      AX, N:OSMsgPool+2  ;; 1 cycle
+   \   000021 F7                    CLRW      BC                 ;; 1 cycle
+   \   000022 43                    CMPW      AX, BC             ;; 1 cycle
+   \   000023 DF08                  BNZ       ??OS_MsgQPut_9     ;; 4 cycles
+   \   000025                       ; ------------------------------------- Block: 7 cycles
+    409                 *p_err = OS_ERR_MSG_POOL_EMPTY;                      /* No more OS_MSG to use                                  */
+   \   000025 A812                  MOVW      AX, [SP+0x12]      ;; 1 cycle
+   \   000027 16                    MOVW      HL, AX             ;; 1 cycle
+   \   000028 301D57                MOVW      AX, #0x571D        ;; 1 cycle
+   \   00002B EF6B                  BR        S:??OS_MsgQPut_8   ;; 3 cycles
+   \   00002D                       ; ------------------------------------- Block: 6 cycles
+    410                  return;
+    411              }
+    412          
+    413              p_msg             = OSMsgPool.NextPtr;                  /* Remove message control block from free list            */
+   \                     ??OS_MsgQPut_9:
+   \   00002D EB....                MOVW      DE, N:OSMsgPool    ;; 1 cycle
+    414              OSMsgPool.NextPtr = p_msg->NextPtr;
+   \   000030 A9                    MOVW      AX, [DE]           ;; 1 cycle
+   \   000031 BF....                MOVW      N:OSMsgPool, AX    ;; 1 cycle
+    415              OSMsgPool.NbrFree--;
+   \   000034 B2....                DECW      N:OSMsgPool+2      ;; 2 cycles
+    416              OSMsgPool.NbrUsed++;
+   \   000037 A2....                INCW      N:OSMsgPool+4      ;; 2 cycles
+    417              if (p_msg_q->NbrEntries == (OS_MSG_QTY)0) {             /* Is this first message placed in the queue?             */
+   \   00003A A800                  MOVW      AX, [SP]           ;; 1 cycle
+   \   00003C 16                    MOVW      HL, AX             ;; 1 cycle
+   \   00003D AB                    MOVW      AX, [HL]           ;; 1 cycle
+   \   00003E 43                    CMPW      AX, BC             ;; 1 cycle
+   \   00003F DF0D                  BNZ       ??OS_MsgQPut_10    ;; 4 cycles
+   \   000041                       ; ------------------------------------- Block: 15 cycles
+    418                  p_msg_q->InPtr         = p_msg;                     /* Yes                                                    */
+   \   000041 A806                  MOVW      AX, [SP+0x06]      ;; 1 cycle
+   \   000043 16                    MOVW      HL, AX             ;; 1 cycle
+   \   000044 15                    MOVW      AX, DE             ;; 1 cycle
+   \   000045 BB                    MOVW      [HL], AX           ;; 1 cycle
+    419                  p_msg_q->OutPtr        = p_msg;
+   \   000046 BC02                  MOVW      [HL+0x02], AX      ;; 1 cycle
+    420                  p_msg_q->NbrEntries    = (OS_MSG_QTY)1;
+   \   000048 A800                  MOVW      AX, [SP]           ;; 1 cycle
+   \   00004A 16                    MOVW      HL, AX             ;; 1 cycle
+   \   00004B E6                    ONEW      AX                 ;; 1 cycle
+   \   00004C EF27                  BR        S:??OS_MsgQPut_11  ;; 3 cycles
+   \   00004E                       ; ------------------------------------- Block: 11 cycles
+    421              } else {
+    422                  if ((opt & OS_OPT_POST_LIFO) == OS_OPT_POST_FIFO) { /* Assume FIFO if not LIFO                                */
+   \                     ??OS_MsgQPut_10:
+   \   00004E AEF8                  MOVW      AX, SP             ;; 1 cycle
+   \   000050 040C00                ADDW      AX, #0xC           ;; 1 cycle
+   \   000053 16                    MOVW      HL, AX             ;; 1 cycle
+   \   000054 31C310                BT        [HL].4, ??OS_MsgQPut_12  ;; 5 cycles
+   \   000057                       ; ------------------------------------- Block: 8 cycles
+    423                      p_msg_in           = p_msg_q->InPtr;            /* FIFO                                                   */
+    424                      p_msg_in->NextPtr  = p_msg;
+   \   000057 A806                  MOVW      AX, [SP+0x06]      ;; 1 cycle
+   \   000059 16                    MOVW      HL, AX             ;; 1 cycle
+   \   00005A AB                    MOVW      AX, [HL]           ;; 1 cycle
+   \   00005B 16                    MOVW      HL, AX             ;; 1 cycle
+   \   00005C 15                    MOVW      AX, DE             ;; 1 cycle
+   \   00005D BB                    MOVW      [HL], AX           ;; 1 cycle
+    425                      p_msg->NextPtr     = (OS_MSG *)0;
+   \   00005E F6                    CLRW      AX                 ;; 1 cycle
+   \   00005F B9                    MOVW      [DE], AX           ;; 1 cycle
+    426                      p_msg_q->InPtr     = p_msg;
+   \   000060 A806                  MOVW      AX, [SP+0x06]      ;; 1 cycle
+   \   000062 16                    MOVW      HL, AX             ;; 1 cycle
+   \   000063 15                    MOVW      AX, DE             ;; 1 cycle
+   \   000064 BB                    MOVW      [HL], AX           ;; 1 cycle
+   \   000065 EF09                  BR        S:??OS_MsgQPut_13  ;; 3 cycles
+   \   000067                       ; ------------------------------------- Block: 15 cycles
+    427                  } else {
+    428                      p_msg->NextPtr     = p_msg_q->OutPtr;           /* LIFO                                                   */
+   \                     ??OS_MsgQPut_12:
+   \   000067 A806                  MOVW      AX, [SP+0x06]      ;; 1 cycle
+   \   000069 16                    MOVW      HL, AX             ;; 1 cycle
+   \   00006A AC02                  MOVW      AX, [HL+0x02]      ;; 1 cycle
+   \   00006C B9                    MOVW      [DE], AX           ;; 1 cycle
+    429                      p_msg_q->OutPtr    = p_msg;
+   \   00006D 15                    MOVW      AX, DE             ;; 1 cycle
+   \   00006E BC02                  MOVW      [HL+0x02], AX      ;; 1 cycle
+   \   000070                       ; ------------------------------------- Block: 6 cycles
+    430                  }
+    431                  p_msg_q->NbrEntries++;
+   \                     ??OS_MsgQPut_13:
+   \   000070 A800                  MOVW      AX, [SP]           ;; 1 cycle
+   \   000072 16                    MOVW      HL, AX             ;; 1 cycle
+   \   000073 AB                    MOVW      AX, [HL]           ;; 1 cycle
+   \   000074 A1                    INCW      AX                 ;; 1 cycle
+   \   000075                       ; ------------------------------------- Block: 4 cycles
+   \                     ??OS_MsgQPut_11:
+   \   000075 BB                    MOVW      [HL], AX           ;; 1 cycle
+    432              }
+    433              if (p_msg_q->NbrEntries > p_msg_q->NbrEntriesMax) {
+   \   000076 12                    MOVW      BC, AX             ;; 1 cycle
+   \   000077 A806                  MOVW      AX, [SP+0x06]      ;; 1 cycle
+   \   000079 16                    MOVW      HL, AX             ;; 1 cycle
+   \   00007A AC08                  MOVW      AX, [HL+0x08]      ;; 1 cycle
+   \   00007C 43                    CMPW      AX, BC             ;; 1 cycle
+   \   00007D DE03                  BNC       ??OS_MsgQPut_14    ;; 4 cycles
+   \   00007F                       ; ------------------------------------- Block: 10 cycles
+    434                  p_msg_q->NbrEntriesMax = p_msg_q->NbrEntries;
+   \   00007F 13                    MOVW      AX, BC             ;; 1 cycle
+   \   000080 BC08                  MOVW      [HL+0x08], AX      ;; 1 cycle
+   \   000082                       ; ------------------------------------- Block: 2 cycles
+    435              }
+    436              p_msg->MsgPtr  = p_void;                                /* Deposit message in the message queue entry             */
+   \                     ??OS_MsgQPut_14:
+   \   000082 A804                  MOVW      AX, [SP+0x04]      ;; 1 cycle
+   \   000084 BA02                  MOVW      [DE+0x02], AX      ;; 1 cycle
+    437              p_msg->MsgSize = msg_size;
+   \   000086 A802                  MOVW      AX, [SP+0x02]      ;; 1 cycle
+   \   000088 BA04                  MOVW      [DE+0x04], AX      ;; 1 cycle
+    438              p_msg->MsgTS   = ts;
+   \   00008A A810                  MOVW      AX, [SP+0x10]      ;; 1 cycle
+   \   00008C 12                    MOVW      BC, AX             ;; 1 cycle
+   \   00008D A80E                  MOVW      AX, [SP+0x0E]      ;; 1 cycle
+   \   00008F BA06                  MOVW      [DE+0x06], AX      ;; 1 cycle
+   \   000091 13                    MOVW      AX, BC             ;; 1 cycle
+   \   000092 BA08                  MOVW      [DE+0x08], AX      ;; 1 cycle
+    439             *p_err          = OS_ERR_NONE;
+   \   000094 A812                  MOVW      AX, [SP+0x12]      ;; 1 cycle
+   \   000096 16                    MOVW      HL, AX             ;; 1 cycle
+   \   000097 F6                    CLRW      AX                 ;; 1 cycle
+   \   000098                       ; ------------------------------------- Block: 13 cycles
+   \                     ??OS_MsgQPut_8:
+   \   000098 BB                    MOVW      [HL], AX           ;; 1 cycle
+    440          }
+   \   000099 1008                  ADDW      SP, #0x8           ;; 1 cycle
+   \   00009B FD....                CALL      N:?FUNC_LEAVE_L06
+   \   00009E 0800                  DW        0x8                ;; 3 cycles
+   \   0000A0                       ; ------------------------------------- Block: 5 cycles
+   \   0000A0                       ; ------------------------------------- Total: 126 cycles
+   \   0000A0                       REQUIRE ?CLRL78_V1_0_L00
+    441          #endif
+
+   Maximum stack usage in bytes:
+
+   CSTACK Function
+   ------ --------
+      6   OSMsgPoolExtend
+        4   -> OS_MsgPoolCreate
+      4   OS_MsgPoolCreate
+      4   OS_MsgPoolInit
+        4   -> OS_MsgPoolCreate
+      4   OS_MsgQEntriesPeakReset
+        4   -> CPU_IntDisMeasStart
+        4   -> CPU_IntDisMeasStop
+      4   OS_MsgQFreeAll
+     10   OS_MsgQGet
+      0   OS_MsgQInit
+     16   OS_MsgQPut
+
+
+   Segment part sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       9  ?Subroutine0
+       9  ?Subroutine1
+      45  OSMsgPoolExtend
+      46  OS_MsgPoolCreate
+      32  OS_MsgPoolInit
+      27  OS_MsgQEntriesPeakReset
+      47  OS_MsgQFreeAll
+     131  OS_MsgQGet
+       4  OS_MsgQInit
+     160  OS_MsgQPut
+
+ 
+ 510 bytes in segment CODE
+ 
+ 510 bytes of CODE memory
+
+Errors: none
+Warnings: none

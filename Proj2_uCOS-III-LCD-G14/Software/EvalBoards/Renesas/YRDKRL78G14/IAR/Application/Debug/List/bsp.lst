@@ -1,0 +1,1454 @@
+###############################################################################
+#                                                                             #
+# IAR C/C++ Compiler V1.30.5.50715 for RL78             23/Mar/2014  17:08:34 #
+# Copyright 2011-2013 IAR Systems AB.                                         #
+# Network license: ece-lic-19.ece.ncsu.edu (STD)                              #
+#                                                                             #
+#    Core         =  rl78_2                                                   #
+#    Code model   =  Near                                                     #
+#    Data model   =  Near                                                     #
+#                 =                                                           #
+#    Source file  =  C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\BSP\bsp.c                                       #
+#    Command line =  C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\BSP\bsp.c --core rl78_2 --code_model near       #
+#                    --data_model near --near_const_location rom0 -o          #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\Debug\Obj\ --dlib_config            #
+#                    "C:\Program Files\IAR Systems\Embedded Workbench         #
+#                    6.5\rl78\LIB\dlrl78nn2n.h" -e -Ohz --no_scheduling       #
+#                    --no_clustering --debug -lC                              #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\Debug\List\ -I                      #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\ -I C:\Users\Suddenlink\Dropbox\git #
+#                    _files\embedded_design\Proj2_uCOS-III-LCD-G14\Software\E #
+#                    valBoards\Renesas\YRDKRL78G14\IAR\Application\Source\    #
+#                    -I C:\Users\Suddenlink\Dropbox\git_files\embedded_design #
+#                    \Proj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDK #
+#                    RL78G14\IAR\Application\..\uCOS-III\ -I                  #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\..\BSP\ -I                          #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\..\BSP\applilet3_src\ -I            #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\..\BSP\Glyph\Drivers\ -I            #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\..\BSP\Glyph\glyph\ -I              #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\..\..\..\..\..\uC-CPU\ -I           #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\..\..\..\..\..\uC-CPU\RL78\IAR\ -I  #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\..\..\..\..\..\uC-LIB\ -I           #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\..\..\..\..\..\uCOS-III\Ports\Renes #
+#                    as\RL78\IAR\ -I C:\Users\Suddenlink\Dropbox\git_files\em #
+#                    bedded_design\Proj2_uCOS-III-LCD-G14\Software\EvalBoards #
+#                    \Renesas\YRDKRL78G14\IAR\Application\..\..\..\..\..\uCOS #
+#                    -III\Source\ --relaxed_fp                                #
+#    List file    =  C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\Debug\List\bsp.lst                  #
+#    Object file  =  C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\Debug\Obj\bsp.r87                   #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Proj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL78G14\IAR\BSP\bsp.c
+      1          /*
+      2          *********************************************************************************************************
+      3          *                                     MICIRUM BOARD SUPPORT PACKAGE
+      4          *
+      5          *                             (c) Copyright 2010-2011; Micrium, Inc.; Weston, FL
+      6          *
+      7          *               All rights reserved.  Protected by international copyright laws.
+      8          *               Knowledge of the source code may NOT be used to develop a similar product.
+      9          *               Please help us continue to provide the Embedded community with the finest
+     10          *               software available.  Your honesty is greatly appreciated.
+     11          *********************************************************************************************************
+     12          */
+     13          
+     14          /*
+     15          *********************************************************************************************************
+     16          *
+     17          *                                    MICRIUM BOARD SUPPORT PACKAGE
+     18          *
+     19          *                                            Renesas RL78
+     20          *                                               on the
+     21          *                                     YRDKRL78G13 Evaluation Board
+     22          *                                    Modified for YRDKRL78G14 by AGD
+     23          *
+     24          * Filename      : bsp.c
+     25          * Version       : V1.00
+     26          * Programmer(s) : NB
+     27          *********************************************************************************************************
+     28          */
+     29          
+     30          
+     31          /*
+     32          *********************************************************************************************************
+     33          *                                             INCLUDE FILES
+     34          *********************************************************************************************************
+     35          */
+     36          
+     37          #define  BSP_MODULE
+     38          #include <includes.h>
+
+   \                                 In  segment SADDR_A, at 0xfff01
+   \   union <unnamed> volatile __saddr _A_P1
+   \                     _A_P1:
+   \   000000                       DS 1
+
+   \                                 In  segment SADDR_A, at 0xfff04
+   \   union <unnamed> volatile __saddr _A_P4
+   \                     _A_P4:
+   \   000000                       DS 1
+
+   \                                 In  segment SADDR_A, at 0xfff06
+   \   union <unnamed> volatile __saddr _A_P6
+   \                     _A_P6:
+   \   000000                       DS 1
+
+   \                                 In  segment SADDR_A, at 0xfff18
+   \   union <unnamed> volatile __saddr __no_bit_access _A_TDR00
+   \                     _A_TDR00:
+   \   000000                       DS 2
+
+   \                                 In  segment NEAR_A, at 0xfffe2
+   \   union <unnamed> volatile __sfr _A_IF1
+   \                     _A_IF1:
+   \   000000                       DS 2
+
+   \                                 In  segment NEAR_A, at 0xfffe6
+   \   union <unnamed> volatile __sfr _A_MK1
+   \                     _A_MK1:
+   \   000000                       DS 2
+
+   \                                 In  segment NEAR_A, at 0xfffea
+   \   union <unnamed> volatile __sfr _A_PR01
+   \                     _A_PR01:
+   \   000000                       DS 2
+
+   \                                 In  segment NEAR_A, at 0xfffee
+   \   union <unnamed> volatile __sfr _A_PR11
+   \                     _A_PR11:
+   \   000000                       DS 2
+
+   \                                 In  segment NEAR_A, at 0xf00f0
+   \   union <unnamed> volatile _A_PER0
+   \                     _A_PER0:
+   \   000000                       DS 1
+
+   \                                 In  segment NEAR_A, at 0xf0190
+   \   union <unnamed> volatile __no_bit_access _A_TMR00
+   \                     _A_TMR00:
+   \   000000                       DS 2
+
+   \                                 In  segment NEAR_A, at 0xf01b2
+   \   union <unnamed> volatile _A_TS0
+   \                     _A_TS0:
+   \   000000                       DS 2
+
+   \                                 In  segment NEAR_A, at 0xf01b6
+   \   union <unnamed> volatile __no_bit_access _A_TPS0
+   \                     _A_TPS0:
+   \   000000                       DS 2
+
+   \                                 In  segment NEAR_A, at 0xf01b8
+   \   union <unnamed> volatile __no_bit_access _A_TO0
+   \                     _A_TO0:
+   \   000000                       DS 2
+
+   \                                 In  segment NEAR_A, at 0xf01ba
+   \   union <unnamed> volatile _A_TOE0
+   \                     _A_TOE0:
+   \   000000                       DS 2
+
+   \                                 In  segment NEAR_A, at 0xf01bc
+   \   union <unnamed> volatile __no_bit_access _A_TOL0
+   \                     _A_TOL0:
+   \   000000                       DS 2
+
+   \                                 In  segment NEAR_A, at 0xf01be
+   \   union <unnamed> volatile __no_bit_access _A_TOM0
+   \                     _A_TOM0:
+   \   000000                       DS 2
+     39          
+     40          /*
+     41          *********************************************************************************************************
+     42          *                                               CONSTANTS
+     43          *********************************************************************************************************
+     44          */
+     45          
+     46          
+     47          #ifdef  OS_uCOS_II_H
+     48          #define  BSP_DLY_CONST  (BSP_CPU_CLKFREQ / OS_TICKS_PER_SEC)
+     49          #endif
+     50          
+     51          #ifdef  OS_H
+     52          #define  BSP_DLY_CONST  (BSP_CPU_CLKFREQ / OS_CFG_TICK_RATE_HZ)
+     53          #endif
+     54          
+     55          /*
+     56          *********************************************************************************************************
+     57          *                                      REGISTER & BIT FIELD DEFINES
+     58          *********************************************************************************************************
+     59          */
+     60          
+     61          /*
+     62          *********************************************************************************************************
+     63          *                                            GPIO DEFINES
+     64          *********************************************************************************************************
+     65          */
+     66          
+     67          
+     68          /*
+     69          *********************************************************************************************************
+     70          *                                       EXTERN  GLOBAL VARIABLES
+     71          *********************************************************************************************************
+     72          */
+     73          
+     74          /*
+     75          *********************************************************************************************************
+     76          *                                           LOCAL DEFINES
+     77          *********************************************************************************************************
+     78          */
+     79          
+     80          /*
+     81          *********************************************************************************************************
+     82          *                                          LOCAL DATA TYPES
+     83          *********************************************************************************************************
+     84          */
+     85          
+     86          
+     87          /*
+     88          *********************************************************************************************************
+     89          *                                            LOCAL TABLES
+     90          *********************************************************************************************************
+     91          */
+     92          
+     93          
+     94          /*
+     95          *********************************************************************************************************
+     96          *                                       LOCAL GLOBAL VARIABLES
+     97          *********************************************************************************************************
+     98          */
+     99          
+    100          /*
+    101          *********************************************************************************************************
+    102          *                                      LOCAL FUNCTION PROTOTYPES
+    103          *********************************************************************************************************
+    104          */
+    105          
+    106          static  void  TMR_TickInit  (void);
+    107          static  void  CLK_OscInit   (void);
+                               ^
+Warning[Pe177]: function "CLK_OscInit" was declared but never referenced
+    108          
+    109          /*
+    110          *********************************************************************************************************
+    111          *                                            OPTION BYTE
+    112          *********************************************************************************************************
+    113          */
+    114          #if 0 // AGD: disabled so we can use the option bytes in r_main.c,
+    115                // which is generated and maintained by applilet
+    116          #pragma constseg = OPTBYTE
+    117          __root  const  CPU_CHAR option[4] =
+    118          {
+    119              0x00,                                                               /* 00000000 = 0x00                                          */
+    120                                                                                  /* ||||||||   Control of watchdog timer in standby mode     */
+    121                                                                                  /* ||||||||   -----------------------------------------     */
+    122                                                                                  /* |||||||0 - Watchdog timer stopped in HALT/STOP mode      */
+    123                                                                                  /* |||||||1 - Watchdog timer enabled in HALT/STOP mode      */
+    124                                                                                  /* |||||||                                                  */
+    125                                                                                  /* |||||||    Watchdog timer overflow time                  */
+    126                                                                                  /* |||||||    ----------------------------                  */
+    127                                                                                  /* ||||000 -- 2^10 / fIL (fIL = 240kHz)                     */
+    128                                                                                  /* ||||001 -- 2^11 / fIL                                    */
+    129                                                                                  /* ||||010 -- 2^12 / fIL                                    */
+    130                                                                                  /* ||||011 -- 2^13 / fIL                                    */
+    131                                                                                  /* ||||100 -- 2^15 / fIL                                    */
+    132                                                                                  /* ||||101 -- 2^17 / fIL                                    */
+    133                                                                                  /* ||||110 -- 2^18 / fIL                                    */
+    134                                                                                  /* ||||111 -- 2^20 / fIL                                    */
+    135                                                                                  /* ||||                                                     */
+    136                                                                                  /* ||||       Control of watchdog timer operation           */
+    137                                                                                  /* ||||       -----------------------------------           */
+    138                                                                                  /* |||0 ----- Operation disabled                            */
+    139                                                                                  /* |||1 ----- Operation enabled                             */
+    140                                                                                  /* |||                                                      */
+    141                                                                                  /* |||        Watchdog timer window open period             */
+    142                                                                                  /* |||        ----------------------------------            */
+    143                                                                                  /* |00 ------ 25%  window open                              */
+    144                                                                                  /* |01 ------ 50%  window open                              */
+    145                                                                                  /* |10 ------ 75%  window open                              */
+    146                                                                                  /* |11 ------ 100% window open                              */
+    147                                                                                  /* |                                                        */
+    148                                                                                  /* |          Use of interval interrupt                     */
+    149                                                                                  /* |          -------------------------                     */
+    150                                                                                  /* 0 -------- Interval interrupt is not used                */
+    151                                                                                  /* 1 -------- Interval interrupt is used                    */
+    152              0xFB,                                                               /* 11111011 = 0xFB                                          */
+    153                                                                                  /* -----|||   LVI on power on application                   */
+    154                                                                                  /* -----|||   ---------------------------                   */
+    155                                                                                  /*      ||0 - LVI on by default                             */
+    156                                                                                  /*      ||1 - LVI off by default                            */
+    157                                                                                  /*      ||                                                  */
+    158                                                                                  /*      ||    Internal High-Speed Osc. Frequency            */
+    159                                                                                  /*      ||    ----------------------------------            */
+    160                                                                                  /*      01 -- 8MHz/20MHz                                    */
+    161                                                                                  /*      10 -- 1MHz                                          */
+    162              0xFF,                                                               /* !!!!! ALWAYS SET TO 0xFF !!!!!                           */
+    163              0x85,                                                                /* 10000101 = 0x85                                          */
+    164                                                                                  /* |------|   Control of on-chip debug operation            */
+    165                                                                                  /* |------|   ----------------------------------            */
+    166                                                                                  /* 0------0 - Disable on-chip debug operation               */
+    167                                                                                  /* 0------1 - Setting prohibited                            */
+    168                                                                                  /* 1------0 - Erases data of flash memory in case of        */
+    169                                                                                  /*            failures in enabling on-chip debugging and    */
+    170                                                                                  /*            authenticating on-chip debug security ID      */
+    171                                                                                  /* 1------1 - Does not erases data of flash memory in case  */
+    172                                                                                  /*            of failures in enabling on-chip debugging and */
+    173                                                                                  /*            authenticating on-chip debug security ID      */
+    174                  };
+    175          #endif // #if 0 to disable these optbyte settings
+    176          #pragma constseg = default
+    177          
+    178          /*
+    179          ***********************************************************************************************************
+    180          ***********************************************************************************************************
+    181          **                                        GLOBAL FUNCTIONS
+    182          ***********************************************************************************************************
+    183          ***********************************************************************************************************
+    184          */
+    185          
+    186          /*
+    187          *********************************************************************************************************
+    188          *                                         BSP_LowLevelInit()
+    189          *
+    190          * Description : Board Support Package Low Level Initialization.
+    191          *
+    192          * Argument(s) : none.
+    193          *
+    194          * Returns(s)  : none
+    195          *
+    196          * Caller(s)   : Startup code.
+    197          *
+    198          * Note(s)     : none.
+    199          *********************************************************************************************************
+    200          */
+    201          
+
+   \                                 In  segment CODE, align 1, keep-with-next
+    202          void  BSP_LowLevelInit (void)
+   \                     BSP_LowLevelInit:
+    203          {
+   \   000000                       ; * Stack frame (at entry) *
+   \   000000                       ; Param size: 0
+   \   000000                       ; Auto size: 0
+    204          
+    205          
+    206          }
+   \   000000 D7                    RET                          ;; 6 cycles
+   \   000001                       ; ------------------------------------- Block: 6 cycles
+   \   000001                       ; ------------------------------------- Total: 6 cycles
+   \   000001                       REQUIRE ?CLRL78_V1_0_L00
+    207          
+    208          
+    209          /*
+    210          *********************************************************************************************************
+    211          *                                          BSP_PreInit()
+    212          *
+    213          * Description : System Pre-Initialization. Initializes all peripherals that don't require OS services (LEDs, PBs)
+    214          *               or modules than need to be initialized before the OS (External memories).
+    215          *
+    216          * Argument(s) : none.
+    217          *
+    218          * Return(s)   : none.
+    219          
+    220          * Caller(s)   : Application.
+    221          *
+    222          * Note(s)     : none.
+    223          *********************************************************************************************************
+    224          */
+    225          
+
+   \                                 In  segment CODE, align 1, keep-with-next
+    226          void  BSP_PreInit (void)
+   \                     BSP_PreInit:
+    227          {
+   \   000000                       ; * Stack frame (at entry) *
+   \   000000                       ; Param size: 0
+   \   000000                       ; Auto size: 0
+    228          
+    229          }
+   \   000000 D7                    RET                          ;; 6 cycles
+   \   000001                       ; ------------------------------------- Block: 6 cycles
+   \   000001                       ; ------------------------------------- Total: 6 cycles
+   \   000001                       REQUIRE ?CLRL78_V1_0_L00
+    230          
+    231          
+    232          /*
+    233          *********************************************************************************************************
+    234          *                                          BSP_PostInit()
+    235          *
+    236          * Description : Initialize all the peripherals that required OS services (OS initialized)
+    237          *
+    238          * Argument(s) : none.
+    239          *
+    240          * Return(s)   : none.
+    241          
+    242          * Caller(s)   : Application.
+    243          *
+    244          * Note(s)     : none.
+    245          *********************************************************************************************************
+    246          */
+    247          
+
+   \                                 In  segment CODE, align 1, keep-with-next
+    248          void  BSP_PostInit (void)
+   \                     BSP_PostInit:
+    249          {
+   \   000000                       ; * Stack frame (at entry) *
+   \   000000                       ; Param size: 0
+   \   000000                       ; Auto size: 0
+    250              // AGD: already handled by applilet's initialization code
+    251              //    CLK_OscInit();
+    252              TMR_TickInit();
+   \   000000 ED....                BR        N:TMR_TickInit     ;; 3 cycles
+   \   000003                       ; ------------------------------------- Block: 3 cycles
+   \   000003                       ; ------------------------------------- Total: 3 cycles
+   \   000003                       REQUIRE ?CLRL78_V1_0_L00
+    253          }
+    254          
+    255          /*
+    256          *********************************************************************************************************
+    257          *                                            BSP_LED_Off()
+    258          *
+    259          * Description : Turns OFF any or all of the LEDs on the board.
+    260          *
+    261          * Argument(s) : led    The ID of the LED control:
+    262          *                      0    turns OFF ALL the LEDs on the board.
+    263          *                      1    turns OFF the blue  LED(D2) on the board.
+    264          *                      2    turns OFF the green LED(D3) on the board.
+    265          *
+    266          * Return(s)   : none.
+    267          *
+    268          * Caller(s)   : Application.
+    269          *
+    270          * Note(s)     : none.
+    271          *********************************************************************************************************
+    272          */
+    273          
+
+   \                                 In  segment CODE, align 1, keep-with-next
+    274          void  BSP_LED_Off (CPU_INT08U led)
+   \                     BSP_LED_Off:
+    275          {
+   \   000000                       ; * Stack frame (at entry) *
+   \   000000                       ; Param size: 0
+   \   000000                       ; Auto size: 0
+    276              switch (led) {
+   \   000000 D1                    CMP0      A                  ;; 1 cycle
+   \   000001 DD13                  BZ        ??Tmr_TickISR_Handler_0  ;; 4 cycles
+   \   000003                       ; ------------------------------------- Block: 5 cycles
+   \   000003 91                    DEC       A                  ;; 1 cycle
+   \   000004 DD23                  BZ        ??Tmr_TickISR_Handler_1  ;; 4 cycles
+   \   000006                       ; ------------------------------------- Block: 5 cycles
+   \   000006 91                    DEC       A                  ;; 1 cycle
+   \   000007 DD24                  BZ        ??Tmr_TickISR_Handler_2  ;; 4 cycles
+   \   000009                       ; ------------------------------------- Block: 5 cycles
+   \   000009 91                    DEC       A                  ;; 1 cycle
+   \   00000A DD25                  BZ        ??Tmr_TickISR_Handler_3  ;; 4 cycles
+   \   00000C                       ; ------------------------------------- Block: 5 cycles
+   \   00000C 91                    DEC       A                  ;; 1 cycle
+   \   00000D DD26                  BZ        ??Tmr_TickISR_Handler_4  ;; 4 cycles
+   \   00000F                       ; ------------------------------------- Block: 5 cycles
+   \   00000F 91                    DEC       A                  ;; 1 cycle
+   \   000010 DD27                  BZ        ??Tmr_TickISR_Handler_5  ;; 4 cycles
+   \   000012                       ; ------------------------------------- Block: 5 cycles
+   \   000012 91                    DEC       A                  ;; 1 cycle
+   \   000013 DD28                  BZ        ??Tmr_TickISR_Handler_6  ;; 4 cycles
+   \   000015                       ; ------------------------------------- Block: 5 cycles
+   \   000015 D7                    RET                          ;; 6 cycles
+   \   000016                       ; ------------------------------------- Block: 6 cycles
+    277                  case 0u:
+    278                      LED01 = DEF_TRUE;
+   \                     ??Tmr_TickISR_Handler_0:
+   \   000016 711201                SET1      S:0xFFF01.1        ;; 2 cycles
+    279                      LED02 = DEF_TRUE;
+   \   000019 710201                SET1      S:0xFFF01.0        ;; 2 cycles
+    280                      LED03 = DEF_TRUE;
+   \   00001C 712206                SET1      S:0xFFF06.2        ;; 2 cycles
+    281                      LED04 = DEF_TRUE;
+   \   00001F 712204                SET1      S:0xFFF04.2        ;; 2 cycles
+    282                      LED05 = DEF_TRUE;
+   \   000022 713206                SET1      S:0xFFF06.3        ;; 2 cycles
+    283                      LED06 = DEF_TRUE;
+   \   000025 713204                SET1      S:0xFFF04.3        ;; 2 cycles
+    284                      break;
+   \   000028 D7                    RET                          ;; 6 cycles
+   \   000029                       ; ------------------------------------- Block: 18 cycles
+    285          
+    286                  case 1u:
+    287                      LED01 = DEF_TRUE;
+   \                     ??Tmr_TickISR_Handler_1:
+   \   000029 711201                SET1      S:0xFFF01.1        ;; 2 cycles
+    288                      break;
+   \   00002C D7                    RET                          ;; 6 cycles
+   \   00002D                       ; ------------------------------------- Block: 8 cycles
+    289          
+    290                  case 2u:
+    291                      LED02 = DEF_TRUE;
+   \                     ??Tmr_TickISR_Handler_2:
+   \   00002D 710201                SET1      S:0xFFF01.0        ;; 2 cycles
+    292                      break;
+   \   000030 D7                    RET                          ;; 6 cycles
+   \   000031                       ; ------------------------------------- Block: 8 cycles
+    293          
+    294                  case 3u:
+    295                      LED03 = DEF_TRUE;
+   \                     ??Tmr_TickISR_Handler_3:
+   \   000031 712206                SET1      S:0xFFF06.2        ;; 2 cycles
+    296                      break;
+   \   000034 D7                    RET                          ;; 6 cycles
+   \   000035                       ; ------------------------------------- Block: 8 cycles
+    297          
+    298                  case 4u:
+    299                      LED04 = DEF_TRUE;
+   \                     ??Tmr_TickISR_Handler_4:
+   \   000035 712204                SET1      S:0xFFF04.2        ;; 2 cycles
+    300                      break;
+   \   000038 D7                    RET                          ;; 6 cycles
+   \   000039                       ; ------------------------------------- Block: 8 cycles
+    301          
+    302                  case 5u:
+    303                      LED05 = DEF_TRUE;
+   \                     ??Tmr_TickISR_Handler_5:
+   \   000039 713206                SET1      S:0xFFF06.3        ;; 2 cycles
+    304                      break;
+   \   00003C D7                    RET                          ;; 6 cycles
+   \   00003D                       ; ------------------------------------- Block: 8 cycles
+    305          
+    306                  case 6u:
+    307                      LED06 = DEF_TRUE;
+   \                     ??Tmr_TickISR_Handler_6:
+   \   00003D 713204                SET1      S:0xFFF04.3        ;; 2 cycles
+    308                      break;
+    309          
+    310                  default:
+    311                      break;
+    312              }
+    313          }
+   \   000040 D7                    RET                          ;; 6 cycles
+   \   000041                       ; ------------------------------------- Block: 8 cycles
+   \   000041                       ; ------------------------------------- Total: 107 cycles
+   \   000041                       REQUIRE ?CLRL78_V1_0_L00
+   \   000041                       REQUIRE _A_P1
+   \   000041                       REQUIRE _A_P6
+   \   000041                       REQUIRE _A_P4
+    314          
+    315          
+    316          /*
+    317          *********************************************************************************************************
+    318          *                                             BSP_LED_On()
+    319          *
+    320          * Description : Turn ON any or all the LEDs on the board.
+    321          *
+    322          * Argument(s) : led    The LED number on the board(1-8)
+    323          *
+    324          * Return(s)   : none.
+    325          *
+    326          * Caller(s)   : Application.
+    327          *
+    328          * Note(s)     : none.
+    329          *********************************************************************************************************
+    330          */
+    331          
+
+   \                                 In  segment CODE, align 1, keep-with-next
+    332          void  BSP_LED_On (CPU_INT08U led)
+   \                     BSP_LED_On:
+    333          {
+   \   000000                       ; * Stack frame (at entry) *
+   \   000000                       ; Param size: 0
+   \   000000                       ; Auto size: 0
+    334              switch (led) {
+   \   000000 D1                    CMP0      A                  ;; 1 cycle
+   \   000001 DD13                  BZ        ??Tmr_TickISR_Handler_7  ;; 4 cycles
+   \   000003                       ; ------------------------------------- Block: 5 cycles
+   \   000003 91                    DEC       A                  ;; 1 cycle
+   \   000004 DD23                  BZ        ??Tmr_TickISR_Handler_8  ;; 4 cycles
+   \   000006                       ; ------------------------------------- Block: 5 cycles
+   \   000006 91                    DEC       A                  ;; 1 cycle
+   \   000007 DD24                  BZ        ??Tmr_TickISR_Handler_9  ;; 4 cycles
+   \   000009                       ; ------------------------------------- Block: 5 cycles
+   \   000009 91                    DEC       A                  ;; 1 cycle
+   \   00000A DD25                  BZ        ??Tmr_TickISR_Handler_10  ;; 4 cycles
+   \   00000C                       ; ------------------------------------- Block: 5 cycles
+   \   00000C 91                    DEC       A                  ;; 1 cycle
+   \   00000D DD26                  BZ        ??Tmr_TickISR_Handler_11  ;; 4 cycles
+   \   00000F                       ; ------------------------------------- Block: 5 cycles
+   \   00000F 91                    DEC       A                  ;; 1 cycle
+   \   000010 DD27                  BZ        ??Tmr_TickISR_Handler_12  ;; 4 cycles
+   \   000012                       ; ------------------------------------- Block: 5 cycles
+   \   000012 91                    DEC       A                  ;; 1 cycle
+   \   000013 DD28                  BZ        ??Tmr_TickISR_Handler_13  ;; 4 cycles
+   \   000015                       ; ------------------------------------- Block: 5 cycles
+   \   000015 D7                    RET                          ;; 6 cycles
+   \   000016                       ; ------------------------------------- Block: 6 cycles
+    335                  case 0u:
+    336                      LED01 = DEF_FALSE;
+   \                     ??Tmr_TickISR_Handler_7:
+   \   000016 711301                CLR1      S:0xFFF01.1        ;; 2 cycles
+    337                      LED02 = DEF_FALSE;
+   \   000019 710301                CLR1      S:0xFFF01.0        ;; 2 cycles
+    338                      LED03 = DEF_FALSE;
+   \   00001C 712306                CLR1      S:0xFFF06.2        ;; 2 cycles
+    339                      LED04 = DEF_FALSE;
+   \   00001F 712304                CLR1      S:0xFFF04.2        ;; 2 cycles
+    340                      LED05 = DEF_FALSE;
+   \   000022 713306                CLR1      S:0xFFF06.3        ;; 2 cycles
+    341                      LED06 = DEF_FALSE;
+   \   000025 713304                CLR1      S:0xFFF04.3        ;; 2 cycles
+    342                      break;
+   \   000028 D7                    RET                          ;; 6 cycles
+   \   000029                       ; ------------------------------------- Block: 18 cycles
+    343          
+    344                  case 1u:
+    345                      LED01 = DEF_FALSE;
+   \                     ??Tmr_TickISR_Handler_8:
+   \   000029 711301                CLR1      S:0xFFF01.1        ;; 2 cycles
+    346                      break;
+   \   00002C D7                    RET                          ;; 6 cycles
+   \   00002D                       ; ------------------------------------- Block: 8 cycles
+    347          
+    348                  case 2u:
+    349                      LED02 = DEF_FALSE;
+   \                     ??Tmr_TickISR_Handler_9:
+   \   00002D 710301                CLR1      S:0xFFF01.0        ;; 2 cycles
+    350                      break;
+   \   000030 D7                    RET                          ;; 6 cycles
+   \   000031                       ; ------------------------------------- Block: 8 cycles
+    351          
+    352                  case 3u:
+    353                      LED03 = DEF_FALSE;
+   \                     ??Tmr_TickISR_Handler_10:
+   \   000031 712306                CLR1      S:0xFFF06.2        ;; 2 cycles
+    354                      break;
+   \   000034 D7                    RET                          ;; 6 cycles
+   \   000035                       ; ------------------------------------- Block: 8 cycles
+    355          
+    356                  case 4u:
+    357                      LED04 = DEF_FALSE;
+   \                     ??Tmr_TickISR_Handler_11:
+   \   000035 712304                CLR1      S:0xFFF04.2        ;; 2 cycles
+    358                      break;
+   \   000038 D7                    RET                          ;; 6 cycles
+   \   000039                       ; ------------------------------------- Block: 8 cycles
+    359          
+    360                  case 5u:
+    361                      LED05 = DEF_FALSE;
+   \                     ??Tmr_TickISR_Handler_12:
+   \   000039 713306                CLR1      S:0xFFF06.3        ;; 2 cycles
+    362                      break;
+   \   00003C D7                    RET                          ;; 6 cycles
+   \   00003D                       ; ------------------------------------- Block: 8 cycles
+    363          
+    364                  case 6u:
+    365                      LED06 = DEF_FALSE;
+   \                     ??Tmr_TickISR_Handler_13:
+   \   00003D 713304                CLR1      S:0xFFF04.3        ;; 2 cycles
+    366                      break;
+    367          
+    368                  default:
+    369                      break;
+    370              }
+    371          }
+   \   000040 D7                    RET                          ;; 6 cycles
+   \   000041                       ; ------------------------------------- Block: 8 cycles
+   \   000041                       ; ------------------------------------- Total: 107 cycles
+   \   000041                       REQUIRE ?CLRL78_V1_0_L00
+   \   000041                       REQUIRE _A_P1
+   \   000041                       REQUIRE _A_P6
+   \   000041                       REQUIRE _A_P4
+    372          
+    373          
+    374          /*
+    375          *********************************************************************************************************
+    376          *                                             BSP_LED_Toggle()
+    377          *
+    378          * Description : Toggles any or all the LEDs on the board.
+    379          *
+    380          * Argument(s) : led    The LED number on the board(1-8)
+    381          *
+    382          * Return(s)   : none.
+    383          *
+    384          * Caller(s)   : Application.
+    385          *
+    386          * Note(s)     : none.
+    387          *********************************************************************************************************
+    388          */
+    389          
+
+   \                                 In  segment CODE, align 1, keep-with-next
+    390          void  BSP_LED_Toggle (CPU_INT08U led)
+   \                     BSP_LED_Toggle:
+    391          {
+   \   000000                       ; * Stack frame (at entry) *
+   \   000000                       ; Param size: 0
+   \   000000 C3                    PUSH      BC                 ;; 1 cycle
+   \   000001 C5                    PUSH      DE                 ;; 1 cycle
+   \   000002                       ; Auto size: 0
+    392              switch (led) {
+   \   000002 D1                    CMP0      A                  ;; 1 cycle
+   \   000003 DD14                  BZ        ??Tmr_TickISR_Handler_14  ;; 4 cycles
+   \   000005                       ; ------------------------------------- Block: 7 cycles
+   \   000005 91                    DEC       A                  ;; 1 cycle
+   \   000006 DD22                  BZ        ??Tmr_TickISR_Handler_15  ;; 4 cycles
+   \   000008                       ; ------------------------------------- Block: 5 cycles
+   \   000008 91                    DEC       A                  ;; 1 cycle
+   \   000009 DD24                  BZ        ??Tmr_TickISR_Handler_16  ;; 4 cycles
+   \   00000B                       ; ------------------------------------- Block: 5 cycles
+   \   00000B 91                    DEC       A                  ;; 1 cycle
+   \   00000C DD26                  BZ        ??Tmr_TickISR_Handler_17  ;; 4 cycles
+   \   00000E                       ; ------------------------------------- Block: 5 cycles
+   \   00000E 91                    DEC       A                  ;; 1 cycle
+   \   00000F DD28                  BZ        ??Tmr_TickISR_Handler_18  ;; 4 cycles
+   \   000011                       ; ------------------------------------- Block: 5 cycles
+   \   000011 91                    DEC       A                  ;; 1 cycle
+   \   000012 DD2A                  BZ        ??Tmr_TickISR_Handler_19  ;; 4 cycles
+   \   000014                       ; ------------------------------------- Block: 5 cycles
+   \   000014 91                    DEC       A                  ;; 1 cycle
+   \   000015 DD2C                  BZ        ??Tmr_TickISR_Handler_20  ;; 4 cycles
+   \   000017                       ; ------------------------------------- Block: 5 cycles
+   \   000017 EF35                  BR        S:??Tmr_TickISR_Handler_21  ;; 3 cycles
+   \   000019                       ; ------------------------------------- Block: 3 cycles
+    393                  case 0u:
+    394                      LED01 = ~LED01;
+   \                     ??Tmr_TickISR_Handler_14:
+   \   000019 FD....                CALL      N:?Subroutine1     ;; 3 cycles
+   \   00001C                       ; ------------------------------------- Block: 3 cycles
+    395                      LED02 = ~LED02;
+   \                     ??CrossCallReturnLabel_0:
+   \   00001C FD....                CALL      N:?Subroutine2     ;; 3 cycles
+   \   00001F                       ; ------------------------------------- Block: 3 cycles
+    396                      LED03 = ~LED03;
+   \                     ??CrossCallReturnLabel_2:
+   \   00001F FD....                CALL      N:?Subroutine3     ;; 3 cycles
+   \   000022                       ; ------------------------------------- Block: 3 cycles
+    397                      LED04 = ~LED04;
+   \                     ??CrossCallReturnLabel_4:
+   \   000022 FD....                CALL      N:?Subroutine4     ;; 3 cycles
+   \   000025                       ; ------------------------------------- Block: 3 cycles
+    398                      LED05 = ~LED05;
+   \                     ??CrossCallReturnLabel_6:
+   \   000025 FD....                CALL      N:?Subroutine5     ;; 3 cycles
+   \   000028                       ; ------------------------------------- Block: 3 cycles
+    399                      LED06 = ~LED06;
+   \                     ??CrossCallReturnLabel_8:
+   \   000028 EF19                  BR        S:??Tmr_TickISR_Handler_20  ;; 3 cycles
+   \   00002A                       ; ------------------------------------- Block: 3 cycles
+    400                      break;
+    401          
+    402                  case 1u:
+    403                      LED01 = ~LED01;
+   \                     ??Tmr_TickISR_Handler_15:
+   \   00002A FD....                CALL      N:?Subroutine1     ;; 3 cycles
+   \   00002D                       ; ------------------------------------- Block: 3 cycles
+    404                      break;
+   \                     ??CrossCallReturnLabel_1:
+   \   00002D EF1F                  BR        S:??Tmr_TickISR_Handler_21  ;; 3 cycles
+   \   00002F                       ; ------------------------------------- Block: 3 cycles
+    405          
+    406                  case 2u:
+    407                      LED02 = ~LED02;
+   \                     ??Tmr_TickISR_Handler_16:
+   \   00002F FD....                CALL      N:?Subroutine2     ;; 3 cycles
+   \   000032                       ; ------------------------------------- Block: 3 cycles
+    408                      break;
+   \                     ??CrossCallReturnLabel_3:
+   \   000032 EF1A                  BR        S:??Tmr_TickISR_Handler_21  ;; 3 cycles
+   \   000034                       ; ------------------------------------- Block: 3 cycles
+    409          
+    410                  case 3u:
+    411                      LED03 = ~LED03;
+   \                     ??Tmr_TickISR_Handler_17:
+   \   000034 FD....                CALL      N:?Subroutine3     ;; 3 cycles
+   \   000037                       ; ------------------------------------- Block: 3 cycles
+    412                      break;
+   \                     ??CrossCallReturnLabel_5:
+   \   000037 EF15                  BR        S:??Tmr_TickISR_Handler_21  ;; 3 cycles
+   \   000039                       ; ------------------------------------- Block: 3 cycles
+    413          
+    414                  case 4u:
+    415                     LED04 = ~LED04;
+   \                     ??Tmr_TickISR_Handler_18:
+   \   000039 FD....                CALL      N:?Subroutine4     ;; 3 cycles
+   \   00003C                       ; ------------------------------------- Block: 3 cycles
+    416                      break;
+   \                     ??CrossCallReturnLabel_7:
+   \   00003C EF10                  BR        S:??Tmr_TickISR_Handler_21  ;; 3 cycles
+   \   00003E                       ; ------------------------------------- Block: 3 cycles
+    417          
+    418                  case 5u:
+    419                      LED05 = ~LED05;
+   \                     ??Tmr_TickISR_Handler_19:
+   \   00003E FD....                CALL      N:?Subroutine5     ;; 3 cycles
+   \   000041                       ; ------------------------------------- Block: 3 cycles
+    420                      break;
+   \                     ??CrossCallReturnLabel_9:
+   \   000041 EF0B                  BR        S:??Tmr_TickISR_Handler_21  ;; 3 cycles
+   \   000043                       ; ------------------------------------- Block: 3 cycles
+    421          
+    422                  case 6u:
+    423                      LED06 = ~LED06;
+   \                     ??Tmr_TickISR_Handler_20:
+   \   000043 713404                MOV1      CY, S:0xFFF04.3    ;; 1 cycle
+   \   000046 713404                MOV1      CY, S:0xFFF04.3    ;; 1 cycle
+   \   000049 71C0                  NOT1      CY                 ;; 1 cycle
+   \   00004B 713104                MOV1      S:0xFFF04.3, CY    ;; 2 cycles
+    424                      break;
+   \   00004E                       ; ------------------------------------- Block: 5 cycles
+    425          
+    426                  default:
+    427                      break;
+    428              }
+    429          }
+   \                     ??Tmr_TickISR_Handler_21:
+   \   00004E C4                    POP       DE                 ;; 1 cycle
+   \   00004F C2                    POP       BC                 ;; 1 cycle
+   \   000050 D7                    RET                          ;; 6 cycles
+   \   000051                       ; ------------------------------------- Block: 8 cycles
+   \   000051                       ; ------------------------------------- Total: 101 cycles
+   \   000051                       REQUIRE ?CLRL78_V1_0_L00
+   \   000051                       REQUIRE _A_P1
+   \   000051                       REQUIRE _A_P6
+   \   000051                       REQUIRE _A_P4
+
+   \                                 In  segment CODE, align 1, keep-with-next
+   \                     ?Subroutine5:
+   \   000000 713406                MOV1      CY, S:0xFFF06.3    ;; 1 cycle
+   \   000003 713406                MOV1      CY, S:0xFFF06.3    ;; 1 cycle
+   \   000006 71C0                  NOT1      CY                 ;; 1 cycle
+   \   000008 713106                MOV1      S:0xFFF06.3, CY    ;; 2 cycles
+   \   00000B D7                    RET                          ;; 6 cycles
+   \   00000C                       ; ------------------------------------- Block: 11 cycles
+   \   00000C                       ; ------------------------------------- Total: 11 cycles
+   \   00000C                       REQUIRE ?CLRL78_V1_0_L00
+
+   \                                 In  segment CODE, align 1, keep-with-next
+   \                     ?Subroutine4:
+   \   000000 712404                MOV1      CY, S:0xFFF04.2    ;; 1 cycle
+   \   000003 712404                MOV1      CY, S:0xFFF04.2    ;; 1 cycle
+   \   000006 71C0                  NOT1      CY                 ;; 1 cycle
+   \   000008 712104                MOV1      S:0xFFF04.2, CY    ;; 2 cycles
+   \   00000B D7                    RET                          ;; 6 cycles
+   \   00000C                       ; ------------------------------------- Block: 11 cycles
+   \   00000C                       ; ------------------------------------- Total: 11 cycles
+   \   00000C                       REQUIRE ?CLRL78_V1_0_L00
+
+   \                                 In  segment CODE, align 1, keep-with-next
+   \                     ?Subroutine3:
+   \   000000 712406                MOV1      CY, S:0xFFF06.2    ;; 1 cycle
+   \   000003 712406                MOV1      CY, S:0xFFF06.2    ;; 1 cycle
+   \   000006 71C0                  NOT1      CY                 ;; 1 cycle
+   \   000008 712106                MOV1      S:0xFFF06.2, CY    ;; 2 cycles
+   \   00000B D7                    RET                          ;; 6 cycles
+   \   00000C                       ; ------------------------------------- Block: 11 cycles
+   \   00000C                       ; ------------------------------------- Total: 11 cycles
+   \   00000C                       REQUIRE ?CLRL78_V1_0_L00
+
+   \                                 In  segment CODE, align 1, keep-with-next
+   \                     ?Subroutine2:
+   \   000000 710401                MOV1      CY, S:0xFFF01.0    ;; 1 cycle
+   \   000003 710401                MOV1      CY, S:0xFFF01.0    ;; 1 cycle
+   \   000006 71C0                  NOT1      CY                 ;; 1 cycle
+   \   000008 710101                MOV1      S:0xFFF01.0, CY    ;; 2 cycles
+   \   00000B D7                    RET                          ;; 6 cycles
+   \   00000C                       ; ------------------------------------- Block: 11 cycles
+   \   00000C                       ; ------------------------------------- Total: 11 cycles
+   \   00000C                       REQUIRE ?CLRL78_V1_0_L00
+
+   \                                 In  segment CODE, align 1, keep-with-next
+   \                     ?Subroutine1:
+   \   000000 711401                MOV1      CY, S:0xFFF01.1    ;; 1 cycle
+   \   000003 711401                MOV1      CY, S:0xFFF01.1    ;; 1 cycle
+   \   000006 71C0                  NOT1      CY                 ;; 1 cycle
+   \   000008 711101                MOV1      S:0xFFF01.1, CY    ;; 2 cycles
+   \   00000B D7                    RET                          ;; 6 cycles
+   \   00000C                       ; ------------------------------------- Block: 11 cycles
+   \   00000C                       ; ------------------------------------- Total: 11 cycles
+   \   00000C                       REQUIRE ?CLRL78_V1_0_L00
+    430          
+    431          
+    432          /*
+    433          *********************************************************************************************************
+    434          *                                         BSP_PB_GetStatus()
+    435          *
+    436          * Description : Get the status of a push button on the board.
+    437          *
+    438          * Argument(s) : pb      The ID of the push button to probe
+    439          *
+    440          *                       1    probe the push button USRPB1
+    441          *                       2    probe the push button USRPB2
+    442          *
+    443          * Return(s)   : DEF_FALSE   if the push button is pressed
+    444          *               DEF_TRUE    if the push button is not pressed
+    445          *********************************************************************************************************
+    446          */
+    447          
+
+   \                                 In  segment CODE, align 1, keep-with-next
+    448          CPU_BOOLEAN  BSP_PB_GetStatus (CPU_INT08U pb)
+   \                     BSP_PB_GetStatus:
+    449          {
+   \   000000                       ; * Stack frame (at entry) *
+   \   000000                       ; Param size: 0
+   \   000000                       ; Auto size: 0
+    450              CPU_BOOLEAN   status;
+    451          
+    452          
+    453              status   = DEF_TRUE;
+    454          
+    455              switch (pb) {
+    456                  case 1:
+    457                      break;
+    458          
+    459                  case 2:
+    460                      break;
+    461          
+    462                  default:
+    463                      break;
+    464              }
+    465          
+    466              return (status);
+   \   000000 E1                    ONEB      A                  ;; 1 cycle
+   \   000001 D7                    RET                          ;; 6 cycles
+   \   000002                       ; ------------------------------------- Block: 7 cycles
+   \   000002                       ; ------------------------------------- Total: 7 cycles
+   \   000002                       REQUIRE ?CLRL78_V1_0_L00
+    467          }
+    468          
+    469          
+    470          #ifdef  OS_H
+    471          
+    472          /*
+    473          *********************************************************************************************************
+    474          *                                      BSP_OS_SemCreate()
+    475          *
+    476          * Description : Creates a sempahore to lock/unlock
+    477          *
+    478          * Argument(s) : p_sem        Pointer to a BSP_OS_SEM structure
+    479          *
+    480          *               sem_val      Initial value of the semaphore.
+    481          *
+    482          *               p_sem_name   Pointer to the semaphore name.
+    483          *
+    484          * Return(s)   : DEF_OK        if the semaphore was created.
+    485          *               DEF_FAIL      if the sempahore could not be created.
+    486          *
+    487          * Caller(s)   : Application.
+    488          *
+    489          * Note(s)     : none.
+    490          *
+    491          *********************************************************************************************************
+    492          */
+    493          
+
+   \                                 In  segment CODE, align 1, keep-with-next
+    494          CPU_BOOLEAN  BSP_OS_SemCreate (BSP_OS_SEM     *p_sem,
+   \                     BSP_OS_SemCreate:
+    495                                         BSP_OS_SEM_VAL  sem_val,
+    496                                         CPU_CHAR       *p_sem_name)
+    497          
+    498          {
+   \   000000                       ; * Stack frame (at entry) *
+   \   000000                       ; Param size: 4
+   \   000000 C5                    PUSH      DE                 ;; 1 cycle
+   \   000001 C1                    PUSH      AX                 ;; 1 cycle
+   \   000002 C3                    PUSH      BC                 ;; 1 cycle
+   \   000003                       ; Auto size: 6
+   \   000003 C1                    PUSH      AX                 ;; 1 cycle
+    499              OS_ERR  os_err;
+    500          
+    501          
+    502              OSSemCreate(p_sem,
+    503                          p_sem_name,
+    504                          sem_val,
+    505                          &os_err);
+   \   000004 A80E                  MOVW      AX, [SP+0x0E]      ;; 1 cycle
+   \   000006 12                    MOVW      BC, AX             ;; 1 cycle
+   \   000007 A80C                  MOVW      AX, [SP+0x0C]      ;; 1 cycle
+   \   000009 C3                    PUSH      BC                 ;; 1 cycle
+   \   00000A C1                    PUSH      AX                 ;; 1 cycle
+   \   00000B AEF8                  MOVW      AX, SP             ;; 1 cycle
+   \   00000D 040400                ADDW      AX, #0x4           ;; 1 cycle
+   \   000010 14                    MOVW      DE, AX             ;; 1 cycle
+   \   000011 A806                  MOVW      AX, [SP+0x06]      ;; 1 cycle
+   \   000013 12                    MOVW      BC, AX             ;; 1 cycle
+   \   000014 A808                  MOVW      AX, [SP+0x08]      ;; 1 cycle
+   \   000016 FD....                CALL      OSSemCreate        ;; 3 cycles
+    506          
+    507              if (os_err != OS_ERR_NONE) {
+   \   000019 A800                  MOVW      AX, [SP]           ;; 1 cycle
+   \   00001B F7                    CLRW      BC                 ;; 1 cycle
+   \   00001C 43                    CMPW      AX, BC             ;; 1 cycle
+   \   00001D DD03                  BZ        ??Tmr_TickISR_Handler_22  ;; 4 cycles
+   \   00001F                       ; ------------------------------------- Block: 25 cycles
+    508                  return (DEF_FAIL);
+   \   00001F F1                    CLRB      A                  ;; 1 cycle
+   \   000020 EF01                  BR        S:??Tmr_TickISR_Handler_23  ;; 3 cycles
+   \   000022                       ; ------------------------------------- Block: 4 cycles
+    509              }
+    510          
+    511              return (DEF_OK);
+   \                     ??Tmr_TickISR_Handler_22:
+   \   000022 E1                    ONEB      A                  ;; 1 cycle
+   \   000023                       ; ------------------------------------- Block: 1 cycles
+   \                     ??Tmr_TickISR_Handler_23:
+   \   000023 1006                  ADDW      SP, #0x6           ;; 1 cycle
+   \   000025 C4                    POP       DE                 ;; 1 cycle
+   \   000026                       ; ------------------------------------- Block: 2 cycles
+   \   000026                       ; ------------------------------------- Total: 32 cycles
+   \   000026                       REQUIRE ?CLRL78_V1_0_L00
+   \   000026                       REQUIRE ?Subroutine0
+   \   000026                       ; // Fall through to label ?Subroutine0
+    512          }
+
+   \                                 In  segment CODE, align 1, keep-with-next
+   \                     ?Subroutine0:
+   \   000000 FD....                CALL      N:?FUNC_LEAVE_L06
+   \   000003 0400                  DW        0x4                ;; 3 cycles
+   \   000005                       ; ------------------------------------- Block: 3 cycles
+   \   000005                       ; ------------------------------------- Total: 3 cycles
+   \   000005                       REQUIRE ?CLRL78_V1_0_L00
+    513          
+    514          /*
+    515          *********************************************************************************************************
+    516          *                                     BSP_OS_SemWait()
+    517          *
+    518          * Description : Wait on a semaphore to become available
+    519          *
+    520          * Argument(s) : p_sem        Pointer to the sempahore handler.
+    521          *
+    522          *               dly_ms       delay in miliseconds to wait on the semaphore
+    523          *
+    524          * Return(s)   : error code return     DEF_OK       if the semaphore was acquire
+    525          *                                     DEF_FAIL     if the sempahore could not be acquire
+    526          *
+    527          * Caller(s)   : Application.
+    528          *
+    529          * Note(s)     : none.
+    530          *********************************************************************************************************
+    531          */
+    532          
+
+   \                                 In  segment CODE, align 1, keep-with-next
+    533          CPU_BOOLEAN  BSP_OS_SemWait (BSP_OS_SEM  *p_sem,
+   \                     BSP_OS_SemWait:
+    534                                       CPU_INT32U   dly_ms)
+    535          {
+   \   000000                       ; * Stack frame (at entry) *
+   \   000000                       ; Param size: 4
+   \   000000 C3                    PUSH      BC                 ;; 1 cycle
+   \   000001 C5                    PUSH      DE                 ;; 1 cycle
+   \   000002 C1                    PUSH      AX                 ;; 1 cycle
+   \   000003                       ; Auto size: 4
+   \   000003 C1                    PUSH      AX                 ;; 1 cycle
+    536              OS_ERR  os_err;
+    537          
+    538              OSSemPend(p_sem,
+    539                        dly_ms,
+    540                        OS_OPT_PEND_BLOCKING,
+    541                        (CPU_TS*)0,
+    542                        &os_err);
+   \   000004 AEF8                  MOVW      AX, SP             ;; 1 cycle
+   \   000006 C1                    PUSH      AX                 ;; 1 cycle
+   \   000007 A810                  MOVW      AX, [SP+0x10]      ;; 1 cycle
+   \   000009 12                    MOVW      BC, AX             ;; 1 cycle
+   \   00000A A80E                  MOVW      AX, [SP+0x0E]      ;; 1 cycle
+   \   00000C C3                    PUSH      BC                 ;; 1 cycle
+   \   00000D C1                    PUSH      AX                 ;; 1 cycle
+   \   00000E 340000                MOVW      DE, #0x0           ;; 1 cycle
+   \   000011 F7                    CLRW      BC                 ;; 1 cycle
+   \   000012 A808                  MOVW      AX, [SP+0x08]      ;; 1 cycle
+   \   000014 FD....                CALL      OSSemPend          ;; 3 cycles
+    543          
+    544              if (os_err != OS_ERR_NONE) {
+   \   000017 A800                  MOVW      AX, [SP]           ;; 1 cycle
+   \   000019 F7                    CLRW      BC                 ;; 1 cycle
+   \   00001A 43                    CMPW      AX, BC             ;; 1 cycle
+   \   00001B DD03                  BZ        ??Tmr_TickISR_Handler_24  ;; 4 cycles
+   \   00001D                       ; ------------------------------------- Block: 24 cycles
+    545                  return (DEF_FAIL);
+   \   00001D F1                    CLRB      A                  ;; 1 cycle
+   \   00001E EF01                  BR        S:??Tmr_TickISR_Handler_25  ;; 3 cycles
+   \   000020                       ; ------------------------------------- Block: 4 cycles
+    546              }
+    547          
+    548              return (DEF_OK);
+   \                     ??Tmr_TickISR_Handler_24:
+   \   000020 E1                    ONEB      A                  ;; 1 cycle
+   \   000021                       ; ------------------------------------- Block: 1 cycles
+   \                     ??Tmr_TickISR_Handler_25:
+   \   000021 1004                  ADDW      SP, #0x4           ;; 1 cycle
+   \   000023 C4                    POP       DE                 ;; 1 cycle
+   \   000024 C2                    POP       BC                 ;; 1 cycle
+   \   000025 ED....                BR        N:?Subroutine0     ;; 3 cycles
+   \   000028                       ; ------------------------------------- Block: 6 cycles
+   \   000028                       ; ------------------------------------- Total: 35 cycles
+   \   000028                       REQUIRE ?CLRL78_V1_0_L00
+    549          }
+    550          
+    551          
+    552          /*
+    553          *********************************************************************************************************
+    554          *                                        BSP_OS_SemPost()
+    555          *
+    556          * Description : Post a semaphore
+    557          *
+    558          * Argument(s) : p_sem                 Pointer to the Semaphore handler.
+    559          *
+    560          * Return(s)   : error code return     DEF_OK     if the semaphore was posted.
+    561          *                                     DEF_FAIL   if the sempahore could not be posted.
+    562          *
+    563          * Caller(s)   : Application.
+    564          *
+    565          * Note(s)     : none.
+    566          *********************************************************************************************************
+    567          */
+    568          
+
+   \                                 In  segment CODE, align 1, keep-with-next
+    569          CPU_BOOLEAN  BSP_OS_SemPost (BSP_OS_SEM  *p_sem)
+   \                     BSP_OS_SemPost:
+    570          {
+   \   000000                       ; * Stack frame (at entry) *
+   \   000000                       ; Param size: 0
+   \   000000 C3                    PUSH      BC                 ;; 1 cycle
+   \   000001 C5                    PUSH      DE                 ;; 1 cycle
+   \   000002                       ; Auto size: 2
+   \   000002 C1                    PUSH      AX                 ;; 1 cycle
+    571              OS_ERR  os_err;
+    572          
+    573          
+    574              OSSemPost(p_sem,
+    575                        OS_OPT_POST_1,
+    576                        &os_err);
+   \   000003 EBF8FF                MOVW      DE, SP             ;; 1 cycle
+   \   000006 F7                    CLRW      BC                 ;; 1 cycle
+   \   000007 FD....                CALL      OSSemPost          ;; 3 cycles
+    577          
+    578              if (os_err != OS_ERR_NONE) {
+   \   00000A A800                  MOVW      AX, [SP]           ;; 1 cycle
+   \   00000C F7                    CLRW      BC                 ;; 1 cycle
+   \   00000D 43                    CMPW      AX, BC             ;; 1 cycle
+   \   00000E DD03                  BZ        ??Tmr_TickISR_Handler_26  ;; 4 cycles
+   \   000010                       ; ------------------------------------- Block: 15 cycles
+    579                  return (DEF_FAIL);
+   \   000010 F1                    CLRB      A                  ;; 1 cycle
+   \   000011 EF01                  BR        S:??Tmr_TickISR_Handler_27  ;; 3 cycles
+   \   000013                       ; ------------------------------------- Block: 4 cycles
+    580              }
+    581          
+    582              return (DEF_OK);
+   \                     ??Tmr_TickISR_Handler_26:
+   \   000013 E1                    ONEB      A                  ;; 1 cycle
+   \   000014                       ; ------------------------------------- Block: 1 cycles
+   \                     ??Tmr_TickISR_Handler_27:
+   \   000014 1002                  ADDW      SP, #0x2           ;; 1 cycle
+   \   000016 C4                    POP       DE                 ;; 1 cycle
+   \   000017 C2                    POP       BC                 ;; 1 cycle
+   \   000018 D7                    RET                          ;; 6 cycles
+   \   000019                       ; ------------------------------------- Block: 9 cycles
+   \   000019                       ; ------------------------------------- Total: 29 cycles
+   \   000019                       REQUIRE ?CLRL78_V1_0_L00
+    583          }
+    584          
+    585          #endif
+    586          
+    587          /*
+    588          *********************************************************************************************************
+    589          *                                        OSCILLATOR INITIALIZATION
+    590          *
+    591          * Description   : This function initializes the clock source.
+    592          *
+    593          * Argument      : None
+    594          *
+    595          * Returns       : None
+    596          *********************************************************************************************************
+    597          */
+    598          #if 0 // AGD: disabled so we can use oscillator initialization code
+    599                // which is generated and maintained by applilet
+    600          
+    601          void  CLK_OscInit (void)
+    602          {
+    603          
+    604                                                                                  /* Set clock operation mode                                 */
+    605                                                                                  /* ||-|-|||   Control of hi-speed system clock osc freq     */
+    606                                                                                  /* ||-|-||    -----------------------------------------     */
+    607                                                                                  /* ||-|-||0 -  2 MHz <= fMX <= 10 MHz                       */
+    608                                                                                  /* ||-|-||1 - 10 MHz <  fMX <= 20 MHz                       */
+    609                                                                                  /* ||-|-||                                                  */
+    610                                                                                  /* ||-|-||    XT1 oscillator oscillation mode selection     */
+    611                                                                                  /* ||-|-||    -----------------------------------------     */
+    612                                                                                  /* ||-|-00 -- Low-power consumption oscillation             */
+    613                                                                                  /* ||-|-01 -- Normal oscillation                            */
+    614                                                                                  /* ||-|-1x -- Ultra low-power consumption operation         */
+    615                                                                                  /* ||-|                                                     */
+    616                                                                                  /* ||-|       Subsystem clock pin operation mode            */
+    617                                                                                  /* ||-|       -----------------------------------------     */
+    618                                                                                  /* ||-0 ----- XT1/P123 & XT2/P124 in input port mode        */
+    619                                                                                  /* ||-1 ----- XT1/P123 & XT2/P124 in crystal resonator mode */
+    620                                                                                  /* ||                                                       */
+    621                                                                                  /* ||         High-speed system clock pin operation mode    */
+    622                                                                                  /* ||         ------------------------------------------    */
+    623                                                                                  /* 00 ------- X1 & X2 in input mode                         */
+    624                                                                                  /* 01 ------- X1 & x2 in crystal/ceramic resonator mode     */
+    625                                                                                  /* 10 ------- X1 & X2 in input mode                         */
+    626                                                                                  /* 11 ------- X1 in input mode & X2 in ext clock input mode */
+    627                                                                                  /* CAUTIONS 1. CMC can be written only once after reset     */
+    628                                                                                  /*             by an 8-bit memory manipulation instruction. */
+    629                                                                                  /*          2. After reset set CMC before X1 or XT1         */
+    630                                                                                  /*             oscillation is started as set by the clock   */
+    631                                                                                  /*             operation status control register (CSC).     */
+    632                                                                                  /*          3. Be sure to set AMPH to 1 if the X1 clock     */
+    633                                                                                  /*             oscillation frequency exceeds 10 MHz.        */
+    634                                                                                  /*          4. It is recommended to set the default value   */
+    635                                                                                  /*             (00H) to CMC after reset release, even when  */
+    636                                                                                  /*             the register is used at the default value,   */
+    637                                                                                  /*             in order to prevent malfunctioning during a  */
+    638                                                                                  /*             program loop.                                */
+    639              CMC    = 0x13;                                                      /* 00010011 = 0x13                                          */
+    640                                                                                  /* Set osc stabilization time to reset value (optional)     */
+    641                                                                                  /* -----|||                                                 */
+    642                                                                                  /* -----|||   osc stabilization time selection              */
+    643                                                                                  /* -----|||   -----------------------------------------     */
+    644                                                                                  /* -----000 -    256/fMX                                    */
+    645                                                                                  /* -----001 -    512/fMX                                    */
+    646                                                                                  /* -----010 -   1024/fMX                                    */
+    647                                                                                  /* -----011 -   2048/fMX                                    */
+    648                                                                                  /* -----100 -   8192/fMX                                    */
+    649                                                                                  /* -----101 -  32768/fMX                                    */
+    650                                                                                  /* -----110 - 131072/fMX                                    */
+    651                                                                                  /* -----111 - 262144/fMX                                    */
+    652              OSTS   = 0x07;                                                      /* 00000111 = 0x07                                          */
+    653          
+    654          }
+    655          #endif
+    656          
+    657          /*
+    658          *********************************************************************************************************
+    659          *                                        TICKER INITIALIZATION
+    660          *
+    661          * Description   : This function initializes the uC/OS-II's tick source.
+    662          *
+    663          * Argument      : None
+    664          *
+    665          * Returns       : None
+    666          *********************************************************************************************************
+    667          */
+    668          
+
+   \                                 In  segment CODE, align 1, keep-with-next
+    669          void  TMR_TickInit (void)
+   \                     TMR_TickInit:
+    670          {
+   \   000000                       ; * Stack frame (at entry) *
+   \   000000                       ; Param size: 0
+   \   000000                       ; Auto size: 0
+    671              PER0          |=    0x01;                                           /* Power on Timer Array Unit                                */
+   \   000000 36F000                MOVW      HL, #0xF0          ;; 1 cycle
+   \   000003 7182                  SET1      [HL].0             ;; 2 cycles
+    672              TPS0           =  0x0008;                                           /* CK00 = fClk, CK01 = fClk / 256                           */
+   \   000005 300800                MOVW      AX, #0x8           ;; 1 cycle
+   \   000008 BFB601                MOVW      0x1B6, AX          ;; 1 cycle
+    673              TMR00          =  0x0000;                                           /* Ch. CK00, PRS clock, slave, sw start, timer mode */
+   \   00000B F6                    CLRW      AX                 ;; 1 cycle
+   \   00000C BF9001                MOVW      0x190, AX          ;; 1 cycle
+    674              TDR00          = (BSP_DLY_CONST / 512) - 1;                         /* Set interval timer                               */
+   \   00000F C9183D00              MOVW      S:0xFFF18, #0x3D   ;; 1 cycle
+    675          
+    676              TOE0          &= 0x00FE;
+   \   000013 AFBA01                MOVW      AX, 0x1BA          ;; 1 cycle
+   \   000016 FD....                CALL      N:?Subroutine6     ;; 3 cycles
+   \   000019                       ; ------------------------------------- Block: 12 cycles
+   \                     ??CrossCallReturnLabel_10:
+   \   000019 BFBA01                MOVW      0x1BA, AX          ;; 1 cycle
+    677              TO0           &= 0x00FE;
+   \   00001C AFB801                MOVW      AX, 0x1B8          ;; 1 cycle
+   \   00001F FD....                CALL      N:?Subroutine6     ;; 3 cycles
+   \   000022                       ; ------------------------------------- Block: 5 cycles
+   \                     ??CrossCallReturnLabel_11:
+   \   000022 BFB801                MOVW      0x1B8, AX          ;; 1 cycle
+    678              TOM0          &= 0x00FE;
+   \   000025 AFBE01                MOVW      AX, 0x1BE          ;; 1 cycle
+   \   000028 FD....                CALL      N:?Subroutine6     ;; 3 cycles
+   \   00002B                       ; ------------------------------------- Block: 5 cycles
+   \                     ??CrossCallReturnLabel_12:
+   \   00002B BFBE01                MOVW      0x1BE, AX          ;; 1 cycle
+    679              TOL0          &= 0x00FE;
+   \   00002E AFBC01                MOVW      AX, 0x1BC          ;; 1 cycle
+   \   000031 FD....                CALL      N:?Subroutine6     ;; 3 cycles
+   \   000034                       ; ------------------------------------- Block: 5 cycles
+   \                     ??CrossCallReturnLabel_13:
+   \   000034 BFBC01                MOVW      0x1BC, AX          ;; 1 cycle
+    680          
+    681              PR01L_bit.no4  =      1;
+   \   000037 714AEA                SET1      0xFFFEA.4          ;; 2 cycles
+    682              PR11L_bit.no4  =      1;
+   \   00003A 714AEE                SET1      0xFFFEE.4          ;; 2 cycles
+    683          
+    684              TMIF00         =      0;                                            /* Clear TAU Ch 0 interrupt request flag            */
+   \   00003D 714BE2                CLR1      0xFFFE2.4          ;; 2 cycles
+    685              TMMK00         =      0;                                            /* Enable TAU Ch 0 interrupt                        */
+   \   000040 714BE6                CLR1      0xFFFE6.4          ;; 2 cycles
+    686              TS0           |=   0x01;
+   \   000043 36B201                MOVW      HL, #0x1B2         ;; 1 cycle
+   \   000046 7182                  SET1      [HL].0             ;; 2 cycles
+    687          }
+   \   000048 D7                    RET                          ;; 6 cycles
+   \   000049                       ; ------------------------------------- Block: 18 cycles
+   \   000049                       ; ------------------------------------- Total: 45 cycles
+   \   000049                       REQUIRE ?CLRL78_V1_0_L00
+   \   000049                       REQUIRE _A_PER0
+   \   000049                       REQUIRE _A_TPS0
+   \   000049                       REQUIRE _A_TMR00
+   \   000049                       REQUIRE _A_TDR00
+   \   000049                       REQUIRE _A_TOE0
+   \   000049                       REQUIRE _A_TO0
+   \   000049                       REQUIRE _A_TOM0
+   \   000049                       REQUIRE _A_TOL0
+   \   000049                       REQUIRE _A_PR01
+   \   000049                       REQUIRE _A_PR11
+   \   000049                       REQUIRE _A_IF1
+   \   000049                       REQUIRE _A_MK1
+   \   000049                       REQUIRE _A_TS0
+
+   \                                 In  segment CODE, align 1, keep-with-next
+   \                     ?Subroutine6:
+   \   000000 60                    MOV       A, X               ;; 1 cycle
+   \   000001 F0                    CLRB      X                  ;; 1 cycle
+   \   000002 5CFE                  AND       A, #0xFE           ;; 1 cycle
+   \   000004 08                    XCH       A, X               ;; 1 cycle
+   \   000005 D7                    RET                          ;; 6 cycles
+   \   000006                       ; ------------------------------------- Block: 10 cycles
+   \   000006                       ; ------------------------------------- Total: 10 cycles
+   \   000006                       REQUIRE ?CLRL78_V1_0_L00
+    688          
+    689          /*
+    690          *********************************************************************************************************
+    691          *                                      Tmr_TickISR_Handler
+    692          *
+    693          * Description   : This function is part of the ISR for the OSTick.
+    694          *
+    695          * Argument      : None
+    696          *
+    697          * Returns       : None
+    698          *********************************************************************************************************
+    699          */
+    700          
+
+   \                                 In  segment CODE, align 1, keep-with-next
+    701          void  Tmr_TickISR_Handler (void)
+   \                     Tmr_TickISR_Handler:
+    702          {
+   \   000000                       ; * Stack frame (at entry) *
+   \   000000                       ; Param size: 0
+   \   000000                       ; Auto size: 0
+    703          
+    704          }
+   \   000000 D7                    RET                          ;; 6 cycles
+   \   000001                       ; ------------------------------------- Block: 6 cycles
+   \   000001                       ; ------------------------------------- Total: 6 cycles
+   \   000001                       REQUIRE ?CLRL78_V1_0_L00
+
+   Maximum stack usage in bytes:
+
+   CSTACK Function
+   ------ --------
+      0   BSP_LED_Off
+      0   BSP_LED_On
+      4   BSP_LED_Toggle
+      0   BSP_LowLevelInit
+     16   BSP_OS_SemCreate
+       12   -> OSSemCreate
+      6   BSP_OS_SemPost
+        6   -> OSSemPost
+     18   BSP_OS_SemWait
+       14   -> OSSemPend
+      0   BSP_PB_GetStatus
+      0   BSP_PostInit
+        0   -> TMR_TickInit
+      0   BSP_PreInit
+      0   TMR_TickInit
+      0   Tmr_TickISR_Handler
+
+
+   Segment part sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       5  ?Subroutine0
+      12  ?Subroutine1
+      12  ?Subroutine2
+      12  ?Subroutine3
+      12  ?Subroutine4
+      12  ?Subroutine5
+       6  ?Subroutine6
+      65  BSP_LED_Off
+      65  BSP_LED_On
+      81  BSP_LED_Toggle
+       1  BSP_LowLevelInit
+      38  BSP_OS_SemCreate
+      25  BSP_OS_SemPost
+      40  BSP_OS_SemWait
+       2  BSP_PB_GetStatus
+       3  BSP_PostInit
+       1  BSP_PreInit
+      73  TMR_TickInit
+       1  Tmr_TickISR_Handler
+       2  _A_IF1
+       2  _A_MK1
+       1  _A_P1
+       1  _A_P4
+       1  _A_P6
+       1  _A_PER0
+       2  _A_PR01
+       2  _A_PR11
+       2  _A_TDR00
+       2  _A_TMR00
+       2  _A_TO0
+       2  _A_TOE0
+       2  _A_TOL0
+       2  _A_TOM0
+       2  _A_TPS0
+       2  _A_TS0
+
+ 
+ 466 bytes in segment CODE
+  23 bytes in segment NEAR_A
+   5 bytes in segment SADDR_A
+ 
+ 466 bytes of CODE memory
+   0 bytes of DATA memory (+ 28 bytes shared)
+
+Errors: none
+Warnings: 1

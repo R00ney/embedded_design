@@ -1,0 +1,385 @@
+###############################################################################
+#                                                                             #
+# IAR C/C++ Compiler V1.30.5.50715 for RL78             23/Mar/2014  17:08:42 #
+# Copyright 2011-2013 IAR Systems AB.                                         #
+# Network license: ece-lic-19.ece.ncsu.edu (STD)                              #
+#                                                                             #
+#    Core         =  rl78_2                                                   #
+#    Code model   =  Near                                                     #
+#    Data model   =  Near                                                     #
+#                 =                                                           #
+#    Source file  =  C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\uCOS-III\Source\os_prio.c  #
+#    Command line =  C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\uCOS-III\Source\os_prio.c  #
+#                    --core rl78_2 --code_model near --data_model near        #
+#                    --near_const_location rom0 -o                            #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\Debug\Obj\ --dlib_config            #
+#                    "C:\Program Files\IAR Systems\Embedded Workbench         #
+#                    6.5\rl78\LIB\dlrl78nn2n.h" -e -Ohz --no_scheduling       #
+#                    --no_clustering --debug -lC                              #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\Debug\List\ -I                      #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\ -I C:\Users\Suddenlink\Dropbox\git #
+#                    _files\embedded_design\Proj2_uCOS-III-LCD-G14\Software\E #
+#                    valBoards\Renesas\YRDKRL78G14\IAR\Application\Source\    #
+#                    -I C:\Users\Suddenlink\Dropbox\git_files\embedded_design #
+#                    \Proj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDK #
+#                    RL78G14\IAR\Application\..\uCOS-III\ -I                  #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\..\BSP\ -I                          #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\..\BSP\applilet3_src\ -I            #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\..\BSP\Glyph\Drivers\ -I            #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\..\BSP\Glyph\glyph\ -I              #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\..\..\..\..\..\uC-CPU\ -I           #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\..\..\..\..\..\uC-CPU\RL78\IAR\ -I  #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\..\..\..\..\..\uC-LIB\ -I           #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\..\..\..\..\..\uCOS-III\Ports\Renes #
+#                    as\RL78\IAR\ -I C:\Users\Suddenlink\Dropbox\git_files\em #
+#                    bedded_design\Proj2_uCOS-III-LCD-G14\Software\EvalBoards #
+#                    \Renesas\YRDKRL78G14\IAR\Application\..\..\..\..\..\uCOS #
+#                    -III\Source\ --relaxed_fp                                #
+#    List file    =  C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\Debug\List\os_prio.lst              #
+#    Object file  =  C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\Debug\Obj\os_prio.r87               #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Proj2_uCOS-III-LCD-G14\Software\uCOS-III\Source\os_prio.c
+      1          /*
+      2          ************************************************************************************************************************
+      3          *                                                      uC/OS-III
+      4          *                                                 The Real-Time Kernel
+      5          *
+      6          *                                  (c) Copyright 2009-2011; Micrium, Inc.; Weston, FL
+      7          *                           All rights reserved.  Protected by international copyright laws.
+      8          *
+      9          *                                                 PRIORITY MANAGEMENT
+     10          *
+     11          * File    : OS_PRIO.C
+     12          * By      : JJL
+     13          * Version : V3.02.00
+     14          *
+     15          * LICENSING TERMS:
+     16          * ---------------
+     17          *           uC/OS-III is provided in source form for FREE short-term evaluation, for educational use or 
+     18          *           for peaceful research.  If you plan or intend to use uC/OS-III in a commercial application/
+     19          *           product then, you need to contact Micrium to properly license uC/OS-III for its use in your 
+     20          *           application/product.   We provide ALL the source code for your convenience and to help you 
+     21          *           experience uC/OS-III.  The fact that the source is provided does NOT mean that you can use 
+     22          *           it commercially without paying a licensing fee.
+     23          *
+     24          *           Knowledge of the source code may NOT be used to develop a similar product.
+     25          *
+     26          *           Please help us continue to provide the embedded community with the finest software available.
+     27          *           Your honesty is greatly appreciated.
+     28          *
+     29          *           You can contact us at www.micrium.com, or by phone at +1 (954) 217-2036.
+     30          ************************************************************************************************************************
+     31          */
+     32          
+     33          #include  <os.h>
+     34          
+     35          #ifdef VSC_INCLUDE_SOURCE_FILE_NAMES
+     36          const  CPU_CHAR  *os_prio__c = "$Id: $";
+     37          #endif
+     38          
+     39          
+
+   \                                 In  segment NEAR_Z, align 2, align-sorted
+     40          CPU_DATA   OSPrioTbl[OS_PRIO_TBL_SIZE];                     /* Declare the array local to this file to allow for  ... */
+   \                     OSPrioTbl:
+   \   000000                       DS 2
+   \   000002                       REQUIRE __INIT_NEAR_Z
+     41                                                                      /* ... optimization.  In other words, this allows the ... */
+     42                                                                      /* ... table to be located in fast memory                 */
+     43          
+     44          /*
+     45          ************************************************************************************************************************
+     46          *                                               INITIALIZE THE PRIORITY LIST
+     47          *
+     48          * Description: This function is called by uC/OS-III to initialize the list of ready priorities.
+     49          *
+     50          * Arguments  : none
+     51          *
+     52          * Returns    : none
+     53          *
+     54          * Note       : This function is INTERNAL to uC/OS-III and your application should not call it.
+     55          ************************************************************************************************************************
+     56          */
+     57          
+
+   \                                 In  segment CODE, align 1, keep-with-next
+     58          void  OS_PrioInit (void)
+   \                     OS_PrioInit:
+     59          {
+   \   000000                       ; * Stack frame (at entry) *
+   \   000000                       ; Param size: 0
+   \   000000                       ; Auto size: 0
+     60              CPU_DATA  i;
+     61          
+     62          
+     63                                                                      /* Clear the bitmap table ... no task is ready            */
+     64              for (i = 0u; i < OS_PRIO_TBL_SIZE; i++) {
+     65                   OSPrioTbl[i] = (CPU_DATA)0;
+   \   000000 F6                    CLRW      AX                 ;; 1 cycle
+   \   000001 BF....                MOVW      N:OSPrioTbl, AX    ;; 1 cycle
+     66              }
+     67          }
+   \   000004 D7                    RET                          ;; 6 cycles
+   \   000005                       ; ------------------------------------- Block: 8 cycles
+   \   000005                       ; ------------------------------------- Total: 8 cycles
+   \   000005                       REQUIRE ?CLRL78_V1_0_L00
+     68          
+     69          /*
+     70          ************************************************************************************************************************
+     71          *                                           GET HIGHEST PRIORITY TASK WAITING
+     72          *
+     73          * Description: This function is called by other uC/OS-III services to determine the highest priority task
+     74          *              waiting on the event.
+     75          *
+     76          * Arguments  : none
+     77          *
+     78          * Returns    : The priority of the Highest Priority Task (HPT) waiting for the event
+     79          *
+     80          * Note(s)    : 1) This function is INTERNAL to uC/OS-III and your application MUST NOT call it.
+     81          ************************************************************************************************************************
+     82          */
+     83          
+
+   \                                 In  segment CODE, align 1, keep-with-next
+     84          OS_PRIO  OS_PrioGetHighest (void)
+   \                     OS_PrioGetHighest:
+     85          {
+   \   000000                       ; * Stack frame (at entry) *
+   \   000000                       ; Param size: 0
+   \   000000 C3                    PUSH      BC                 ;; 1 cycle
+   \   000001                       ; Auto size: 0
+     86              CPU_DATA  *p_tbl;
+     87              OS_PRIO    prio;
+     88          
+     89          
+     90              prio  = (OS_PRIO)0;
+   \   000001 F3                    CLRB      B                  ;; 1 cycle
+     91              p_tbl = &OSPrioTbl[0];
+   \   000002 36....                MOVW      HL, #OSPrioTbl     ;; 1 cycle
+   \   000005 EF06                  BR        S:??OS_PrioRemove_0  ;; 3 cycles
+   \   000007                       ; ------------------------------------- Block: 6 cycles
+     92              while (*p_tbl == (CPU_DATA)0) {                         /* Search the bitmap table for the highest priority       */
+     93                  prio += DEF_INT_CPU_NBR_BITS;                       /* Compute the step of each CPU_DATA entry                */
+   \                     ??OS_PrioGetHighest_0:
+   \   000007 63                    MOV       A, B               ;; 1 cycle
+   \   000008 0C10                  ADD       A, #0x10           ;; 1 cycle
+   \   00000A 73                    MOV       B, A               ;; 1 cycle
+     94                  p_tbl++;
+   \   00000B A7                    INCW      HL                 ;; 1 cycle
+   \   00000C A7                    INCW      HL                 ;; 1 cycle
+   \   00000D                       ; ------------------------------------- Block: 5 cycles
+     95              }
+   \                     ??OS_PrioRemove_0:
+   \   00000D AB                    MOVW      AX, [HL]           ;; 1 cycle
+   \   00000E 440000                CMPW      AX, #0x0           ;; 1 cycle
+   \   000011 DDF4                  BZ        ??OS_PrioGetHighest_0  ;; 4 cycles
+   \   000013                       ; ------------------------------------- Block: 6 cycles
+     96              prio += (OS_PRIO)CPU_CntLeadZeros(*p_tbl);              /* Find the position of the first bit set at the entry    */
+     97              return (prio);
+   \   000013 FD....                CALL      CPU_CntLeadZeros   ;; 3 cycles
+   \   000016 63                    MOV       A, B               ;; 1 cycle
+   \   000017 6108                  ADD       A, X               ;; 1 cycle
+   \   000019 C2                    POP       BC                 ;; 1 cycle
+   \   00001A D7                    RET                          ;; 6 cycles
+   \   00001B                       ; ------------------------------------- Block: 12 cycles
+   \   00001B                       ; ------------------------------------- Total: 29 cycles
+   \   00001B                       REQUIRE ?CLRL78_V1_0_L00
+     98          }
+     99          
+    100          /*
+    101          ************************************************************************************************************************
+    102          *                                                  INSERT PRIORITY
+    103          *
+    104          * Description: This function is called to insert a priority in the priority table.
+    105          *
+    106          * Arguments  : prio     is the priority to insert
+    107          *
+    108          * Returns    : none
+    109          *
+    110          * Note(s)    : 1) This function is INTERNAL to uC/OS-III and your application MUST NOT call it.
+    111          ************************************************************************************************************************
+    112          */
+    113          
+
+   \                                 In  segment CODE, align 1, keep-with-next
+    114          void  OS_PrioInsert (OS_PRIO  prio)
+   \                     OS_PrioInsert:
+    115          {
+   \   000000                       ; * Stack frame (at entry) *
+   \   000000                       ; Param size: 0
+   \   000000 C3                    PUSH      BC                 ;; 1 cycle
+   \   000001 C5                    PUSH      DE                 ;; 1 cycle
+   \   000002                       ; Auto size: 0
+   \   000002 FD....                CALL      N:?Subroutine1     ;; 3 cycles
+   \   000005                       ; ------------------------------------- Block: 5 cycles
+    116              CPU_DATA  bit;
+    117              CPU_DATA  bit_nbr;
+    118              OS_PRIO   ix;
+    119          
+    120          
+    121              ix             = prio / DEF_INT_CPU_NBR_BITS;
+    122              bit_nbr        = (CPU_DATA)prio & (DEF_INT_CPU_NBR_BITS - 1u);
+    123              bit            = 1u;
+    124              bit          <<= (DEF_INT_CPU_NBR_BITS - 1u) - bit_nbr;
+    125              OSPrioTbl[ix] |= bit;
+   \                     ??CrossCallReturnLabel_0:
+   \   000005 14                    MOVW      DE, AX             ;; 1 cycle
+   \   000006 AB                    MOVW      AX, [HL]           ;; 1 cycle
+   \   000007 616D                  OR        A, D               ;; 1 cycle
+   \   000009 08                    XCH       A, X               ;; 1 cycle
+   \   00000A 616C                  OR        A, E               ;; 1 cycle
+   \   00000C                       ; ------------------------------------- Block: 5 cycles
+   \   00000C                       ; ------------------------------------- Total: 10 cycles
+   \   00000C                       REQUIRE ?CLRL78_V1_0_L00
+   \   00000C                       REQUIRE ?Subroutine0
+   \   00000C                       ; // Fall through to label ?Subroutine0
+
+   \                                 In  segment CODE, align 1, keep-with-next
+   \                     ?Subroutine0:
+   \   000000 08                    XCH       A, X               ;; 1 cycle
+   \   000001 BB                    MOVW      [HL], AX           ;; 1 cycle
+    126          }
+   \   000002 C4                    POP       DE                 ;; 1 cycle
+   \   000003 C2                    POP       BC                 ;; 1 cycle
+   \   000004 D7                    RET                          ;; 6 cycles
+   \   000005                       ; ------------------------------------- Block: 10 cycles
+   \   000005                       ; ------------------------------------- Total: 10 cycles
+   \   000005                       REQUIRE ?CLRL78_V1_0_L00
+
+   \                                 In  segment CODE, align 1, keep-with-next
+   \                     ?Subroutine1:
+   \   000000 73                    MOV       B, A               ;; 1 cycle
+   \   000001 314A                  SHR       A, 0x4             ;; 1 cycle
+   \   000003 70                    MOV       X, A               ;; 1 cycle
+   \   000004 F1                    CLRB      A                  ;; 1 cycle
+   \   000005 01                    ADDW      AX, AX             ;; 1 cycle
+   \   000006 04....                ADDW      AX, #OSPrioTbl     ;; 1 cycle
+   \   000009 16                    MOVW      HL, AX             ;; 1 cycle
+   \   00000A 63                    MOV       A, B               ;; 1 cycle
+   \   00000B 5C0F                  AND       A, #0xF            ;; 1 cycle
+   \   00000D 70                    MOV       X, A               ;; 1 cycle
+   \   00000E 510F                  MOV       A, #0xF            ;; 1 cycle
+   \   000010 6128                  SUB       A, X               ;; 1 cycle
+   \   000012 72                    MOV       C, A               ;; 1 cycle
+   \   000013 E6                    ONEW      AX                 ;; 1 cycle
+   \   000014 FD....                CALL      N:?I_LSH_L02       ;; 3 cycles
+   \   000017 D7                    RET                          ;; 6 cycles
+   \   000018                       ; ------------------------------------- Block: 23 cycles
+   \   000018                       ; ------------------------------------- Total: 23 cycles
+   \   000018                       REQUIRE ?CLRL78_V1_0_L00
+    127          
+    128          /*
+    129          ************************************************************************************************************************
+    130          *                                                   REMOVE PRIORITY
+    131          *
+    132          * Description: This function is called to remove a priority in the priority table.
+    133          *
+    134          * Arguments  : prio     is the priority to remove
+    135          *
+    136          * Returns    : none
+    137          *
+    138          * Note(s)    : 1) This function is INTERNAL to uC/OS-III and your application MUST NOT call it.
+    139          ************************************************************************************************************************
+    140          */
+    141          
+
+   \                                 In  segment CODE, align 1, keep-with-next
+    142          void  OS_PrioRemove (OS_PRIO  prio)
+   \                     OS_PrioRemove:
+    143          {
+   \   000000                       ; * Stack frame (at entry) *
+   \   000000                       ; Param size: 0
+   \   000000 C3                    PUSH      BC                 ;; 1 cycle
+   \   000001 C5                    PUSH      DE                 ;; 1 cycle
+   \   000002                       ; Auto size: 0
+   \   000002 FD....                CALL      N:?Subroutine1     ;; 3 cycles
+   \   000005                       ; ------------------------------------- Block: 5 cycles
+    144              CPU_DATA  bit;
+    145              CPU_DATA  bit_nbr;
+    146              OS_PRIO   ix;
+    147          
+    148          
+    149              ix             = prio / DEF_INT_CPU_NBR_BITS;
+    150              bit_nbr        = (CPU_DATA)prio & (DEF_INT_CPU_NBR_BITS - 1u);
+    151              bit            = 1u;
+    152              bit          <<= (DEF_INT_CPU_NBR_BITS - 1u) - bit_nbr;
+    153              OSPrioTbl[ix] &= ~bit;
+   \                     ??CrossCallReturnLabel_1:
+   \   000005 7CFF                  XOR       A, #0xFF           ;; 1 cycle
+   \   000007 08                    XCH       A, X               ;; 1 cycle
+   \   000008 7CFF                  XOR       A, #0xFF           ;; 1 cycle
+   \   00000A 08                    XCH       A, X               ;; 1 cycle
+   \   00000B 14                    MOVW      DE, AX             ;; 1 cycle
+   \   00000C AB                    MOVW      AX, [HL]           ;; 1 cycle
+   \   00000D 615D                  AND       A, D               ;; 1 cycle
+   \   00000F 08                    XCH       A, X               ;; 1 cycle
+   \   000010 615C                  AND       A, E               ;; 1 cycle
+   \   000012 ED....                BR        N:?Subroutine0     ;; 3 cycles
+   \   000015                       ; ------------------------------------- Block: 12 cycles
+   \   000015                       ; ------------------------------------- Total: 17 cycles
+   \   000015                       REQUIRE ?CLRL78_V1_0_L00
+    154          }
+
+   Maximum stack usage in bytes:
+
+   CSTACK Function
+   ------ --------
+      2   OS_PrioGetHighest
+        2   -> CPU_CntLeadZeros
+      0   OS_PrioInit
+      4   OS_PrioInsert
+      4   OS_PrioRemove
+
+
+   Segment part sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       5  ?Subroutine0
+      24  ?Subroutine1
+       2  OSPrioTbl
+      27  OS_PrioGetHighest
+       5  OS_PrioInit
+      12  OS_PrioInsert
+      21  OS_PrioRemove
+
+ 
+ 94 bytes in segment CODE
+  2 bytes in segment NEAR_Z
+ 
+ 94 bytes of CODE memory
+  2 bytes of DATA memory
+
+Errors: none
+Warnings: none

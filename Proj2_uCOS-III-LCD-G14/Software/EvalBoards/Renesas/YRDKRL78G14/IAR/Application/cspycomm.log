@@ -1,0 +1,458 @@
+========== RL78 Start Logging =====
+Tue Mar 25 11:42:32 2014
+===================================
+========== ex_boardinfo2 ==========
+exec_infoname: RL78 EZ-CUBE Executor, exec_version: V1.80e, df_chipname: , df_fileversion: 
+Boardinfo: 00008004, product id: 4100 version: A, firmware version: 07.12a
+Port name 1: TOOL0, support_chk: 00000000
+===================================
+========== ex_boardinfo2 ==========
+exec_infoname: RL78 EZ-CUBE Executor, exec_version: V1.80e, df_chipname: , df_fileversion: 
+Boardinfo: 00008004, product id: 4100 version: A, firmware version: 07.12a
+Port name 1: TOOL0, support_chk: 00000000
+===================================
+========== ex_boardinfo2 ==========
+exec_infoname: RL78 EZ-CUBE Executor, exec_version: V1.80e, df_chipname: , df_fileversion: 
+Boardinfo: 00008004, product id: 4100 version: A, firmware version: 07.12a
+Port name 1: TOOL0, support_chk: 00000000
+===================================
+========== ex_initexec ============
+Hostname: xxx
+Portno: 0001
+exec_name: , vdd: 01, clk: 00, flash: 10
+pin: 00, mask: 00, sel: 00, pbrk: 00
+devfile: C:\Program Files\IAR Systems\Embedded Workbench 6.5\rl78\config\renesas\devicefiles\DR5F104PJ.DVF
+hWnd: 0x00000000, hAccTable: 0x00000000
+data_num: 17
+reg_inf: RP0:  52 50 30 00 00 00 00 00 08 00 00 00 00 00 00 00 00 02 00 00 00 00 00 00 
+reg_inf: RP1:  52 50 31 00 00 00 00 00 09 00 00 00 00 00 00 00 00 02 00 00 00 00 00 00 
+reg_inf: RP2:  52 50 32 00 00 00 00 00 0a 00 00 00 00 00 00 00 00 02 00 00 00 00 00 00 
+reg_inf: RP3:  52 50 33 00 00 00 00 00 0b 00 00 00 00 00 00 00 00 02 00 00 00 00 00 00 
+reg_inf: R0 :  52 30 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 
+reg_inf: R1 :  52 31 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 
+reg_inf: R2 :  52 32 00 00 00 00 00 00 02 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 
+reg_inf: R3 :  52 33 00 00 00 00 00 00 03 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 
+reg_inf: R4 :  52 34 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 
+reg_inf: R5 :  52 35 00 00 00 00 00 00 05 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 
+reg_inf: R6 :  52 36 00 00 00 00 00 00 06 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 
+reg_inf: R7 :  52 37 00 00 00 00 00 00 07 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 
+reg_inf: PC :  50 43 00 00 00 00 00 00 0e 00 00 00 00 00 00 00 00 02 00 00 00 00 00 00 
+reg_inf: SP :  53 50 00 00 00 00 00 00 0d 00 00 00 00 00 00 00 00 02 00 00 00 00 00 00 
+reg_inf: PSW:  50 53 57 00 00 00 00 00 0f 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 
+reg_inf: ES :  45 53 00 00 00 00 00 00 12 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 
+reg_inf: CS :  43 53 00 00 00 00 00 00 11 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 
+===================================
+========== ex_socunitinfo2 ========
+EX_SET, EX_UNIT_FLPGOPT, num: 1
+unit_info[0]: 0x00000004
+===================================
+========== ex_boardinfo2 ==========
+exec_infoname: RL78 EZ-CUBE Executor, exec_version: V1.80e, df_chipname: R5F104PJ(f104pj), df_fileversion: V2.00
+Boardinfo: 00008004, product id: 4100 version: A, firmware version: 07.12a
+Port name 1: TOOL0, support_chk: 00000000
+===================================
+========== ex_socunitinfo2 ========
+EX_SET, EX_UNIT_RSU, num: 5
+unit_info[0]: 0x00000000
+unit_info[1]: 0x00000000
+unit_info[2]: 0x00000000
+unit_info[3]: 0x00000000
+unit_info[4]: 0x00000001
+===================================
+========== ex_pincont =============
+EX_SET, mask_fg: 0x00000000, sel_fg: 0x00000000
+===================================
+========== ex_socunitinfo2 ========
+EX_SET, EX_UNIT_ICEFUNCTION, num: 1
+unit_info[0]: 0x00000000
+===================================
+========== ex_socunitinfo2 ========
+EX_SET, EX_UNIT_CG, num: 4
+unit_info[0]: 0x00000000
+unit_info[1]: 0x00004E20
+unit_info[2]: 0x00008000
+unit_info[3]: 0x00000000
+===================================
+========== ex_getenv ==============
+pack_info: "",  miro_info: "OCD Control Code V3.03",  exec_info: "RL78 EZ-CUBE Executor V1.80e [ 5 Sep 2013]",  moni_info: "",  flash_info: ""
+trcmem_size: 0x00000100, btrcmem_size:     0x0000,     prt_num:     0x0000,      rprm_size:     0x0000,       seq_num: 0x0000,    pass_num: 0x0000,      snap_num: 0x0000, stub_num: 0x0000
+  swdmm_num:     0x0000,      evn_num:       0x02,  busevn_num:       0x02,   fetchevn_num:       0x02,    brdevn_num:   0x00,   timer_num:   0x00,      brk_mode:   0x01,  em1_chk:   0x00, exec_chk: 0x00
+ dmrom_addr: 0x00000000,   dmrom_size: 0x00000000, opboard_chk: 0x00000000, extsupport_chk: 0x00802200, beforebrk_num: 0x0000, emumem_size: 0x0000, trcbusevn_num:   0x00
+===================================
+========== ex_boardinfo2 ==========
+exec_infoname: RL78 EZ-CUBE Executor, exec_version: V1.80e, df_chipname: R5F104PJ(f104pj), df_fileversion: V2.00
+Boardinfo: 00008004, product id: 4100 version: A, firmware version: 07.12a
+Port name 1: TOOL0, support_chk: 00000000
+===================================
+========== ex_initimem2 ===========
+EX_SET, rom_size:  0x00040000
+brom_size: 0x00000000
+ram_size:  0x00006000
+xram_size: 0x00000000
+===================================
+========== ex_setenv ==============
+EX_REF, trcmem_size: 0x00000100, pev_mode: 3, flsafe_sw: 0x00000000
+btrcmem_size: 0x00000000, brkmem_sw: 0x00000000, brk_mode: 1, trcp_bksw: 0x00000000
+===================================
+========== ex_setenv ==============
+EX_SET, trcmem_size: 0x00000100, pev_mode: 3, flsafe_sw: 0x00000000
+btrcmem_size: 0x00000000, brkmem_sw: 0x00000000, brk_mode: 1, trcp_bksw: 0x00000000
+===================================
+========== ex_trcsw ===============
+EX_TRCMEM_OFF
+===================================
+========== ex_trcsw ===============
+EX_TRCMEM_OFF
+**********************************************************************
+**  ERROR  **  0x030F  **  The setting has been already specified.  **
+**********************************************************************
+===================================
+========== ex_memwrite ============
+addr_1: 0x00004000, addr_2: 0x00000000, count: 0x0200, EX_M_FLASH_PV_WR, EX_DATA_SIZE_4, EX_VER_OFF
+data: 0x7F 0x10 0x00 0x00 0x05 0x07 0x0F 0x05 0x78 0x28 0x00 0x00 0x05 0x07 0x07 0x7D 0x28 0x50 0x00 0x00 ...
+(number: 0x00000000, error_fg: 0x00, direct: 0x78E8)
+===================================
+========== ex_memwrite ============
+addr_1: 0x00004800, addr_2: 0x00000000, count: 0x0200, EX_M_FLASH_PV_WR, EX_DATA_SIZE_4, EX_VER_OFF
+data: 0xAA 0x4B 0xC5 0xC6 0xFD 0xE2 0x4B 0x61 0xEA 0xE1 0x16 0xA8 0x00 0xFD 0xAA 0x4B 0xC5 0xC6 0xFD 0xE2 ...
+(number: 0x00000000, error_fg: 0x00, direct: 0x78E8)
+===================================
+========== ex_memwrite ============
+addr_1: 0x00007000, addr_2: 0x00000000, count: 0x0200, EX_M_FLASH_PV_WR, EX_DATA_SIZE_4, EX_VER_OFF
+data: 0x65 0x6C 0x20 0x4C 0x78 0xDF 0x62 0xA8 0x0A 0x16 0xAE 0xF8 0xFD 0x57 0x71 0x51 0x30 0x9B 0xA8 0x0A ...
+(number: 0x00000000, error_fg: 0x00, direct: 0x78E8)
+===================================
+========== ex_memwrite ============
+addr_1: 0x00005000, addr_2: 0x00000000, count: 0x0200, EX_M_FLASH_PV_WR, EX_DATA_SIZE_4, EX_VER_OFF
+data: 0x02 0x12 0xA8 0x00 0x04 0x01 0x00 0x61 0xD8 0xA3 0xB8 0x00 0x13 0xB8 0x02 0xA8 0x02 0x12 0xA8 0x00 ...
+(number: 0x00000000, error_fg: 0x00, direct: 0x78E8)
+===================================
+========== ex_memwrite ============
+addr_1: 0x00003000, addr_2: 0x00000000, count: 0x0200, EX_M_FLASH_PV_WR, EX_DATA_SIZE_4, EX_VER_OFF
+data: 0x49 0x6E 0x69 0x74 0x20 0x41 0x63 0x63 0x65 0x6C 0x00 0x00 0x44 0x6F 0x6E 0x65 0x00 0x00 0x58 0x3A ...
+(number: 0x00000000, error_fg: 0x00, direct: 0x78E8)
+===================================
+========== ex_memwrite ============
+addr_1: 0x00003800, addr_2: 0x00000000, count: 0x0200, EX_M_FLASH_PV_WR, EX_DATA_SIZE_4, EX_VER_OFF
+data: 0xF6 0xF2 0x40 0x00 0x08 0x08 0x00 0x00 0x30 0x7D 0x7D 0x30 0x00 0x00 0x08 0x08 0x08 0x1C 0x36 0x2A ...
+(number: 0x00000000, error_fg: 0x00, direct: 0x78E8)
+===================================
+========== ex_memwrite ============
+addr_1: 0x00005800, addr_2: 0x00000000, count: 0x0200, EX_M_FLASH_PV_WR, EX_DATA_SIZE_4, EX_VER_OFF
+data: 0xA8 0x08 0x60 0x5C 0x01 0x70 0xF1 0xB8 0x06 0xA8 0x08 0xB8 0x00 0xAE 0xF8 0x04 0x06 0x00 0x16 0x31 ...
+(number: 0x00000000, error_fg: 0x00, direct: 0x78E8)
+===================================
+========== ex_memwrite ============
+addr_1: 0x00000000, addr_2: 0x00000000, count: 0x0200, EX_M_FLASH_PV_WR, EX_DATA_SIZE_4, EX_VER_OFF
+data: 0xDD 0x00 0xFF 0xFF 0xFF 0xFF 0xFF 0xFF 0xFF 0xFF 0xFF 0xFF 0xFF 0xFF 0xFF 0xFF 0xFF 0xFF 0xFF 0xFF ...
+(number: 0x00000000, error_fg: 0x00, direct: 0x78E8)
+===================================
+========== ex_memwrite ============
+addr_1: 0x00006000, addr_2: 0x00000000, count: 0x0200, EX_M_FLASH_PV_WR, EX_DATA_SIZE_4, EX_VER_OFF
+data: 0x70 0x51 0x0F 0x61 0x28 0x72 0xE6 0xFD 0x3F 0x01 0xD7 0x16 0xF6 0xBF 0x20 0xB5 0xBB 0xD7 0x16 0xF6 ...
+(number: 0x00000000, error_fg: 0x00, direct: 0x78E8)
+===================================
+========== ex_memwrite ============
+addr_1: 0x00006800, addr_2: 0x00000000, count: 0x0200, (EX_M_FLASH_PV_WR | EX_M_FLASH_END_WR), EX_DATA_SIZE_4, EX_VER_OFF
+data: 0x12 0xA8 0x14 0x33 0x44 0x00 0x00 0x13 0xDF 0x02 0xF7 0x43 0xDF 0x1B 0x15 0xF7 0x43 0xDF 0x16 0xA8 ...
+(number: 0x00000000, error_fg: 0x00, direct: 0x78E8)
+===================================
+========== ex_memread =============
+addr_1: 0x00004000, number: 0x00000400, EX_BREAK_RD, EX_DATA_SIZE_1
+data: 0x7F 0x10 0x00 0x00 0x05 0x07 0x0F 0x05 0x78 0x28 0x00 0x00 0x05 0x07 0x07 0x7D 0x28 0x50 0x00 0x00 ...
+(addr_2: 0xD0754D10, count: 0xD060, verify_fg: 0x0008, error_fg: 0x00, direct: 0x9706)
+===================================
+========== ex_memread =============
+addr_1: 0x00004400, number: 0x00000400, EX_BREAK_RD, EX_DATA_SIZE_1
+data: 0x74 0x40 0x7C 0x40 0x84 0x40 0x8C 0x40 0x94 0x40 0x9C 0x40 0xA4 0x40 0xAC 0x40 0xB4 0x40 0xBC 0x40 ...
+(addr_2: 0xD0754D10, count: 0xD060, verify_fg: 0x0008, error_fg: 0x00, direct: 0x9706)
+===================================
+========== ex_memread =============
+addr_1: 0x00004800, number: 0x00000400, EX_BREAK_RD, EX_DATA_SIZE_1
+data: 0xAA 0x4B 0xC5 0xC6 0xFD 0xE2 0x4B 0x61 0xEA 0xE1 0x16 0xA8 0x00 0xFD 0xAA 0x4B 0xC5 0xC6 0xFD 0xE2 ...
+(addr_2: 0xD0754D10, count: 0xD060, verify_fg: 0x0008, error_fg: 0x00, direct: 0x9706)
+===================================
+========== ex_memread =============
+addr_1: 0x00004C00, number: 0x00000400, EX_BREAK_RD, EX_DATA_SIZE_1
+data: 0xA8 0x00 0x16 0x30 0x02 0x00 0xBB 0xF6 0xBC 0x02 0xA8 0x02 0x16 0xAB 0x16 0xAC 0x32 0xF7 0x43 0x61 ...
+(addr_2: 0xD0754D10, count: 0xD060, verify_fg: 0x0008, error_fg: 0x00, direct: 0x9706)
+===================================
+========== ex_memread =============
+addr_1: 0x00007000, number: 0x00000400, EX_BREAK_RD, EX_DATA_SIZE_1
+data: 0x65 0x6C 0x20 0x4C 0x78 0xDF 0x62 0xA8 0x0A 0x16 0xAE 0xF8 0xFD 0x57 0x71 0x51 0x30 0x9B 0xA8 0x0A ...
+(addr_2: 0xD0754D10, count: 0xD060, verify_fg: 0x0008, error_fg: 0x00, direct: 0x9706)
+===================================
+========== ex_memread =============
+addr_1: 0x00007400, number: 0x00000400, EX_BREAK_RD, EX_DATA_SIZE_1
+data: 0x03 0x47 0xDC 0xF2 0xA8 0x02 0x16 0xAB 0x12 0x17 0x03 0xB8 0x04 0x16 0xA8 0x00 0x47 0xDC 0x64 0x16 ...
+(addr_2: 0xD0754D10, count: 0xD060, verify_fg: 0x0008, error_fg: 0x00, direct: 0x9706)
+===================================
+========== ex_memread =============
+addr_1: 0x00005000, number: 0x00000400, EX_BREAK_RD, EX_DATA_SIZE_1
+data: 0x02 0x12 0xA8 0x00 0x04 0x01 0x00 0x61 0xD8 0xA3 0xB8 0x00 0x13 0xB8 0x02 0xA8 0x02 0x12 0xA8 0x00 ...
+(addr_2: 0xD0754D10, count: 0xD060, verify_fg: 0x0008, error_fg: 0x00, direct: 0x9706)
+===================================
+========== ex_memread =============
+addr_1: 0x00005400, number: 0x00000400, EX_BREAK_RD, EX_DATA_SIZE_1
+data: 0x70 0xF1 0xD7 0xC3 0xC5 0xF6 0xBF 0xEC 0xB1 0xBF 0xEE 0xB1 0x36 0xF0 0xB1 0xBB 0xBC 0x02 0x36 0xF4 ...
+(addr_2: 0xD0754D10, count: 0xD060, verify_fg: 0x0008, error_fg: 0x00, direct: 0x9706)
+===================================
+========== ex_memread =============
+addr_1: 0x00003000, number: 0x00000400, EX_BREAK_RD, EX_DATA_SIZE_1
+data: 0x49 0x6E 0x69 0x74 0x20 0x41 0x63 0x63 0x65 0x6C 0x00 0x00 0x44 0x6F 0x6E 0x65 0x00 0x00 0x58 0x3A ...
+(addr_2: 0xD0754D10, count: 0xD060, verify_fg: 0x0008, error_fg: 0x00, direct: 0x9706)
+===================================
+========== ex_memread =============
+addr_1: 0x00003400, number: 0x00000400, EX_BREAK_RD, EX_DATA_SIZE_1
+data: 0x41 0x7F 0x7F 0x49 0x09 0x09 0x03 0x00 0x08 0x08 0x3E 0x7F 0x41 0x51 0x51 0x73 0x32 0x00 0x08 0x08 ...
+(addr_2: 0xD0754D10, count: 0xD060, verify_fg: 0x0008, error_fg: 0x00, direct: 0x9706)
+===================================
+========== ex_memread =============
+addr_1: 0x00003800, number: 0x00000400, EX_BREAK_RD, EX_DATA_SIZE_1
+data: 0xF6 0xF2 0x40 0x00 0x08 0x08 0x00 0x00 0x30 0x7D 0x7D 0x30 0x00 0x00 0x08 0x08 0x08 0x1C 0x36 0x2A ...
+(addr_2: 0xD0754D10, count: 0xD060, verify_fg: 0x0008, error_fg: 0x00, direct: 0x9706)
+===================================
+========== ex_memread =============
+addr_1: 0x00003C00, number: 0x00000400, EX_BREAK_RD, EX_DATA_SIZE_1
+data: 0xF8 0x34 0x02 0x35 0x0C 0x35 0x16 0x35 0x20 0x35 0x2A 0x35 0x34 0x35 0x3E 0x35 0x48 0x35 0x52 0x35 ...
+(addr_2: 0xD0754D10, count: 0xD060, verify_fg: 0x0008, error_fg: 0x00, direct: 0x9706)
+===================================
+========== ex_memread =============
+addr_1: 0x00005800, number: 0x00000400, EX_BREAK_RD, EX_DATA_SIZE_1
+data: 0xA8 0x08 0x60 0x5C 0x01 0x70 0xF1 0xB8 0x06 0xA8 0x08 0xB8 0x00 0xAE 0xF8 0x04 0x06 0x00 0x16 0x31 ...
+(addr_2: 0xD0754D10, count: 0xD060, verify_fg: 0x0008, error_fg: 0x00, direct: 0x9706)
+===================================
+========== ex_memread =============
+addr_1: 0x00005C00, number: 0x00000400, EX_BREAK_RD, EX_DATA_SIZE_1
+data: 0x16 0x8B 0x4C 0x03 0xDF 0x14 0xA8 0x10 0x12 0xA8 0x0E 0xC3 0xC1 0xA8 0x10 0xC1 0xA8 0x0A 0x12 0xA8 ...
+(addr_2: 0xD0754D10, count: 0xD060, verify_fg: 0x0008, error_fg: 0x00, direct: 0x9706)
+===================================
+========== ex_memread =============
+addr_1: 0x00000000, number: 0x00000400, EX_BREAK_RD, EX_DATA_SIZE_1
+data: 0xD0 0x00 0xFF 0xFF 0xFF 0xFF 0xFF 0xFF 0xFF 0xFF 0xFF 0xFF 0xFF 0xFF 0xFF 0xFF 0xFF 0xFF 0xFF 0xFF ...
+(addr_2: 0xD0754D10, count: 0xD060, verify_fg: 0x0008, error_fg: 0x00, direct: 0x9706)
+===================================
+========== ex_memread =============
+addr_1: 0x00000400, number: 0x00000400, EX_BREAK_RD, EX_DATA_SIZE_1
+data: 0xFF 0xFF 0xFF 0xFF 0xFF 0xFF 0xFF 0xFF 0xFF 0xFF 0xFF 0xFF 0xFF 0xFF 0xFF 0xFF 0xFF 0xFF 0xFF 0xFF ...
+(addr_2: 0xD0754D10, count: 0xD060, verify_fg: 0x0008, error_fg: 0x00, direct: 0x9706)
+===================================
+========== ex_memread =============
+addr_1: 0x00006000, number: 0x00000400, EX_BREAK_RD, EX_DATA_SIZE_1
+data: 0x70 0x51 0x0F 0x61 0x28 0x72 0xE6 0xFD 0x3F 0x01 0xD7 0x16 0xF6 0xBF 0x20 0xB5 0xBB 0xD7 0x16 0xF6 ...
+(addr_2: 0xD0754D10, count: 0xD060, verify_fg: 0x0008, error_fg: 0x00, direct: 0x9706)
+===================================
+========== ex_memread =============
+addr_1: 0x00006400, number: 0x00000400, EX_BREAK_RD, EX_DATA_SIZE_1
+data: 0x04 0xB8 0xB4 0x14 0xF6 0xB9 0xBA 0x02 0xBA 0x04 0xA7 0xAF 0xF6 0x45 0x47 0x61 0xC3 0xE7 0xC4 0xC2 ...
+(addr_2: 0xD0754D10, count: 0xD060, verify_fg: 0x0008, error_fg: 0x00, direct: 0x9706)
+===================================
+========== ex_memread =============
+addr_1: 0x00006800, number: 0x00000400, EX_BREAK_RD, EX_DATA_SIZE_1
+data: 0x12 0xA8 0x14 0x33 0x44 0x00 0x00 0x13 0xDF 0x02 0xF7 0x43 0xDF 0x1B 0x15 0xF7 0x43 0xDF 0x16 0xA8 ...
+(addr_2: 0xD0754D10, count: 0xD060, verify_fg: 0x0008, error_fg: 0x00, direct: 0x9706)
+===================================
+========== ex_memread =============
+addr_1: 0x00006C00, number: 0x00000400, EX_BREAK_RD, EX_DATA_SIZE_1
+data: 0x31 0xB5 0x20 0xF6 0x31 0xA3 0x08 0x42 0xBC 0xB5 0xDF 0x4E 0xED 0x5B 0x6C 0x42 0xBC 0xB5 0xDD 0xF8 ...
+(addr_2: 0xD0754D10, count: 0xD060, verify_fg: 0x0008, error_fg: 0x00, direct: 0x9706)
+===================================
+========== ex_memread =============
+addr_1: 0x000000C4, number: 0x0000000A, EX_BREAK_RD, EX_DATA_SIZE_1
+data: 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 ...
+(addr_2: 0x14DD684C, count: 0x04DD, verify_fg: 0x7A4C, error_fg: 0xDF, direct: 0xF603)
+===================================
+========== ex_reset ===============
+EX_RESET
+===================================
+========== ex_swbrkcond ===========
+EX_SET, num: 0x0001, sbno: 0x0001, sberr: 0x0000, sbaddr: 0x00006CAF, sbdata: 0x71 0x7A
+===================================
+========== ex_swbrkcond ===========
+EX_SET, num: 0x0001, sbno: 0x0002, sberr: 0x0000, sbaddr: 0x00006CEB, sbdata: 0xD7 0x00
+===================================
+========== ex_covsw ===============
+EX_COV_SW_OFF
+*************************************************************
+**  ERROR  **  0x0002  **  This feature is not supported.  **
+*************************************************************
+===================================
+========== ex_regread =============
+EX_ER_OFF_REG_READ, num: 1, reg_char: 0x0200, data: 0x000000DD
+===================================
+========== ex_memread =============
+addr_1: 0x00000000, number: 0x00000080, EX_BREAK_RD, EX_DATA_SIZE_1
+data: 0xD0 0x00 0xFF 0xFF 0xFF 0xFF 0xFF 0xFF 0xFF 0xFF 0xFF 0xFF 0xFF 0xFF 0xFF 0xFF 0xFF 0xFF 0xFF 0xFF ...
+(addr_2: 0x00000000, count: 0x0077, verify_fg: 0x6100, error_fg: 0x00, direct: 0x0000)
+===================================
+========== ex_memread =============
+addr_1: 0x00000080, number: 0x00000080, EX_BREAK_RD, EX_DATA_SIZE_1
+data: 0xFF 0xFF 0xFF 0xFF 0xFF 0xFF 0xFF 0xFF 0xFF 0xFF 0xFF 0xFF 0xFF 0xFF 0xFF 0xFF 0xFF 0xFF 0xFF 0xFF ...
+(addr_2: 0x00000000, count: 0x0077, verify_fg: 0x6100, error_fg: 0x00, direct: 0x0000)
+===================================
+========== ex_memread =============
+addr_1: 0x00000100, number: 0x00000080, EX_BREAK_RD, EX_DATA_SIZE_1
+data: 0xFC 0x00 0xFD 0xE1 0x6C 0x61 0x68 0x61 0xF8 0xED 0x39 0x01 0x36 0x00 0xA7 0x32 0xCE 0x0E 0xD2 0x61 ...
+(addr_2: 0x00000000, count: 0x0077, verify_fg: 0x6100, error_fg: 0x00, direct: 0x0000)
+===================================
+========== ex_memread =============
+addr_1: 0x00000180, number: 0x00000080, EX_BREAK_RD, EX_DATA_SIZE_1
+data: 0x16 0x8C 0x0A 0x08 0x8C 0x0B 0xC1 0xC5 0x51 0x80 0x61 0x75 0x7E 0x0B 0x9C 0x0B 0x62 0x2E 0x08 0x70 ...
+(addr_2: 0x00000000, count: 0x0077, verify_fg: 0x6100, error_fg: 0x00, direct: 0x0000)
+===================================
+========== ex_regread =============
+EX_ER_OFF_REG_READ, num: 1, reg_char: 0xF820, data: 0x00000000
+===================================
+========== ex_regread =============
+EX_ER_OFF_REG_READ, num: 1, reg_char: 0xF810, data: 0x00000000
+===================================
+========== ex_regread =============
+EX_ER_OFF_REG_READ, num: 1, reg_char: 0xF811, data: 0x00000000
+===================================
+========== ex_regread =============
+EX_ER_OFF_REG_READ, num: 1, reg_char: 0xF821, data: 0x00000000
+===================================
+========== ex_regread =============
+EX_ER_OFF_REG_READ, num: 1, reg_char: 0xF906, data: 0x00000000
+===================================
+========== ex_regread =============
+EX_ER_OFF_REG_READ, num: 1, reg_char: 0xF907, data: 0x00000000
+===================================
+========== ex_regread =============
+EX_ER_OFF_REG_READ, num: 1, reg_char: 0x0201, data: 0x000FFC00
+===================================
+========== ex_regread =============
+EX_ER_OFF_REG_READ, num: 1, reg_char: 0x0202, data: 0x00000006
+===================================
+========== ex_regread =============
+EX_ER_OFF_REG_READ, num: 1, reg_char: 0x0210, data: 0x00000000
+===================================
+========== ex_regread =============
+EX_ER_OFF_REG_READ, num: 1, reg_char: 0x0211, data: 0x0000000F
+===================================
+========== ex_sfrread =============
+EX_ER_OFF_SFR_READ, EX_NON_READ, num: 0x0001, EX_DATA_SIZE_2, bit: 0x00000000, offset: 0x000FFFF0, data: 0x00000000
+===================================
+========== ex_sfrread =============
+EX_ER_OFF_SFR_READ, EX_NON_READ, num: 0x0001, EX_DATA_SIZE_2, bit: 0x00000000, offset: 0x000FFFF2, data: 0x00000000
+===================================
+========== ex_regread =============
+EX_ER_OFF_REG_READ, num: 1, reg_char: 0x0210, data: 0x00000000
+===================================
+========== ex_regread =============
+EX_ER_OFF_REG_READ, num: 1, reg_char: 0x0211, data: 0x0000000F
+===================================
+========== ex_sfrread =============
+EX_ER_OFF_SFR_READ, EX_NON_READ, num: 0x0001, EX_DATA_SIZE_2, bit: 0x00000000, offset: 0x000FFFF0, data: 0x00000000
+===================================
+========== ex_sfrread =============
+EX_ER_OFF_SFR_READ, EX_NON_READ, num: 0x0001, EX_DATA_SIZE_2, bit: 0x00000000, offset: 0x000FFFF2, data: 0x00000000
+===================================
+========== ex_regread =============
+EX_ER_OFF_REG_READ, num: 1, reg_char: 0xF820, data: 0x00000000
+===================================
+========== ex_regread =============
+EX_ER_OFF_REG_READ, num: 1, reg_char: 0xF810, data: 0x00000000
+===================================
+========== ex_regread =============
+EX_ER_OFF_REG_READ, num: 1, reg_char: 0xF811, data: 0x00000000
+===================================
+========== ex_regread =============
+EX_ER_OFF_REG_READ, num: 1, reg_char: 0xF821, data: 0x00000000
+===================================
+========== ex_regread =============
+EX_ER_OFF_REG_READ, num: 1, reg_char: 0xF906, data: 0x00000000
+===================================
+========== ex_regread =============
+EX_ER_OFF_REG_READ, num: 1, reg_char: 0xF907, data: 0x00000000
+===================================
+========== ex_memread =============
+addr_1: 0x000FB580, number: 0x00000080, EX_BREAK_RD, EX_DATA_SIZE_1
+data: 0x2E 0xF6 0x02 0x3A 0xBA 0xED 0x8A 0x69 0xA2 0xDF 0xA8 0x5B 0xF4 0x2F 0xEC 0x4D 0xD6 0xB6 0x57 0x10 ...
+(addr_2: 0x00000000, count: 0x0077, verify_fg: 0x6100, error_fg: 0x00, direct: 0x0000)
+===================================
+========== ex_memread =============
+addr_1: 0x000FD100, number: 0x00000080, EX_BREAK_RD, EX_DATA_SIZE_1
+data: 0x26 0x69 0x14 0x6D 0x57 0xAF 0xC5 0x39 0xCD 0x93 0x03 0x29 0xAF 0x3F 0x28 0x6A 0xD7 0x7A 0x02 0x23 ...
+(addr_2: 0x00000000, count: 0x0077, verify_fg: 0x6100, error_fg: 0x00, direct: 0x0000)
+===================================
+========== ex_rrmmapping ==========
+EX_REF, rrm_num: 0
+===================================
+========== ex_trcsw ===============
+EX_TRCMEM_OFF
+**********************************************************************
+**  ERROR  **  0x030F  **  The setting has been already specified.  **
+**********************************************************************
+===================================
+========== ex_run =================
+EX_BRK_ST, saddr: 0x00000000, eaddr: 0x00000000
+===================================
+========== ex_getstatus ===========
+cpustat: 0x00000000, exestat: 0x00000000, hwbrfact: 0x00200000, pc_value: 0x00006CAF
+===================================
+========== ex_getstatus ===========
+cpustat: 0x00000000, exestat: 0x00000000, hwbrfact: 0x00200000, pc_value: 0x00006CAF
+===================================
+========== ex_timeread2 ===========
+timer_no: 0, clock_unit: 100000
+(0), count: 1, timer_total: 10
+timer_max: 10, timer_min: 10
+===================================
+========== ex_regread =============
+EX_ER_OFF_REG_READ, num: 1, reg_char: 0x0200, data: 0x00006CAF
+===================================
+========== ex_swbrkcond ===========
+EX_DEL, num: 0x0001, sbno: 0x0001, sberr: 0x0000, sbaddr: 0x00006CAF, sbdata: 0x48 0x6A
+===================================
+========== ex_run =================
+EX_BRK_ST, saddr: 0x00000000, eaddr: 0x00000000
+===================================
+========== ex_getstatus ===========
+cpustat: 0x00000000, exestat: 0x00000001, hwbrfact: 0x00000000, pc_value: 0xFFFFFFFF
+===================================
+========== ex_stop ================
+===================================
+========== ex_getstatus ===========
+cpustat: 0x00000000, exestat: 0x00000000, hwbrfact: 0x00800000, pc_value: 0x0000025E
+===================================
+========== ex_timeread2 ===========
+timer_no: 0, clock_unit: 100000
+(0), count: 1, timer_total: 504999
+timer_max: 504999, timer_min: 504999
+===================================
+========== ex_regread =============
+EX_ER_OFF_REG_READ, num: 1, reg_char: 0x0200, data: 0x0000025E
+===================================
+========== ex_regread =============
+EX_ER_OFF_REG_READ, num: 1, reg_char: 0x0201, data: 0x000FB26C
+===================================
+========== ex_memread =============
+addr_1: 0x000FB500, number: 0x00000080, EX_BREAK_RD, EX_DATA_SIZE_1
+data: 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 ...
+(addr_2: 0x00000000, count: 0x0077, verify_fg: 0x6100, error_fg: 0x00, direct: 0x0000)
+===================================
+========== ex_memread =============
+addr_1: 0x000FB580, number: 0x00000080, EX_BREAK_RD, EX_DATA_SIZE_1
+data: 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x80 0x00 0x00 0x00 0x00 0x00 0x00 ...
+(addr_2: 0x00000000, count: 0x0077, verify_fg: 0x6100, error_fg: 0x00, direct: 0x0000)
+===================================
+========== ex_memread =============
+addr_1: 0x000FB480, number: 0x00000080, EX_BREAK_RD, EX_DATA_SIZE_1
+data: 0x5E 0xB5 0x00 0x07 0x02 0x00 0x02 0x00 0x68 0x59 0x00 0x06 0xC6 0x00 0x00 0x00 0x00 0x00 0xA6 0x61 ...
+(addr_2: 0x00000000, count: 0x0077, verify_fg: 0x6100, error_fg: 0x00, direct: 0x0000)
+===================================
+========== ex_memread =============
+addr_1: 0x000FB180, number: 0x00000080, EX_BREAK_RD, EX_DATA_SIZE_1
+data: 0x00 0x00 0x90 0xA7 0x90 0xA7 0x90 0xA7 0x90 0xA7 0x90 0xA7 0x3E 0x5F 0x00 0x00 0x00 0x00 0x00 0x00 ...
+(addr_2: 0x00000000, count: 0x0077, verify_fg: 0x6100, error_fg: 0x00, direct: 0x0000)
+===================================
+========== ex_swbrkcond ===========
+EX_DEL, num: 0x0001, sbno: 0x0002, sberr: 0x0000, sbaddr: 0x00006CEB, sbdata: 0xB8 0x69
+===================================
+========== ex_exit ================
+EX_END_PROC
+===================================
+========== Stop Logging ===========
+Tue Mar 25 11:43:47 2014
+========== End of file ============

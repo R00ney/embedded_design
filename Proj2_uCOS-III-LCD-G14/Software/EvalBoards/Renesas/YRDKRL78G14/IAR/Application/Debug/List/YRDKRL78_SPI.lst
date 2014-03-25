@@ -1,0 +1,724 @@
+###############################################################################
+#                                                                             #
+# IAR C/C++ Compiler V1.30.5.50715 for RL78             23/Mar/2014  17:08:29 #
+# Copyright 2011-2013 IAR Systems AB.                                         #
+# Network license: ece-lic-19.ece.ncsu.edu (STD)                              #
+#                                                                             #
+#    Core         =  rl78_2                                                   #
+#    Code model   =  Near                                                     #
+#    Data model   =  Near                                                     #
+#                 =                                                           #
+#    Source file  =  C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\BSP\Glyph\Drivers\YRDKRL78_SPI.c                #
+#    Command line =  C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\BSP\Glyph\Drivers\YRDKRL78_SPI.c --core rl78_2  #
+#                    --code_model near --data_model near                      #
+#                    --near_const_location rom0 -o                            #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\Debug\Obj\ --dlib_config            #
+#                    "C:\Program Files\IAR Systems\Embedded Workbench         #
+#                    6.5\rl78\LIB\dlrl78nn2n.h" -e -Ohz --no_scheduling       #
+#                    --no_clustering --debug -lC                              #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\Debug\List\ -I                      #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\ -I C:\Users\Suddenlink\Dropbox\git #
+#                    _files\embedded_design\Proj2_uCOS-III-LCD-G14\Software\E #
+#                    valBoards\Renesas\YRDKRL78G14\IAR\Application\Source\    #
+#                    -I C:\Users\Suddenlink\Dropbox\git_files\embedded_design #
+#                    \Proj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDK #
+#                    RL78G14\IAR\Application\..\uCOS-III\ -I                  #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\..\BSP\ -I                          #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\..\BSP\applilet3_src\ -I            #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\..\BSP\Glyph\Drivers\ -I            #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\..\BSP\Glyph\glyph\ -I              #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\..\..\..\..\..\uC-CPU\ -I           #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\..\..\..\..\..\uC-CPU\RL78\IAR\ -I  #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\..\..\..\..\..\uC-LIB\ -I           #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\..\..\..\..\..\uCOS-III\Ports\Renes #
+#                    as\RL78\IAR\ -I C:\Users\Suddenlink\Dropbox\git_files\em #
+#                    bedded_design\Proj2_uCOS-III-LCD-G14\Software\EvalBoards #
+#                    \Renesas\YRDKRL78G14\IAR\Application\..\..\..\..\..\uCOS #
+#                    -III\Source\ --relaxed_fp                                #
+#    List file    =  C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\Debug\List\YRDKRL78_SPI.lst         #
+#    Object file  =  C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\Debug\Obj\YRDKRL78_SPI.r87          #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Proj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL78G14\IAR\BSP\Glyph\Drivers\YRDKRL78_SPI.c
+      1          /******************************************************************************
+      2          * DISCLAIMER
+      3          * This software is supplied by Renesas Electronics Corporation and is only
+      4          * intended for use with Renesas products. No other uses are authorized.
+      5          * This software is owned by Renesas Electronics Corporation and is protected under
+      6          * all applicable laws, including copyright laws.
+      7          * THIS SOFTWARE IS PROVIDED "AS IS" AND RENESAS MAKES NO WARRANTIES
+      8          * REGARDING THIS SOFTWARE, WHETHER EXPRESS, IMPLIED OR STATUTORY,
+      9          * INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A
+     10          * PARTICULAR PURPOSE AND NON-INFRINGEMENT. ALL SUCH WARRANTIES ARE EXPRESSLY
+     11          * DISCLAIMED.
+     12          * TO THE MAXIMUM EXTENT PERMITTED NOT PROHIBITED BY LAW, NEITHER RENESAS
+     13          * ELECTRONICS CORPORATION NOR ANY OF ITS AFFILIATED COMPANIES SHALL BE LIABLE
+     14          * FOR ANY DIRECT, INDIRECT, SPECIAL, INCIDENTAL OR CONSEQUENTIAL DAMAGES
+     15          * FOR ANY REASON RELATED TO THIS SOFTWARE, EVEN IF RENESAS OR ITS
+     16          * AFFILIATES HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+     17          * Renesas reserves the right, without notice, to make changes to this
+     18          * software and to discontinue the availability of this software.
+     19          * By using this software, you agree to the additional terms and
+     20          * conditions found by accessing the following link:
+     21          * http://www.renesas.com/disclaimer
+     22          ******************************************************************************/
+     23          /* Copyright (C) 2010 Renesas Electronics Corporation. All rights reserved. */
+     24          /* Code written for Renesas by Future Designs, Inc. www.teamfdi.com */
+     25          
+     26          /******************************************************************************
+     27          * File Name : YRDKRL78_RLCD0.c
+     28          * Version : 1.00
+     29          * Device(s) : RLCD0 Communications
+     30          * Tool-Chain : Glyph - The Generic API for Graphics LCD API version 1.00
+     31          * H/W Platform : RL78 Group CPU
+     32          * Description : Glyph API RL78 RLCD Transmitter 0 Operation channel 3
+     33          * Routines for LCD code running on RL78 MCU, RLCD0.
+     34          * This program uses RLCD0.  The Chip Select for the flash device (LCD)
+     35          * is set to PC_2.
+     36          *       Manufacturer: Renesas
+     37          *       Communications Protocol: LCD 3-Wire
+     38          *                                Transmitt only
+     39          *                                MASTER
+     40          *       Transmitter Number: 0
+     41          *       channel: 3
+     42          *       Chip Select Port: PC.2
+     43          *       RLCD Clock Speed: 25MHz
+     44          ******************************************************************************
+     45          * History :
+     46          ******************************************************************************/
+     47          
+     48          /******************************************************************************
+     49          Includes “YRDKRL78 RLCD Includes”
+     50          ******************************************************************************/
+     51          #include "platform_cfg.h"
+     52          
+     53          #include "intrinsics.h"
+     54          #include "ior5f.h"
+
+   \                                 In  segment SADDR_A, at 0xfff07
+   \   union <unnamed> volatile __saddr _A_P7
+   \                     _A_P7:
+   \   000000                       DS 1
+
+   \                                 In  segment SADDR_A, at 0xfff0d
+   \   union <unnamed> volatile __saddr _A_P13
+   \                     _A_P13:
+   \   000000                       DS 1
+
+   \                                 In  segment SADDR_A, at 0xfff0e
+   \   union <unnamed> volatile __saddr _A_P14
+   \                     _A_P14:
+   \   000000                       DS 1
+
+   \                                 In  segment NEAR_A, at 0xfff27
+   \   union <unnamed> volatile __sfr _A_PM7
+   \                     _A_PM7:
+   \   000000                       DS 1
+
+   \                                 In  segment NEAR_A, at 0xfff2e
+   \   union <unnamed> volatile __sfr _A_PM14
+   \                     _A_PM14:
+   \   000000                       DS 1
+
+   \                                 In  segment NEAR_A, at 0xfff4a
+   \   union <unnamed> volatile __sfr __no_bit_access _A_SDR11
+   \                     _A_SDR11:
+   \   000000                       DS 2
+
+   \                                 In  segment NEAR_A, at 0xfffe0
+   \   union <unnamed> volatile __sfr _A_IF0
+   \                     _A_IF0:
+   \   000000                       DS 2
+
+   \                                 In  segment NEAR_A, at 0xfffe4
+   \   union <unnamed> volatile __sfr _A_MK0
+   \                     _A_MK0:
+   \   000000                       DS 2
+
+   \                                 In  segment NEAR_A, at 0xfffe8
+   \   union <unnamed> volatile __sfr _A_PR00
+   \                     _A_PR00:
+   \   000000                       DS 2
+
+   \                                 In  segment NEAR_A, at 0xfffec
+   \   union <unnamed> volatile __sfr _A_PR10
+   \                     _A_PR10:
+   \   000000                       DS 2
+
+   \                                 In  segment NEAR_A, at 0xf00f0
+   \   union <unnamed> volatile _A_PER0
+   \                     _A_PER0:
+   \   000000                       DS 1
+
+   \                                 In  segment NEAR_A, at 0xf0142
+   \   union <unnamed> const volatile __no_bit_access _A_SSR11
+   \                     _A_SSR11:
+   \   000000                       DS 2
+
+   \                                 In  segment NEAR_A, at 0xf014a
+   \   union <unnamed> volatile __no_bit_access _A_SIR11
+   \                     _A_SIR11:
+   \   000000                       DS 2
+
+   \                                 In  segment NEAR_A, at 0xf0152
+   \   union <unnamed> volatile __no_bit_access _A_SMR11
+   \                     _A_SMR11:
+   \   000000                       DS 2
+
+   \                                 In  segment NEAR_A, at 0xf015a
+   \   union <unnamed> volatile __no_bit_access _A_SCR11
+   \                     _A_SCR11:
+   \   000000                       DS 2
+
+   \                                 In  segment NEAR_A, at 0xf0162
+   \   union <unnamed> volatile _A_SS1
+   \                     _A_SS1:
+   \   000000                       DS 2
+
+   \                                 In  segment NEAR_A, at 0xf0164
+   \   union <unnamed> volatile _A_ST1
+   \                     _A_ST1:
+   \   000000                       DS 2
+
+   \                                 In  segment NEAR_A, at 0xf0166
+   \   union <unnamed> volatile __no_bit_access _A_SPS1
+   \                     _A_SPS1:
+   \   000000                       DS 2
+
+   \                                 In  segment NEAR_A, at 0xf0168
+   \   union <unnamed> volatile __no_bit_access _A_SO1
+   \                     _A_SO1:
+   \   000000                       DS 2
+
+   \                                 In  segment NEAR_A, at 0xf016a
+   \   union <unnamed> volatile _A_SOE1
+   \                     _A_SOE1:
+   \   000000                       DS 2
+     55          
+     56          #include "glyph_api.h"
+     57          
+     58          void YRDKRL78_LCD_SendByte(uint8_t *aData, uint32_t aLength);
+     59          void YRDKRL78_LCD_ResetIO(void);
+     60          void YRDKRL78_LCD_RS_Start(void);
+     61          void YRDKRL78_LCD_RS_End(void);
+     62          void YRDKRL78_LCD_CS_Start(void);
+     63          void YRDKRL78_LCD_CS_End(void);
+     64          
+     65          #define NOP	__no_operation
+     66          
+     67          #define _6400_CSI10_DIVISOR			    0x6400U
+     68          #define _0400_CSI10_DIVISOR			    0x0400U
+     69          #define _0400_CSI21_DIVISOR			    0x0400U
+     70          
+     71          //	Serial Clock Select Register m (SPSm)
+     72          #define _0000_SAU_CK00_FCLK_0			0x0000U	// ck00-fclk
+     73          
+     74          //	Format of Serial Flag Clear Trigger Register mn (SIRmn)
+     75          #define	_0001_SAU_SIRMN_OVCTMN			0x0001U
+     76          #define	_0002_SAU_SIRMN_PECTMN			0x0002U
+     77          #define	_0004_SAU_SIRMN_FECTMN			0x0004U
+     78          
+     79          //	Serial Channel Start Register m (SSm)
+     80          #define _0004_SAU_CH2_START_TRG_ON		0x0004U	// sets SEm2 to 1 and enters the communication wait status
+     81          #define _0002_SAU_CH1_START_TRG_ON		0x0002U	// sets SEm1 to 1 and enters the communication wait status
+     82          
+     83          //	Serial Channel Stop Register m (STm)
+     84          #define _0004_SAU_CH2_STOP_TRG_ON		0x0004U	// operation is stopped (stop trigger is generated)
+     85          #define _0002_SAU_CH1_STOP_TRG_ON		0x0002U	// operation is stopped (stop trigger is generated)
+     86          
+     87          //	Serial Mode Register mn (SMRmn)
+     88          #define	_0020_SAU_SMRMN_INITIALVALUE	0x0020U
+     89          #define _0000_SAU_CLOCK_SELECT_CK00		0x0000U	// operation clock CK0 set by PRS register
+     90          #define _0000_SAU_CK01_FCLK_0			0x0000U	// ck01-fclk
+     91          #define _0000_SAU_CLOCK_MODE_CKS		0x0000U	// divided operation clock MCK specified by CKSmn bit
+     92          #define _0000_SAU_TRIGGER_SOFTWARE		0x0000U	// only software trigger is valid
+     93          #define _0000_SAU_MODE_CSI			    0x0000U	// CSI mode
+     94          #define _0000_SAU_TRANSFER_END			0x0000U	// transfer end interrupt
+     95          
+     96          //	Serial Communication Operation Setting Register mn (SCRmn)
+     97          #define _8000_SAU_TRANSMISSION			0x8000U	// transmission only
+     98          #define _0000_SAU_TIMING_1			    0x0000U	// type 1
+     99          #define _0000_SAU_MSB				    0x0000U	// MSB
+    100          #define _0007_SAU_LENGTH_8			    0x0007U	// 8-bit data length
+    101          
+    102          //	Serial Output Enable Register m (SOEm)
+    103          #define _0004_SAU_CH2_OUTPUT_ENABLE		0x0004U	// stops output by serial communication operation
+    104          #define _0002_SAU_CH1_OUTPUT_ENABLE		0x0002U	// stops output by serial communication operation
+    105          
+    106          //	Serial Output Register m (SOm)
+    107          #define _0004_SAU_CH2_DATA_OUTPUT_1		0x0004U	// Serial data output value is "1"
+    108          #define _0400_SAU_CH2_CLOCK_OUTPUT_1	0x0400U	// Serial clock output value is "1"
+    109          #define _0002_SAU_CH1_DATA_OUTPUT_1		0x0002U	// Serial data output value is "1"
+    110          #define _0200_SAU_CH1_CLOCK_OUTPUT_1	0x0200U	// Serial clock output value is "1"
+    111          
+    112          //	Format of Serial Status Register mn (SSRmn)
+    113          #define _0040_SAU_UNDER_EXECUTE			0x0040U	/* communication is under execution */
+    114          #define _0020_SAU_VALID_STORED			0x0020U	/* valid data is stored in the SDRmn register */
+    115          #define _0004_SAU_FRAM_ERROR			0x0004U	/* a framing error occurs during UART reception */
+    116          #define _0002_SAU_PARITY_ERROR			0x0002U	/* a parity error occurs during UART reception or ACK is not detected during I2C transmission */
+    117          #define _0001_SAU_OVERRUN_ERROR			0x0001U	/* an overrun error occurs */
+    118          
+    119          /******************************************************************************
+    120          * Function Name: YRDKRL78_LCD_Open
+    121          * Description : Open and setup the communications channel for the LCD.
+    122          * Argument : aHandle - the Glyph handle to setup for the LCD and Communications.
+    123          * Return Value : 0=success, not 0= error
+    124          ******************************************************************************/
+
+   \                                 In  segment CODE, align 1, keep-with-next
+    125          T_glyphError LCD_SPI_Open(T_glyphHandle aHandle)
+   \                     LCD_SPI_Open:
+    126          {
+   \   000000                       ; * Stack frame (at entry) *
+   \   000000                       ; Param size: 0
+   \   000000 C3                    PUSH      BC                 ;; 1 cycle
+   \   000001                       ; Auto size: 4
+   \   000001 2004                  SUBW      SP, #0x4           ;; 1 cycle
+    127            	uint32_t volatile delay;
+    128          
+    129            	// Setup CS, RS as output pins
+    130          	LCD_CTL_PORT = (1<<LCD_CTL_RS_BIT_POS) | (1<<LCD_CTL_CS_BIT_POS);
+   \   000003 CD0E60                MOV       S:0xFFF0E, #0x60   ;; 1 cycle
+    131            	LCD_CTL_PORT_DIR &= (uint8_t) ~( (1<<LCD_CTL_RS_BIT_POS) | (1<<LCD_CTL_CS_BIT_POS));
+   \   000006 8E2E                  MOV       A, 0xFFF2E         ;; 1 cycle
+   \   000008 5C9F                  AND       A, #0x9F           ;; 1 cycle
+   \   00000A 9E2E                  MOV       0xFFF2E, A         ;; 1 cycle
+    132          
+    133            	// Reset IO
+    134            	LCD_RESET_PORT |= (1<<LCD_RESET_BIT_POS); // Assert (#RESET-IO)
+   \   00000C 71020D                SET1      S:0xFFF0D.0        ;; 2 cycles
+    135            	for (delay=0;delay<10000;delay++);
+   \   00000F F6                    CLRW      AX                 ;; 1 cycle
+   \   000010 B800                  MOVW      [SP], AX           ;; 1 cycle
+   \   000012 EF0E                  BR        S:??LCD_SPI_DataSend_0  ;; 3 cycles
+   \   000014                       ; ------------------------------------- Block: 13 cycles
+   \                     ??LCD_SPI_Open_0:
+   \   000014 A802                  MOVW      AX, [SP+0x02]      ;; 1 cycle
+   \   000016 12                    MOVW      BC, AX             ;; 1 cycle
+   \   000017 A800                  MOVW      AX, [SP]           ;; 1 cycle
+   \   000019 040100                ADDW      AX, #0x1           ;; 1 cycle
+   \   00001C 61D8                  SKNC
+   \   00001E A3                    INCW      BC                 ;; 5 cycles
+   \   00001F B800                  MOVW      [SP], AX           ;; 1 cycle
+   \   000021 13                    MOVW      AX, BC             ;; 1 cycle
+   \   000022                       ; ------------------------------------- Block: 11 cycles
+   \                     ??LCD_SPI_DataSend_0:
+   \   000022 B802                  MOVW      [SP+0x02], AX      ;; 1 cycle
+   \   000024 A802                  MOVW      AX, [SP+0x02]      ;; 1 cycle
+   \   000026 12                    MOVW      BC, AX             ;; 1 cycle
+   \   000027 A800                  MOVW      AX, [SP]           ;; 1 cycle
+   \   000029 33                    XCHW      AX, BC             ;; 1 cycle
+   \   00002A 440000                CMPW      AX, #0x0           ;; 1 cycle
+   \   00002D 13                    MOVW      AX, BC             ;; 1 cycle
+   \   00002E 61F8                  SKNZ                         ;; 4 cycles
+   \   000030                       ; ------------------------------------- Block: 11 cycles
+   \   000030 441027                CMPW      AX, #0x2710        ;; 1 cycle
+   \   000033                       ; ------------------------------------- Block: 1 cycles
+   \                     ??LCD_SPI_Open_1:
+   \   000033 DCDF                  BC        ??LCD_SPI_Open_0   ;; 4 cycles
+   \   000035                       ; ------------------------------------- Block: 4 cycles
+    136            	LCD_RESET_PORT &= (~1<<LCD_RESET_BIT_POS); // De-assert (#RESET-IO)
+   \   000035 71030D                CLR1      S:0xFFF0D.0        ;; 2 cycles
+    137            	for (delay=0;delay<10000;delay++);
+   \   000038 F6                    CLRW      AX                 ;; 1 cycle
+   \   000039 B800                  MOVW      [SP], AX           ;; 1 cycle
+   \   00003B EF0E                  BR        S:??LCD_SPI_DataSend_1  ;; 3 cycles
+   \   00003D                       ; ------------------------------------- Block: 7 cycles
+   \                     ??LCD_SPI_Open_2:
+   \   00003D A802                  MOVW      AX, [SP+0x02]      ;; 1 cycle
+   \   00003F 12                    MOVW      BC, AX             ;; 1 cycle
+   \   000040 A800                  MOVW      AX, [SP]           ;; 1 cycle
+   \   000042 040100                ADDW      AX, #0x1           ;; 1 cycle
+   \   000045 61D8                  SKNC
+   \   000047 A3                    INCW      BC                 ;; 5 cycles
+   \   000048 B800                  MOVW      [SP], AX           ;; 1 cycle
+   \   00004A 13                    MOVW      AX, BC             ;; 1 cycle
+   \   00004B                       ; ------------------------------------- Block: 11 cycles
+   \                     ??LCD_SPI_DataSend_1:
+   \   00004B B802                  MOVW      [SP+0x02], AX      ;; 1 cycle
+   \   00004D A802                  MOVW      AX, [SP+0x02]      ;; 1 cycle
+   \   00004F 12                    MOVW      BC, AX             ;; 1 cycle
+   \   000050 A800                  MOVW      AX, [SP]           ;; 1 cycle
+   \   000052 33                    XCHW      AX, BC             ;; 1 cycle
+   \   000053 440000                CMPW      AX, #0x0           ;; 1 cycle
+   \   000056 13                    MOVW      AX, BC             ;; 1 cycle
+   \   000057 61F8                  SKNZ                         ;; 4 cycles
+   \   000059                       ; ------------------------------------- Block: 11 cycles
+   \   000059 441027                CMPW      AX, #0x2710        ;; 1 cycle
+   \   00005C                       ; ------------------------------------- Block: 1 cycles
+   \                     ??LCD_SPI_Open_3:
+   \   00005C DCDF                  BC        ??LCD_SPI_Open_2   ;; 4 cycles
+   \   00005E                       ; ------------------------------------- Block: 4 cycles
+    138          
+    139          #ifdef RDK_RL78G13
+    140          	// SAU Init
+    141            	SAU0EN = 1U;	/* supply SAU0 clock */
+    142          	NOP();
+    143          	NOP();
+    144          	NOP();
+    145          	NOP();
+    146          	SPS0 = _0000_SAU_CK00_FCLK_0 | _0000_SAU_CK01_FCLK_0;
+    147          
+    148            	// CSI10 Init
+    149            	ST0 |= _0004_SAU_CH2_STOP_TRG_ON;	/* disable CSI10 */
+    150          	CSIMK10 = 1U;	/* disable INTCSI10 interrupt */
+    151          	CSIIF10 = 0U;	/* clear INTCSI10 interrupt flag */
+    152          
+    153          	/* Set INTCSI10 low priority */
+    154          	CSIPR110 = 1U;
+    155          	CSIPR010 = 1U;
+    156          	SIR02 = _0004_SAU_SIRMN_FECTMN | _0002_SAU_SIRMN_PECTMN | _0001_SAU_SIRMN_OVCTMN;	/* clear error flag */
+    157          	SMR02 = _0020_SAU_SMRMN_INITIALVALUE | _0000_SAU_CLOCK_SELECT_CK00 | _0000_SAU_CLOCK_MODE_CKS | _0000_SAU_TRIGGER_SOFTWARE | _0000_SAU_MODE_CSI | _0000_SAU_TRANSFER_END;
+    158          	SCR02 = _8000_SAU_TRANSMISSION | _0000_SAU_TIMING_1 | _0000_SAU_MSB | _0007_SAU_LENGTH_8;
+    159          	SDR02 = _0400_CSI10_DIVISOR;
+    160          	SO0 |= _0400_SAU_CH2_CLOCK_OUTPUT_1;	/* CSI10 clock initial level */
+    161          	SO0 &= ~_0004_SAU_CH2_DATA_OUTPUT_1;	/* CSI10 SO initial level */
+    162          	SOE0 |= _0004_SAU_CH2_OUTPUT_ENABLE;	/* enable CSI10 output */
+    163          	/* Set SO10 pin */
+    164          	P0 |= 0x04U;
+    165          	PMC0 &= 0xFBU;
+    166          	PM0 &= 0xFBU;
+    167          	/* Set SCK10 pin */
+    168          	P0 |= 0x10U;
+    169          	PM0 &= 0xEFU;
+    170          
+    171              // CSI10 Start
+    172              CSIIF10 = 0U;	/* clear INTCSI10 interrupt flag */
+    173          	CSIMK10 = 0U;	/* enable INTCSI10 */
+    174          	SO0 |= _0400_SAU_CH2_CLOCK_OUTPUT_1;	/* CSI10 clock initial level */
+    175          	SO0 &= ~_0004_SAU_CH2_DATA_OUTPUT_1;	/* CSI10 SO initial level */
+    176          	SOE0 |= _0004_SAU_CH2_OUTPUT_ENABLE;	/* enable CSI10 output */
+    177          	SS0 |= _0004_SAU_CH2_START_TRG_ON;	/* enable CSI10 */
+    178          
+    179          #else
+    180          	// SAU Init
+    181            	SAU1EN = 1U;	/* supply SAU1 clock */
+   \   00005E 36F000                MOVW      HL, #0xF0          ;; 1 cycle
+   \   000061 71B2                  SET1      [HL].3             ;; 2 cycles
+    182          	NOP();
+   \   000063 00                    NOP                          ;; 1 cycle
+    183          	NOP();
+   \   000064 00                    NOP                          ;; 1 cycle
+    184          	NOP();
+   \   000065 00                    NOP                          ;; 1 cycle
+    185          	NOP();
+   \   000066 00                    NOP                          ;; 1 cycle
+    186          	SPS1 = _0000_SAU_CK00_FCLK_0 | _0000_SAU_CK01_FCLK_0;
+   \   000067 F6                    CLRW      AX                 ;; 1 cycle
+   \   000068 BF6601                MOVW      0x166, AX          ;; 1 cycle
+    187          
+    188            	// CS21 Init
+    189            	ST1 |= _0002_SAU_CH1_STOP_TRG_ON;	/* disable CSI10 */
+   \   00006B 366401                MOVW      HL, #0x164         ;; 1 cycle
+   \   00006E 7192                  SET1      [HL].1             ;; 2 cycles
+    190          	CSIMK21 = 1U;	/* disable INTCSI21 interrupt */
+   \   000070 711AE5                SET1      0xFFFE5.1          ;; 2 cycles
+    191          	CSIIF21 = 0U;	/* clear INTCSI21 interrupt flag */
+   \   000073 711BE1                CLR1      0xFFFE1.1          ;; 2 cycles
+    192          
+    193          	/* Set INTCSI21 low priority */
+    194          	CSIPR121 = 1U;
+   \   000076 711AED                SET1      0xFFFED.1          ;; 2 cycles
+    195          	CSIPR021 = 1U;
+   \   000079 711AE9                SET1      0xFFFE9.1          ;; 2 cycles
+    196          	SIR11 = _0004_SAU_SIRMN_FECTMN | _0002_SAU_SIRMN_PECTMN | _0001_SAU_SIRMN_OVCTMN;	/* clear error flag */
+   \   00007C 5007                  MOV       X, #0x7            ;; 1 cycle
+   \   00007E BF4A01                MOVW      0x14A, AX          ;; 1 cycle
+    197          	SMR11 = _0020_SAU_SMRMN_INITIALVALUE | _0000_SAU_CLOCK_SELECT_CK00 | _0000_SAU_CLOCK_MODE_CKS | _0000_SAU_TRIGGER_SOFTWARE | _0000_SAU_MODE_CSI | _0000_SAU_TRANSFER_END;
+   \   000081 5020                  MOV       X, #0x20           ;; 1 cycle
+   \   000083 BF5201                MOVW      0x152, AX          ;; 1 cycle
+    198          	SCR11 = _8000_SAU_TRANSMISSION | _0000_SAU_TIMING_1 | _0000_SAU_MSB | _0007_SAU_LENGTH_8;
+   \   000086 300780                MOVW      AX, #0x8007        ;; 1 cycle
+   \   000089 BF5A01                MOVW      0x15A, AX          ;; 1 cycle
+    199          	SDR11 = _0400_CSI21_DIVISOR;
+   \   00008C CB4A0004              MOVW      0xFFF4A, #0x400    ;; 1 cycle
+    200          	SO1 |= _0200_SAU_CH1_CLOCK_OUTPUT_1;	/* CSI21 clock initial level */
+   \   000090 FD....                CALL      N:?Subroutine0     ;; 3 cycles
+   \   000093                       ; ------------------------------------- Block: 30 cycles
+    201          	SO1 &= ~_0002_SAU_CH1_DATA_OUTPUT_1;	/* CSI21 SO initial level */
+    202          	SOE1 |= _0002_SAU_CH1_OUTPUT_ENABLE;	/* enable CSI21 output */
+   \                     ??CrossCallReturnLabel_0:
+   \   000093 566A                  MOV       L, #0x6A           ;; 1 cycle
+   \   000095 7192                  SET1      [HL].1             ;; 2 cycles
+    203          
+    204          	/* Set SO21 pin */
+    205          	P7 |= 0x04U;
+   \   000097 712207                SET1      S:0xFFF07.2        ;; 2 cycles
+    206          	PM7 &= 0xFBU;
+   \   00009A 712B27                CLR1      0xFFF27.2          ;; 2 cycles
+    207          	/* Set SCK21 pin */
+    208          	P7 |= 0x01U;
+   \   00009D 710207                SET1      S:0xFFF07.0        ;; 2 cycles
+    209          	PM7 &= 0xFEU;
+   \   0000A0 710B27                CLR1      0xFFF27.0          ;; 2 cycles
+    210          
+    211            	// CSI21 Start
+    212            	CSIIF21 = 0U;	/* clear INTCSI21 interrupt flag */
+   \   0000A3 711BE1                CLR1      0xFFFE1.1          ;; 2 cycles
+    213          	CSIMK21 = 0U;	/* enable INTCSI21 */
+   \   0000A6 711BE5                CLR1      0xFFFE5.1          ;; 2 cycles
+    214          	SO1 |= _0200_SAU_CH1_CLOCK_OUTPUT_1;	/* CSI21 clock initial level */
+   \   0000A9 FD....                CALL      N:?Subroutine0     ;; 3 cycles
+   \   0000AC                       ; ------------------------------------- Block: 18 cycles
+    215          	SO1 &= ~_0002_SAU_CH1_DATA_OUTPUT_1;	/* CSI21 SO initial level */
+    216          	SOE1 |= _0002_SAU_CH1_OUTPUT_ENABLE;	/* enable CSI21 output */
+   \                     ??CrossCallReturnLabel_1:
+   \   0000AC 7192                  SET1      [HL].1             ;; 2 cycles
+    217          	SS1 |= _0002_SAU_CH1_START_TRG_ON;	/* enable CSI21 */
+   \   0000AE 5662                  MOV       L, #0x62           ;; 1 cycle
+   \   0000B0 7192                  SET1      [HL].1             ;; 2 cycles
+    218          #endif
+    219          
+    220            return GLYPH_ERROR_NONE ;
+   \   0000B2 F1                    CLRB      A                  ;; 1 cycle
+   \   0000B3 1004                  ADDW      SP, #0x4           ;; 1 cycle
+   \   0000B5 C2                    POP       BC                 ;; 1 cycle
+   \   0000B6 D7                    RET                          ;; 6 cycles
+   \   0000B7                       ; ------------------------------------- Block: 14 cycles
+   \   0000B7                       ; ------------------------------------- Total: 136 cycles
+   \   0000B7                       REQUIRE ?CLRL78_V1_0_L00
+   \   0000B7                       REQUIRE _A_P14
+   \   0000B7                       REQUIRE _A_PM14
+   \   0000B7                       REQUIRE _A_P13
+   \   0000B7                       REQUIRE _A_PER0
+   \   0000B7                       REQUIRE _A_SPS1
+   \   0000B7                       REQUIRE _A_ST1
+   \   0000B7                       REQUIRE _A_MK0
+   \   0000B7                       REQUIRE _A_IF0
+   \   0000B7                       REQUIRE _A_PR10
+   \   0000B7                       REQUIRE _A_PR00
+   \   0000B7                       REQUIRE _A_SIR11
+   \   0000B7                       REQUIRE _A_SMR11
+   \   0000B7                       REQUIRE _A_SCR11
+   \   0000B7                       REQUIRE _A_SDR11
+   \   0000B7                       REQUIRE _A_SO1
+   \   0000B7                       REQUIRE _A_SOE1
+   \   0000B7                       REQUIRE _A_P7
+   \   0000B7                       REQUIRE _A_PM7
+   \   0000B7                       REQUIRE _A_SS1
+    221          }
+
+   \                                 In  segment CODE, align 1, keep-with-next
+   \                     ?Subroutine0:
+   \   000000 AF6801                MOVW      AX, 0x168          ;; 1 cycle
+   \   000003 6C02                  OR        A, #0x2            ;; 1 cycle
+   \   000005 BF6801                MOVW      0x168, AX          ;; 1 cycle
+   \   000008 AF6801                MOVW      AX, 0x168          ;; 1 cycle
+   \   00000B 08                    XCH       A, X               ;; 1 cycle
+   \   00000C 5CFD                  AND       A, #0xFD           ;; 1 cycle
+   \   00000E 08                    XCH       A, X               ;; 1 cycle
+   \   00000F BF6801                MOVW      0x168, AX          ;; 1 cycle
+   \   000012 D7                    RET                          ;; 6 cycles
+   \   000013                       ; ------------------------------------- Block: 14 cycles
+   \   000013                       ; ------------------------------------- Total: 14 cycles
+   \   000013                       REQUIRE ?CLRL78_V1_0_L00
+    222          
+    223          /******************************************************************************
+    224          * Function Name: YRDKRL78_LCD_SendCmd
+    225          * Description : Send a command define to the LCD.  The defines for all commands
+    226          * available to send to the ST7579 LCD controller are defined in the header
+    227          * for this file RL78_LCD.h.  The nCommand parameter should always be
+    228          * a define from that location.
+    229          * Argument : cCommand - 8 bits of data to be used as a command to the LCD
+    230          * Return Value : none
+    231          ******************************************************************************/
+
+   \                                 In  segment CODE, align 1, keep-with-next
+    232          void LCD_SPI_CommandSend(int8_t aCommand)
+   \                     LCD_SPI_CommandSend:
+    233          {
+   \   000000                       ; * Stack frame (at entry) *
+   \   000000                       ; Param size: 0
+   \   000000                       ; Auto size: 2
+   \   000000 C1                    PUSH      AX                 ;; 1 cycle
+    234              uint8_t volatile delay;
+    235          
+    236          		LCD_CTL_PORT &= ~(1<<LCD_CTL_RS_BIT_POS); // assert RS
+   \   000001 71630E                CLR1      S:0xFFF0E.6        ;; 2 cycles
+    237            	LCD_CTL_PORT &= ~(1<<LCD_CTL_CS_BIT_POS); // assert CS
+   \   000004 FD....                CALL      N:?Subroutine1     ;; 3 cycles
+   \   000007                       ; ------------------------------------- Block: 6 cycles
+    238          
+    239              LCD_CSIMK = 1U;     // disable CSI interrupt
+    240              LCD_SIO = aCommand;	// started by writing data to SDR[7:0]
+    241          
+    242                                  // Short Delay
+    243              for(delay=0; delay<5; delay++);
+   \                     ??CrossCallReturnLabel_2:
+   \   000007 F1                    CLRB      A                  ;; 1 cycle
+   \   000008 EF03                  BR        S:??LCD_SPI_DataSend_2  ;; 3 cycles
+   \   00000A                       ; ------------------------------------- Block: 4 cycles
+   \                     ??LCD_SPI_CommandSend_0:
+   \   00000A 8800                  MOV       A, [SP]            ;; 1 cycle
+   \   00000C 81                    INC       A                  ;; 1 cycle
+   \   00000D                       ; ------------------------------------- Block: 2 cycles
+   \                     ??LCD_SPI_DataSend_2:
+   \   00000D 9800                  MOV       [SP], A            ;; 1 cycle
+   \   00000F 8800                  MOV       A, [SP]            ;; 1 cycle
+   \   000011 4C05                  CMP       A, #0x5            ;; 1 cycle
+   \   000013 DCF5                  BC        ??LCD_SPI_CommandSend_0  ;; 4 cycles
+   \   000015                       ; ------------------------------------- Block: 7 cycles
+    244          
+    245                                  // Wait for transmission end
+    246              while(LCD_SSR & _0040_SAU_UNDER_EXECUTE);
+   \                     ??LCD_SPI_CommandSend_1:
+   \   000015 AF4201                MOVW      AX, 0x142          ;; 1 cycle
+   \   000018 60                    MOV       A, X               ;; 1 cycle
+   \   000019 3163F9                BT        A.6, ??LCD_SPI_CommandSend_1  ;; 5 cycles
+   \   00001C                       ; ------------------------------------- Block: 7 cycles
+    247          
+    248          	LCD_CTL_PORT |= (1<<LCD_CTL_RS_BIT_POS); // deassert RS
+   \   00001C 71620E                SET1      S:0xFFF0E.6        ;; 2 cycles
+    249            	LCD_CTL_PORT |= (1<<LCD_CTL_CS_BIT_POS); // deassert CS
+   \   00001F 71520E                SET1      S:0xFFF0E.5        ;; 2 cycles
+    250          }
+   \   000022 1002                  ADDW      SP, #0x2           ;; 1 cycle
+   \   000024 D7                    RET                          ;; 6 cycles
+   \   000025                       ; ------------------------------------- Block: 11 cycles
+   \   000025                       ; ------------------------------------- Total: 37 cycles
+   \   000025                       REQUIRE ?CLRL78_V1_0_L00
+   \   000025                       REQUIRE _A_P14
+   \   000025                       REQUIRE _A_MK0
+   \   000025                       REQUIRE _A_SDR11
+   \   000025                       REQUIRE _A_SSR11
+
+   \                                 In  segment CODE, align 1, keep-with-next
+   \                     ?Subroutine1:
+   \   000000 71530E                CLR1      S:0xFFF0E.5        ;; 2 cycles
+   \   000003 711AE5                SET1      0xFFFE5.1          ;; 2 cycles
+   \   000006 9E4A                  MOV       0xFFF4A, A         ;; 1 cycle
+   \   000008 D7                    RET                          ;; 6 cycles
+   \   000009                       ; ------------------------------------- Block: 11 cycles
+   \   000009                       ; ------------------------------------- Total: 11 cycles
+   \   000009                       REQUIRE ?CLRL78_V1_0_L00
+    251          
+    252          /******************************************************************************
+    253          * Function Name: YRDKRL78_SendData
+    254          * Description : Send 8 bits of data to the LCD RAM at the current location.
+    255          * The current location is determined and set with local functions.
+    256          * Argument : cData - 8 bits of data to be sent to the LCD
+    257          * Return Value : none
+    258          ******************************************************************************/
+
+   \                                 In  segment CODE, align 1, keep-with-next
+    259          void LCD_SPI_DataSend(int8_t aData)
+   \                     LCD_SPI_DataSend:
+    260          {
+   \   000000                       ; * Stack frame (at entry) *
+   \   000000                       ; Param size: 0
+   \   000000                       ; Auto size: 0
+    261              uint8_t delay;
+    262          
+    263            	LCD_CTL_PORT &= ~(1<<LCD_CTL_CS_BIT_POS); // assert CS
+   \   000000 FD....                CALL      N:?Subroutine1     ;; 3 cycles
+    264          
+    265              LCD_CSIMK = 1U;	    // disable INTCSI10 interrupt
+    266              LCD_SIO = aData;	    // started by writing data to SDR[7:0]
+    267          
+    268                                  // Short Delay
+    269              for(delay=0; delay<5; delay++);
+   \   000003                       ; ------------------------------------- Block: 3 cycles
+    270          
+    271                                  // Wait for transmission end
+    272              while(LCD_SSR & _0040_SAU_UNDER_EXECUTE);
+   \                     ??CrossCallReturnLabel_3:
+   \   000003 AF4201                MOVW      AX, 0x142          ;; 1 cycle
+   \   000006 60                    MOV       A, X               ;; 1 cycle
+   \   000007 3163F9                BT        A.6, ??CrossCallReturnLabel_3  ;; 5 cycles
+   \   00000A                       ; ------------------------------------- Block: 7 cycles
+    273          
+    274            	LCD_CTL_PORT |= (1<<LCD_CTL_CS_BIT_POS); // deassert CS
+   \   00000A 71520E                SET1      S:0xFFF0E.5        ;; 2 cycles
+    275          }
+   \   00000D D7                    RET                          ;; 6 cycles
+   \   00000E                       ; ------------------------------------- Block: 8 cycles
+   \   00000E                       ; ------------------------------------- Total: 18 cycles
+   \   00000E                       REQUIRE ?CLRL78_V1_0_L00
+   \   00000E                       REQUIRE _A_P14
+   \   00000E                       REQUIRE _A_MK0
+   \   00000E                       REQUIRE _A_SDR11
+   \   00000E                       REQUIRE _A_SSR11
+    276          
+    277          
+
+   Maximum stack usage in bytes:
+
+   CSTACK Function
+   ------ --------
+      2   LCD_SPI_CommandSend
+      0   LCD_SPI_DataSend
+      6   LCD_SPI_Open
+
+
+   Segment part sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+      19  ?Subroutine0
+       9  ?Subroutine1
+      37  LCD_SPI_CommandSend
+      14  LCD_SPI_DataSend
+     183  LCD_SPI_Open
+       2  _A_IF0
+       2  _A_MK0
+       1  _A_P13
+       1  _A_P14
+       1  _A_P7
+       1  _A_PER0
+       1  _A_PM14
+       1  _A_PM7
+       2  _A_PR00
+       2  _A_PR10
+       2  _A_SCR11
+       2  _A_SDR11
+       2  _A_SIR11
+       2  _A_SMR11
+       2  _A_SO1
+       2  _A_SOE1
+       2  _A_SPS1
+       2  _A_SS1
+       2  _A_SSR11
+       2  _A_ST1
+
+ 
+ 262 bytes in segment CODE
+  31 bytes in segment NEAR_A
+   3 bytes in segment SADDR_A
+ 
+ 262 bytes of CODE memory
+   0 bytes of DATA memory (+ 34 bytes shared)
+
+Errors: none
+Warnings: none

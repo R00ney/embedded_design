@@ -1,0 +1,462 @@
+###############################################################################
+#                                                                             #
+# IAR C/C++ Compiler V1.30.5.50715 for RL78             23/Mar/2014  17:08:34 #
+# Copyright 2011-2013 IAR Systems AB.                                         #
+# Network license: ece-lic-19.ece.ncsu.edu (STD)                              #
+#                                                                             #
+#    Core         =  rl78_2                                                   #
+#    Code model   =  Near                                                     #
+#    Data model   =  Near                                                     #
+#                 =                                                           #
+#    Source file  =  C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\BSP\cpu_bsp.c                                   #
+#    Command line =  C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\BSP\cpu_bsp.c --core rl78_2 --code_model near   #
+#                    --data_model near --near_const_location rom0 -o          #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\Debug\Obj\ --dlib_config            #
+#                    "C:\Program Files\IAR Systems\Embedded Workbench         #
+#                    6.5\rl78\LIB\dlrl78nn2n.h" -e -Ohz --no_scheduling       #
+#                    --no_clustering --debug -lC                              #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\Debug\List\ -I                      #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\ -I C:\Users\Suddenlink\Dropbox\git #
+#                    _files\embedded_design\Proj2_uCOS-III-LCD-G14\Software\E #
+#                    valBoards\Renesas\YRDKRL78G14\IAR\Application\Source\    #
+#                    -I C:\Users\Suddenlink\Dropbox\git_files\embedded_design #
+#                    \Proj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDK #
+#                    RL78G14\IAR\Application\..\uCOS-III\ -I                  #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\..\BSP\ -I                          #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\..\BSP\applilet3_src\ -I            #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\..\BSP\Glyph\Drivers\ -I            #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\..\BSP\Glyph\glyph\ -I              #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\..\..\..\..\..\uC-CPU\ -I           #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\..\..\..\..\..\uC-CPU\RL78\IAR\ -I  #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\..\..\..\..\..\uC-LIB\ -I           #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\..\..\..\..\..\uCOS-III\Ports\Renes #
+#                    as\RL78\IAR\ -I C:\Users\Suddenlink\Dropbox\git_files\em #
+#                    bedded_design\Proj2_uCOS-III-LCD-G14\Software\EvalBoards #
+#                    \Renesas\YRDKRL78G14\IAR\Application\..\..\..\..\..\uCOS #
+#                    -III\Source\ --relaxed_fp                                #
+#    List file    =  C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\Debug\List\cpu_bsp.lst              #
+#    Object file  =  C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\Debug\Obj\cpu_bsp.r87               #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Proj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL78G14\IAR\BSP\cpu_bsp.c
+      1          /*
+      2          *********************************************************************************************************
+      3          *                                                uC/CPU
+      4          *                                    CPU CONFIGURATION & PORT LAYER
+      5          *
+      6          *                          (c) Copyright 2004-2011; Micrium, Inc.; Weston, FL
+      7          *
+      8          *               All rights reserved.  Protected by international copyright laws.
+      9          *
+     10          *               uC/CPU is provided in source form to registered licensees ONLY.  It is 
+     11          *               illegal to distribute this source code to any third party unless you receive 
+     12          *               written permission by an authorized Micrium representative.  Knowledge of 
+     13          *               the source code may NOT be used to develop a similar product.
+     14          *
+     15          *               Please help us continue to provide the Embedded community with the finest 
+     16          *               software available.  Your honesty is greatly appreciated.
+     17          *
+     18          *               You can contact us at www.micrium.com.
+     19          *********************************************************************************************************
+     20          */
+     21          
+     22          /*
+     23          *********************************************************************************************************
+     24          *
+     25          *                               CPU BOARD SUPPORT PACKAGE (BSP) FUNCTIONS
+     26          *
+     27          *                                              TEMPLATE
+     28          *
+     29          * Filename      : cpu_bsp.c
+     30          * Version       : V1.28.00
+     31          * Programmer(s) : ITJ
+     32          *********************************************************************************************************
+     33          */
+     34          
+     35          
+     36          /*
+     37          *********************************************************************************************************
+     38          *                                            INCLUDE FILES
+     39          *********************************************************************************************************
+     40          */
+     41          
+     42          #define    CPU_BSP_MODULE
+     43          #include  <cpu_core.h>
+     44          
+     45          
+     46          /*$PAGE*/
+     47          /*
+     48          *********************************************************************************************************
+     49          *                                            LOCAL DEFINES
+     50          *********************************************************************************************************
+     51          */
+     52          
+     53          
+     54          /*
+     55          *********************************************************************************************************
+     56          *                                           LOCAL CONSTANTS
+     57          *********************************************************************************************************
+     58          */
+     59          
+     60          
+     61          /*
+     62          *********************************************************************************************************
+     63          *                                          LOCAL DATA TYPES
+     64          *********************************************************************************************************
+     65          */
+     66          
+     67          
+     68          /*
+     69          *********************************************************************************************************
+     70          *                                            LOCAL TABLES
+     71          *********************************************************************************************************
+     72          */
+     73          
+     74          
+     75          /*
+     76          *********************************************************************************************************
+     77          *                                       LOCAL GLOBAL VARIABLES
+     78          *********************************************************************************************************
+     79          */
+     80          
+     81          
+     82          /*
+     83          *********************************************************************************************************
+     84          *                                      LOCAL FUNCTION PROTOTYPES
+     85          *********************************************************************************************************
+     86          */
+     87          
+     88          
+     89          /*
+     90          *********************************************************************************************************
+     91          *                                     LOCAL CONFIGURATION ERRORS
+     92          *********************************************************************************************************
+     93          */
+     94          
+     95          
+     96          /*$PAGE*/
+     97          /*
+     98          *********************************************************************************************************
+     99          *                                          CPU_TS_TmrInit()
+    100          *
+    101          * Description : Initialize & start CPU timestamp timer.
+    102          *
+    103          * Argument(s) : none.
+    104          *
+    105          * Return(s)   : none.
+    106          *
+    107          * Caller(s)   : CPU_TS_Init().
+    108          *
+    109          *               This function is an INTERNAL CPU module function & MUST be implemented by application/
+    110          *               BSP function(s) [see Note #1] but MUST NOT be called by application function(s).
+    111          *
+    112          * Note(s)     : (1) CPU_TS_TmrInit() is an application/BSP function that MUST be defined by the developer 
+    113          *                   if either of the following CPU features is enabled :
+    114          *
+    115          *                   (a) CPU timestamps
+    116          *                   (b) CPU interrupts disabled time measurements
+    117          *
+    118          *                   See 'cpu_cfg.h  CPU TIMESTAMP CONFIGURATION  Note #1'
+    119          *                     & 'cpu_cfg.h  CPU INTERRUPTS DISABLED TIME MEASUREMENT CONFIGURATION  Note #1a'.
+    120          *
+    121          *               (2) (a) Timer count values MUST be returned via word-size-configurable 'CPU_TS_TMR' 
+    122          *                       data type.
+    123          *
+    124          *                       (1) If timer has more bits, truncate timer values' higher-order bits greater 
+    125          *                           than the configured 'CPU_TS_TMR' timestamp timer data type word size.
+    126          *
+    127          *                       (2) Since the timer MUST NOT have less bits than the configured 'CPU_TS_TMR' 
+    128          *                           timestamp timer data type word size; 'CPU_CFG_TS_TMR_SIZE' MUST be 
+    129          *                           configured so that ALL bits in 'CPU_TS_TMR' data type are significant.
+    130          *
+    131          *                           In other words, if timer size is not a binary-multiple of 8-bit octets 
+    132          *                           (e.g. 20-bits or even 24-bits), then the next lower, binary-multiple 
+    133          *                           octet word size SHOULD be configured (e.g. to 16-bits).  However, the 
+    134          *                           minimum supported word size for CPU timestamp timers is 8-bits.
+    135          *
+    136          *                       See also 'cpu_cfg.h   CPU TIMESTAMP CONFIGURATION  Note #2'
+    137          *                              & 'cpu_core.h  CPU TIMESTAMP DATA TYPES     Note #1'.
+    138          *
+    139          *                   (b) Timer SHOULD be an 'up'  counter whose values increase with each time count.
+    140          *
+    141          *                   (c) When applicable, timer period SHOULD be less than the typical measured time 
+    142          *                       but MUST be less than the maximum measured time; otherwise, timer resolution 
+    143          *                       inadequate to measure desired times.
+    144          *
+    145          *                   See also 'CPU_TS_TmrRd()  Note #2'.
+    146          *********************************************************************************************************
+    147          */
+    148          
+    149          #if (CPU_CFG_TS_TMR_EN == DEF_ENABLED)
+
+   \                                 In  segment CODE, align 1, keep-with-next
+    150          void  CPU_TS_TmrInit (void)
+   \                     CPU_TS_TmrInit:
+    151          {
+   \   000000                       ; * Stack frame (at entry) *
+   \   000000                       ; Param size: 0
+   \   000000                       ; Auto size: 0
+    152          
+    153              /* $$$$ Insert code to configure & start CPU timestamp timer (see Note #2). */
+    154          
+    155          }
+   \   000000 D7                    RET                          ;; 6 cycles
+   \   000001                       ; ------------------------------------- Block: 6 cycles
+   \   000001                       ; ------------------------------------- Total: 6 cycles
+   \   000001                       REQUIRE ?CLRL78_V1_0_L00
+    156          #endif
+    157          
+    158          
+    159          /*$PAGE*/
+    160          /*
+    161          *********************************************************************************************************
+    162          *                                           CPU_TS_TmrRd()
+    163          *
+    164          * Description : Get current CPU timestamp timer count value.
+    165          *
+    166          * Argument(s) : none.
+    167          *
+    168          * Return(s)   : Timestamp timer count (see Notes #2a & #2b).
+    169          *
+    170          * Caller(s)   : CPU_TS_Init(),
+    171          *               CPU_TS_Get32(),
+    172          *               CPU_TS_Get64(),
+    173          *               CPU_IntDisMeasStart(),
+    174          *               CPU_IntDisMeasStop().
+    175          *
+    176          *               This function is an INTERNAL CPU module function & MUST be implemented by application/
+    177          *               BSP function(s) [see Note #1] but SHOULD NOT be called by application function(s).
+    178          *
+    179          * Note(s)     : (1) CPU_TS_TmrRd() is an application/BSP function that MUST be defined by the developer 
+    180          *                   if either of the following CPU features is enabled :
+    181          *
+    182          *                   (a) CPU timestamps
+    183          *                   (b) CPU interrupts disabled time measurements
+    184          *
+    185          *                   See 'cpu_cfg.h  CPU TIMESTAMP CONFIGURATION  Note #1'
+    186          *                     & 'cpu_cfg.h  CPU INTERRUPTS DISABLED TIME MEASUREMENT CONFIGURATION  Note #1a'.
+    187          *
+    188          *               (2) (a) Timer count values MUST be returned via word-size-configurable 'CPU_TS_TMR' 
+    189          *                       data type.
+    190          *
+    191          *                       (1) If timer has more bits, truncate timer values' higher-order bits greater 
+    192          *                           than the configured 'CPU_TS_TMR' timestamp timer data type word size.
+    193          *
+    194          *                       (2) Since the timer MUST NOT have less bits than the configured 'CPU_TS_TMR' 
+    195          *                           timestamp timer data type word size; 'CPU_CFG_TS_TMR_SIZE' MUST be 
+    196          *                           configured so that ALL bits in 'CPU_TS_TMR' data type are significant.
+    197          *
+    198          *                           In other words, if timer size is not a binary-multiple of 8-bit octets 
+    199          *                           (e.g. 20-bits or even 24-bits), then the next lower, binary-multiple 
+    200          *                           octet word size SHOULD be configured (e.g. to 16-bits).  However, the 
+    201          *                           minimum supported word size for CPU timestamp timers is 8-bits.
+    202          *
+    203          *                       See also 'cpu_cfg.h   CPU TIMESTAMP CONFIGURATION  Note #2'
+    204          *                              & 'cpu_core.h  CPU TIMESTAMP DATA TYPES     Note #1'.
+    205          *
+    206          *                   (b) Timer SHOULD be an 'up'  counter whose values increase with each time count.
+    207          *
+    208          *                       (1) If timer is a 'down' counter whose values decrease with each time count,
+    209          *                           then the returned timer value MUST be ones-complemented.
+    210          *
+    211          *                   (c) (1) When applicable, the amount of time measured by CPU timestamps is 
+    212          *                           calculated by either of the following equations :
+    213          *
+    214          *                           (A) Time measured  =  Number timer counts  *  Timer period
+    215          *
+    216          *                                   where
+    217          *
+    218          *                                       Number timer counts     Number of timer counts measured 
+    219          *                                       Timer period            Timer's period in some units of 
+    220          *                                                                   (fractional) seconds
+    221          *                                       Time measured           Amount of time measured, in same 
+    222          *                                                                   units of (fractional) seconds 
+    223          *                                                                   as the Timer period
+    224          *
+    225          *                                                  Number timer counts
+    226          *                           (B) Time measured  =  ---------------------
+    227          *                                                    Timer frequency
+    228          *
+    229          *                                   where
+    230          *
+    231          *                                       Number timer counts     Number of timer counts measured
+    232          *                                       Timer frequency         Timer's frequency in some units 
+    233          *                                                                   of counts per second
+    234          *                                       Time measured           Amount of time measured, in seconds
+    235          *
+    236          *                       (2) Timer period SHOULD be less than the typical measured time but MUST be less 
+    237          *                           than the maximum measured time; otherwise, timer resolution inadequate to 
+    238          *                           measure desired times.
+    239          *********************************************************************************************************
+    240          */
+    241          
+    242          #if (CPU_CFG_TS_TMR_EN == DEF_ENABLED)
+
+   \                                 In  segment CODE, align 1, keep-with-next
+    243          CPU_TS_TMR  CPU_TS_TmrRd (void)
+   \                     CPU_TS_TmrRd:
+    244          {
+   \   000000                       ; * Stack frame (at entry) *
+   \   000000                       ; Param size: 0
+   \   000000                       ; Auto size: 0
+    245              CPU_TS_TMR  ts_tmr_cnts;
+    246          
+    247                                                                          
+    248              ts_tmr_cnts = 0;//$$$$ Insert code to return CPU timestamp timer value (see Note #2);
+    249          
+    250              return (ts_tmr_cnts);
+   \   000000 F6                    CLRW      AX                 ;; 1 cycle
+   \   000001 F7                    CLRW      BC                 ;; 1 cycle
+   \   000002 D7                    RET                          ;; 6 cycles
+   \   000003                       ; ------------------------------------- Block: 8 cycles
+   \   000003                       ; ------------------------------------- Total: 8 cycles
+   \   000003                       REQUIRE ?CLRL78_V1_0_L00
+    251          }
+    252          #endif
+    253          
+    254          
+    255          /*$PAGE*/
+    256          /*
+    257          *********************************************************************************************************
+    258          *                                         CPU_TSxx_to_uSec()
+    259          *
+    260          * Description : Convert a 32-/64-bit CPU timestamp from timer counts to microseconds.
+    261          *
+    262          * Argument(s) : ts_cnts   CPU timestamp (in timestamp timer counts [see Note #2aA]).
+    263          *
+    264          * Return(s)   : Converted CPU timestamp (in microseconds           [see Note #2aD]).
+    265          *
+    266          * Caller(s)   : Application.
+    267          *
+    268          *               This function is an (optional) CPU module application interface (API) function which 
+    269          *               MAY be implemented by application/BSP function(s) [see Note #1] & MAY be called by 
+    270          *               application function(s).
+    271          *
+    272          * Note(s)     : (1) CPU_TS32_to_uSec()/CPU_TS64_to_uSec() are application/BSP functions that MAY be 
+    273          *                   optionally defined by the developer when either of the following CPU features is 
+    274          *                   enabled :
+    275          *
+    276          *                   (a) CPU timestamps
+    277          *                   (b) CPU interrupts disabled time measurements
+    278          *
+    279          *                   See 'cpu_cfg.h  CPU TIMESTAMP CONFIGURATION  Note #1'
+    280          *                     & 'cpu_cfg.h  CPU INTERRUPTS DISABLED TIME MEASUREMENT CONFIGURATION  Note #1a'.
+    281          *
+    282          *               (2) (a) The amount of time measured by CPU timestamps is calculated by either of 
+    283          *                       the following equations :
+    284          *
+    285          *                                                                        10^6 microseconds
+    286          *                       (1) Time measured  =   Number timer counts   *  -------------------  *  Timer period
+    287          *                                                                            1 second
+    288          *
+    289          *                                              Number timer counts       10^6 microseconds
+    290          *                       (2) Time measured  =  ---------------------  *  -------------------
+    291          *                                                Timer frequency             1 second
+    292          *
+    293          *                               where
+    294          *
+    295          *                                   (A) Number timer counts     Number of timer counts measured
+    296          *                                   (B) Timer frequency         Timer's frequency in some units 
+    297          *                                                                   of counts per second
+    298          *                                   (C) Timer period            Timer's period in some units of 
+    299          *                                                                   (fractional)  seconds
+    300          *                                   (D) Time measured           Amount of time measured, 
+    301          *                                                                   in microseconds
+    302          *
+    303          *                   (b) Timer period SHOULD be less than the typical measured time but MUST be less 
+    304          *                       than the maximum measured time; otherwise, timer resolution inadequate to 
+    305          *                       measure desired times.
+    306          *
+    307          *                   (c) Specific implementations may convert any number of CPU_TS32 or CPU_TS64 bits 
+    308          *                       -- up to 32 or 64, respectively -- into microseconds.
+    309          *********************************************************************************************************
+    310          */
+    311          
+    312          #if (CPU_CFG_TS_32_EN == DEF_ENABLED)
+
+   \                                 In  segment CODE, align 1, keep-with-next
+    313          CPU_INT64U  CPU_TS32_to_uSec (CPU_TS32  ts_cnts)
+   \                     CPU_TS32_to_uSec:
+    314          {
+   \   000000                       ; * Stack frame (at entry) *
+   \   000000                       ; Param size: 0
+   \   000000                       ; Auto size: 0
+    315          
+    316              //$$$$ Insert code to convert (up to) 64-bits of 32-bit CPU timestamp to microseconds (see Note #2);
+    317             return(0);
+   \   000000 F6                    CLRW      AX                 ;; 1 cycle
+   \   000001 F7                    CLRW      BC                 ;; 1 cycle
+   \   000002 D7                    RET                          ;; 6 cycles
+   \   000003                       ; ------------------------------------- Block: 8 cycles
+   \   000003                       ; ------------------------------------- Total: 8 cycles
+   \   000003                       REQUIRE ?CLRL78_V1_0_L00
+    318          }
+    319          #endif
+    320          
+    321          
+    322          #if (CPU_CFG_TS_64_EN == DEF_ENABLED)
+    323          CPU_INT64U  CPU_TS64_to_uSec (CPU_TS64  ts_cnts)
+    324          {
+    325          
+    326              //$$$$ Insert code to convert (up to) 64-bits of 64-bit CPU timestamp to microseconds (see Note #2);
+    327             return(0);
+    328          }
+    329          #endif
+    330          
+
+   Maximum stack usage in bytes:
+
+   CSTACK Function
+   ------ --------
+      0   CPU_TS32_to_uSec
+      0   CPU_TS_TmrInit
+      0   CPU_TS_TmrRd
+
+
+   Segment part sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       3  CPU_TS32_to_uSec
+       1  CPU_TS_TmrInit
+       3  CPU_TS_TmrRd
+
+ 
+ 7 bytes in segment CODE
+ 
+ 7 bytes of CODE memory
+
+Errors: none
+Warnings: none

@@ -1,0 +1,1213 @@
+###############################################################################
+#                                                                             #
+# IAR C/C++ Compiler V1.30.5.50715 for RL78             23/Mar/2014  17:08:37 #
+# Copyright 2011-2013 IAR Systems AB.                                         #
+# Network license: ece-lic-19.ece.ncsu.edu (STD)                              #
+#                                                                             #
+#    Core         =  rl78_2                                                   #
+#    Code model   =  Near                                                     #
+#    Data model   =  Near                                                     #
+#                 =                                                           #
+#    Source file  =  C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\uC-LIB\lib_ascii.c         #
+#    Command line =  C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\uC-LIB\lib_ascii.c --core  #
+#                    rl78_2 --code_model near --data_model near               #
+#                    --near_const_location rom0 -o                            #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\Debug\Obj\ --dlib_config            #
+#                    "C:\Program Files\IAR Systems\Embedded Workbench         #
+#                    6.5\rl78\LIB\dlrl78nn2n.h" -e -Ohz --no_scheduling       #
+#                    --no_clustering --debug -lC                              #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\Debug\List\ -I                      #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\ -I C:\Users\Suddenlink\Dropbox\git #
+#                    _files\embedded_design\Proj2_uCOS-III-LCD-G14\Software\E #
+#                    valBoards\Renesas\YRDKRL78G14\IAR\Application\Source\    #
+#                    -I C:\Users\Suddenlink\Dropbox\git_files\embedded_design #
+#                    \Proj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDK #
+#                    RL78G14\IAR\Application\..\uCOS-III\ -I                  #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\..\BSP\ -I                          #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\..\BSP\applilet3_src\ -I            #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\..\BSP\Glyph\Drivers\ -I            #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\..\BSP\Glyph\glyph\ -I              #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\..\..\..\..\..\uC-CPU\ -I           #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\..\..\..\..\..\uC-CPU\RL78\IAR\ -I  #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\..\..\..\..\..\uC-LIB\ -I           #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\..\..\..\..\..\uCOS-III\Ports\Renes #
+#                    as\RL78\IAR\ -I C:\Users\Suddenlink\Dropbox\git_files\em #
+#                    bedded_design\Proj2_uCOS-III-LCD-G14\Software\EvalBoards #
+#                    \Renesas\YRDKRL78G14\IAR\Application\..\..\..\..\..\uCOS #
+#                    -III\Source\ --relaxed_fp                                #
+#    List file    =  C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\Debug\List\lib_ascii.lst            #
+#    Object file  =  C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\Debug\Obj\lib_ascii.r87             #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Proj2_uCOS-III-LCD-G14\Software\uC-LIB\lib_ascii.c
+      1          /*
+      2          *********************************************************************************************************
+      3          *                                                uC/LIB
+      4          *                                        CUSTOM LIBRARY MODULES
+      5          *
+      6          *                          (c) Copyright 2004-2011; Micrium, Inc.; Weston, FL
+      7          *
+      8          *               All rights reserved.  Protected by international copyright laws.
+      9          *
+     10          *               uC/LIB is provided in source form to registered licensees ONLY.  It is 
+     11          *               illegal to distribute this source code to any third party unless you receive 
+     12          *               written permission by an authorized Micrium representative.  Knowledge of 
+     13          *               the source code may NOT be used to develop a similar product.
+     14          *
+     15          *               Please help us continue to provide the Embedded community with the finest 
+     16          *               software available.  Your honesty is greatly appreciated.
+     17          *
+     18          *               You can contact us at www.micrium.com.
+     19          *********************************************************************************************************
+     20          */
+     21          
+     22          /*
+     23          *********************************************************************************************************
+     24          *
+     25          *                                     ASCII CHARACTER OPERATIONS
+     26          *
+     27          * Filename      : lib_ascii.c
+     28          * Version       : V1.36.01
+     29          * Programmer(s) : BAN
+     30          *                 ITJ
+     31          *********************************************************************************************************
+     32          * Note(s)       : (1) NO compiler-supplied standard library functions are used in library or product software.
+     33          *
+     34          *                     (a) ALL standard library functions are implemented in the custom library modules :
+     35          *
+     36          *                         (1) \<Custom Library Directory>\lib_*.*
+     37          *
+     38          *                         (2) \<Custom Library Directory>\Ports\<cpu>\<compiler>\lib*_a.*
+     39          *
+     40          *                               where
+     41          *                                       <Custom Library Directory>      directory path for custom library software
+     42          *                                       <cpu>                           directory name for specific processor (CPU)
+     43          *                                       <compiler>                      directory name for specific compiler
+     44          *
+     45          *                     (b) Product-specific library functions are implemented in individual products.
+     46          *
+     47          *
+     48          *                 (2) (a) ECMA-6 '7-Bit coded Character Set' (6th edition), which corresponds to the
+     49          *                         3rd edition of ISO 646, specifies several versions of a 7-bit character set :
+     50          *
+     51          *                         (1) THE GENERAL VERSION, which allows characters at 0x23 and 0x24 to be given a
+     52          *                             set alternate form and allows the characters 0x40, 0x5B, 0x5D, 0x60, 0x7B &
+     53          *                             0x7D to be assigned a "unique graphic character" or to be declared as unused.
+     54          *                             All other characters are explicitly specified.
+     55          *
+     56          *                         (2) THE INTERNATIONAL REFERENCE VERSION, which explicitly specifies all characters
+     57          *                             in the 7-bit character set.
+     58          *
+     59          *                         (3) NATIONAL & APPLICATION-ORIENTED VERSIONS, which may be derived from the
+     60          *                             standard in specified ways.
+     61          *
+     62          *                     (b) The character set represented in this file reproduces the Internation Reference
+     63          *                         Version.  This is identical to the 7-bit character set which occupies Unicode
+     64          *                         characters 0x0000 through 0x007F.  The character names are taken from v5.0 of the
+     65          *                         Unicode specification, with certain abbreviations so that the resulting #define
+     66          *                         names will not violate ANSI C naming restriction :
+     67          *
+     68          *                         (1) For the Latin capital & lowercase letters, the name components 'LETTER_CAPITAL'
+     69          *                             & 'LETTER_SMALL' are replaced by 'UPPER' & 'LOWER', respectively.
+     70          *********************************************************************************************************
+     71          */
+     72          
+     73          
+     74          /*
+     75          *********************************************************************************************************
+     76          *                                            INCLUDE FILES
+     77          *********************************************************************************************************
+     78          */
+     79          
+     80          #define    LIB_ASCII_MODULE
+     81          #include  <lib_ascii.h>
+     82          
+     83          
+     84          /*$PAGE*/
+     85          /*
+     86          *********************************************************************************************************
+     87          *                                            LOCAL DEFINES
+     88          *********************************************************************************************************
+     89          */
+     90          
+     91          
+     92          /*
+     93          *********************************************************************************************************
+     94          *                                           LOCAL CONSTANTS
+     95          *********************************************************************************************************
+     96          */
+     97          
+     98          
+     99          /*
+    100          *********************************************************************************************************
+    101          *                                          LOCAL DATA TYPES
+    102          *********************************************************************************************************
+    103          */
+    104          
+    105          
+    106          /*
+    107          *********************************************************************************************************
+    108          *                                            LOCAL TABLES
+    109          *********************************************************************************************************
+    110          */
+    111          
+    112          
+    113          /*
+    114          *********************************************************************************************************
+    115          *                                       LOCAL GLOBAL VARIABLES
+    116          *********************************************************************************************************
+    117          */
+    118          
+    119          
+    120          /*
+    121          *********************************************************************************************************
+    122          *                                      LOCAL FUNCTION PROTOTYPES
+    123          *********************************************************************************************************
+    124          */
+    125          
+    126          
+    127          /*
+    128          *********************************************************************************************************
+    129          *                                     LOCAL CONFIGURATION ERRORS
+    130          *********************************************************************************************************
+    131          */
+    132          
+    133          
+    134          /*$PAGE*/
+    135          /*
+    136          *********************************************************************************************************
+    137          *                                           ASCII_IsAlpha()
+    138          *
+    139          * Description : Determine whether a character is an alphabetic character.
+    140          *
+    141          * Argument(s) : c           Character to examine.
+    142          *
+    143          * Return(s)   : DEF_YES, if character is     an alphabetic character.
+    144          *
+    145          *               DEF_NO,	 if character is NOT an alphabetic character.
+    146          *
+    147          * Caller(s)   : Application.
+    148          *
+    149          * Note(s)     : (1) ISO/IEC 9899:TC2, Section 7.4.1.2.(2) states that "isalpha() returns true only for the
+    150          *                   characters for which isupper() or islower() is true".
+    151          *********************************************************************************************************
+    152          */
+    153          
+
+   \                                 In  segment CODE, align 1, keep-with-next
+    154          CPU_BOOLEAN  ASCII_IsAlpha (CPU_CHAR  c)
+   \                     ASCII_IsAlpha:
+    155          {
+   \   000000                       ; * Stack frame (at entry) *
+   \   000000                       ; Param size: 0
+   \   000000                       ; Auto size: 0
+   \   000000 70                    MOV       X, A               ;; 1 cycle
+    156              CPU_BOOLEAN  alpha;
+    157          
+    158          
+    159              alpha = ASCII_IS_ALPHA(c);
+   \   000001 0CBF                  ADD       A, #0xBF           ;; 1 cycle
+   \   000003 4C1A                  CMP       A, #0x1A           ;; 1 cycle
+   \   000005 DC0A                  BC        ??ASCII_Cmp_0      ;; 4 cycles
+   \   000007                       ; ------------------------------------- Block: 7 cycles
+   \   000007 60                    MOV       A, X               ;; 1 cycle
+   \   000008 0C9F                  ADD       A, #0x9F           ;; 1 cycle
+   \   00000A 4C1A                  CMP       A, #0x1A           ;; 1 cycle
+   \   00000C E1                    ONEB      A                  ;; 1 cycle
+   \   00000D DC03                  BC        ??ASCII_Cmp_1      ;; 4 cycles
+   \   00000F                       ; ------------------------------------- Block: 8 cycles
+   \   00000F F1                    CLRB      A                  ;; 1 cycle
+   \   000010 D7                    RET                          ;; 6 cycles
+   \   000011                       ; ------------------------------------- Block: 7 cycles
+   \                     ??ASCII_Cmp_0:
+   \   000011 E1                    ONEB      A                  ;; 1 cycle
+   \   000012                       ; ------------------------------------- Block: 1 cycles
+    160          
+    161              return (alpha);
+   \                     ??ASCII_Cmp_1:
+   \   000012 D7                    RET                          ;; 6 cycles
+   \   000013                       ; ------------------------------------- Block: 6 cycles
+   \   000013                       ; ------------------------------------- Total: 29 cycles
+   \   000013                       REQUIRE ?CLRL78_V1_0_L00
+    162          }
+    163          
+    164          
+    165          /*
+    166          *********************************************************************************************************
+    167          *                                         ASCII_IsAlphaNum()
+    168          *
+    169          * Description : Determine whether a character is an alphanumeric character.
+    170          *
+    171          * Argument(s) : c           Character to examine.
+    172          *
+    173          * Return(s)   : DEF_YES, if character is     an alphanumeric character.
+    174          *
+    175          *               DEF_NO,	 if character is NOT an alphanumeric character.
+    176          *
+    177          * Caller(s)   : Application.
+    178          *
+    179          * Note(s)     : (1) ISO/IEC 9899:TC2, Section 7.4.1.1.(2) states that "isalnum() ... tests for any character
+    180          *                   for which isalpha() or isdigit() is true".
+    181          *********************************************************************************************************
+    182          */
+    183          
+
+   \                                 In  segment CODE, align 1, keep-with-next
+    184          CPU_BOOLEAN  ASCII_IsAlphaNum (CPU_CHAR  c)
+   \                     ASCII_IsAlphaNum:
+    185          {
+   \   000000                       ; * Stack frame (at entry) *
+   \   000000                       ; Param size: 0
+   \   000000                       ; Auto size: 0
+   \   000000 70                    MOV       X, A               ;; 1 cycle
+    186              CPU_BOOLEAN  alpha_num;
+    187          
+    188          
+    189              alpha_num = ASCII_IS_ALPHA_NUM(c);
+   \   000001 0CBF                  ADD       A, #0xBF           ;; 1 cycle
+   \   000003 4C1A                  CMP       A, #0x1A           ;; 1 cycle
+   \   000005 DC11                  BC        ??ASCII_Cmp_2      ;; 4 cycles
+   \   000007                       ; ------------------------------------- Block: 7 cycles
+   \   000007 60                    MOV       A, X               ;; 1 cycle
+   \   000008 0C9F                  ADD       A, #0x9F           ;; 1 cycle
+   \   00000A 4C1A                  CMP       A, #0x1A           ;; 1 cycle
+   \   00000C DC0A                  BC        ??ASCII_Cmp_2      ;; 4 cycles
+   \   00000E                       ; ------------------------------------- Block: 7 cycles
+   \   00000E 60                    MOV       A, X               ;; 1 cycle
+   \   00000F 0CD0                  ADD       A, #0xD0           ;; 1 cycle
+   \   000011 4C0A                  CMP       A, #0xA            ;; 1 cycle
+   \   000013 E1                    ONEB      A                  ;; 1 cycle
+   \   000014 DC03                  BC        ??ASCII_Cmp_3      ;; 4 cycles
+   \   000016                       ; ------------------------------------- Block: 8 cycles
+   \   000016 F1                    CLRB      A                  ;; 1 cycle
+   \   000017 D7                    RET                          ;; 6 cycles
+   \   000018                       ; ------------------------------------- Block: 7 cycles
+   \                     ??ASCII_Cmp_2:
+   \   000018 E1                    ONEB      A                  ;; 1 cycle
+   \   000019                       ; ------------------------------------- Block: 1 cycles
+    190          
+    191              return (alpha_num);
+   \                     ??ASCII_Cmp_3:
+   \   000019 D7                    RET                          ;; 6 cycles
+   \   00001A                       ; ------------------------------------- Block: 6 cycles
+   \   00001A                       ; ------------------------------------- Total: 36 cycles
+   \   00001A                       REQUIRE ?CLRL78_V1_0_L00
+    192          }
+    193          
+    194          
+    195          /*$PAGE*/
+    196          /*
+    197          *********************************************************************************************************
+    198          *                                           ASCII_IsLower()
+    199          *
+    200          * Description : Determine whether a character is a lowercase alphabetic character.
+    201          *
+    202          * Argument(s) : c           Character to examine.
+    203          *
+    204          * Return(s)   : DEF_YES, if character is     a lowercase alphabetic character.
+    205          *
+    206          *               DEF_NO,	 if character is NOT a lowercase alphabetic character.
+    207          *
+    208          * Caller(s)   : Application.
+    209          *
+    210          * Note(s)     : (1) ISO/IEC 9899:TC2, Section 7.4.1.7.(2)  states that "islower() returns true only for
+    211          *                   the lowercase letters".
+    212          *********************************************************************************************************
+    213          */
+    214          
+
+   \                                 In  segment CODE, align 1, keep-with-next
+    215          CPU_BOOLEAN  ASCII_IsLower (CPU_CHAR  c)
+   \                     ASCII_IsLower:
+    216          {
+   \   000000                       ; * Stack frame (at entry) *
+   \   000000                       ; Param size: 0
+   \   000000                       ; Auto size: 0
+    217              CPU_BOOLEAN  lower;
+    218          
+    219          
+    220              lower = ASCII_IS_LOWER(c);
+   \   000000 0C9F                  ADD       A, #0x9F           ;; 1 cycle
+   \   000002 4C1A                  CMP       A, #0x1A           ;; 1 cycle
+   \   000004 E1                    ONEB      A                  ;; 1 cycle
+   \   000005 61C8                  SKC                          ;; 4 cycles
+   \   000007                       ; ------------------------------------- Block: 7 cycles
+   \   000007 F1                    CLRB      A                  ;; 1 cycle
+   \   000008                       ; ------------------------------------- Block: 1 cycles
+    221          
+    222              return (lower);
+   \                     ??ASCII_IsLower_0:
+   \   000008 D7                    RET                          ;; 6 cycles
+   \   000009                       ; ------------------------------------- Block: 6 cycles
+   \   000009                       ; ------------------------------------- Total: 14 cycles
+   \   000009                       REQUIRE ?CLRL78_V1_0_L00
+    223          }
+    224          
+    225          
+    226          /*
+    227          *********************************************************************************************************
+    228          *                                           ASCII_IsUpper()
+    229          *
+    230          * Description : Determine whether a character is an uppercase alphabetic character.
+    231          *
+    232          * Argument(s) : c           Character to examine.
+    233          *
+    234          * Return(s)   : DEF_YES, if character is     an uppercase alphabetic character.
+    235          *
+    236          *               DEF_NO,	 if character is NOT an uppercase alphabetic character.
+    237          *
+    238          * Caller(s)   : Application.
+    239          *
+    240          * Note(s)     : (1) ISO/IEC 9899:TC2, Section 7.4.1.11.(2) states that "isupper() returns true only for
+    241          *                   the uppercase letters".
+    242          *********************************************************************************************************
+    243          */
+    244          
+
+   \                                 In  segment CODE, align 1, keep-with-next
+    245          CPU_BOOLEAN  ASCII_IsUpper (CPU_CHAR  c)
+   \                     ASCII_IsUpper:
+    246          {
+   \   000000                       ; * Stack frame (at entry) *
+   \   000000                       ; Param size: 0
+   \   000000                       ; Auto size: 0
+    247              CPU_BOOLEAN  upper;
+    248          
+    249          
+    250              upper = ASCII_IS_UPPER(c);
+   \   000000 0CBF                  ADD       A, #0xBF           ;; 1 cycle
+   \   000002 4C1A                  CMP       A, #0x1A           ;; 1 cycle
+   \   000004 E1                    ONEB      A                  ;; 1 cycle
+   \   000005 61C8                  SKC                          ;; 4 cycles
+   \   000007                       ; ------------------------------------- Block: 7 cycles
+   \   000007 F1                    CLRB      A                  ;; 1 cycle
+   \   000008                       ; ------------------------------------- Block: 1 cycles
+    251          
+    252              return (upper);
+   \                     ??ASCII_IsUpper_0:
+   \   000008 D7                    RET                          ;; 6 cycles
+   \   000009                       ; ------------------------------------- Block: 6 cycles
+   \   000009                       ; ------------------------------------- Total: 14 cycles
+   \   000009                       REQUIRE ?CLRL78_V1_0_L00
+    253          }
+    254          
+    255          
+    256          /*$PAGE*/
+    257          /*
+    258          *********************************************************************************************************
+    259          *                                            ASCII_IsDig()
+    260          *
+    261          * Description : Determine whether a character is a decimal-digit character.
+    262          *
+    263          * Argument(s) : c           Character to examine.
+    264          *
+    265          * Return(s)   : DEF_YES, if character is     a decimal-digit character.
+    266          *
+    267          *               DEF_NO,	 if character is NOT a decimal-digit character.
+    268          *
+    269          * Caller(s)   : Application.
+    270          *
+    271          * Note(s)     : (1) ISO/IEC 9899:TC2, Section 7.4.1.5.(2)  states that "isdigit()  ... tests for any
+    272          *                   decimal-digit character".
+    273          *********************************************************************************************************
+    274          */
+    275          
+
+   \                                 In  segment CODE, align 1, keep-with-next
+    276          CPU_BOOLEAN  ASCII_IsDig (CPU_CHAR  c)
+   \                     ASCII_IsDig:
+    277          {
+   \   000000                       ; * Stack frame (at entry) *
+   \   000000                       ; Param size: 0
+   \   000000                       ; Auto size: 0
+    278              CPU_BOOLEAN  dig;
+    279          
+    280          
+    281              dig = ASCII_IS_DIG(c);
+   \   000000 0CD0                  ADD       A, #0xD0           ;; 1 cycle
+   \   000002 4C0A                  CMP       A, #0xA            ;; 1 cycle
+   \   000004 E1                    ONEB      A                  ;; 1 cycle
+   \   000005 61C8                  SKC                          ;; 4 cycles
+   \   000007                       ; ------------------------------------- Block: 7 cycles
+   \   000007 F1                    CLRB      A                  ;; 1 cycle
+   \   000008                       ; ------------------------------------- Block: 1 cycles
+    282          
+    283              return (dig);
+   \                     ??ASCII_IsDig_0:
+   \   000008 D7                    RET                          ;; 6 cycles
+   \   000009                       ; ------------------------------------- Block: 6 cycles
+   \   000009                       ; ------------------------------------- Total: 14 cycles
+   \   000009                       REQUIRE ?CLRL78_V1_0_L00
+    284          }
+    285          
+    286          
+    287          /*
+    288          *********************************************************************************************************
+    289          *                                          ASCII_IsDigOct()
+    290          *
+    291          * Description : Determine whether a character is an octal-digit character.
+    292          *
+    293          * Argument(s) : c           Character to examine.
+    294          *
+    295          * Return(s)   : DEF_YES, if character is     an octal-digit character.
+    296          *
+    297          *               DEF_NO,	 if character is NOT an octal-digit character.
+    298          *
+    299          * Caller(s)   : Application.
+    300          *
+    301          * Note(s)     : none.
+    302          *********************************************************************************************************
+    303          */
+    304          
+
+   \                                 In  segment CODE, align 1, keep-with-next
+    305          CPU_BOOLEAN  ASCII_IsDigOct (CPU_CHAR  c)
+   \                     ASCII_IsDigOct:
+    306          {
+   \   000000                       ; * Stack frame (at entry) *
+   \   000000                       ; Param size: 0
+   \   000000                       ; Auto size: 0
+    307              CPU_BOOLEAN  dig_oct;
+    308          
+    309          
+    310              dig_oct = ASCII_IS_DIG_OCT(c);
+   \   000000 0CD0                  ADD       A, #0xD0           ;; 1 cycle
+   \   000002 4C08                  CMP       A, #0x8            ;; 1 cycle
+   \   000004 E1                    ONEB      A                  ;; 1 cycle
+   \   000005 61C8                  SKC                          ;; 4 cycles
+   \   000007                       ; ------------------------------------- Block: 7 cycles
+   \   000007 F1                    CLRB      A                  ;; 1 cycle
+   \   000008                       ; ------------------------------------- Block: 1 cycles
+    311          
+    312              return (dig_oct);
+   \                     ??ASCII_IsDigOct_0:
+   \   000008 D7                    RET                          ;; 6 cycles
+   \   000009                       ; ------------------------------------- Block: 6 cycles
+   \   000009                       ; ------------------------------------- Total: 14 cycles
+   \   000009                       REQUIRE ?CLRL78_V1_0_L00
+    313          }
+    314          
+    315          
+    316          /*
+    317          *********************************************************************************************************
+    318          *                                          ASCII_IsDigHex()
+    319          *
+    320          * Description : Determine whether a character is a hexadecimal-digit character.
+    321          *
+    322          * Argument(s) : c           Character to examine.
+    323          *
+    324          * Return(s)   : DEF_YES, if character is     a hexadecimal-digit character.
+    325          *
+    326          *               DEF_NO,	 if character is NOT a hexadecimal-digit character.
+    327          *
+    328          * Caller(s)   : Application.
+    329          *
+    330          * Note(s)     : (1) ISO/IEC 9899:TC2, Section 7.4.1.12.(2) states that "isxdigit() ... tests for any
+    331          *                   hexadecimal-digit character".
+    332          *********************************************************************************************************
+    333          */
+    334          
+
+   \                                 In  segment CODE, align 1, keep-with-next
+    335          CPU_BOOLEAN  ASCII_IsDigHex (CPU_CHAR  c)
+   \                     ASCII_IsDigHex:
+    336          {
+   \   000000                       ; * Stack frame (at entry) *
+   \   000000                       ; Param size: 0
+   \   000000                       ; Auto size: 0
+   \   000000 70                    MOV       X, A               ;; 1 cycle
+    337              CPU_BOOLEAN  dig_hex;
+    338          
+    339          
+    340              dig_hex = ASCII_IS_DIG_HEX(c);
+   \   000001 0CD0                  ADD       A, #0xD0           ;; 1 cycle
+   \   000003 4C0A                  CMP       A, #0xA            ;; 1 cycle
+   \   000005 DC11                  BC        ??ASCII_Cmp_4      ;; 4 cycles
+   \   000007                       ; ------------------------------------- Block: 7 cycles
+   \   000007 60                    MOV       A, X               ;; 1 cycle
+   \   000008 0CBF                  ADD       A, #0xBF           ;; 1 cycle
+   \   00000A 4C06                  CMP       A, #0x6            ;; 1 cycle
+   \   00000C DC0A                  BC        ??ASCII_Cmp_4      ;; 4 cycles
+   \   00000E                       ; ------------------------------------- Block: 7 cycles
+   \   00000E 60                    MOV       A, X               ;; 1 cycle
+   \   00000F 0C9F                  ADD       A, #0x9F           ;; 1 cycle
+   \   000011 4C06                  CMP       A, #0x6            ;; 1 cycle
+   \   000013 E1                    ONEB      A                  ;; 1 cycle
+   \   000014 DC03                  BC        ??ASCII_Cmp_5      ;; 4 cycles
+   \   000016                       ; ------------------------------------- Block: 8 cycles
+   \   000016 F1                    CLRB      A                  ;; 1 cycle
+   \   000017 D7                    RET                          ;; 6 cycles
+   \   000018                       ; ------------------------------------- Block: 7 cycles
+   \                     ??ASCII_Cmp_4:
+   \   000018 E1                    ONEB      A                  ;; 1 cycle
+   \   000019                       ; ------------------------------------- Block: 1 cycles
+    341          
+    342              return (dig_hex);
+   \                     ??ASCII_Cmp_5:
+   \   000019 D7                    RET                          ;; 6 cycles
+   \   00001A                       ; ------------------------------------- Block: 6 cycles
+   \   00001A                       ; ------------------------------------- Total: 36 cycles
+   \   00001A                       REQUIRE ?CLRL78_V1_0_L00
+    343          }
+    344          
+    345          
+    346          /*$PAGE*/
+    347          /*
+    348          *********************************************************************************************************
+    349          *                                           ASCII_IsBlank()
+    350          *
+    351          * Description : Determine whether a character is a standard blank character.
+    352          *
+    353          * Argument(s) : c           Character to examine.
+    354          *
+    355          * Return(s)   : DEF_YES, if character is     a standard blank character.
+    356          *
+    357          *               DEF_NO,	 if character is NOT a standard blank character.
+    358          *
+    359          * Caller(s)   : Application.
+    360          *
+    361          * Note(s)     : (1) (a) ISO/IEC 9899:TC2, Section 7.4.1.3.(2) states that "isblank() returns true only for
+    362          *                       the standard blank characters".
+    363          *
+    364          *                   (b) ISO/IEC 9899:TC2, Section 7.4.1.3.(2) defines "the standard blank characters" as
+    365          *                       the "space (' '), and horizontal tab ('\t')".
+    366          *********************************************************************************************************
+    367          */
+    368          
+
+   \                                 In  segment CODE, align 1, keep-with-next
+    369          CPU_BOOLEAN  ASCII_IsBlank (CPU_CHAR  c)
+   \                     ASCII_IsBlank:
+    370          {
+   \   000000                       ; * Stack frame (at entry) *
+   \   000000                       ; Param size: 0
+   \   000000                       ; Auto size: 0
+    371              CPU_BOOLEAN  blank;
+    372          
+    373          
+    374              blank = ASCII_IS_BLANK(c);
+   \   000000 4C20                  CMP       A, #0x20           ;; 1 cycle
+   \   000002 DD07                  BZ        ??ASCII_Cmp_6      ;; 4 cycles
+   \   000004                       ; ------------------------------------- Block: 5 cycles
+   \   000004 4C09                  CMP       A, #0x9            ;; 1 cycle
+   \   000006 E1                    ONEB      A                  ;; 1 cycle
+   \   000007 DD03                  BZ        ??ASCII_Cmp_7      ;; 4 cycles
+   \   000009                       ; ------------------------------------- Block: 6 cycles
+   \   000009 F1                    CLRB      A                  ;; 1 cycle
+   \   00000A D7                    RET                          ;; 6 cycles
+   \   00000B                       ; ------------------------------------- Block: 7 cycles
+   \                     ??ASCII_Cmp_6:
+   \   00000B E1                    ONEB      A                  ;; 1 cycle
+   \   00000C                       ; ------------------------------------- Block: 1 cycles
+    375          
+    376              return (blank);
+   \                     ??ASCII_Cmp_7:
+   \   00000C D7                    RET                          ;; 6 cycles
+   \   00000D                       ; ------------------------------------- Block: 6 cycles
+   \   00000D                       ; ------------------------------------- Total: 25 cycles
+   \   00000D                       REQUIRE ?CLRL78_V1_0_L00
+    377          }
+    378          
+    379          
+    380          /*
+    381          *********************************************************************************************************
+    382          *                                           ASCII_IsSpace()
+    383          *
+    384          * Description : Determine whether a character is a white-space character.
+    385          *
+    386          * Argument(s) : c           Character to examine.
+    387          *
+    388          * Return(s)   : DEF_YES, if character is     a white-space character.
+    389          *
+    390          *               DEF_NO,	 if character is NOT a white-space character.
+    391          *
+    392          * Caller(s)   : Application.
+    393          *
+    394          * Note(s)     : (1) (a) ISO/IEC 9899:TC2, Section 7.4.1.10.(2) states that "isspace() returns true only
+    395          *                       for the standard white-space characters".
+    396          *
+    397          *                   (b) ISO/IEC 9899:TC2, Section 7.4.1.10.(2) defines "the standard white-space characters"
+    398          *                       as the "space (' '), form feed ('\f'), new-line ('\n'), carriage return ('\r'),
+    399          *                       horizontal tab ('\t'), and vertical tab ('\v')".
+    400          *********************************************************************************************************
+    401          */
+    402          
+
+   \                                 In  segment CODE, align 1, keep-with-next
+    403          CPU_BOOLEAN  ASCII_IsSpace (CPU_CHAR  c)
+   \                     ASCII_IsSpace:
+    404          {
+   \   000000                       ; * Stack frame (at entry) *
+   \   000000                       ; Param size: 0
+   \   000000                       ; Auto size: 0
+    405              CPU_BOOLEAN  space;
+    406          
+    407          
+    408              space = ASCII_IS_SPACE(c);
+   \   000000 4C20                  CMP       A, #0x20           ;; 1 cycle
+   \   000002 DD17                  BZ        ??ASCII_Cmp_8      ;; 4 cycles
+   \   000004                       ; ------------------------------------- Block: 5 cycles
+   \   000004 4C0D                  CMP       A, #0xD            ;; 1 cycle
+   \   000006 DD13                  BZ        ??ASCII_Cmp_8      ;; 4 cycles
+   \   000008                       ; ------------------------------------- Block: 5 cycles
+   \   000008 4C0A                  CMP       A, #0xA            ;; 1 cycle
+   \   00000A DD0F                  BZ        ??ASCII_Cmp_8      ;; 4 cycles
+   \   00000C                       ; ------------------------------------- Block: 5 cycles
+   \   00000C 4C0C                  CMP       A, #0xC            ;; 1 cycle
+   \   00000E DD0B                  BZ        ??ASCII_Cmp_8      ;; 4 cycles
+   \   000010                       ; ------------------------------------- Block: 5 cycles
+   \   000010 4C09                  CMP       A, #0x9            ;; 1 cycle
+   \   000012 DD07                  BZ        ??ASCII_Cmp_8      ;; 4 cycles
+   \   000014                       ; ------------------------------------- Block: 5 cycles
+   \   000014 4C0B                  CMP       A, #0xB            ;; 1 cycle
+   \   000016 E1                    ONEB      A                  ;; 1 cycle
+   \   000017 DD03                  BZ        ??ASCII_Cmp_9      ;; 4 cycles
+   \   000019                       ; ------------------------------------- Block: 6 cycles
+   \   000019 F1                    CLRB      A                  ;; 1 cycle
+   \   00001A D7                    RET                          ;; 6 cycles
+   \   00001B                       ; ------------------------------------- Block: 7 cycles
+   \                     ??ASCII_Cmp_8:
+   \   00001B E1                    ONEB      A                  ;; 1 cycle
+   \   00001C                       ; ------------------------------------- Block: 1 cycles
+    409          
+    410              return (space);
+   \                     ??ASCII_Cmp_9:
+   \   00001C D7                    RET                          ;; 6 cycles
+   \   00001D                       ; ------------------------------------- Block: 6 cycles
+   \   00001D                       ; ------------------------------------- Total: 45 cycles
+   \   00001D                       REQUIRE ?CLRL78_V1_0_L00
+    411          }
+    412          
+    413          
+    414          /*$PAGE*/
+    415          /*
+    416          *********************************************************************************************************
+    417          *                                           ASCII_IsPrint()
+    418          *
+    419          * Description : Determine whether a character is a printing character.
+    420          *
+    421          * Argument(s) : c           Character to examine.
+    422          *
+    423          * Return(s)   : DEF_YES, if character is     a printing character.
+    424          *
+    425          *               DEF_NO,	 if character is NOT a printing character.
+    426          *
+    427          * Caller(s)   : Application.
+    428          *
+    429          * Note(s)     : (1) (a) ISO/IEC 9899:TC2, Section 7.4.1.8.(2) states that "isprint() ... tests for any
+    430          *                       printing character including space (' ')".
+    431          *
+    432          *                   (b) ISO/IEC 9899:TC2, Section 7.4.(3), Note 169, states that in "the seven-bit US
+    433          *                       ASCII character set, the printing characters are those whose values lie from
+    434          *                       0x20 (space) through 0x7E (tilde)".
+    435          *********************************************************************************************************
+    436          */
+    437          
+
+   \                                 In  segment CODE, align 1, keep-with-next
+    438          CPU_BOOLEAN  ASCII_IsPrint (CPU_CHAR  c)
+   \                     ASCII_IsPrint:
+    439          {
+   \   000000                       ; * Stack frame (at entry) *
+   \   000000                       ; Param size: 0
+   \   000000                       ; Auto size: 0
+    440              CPU_BOOLEAN  print;
+    441          
+    442          
+    443              print = ASCII_IS_PRINT(c);
+   \   000000 0CE0                  ADD       A, #0xE0           ;; 1 cycle
+   \   000002 4C5F                  CMP       A, #0x5F           ;; 1 cycle
+   \   000004 E1                    ONEB      A                  ;; 1 cycle
+   \   000005 61C8                  SKC                          ;; 4 cycles
+   \   000007                       ; ------------------------------------- Block: 7 cycles
+   \   000007 F1                    CLRB      A                  ;; 1 cycle
+   \   000008                       ; ------------------------------------- Block: 1 cycles
+    444          
+    445              return (print);
+   \                     ??ASCII_IsPrint_0:
+   \   000008 D7                    RET                          ;; 6 cycles
+   \   000009                       ; ------------------------------------- Block: 6 cycles
+   \   000009                       ; ------------------------------------- Total: 14 cycles
+   \   000009                       REQUIRE ?CLRL78_V1_0_L00
+    446          }
+    447          
+    448          
+    449          /*
+    450          *********************************************************************************************************
+    451          *                                           ASCII_IsGraph()
+    452          *
+    453          * Description : Determine whether a character is any printing character except a space character.
+    454          *
+    455          * Argument(s) : c           Character to examine.
+    456          *
+    457          * Return(s)   : DEF_YES, if character is     a graphic character.
+    458          *
+    459          *               DEF_NO,	 if character is NOT a graphic character.
+    460          *
+    461          * Caller(s)   : Application.
+    462          *
+    463          * Note(s)     : (1) (a) ISO/IEC 9899:TC2, Section 7.4.1.6.(2) states that "isgraph() ... tests for any
+    464          *                       printing character except space (' ')".
+    465          *
+    466          *                   (b) ISO/IEC 9899:TC2, Section 7.4.(3), Note 169, states that in "the seven-bit US
+    467          *                       ASCII character set, the printing characters are those whose values lie from
+    468          *                       0x20 (space) through 0x7E (tilde)".
+    469          *********************************************************************************************************
+    470          */
+    471          
+
+   \                                 In  segment CODE, align 1, keep-with-next
+    472          CPU_BOOLEAN  ASCII_IsGraph (CPU_CHAR  c)
+   \                     ASCII_IsGraph:
+    473          {
+   \   000000                       ; * Stack frame (at entry) *
+   \   000000                       ; Param size: 0
+   \   000000                       ; Auto size: 0
+    474              CPU_BOOLEAN  graph;
+    475          
+    476          
+    477              graph = ASCII_IS_GRAPH(c);
+   \   000000 0CDF                  ADD       A, #0xDF           ;; 1 cycle
+   \   000002 4C5E                  CMP       A, #0x5E           ;; 1 cycle
+   \   000004 E1                    ONEB      A                  ;; 1 cycle
+   \   000005 61C8                  SKC                          ;; 4 cycles
+   \   000007                       ; ------------------------------------- Block: 7 cycles
+   \   000007 F1                    CLRB      A                  ;; 1 cycle
+   \   000008                       ; ------------------------------------- Block: 1 cycles
+    478          
+    479              return (graph);
+   \                     ??ASCII_IsGraph_0:
+   \   000008 D7                    RET                          ;; 6 cycles
+   \   000009                       ; ------------------------------------- Block: 6 cycles
+   \   000009                       ; ------------------------------------- Total: 14 cycles
+   \   000009                       REQUIRE ?CLRL78_V1_0_L00
+    480          }
+    481          
+    482          
+    483          /*$PAGE*/
+    484          /*
+    485          *********************************************************************************************************
+    486          *                                           ASCII_IsPunct()
+    487          *
+    488          * Description : Determine whether a character is a punctuation character.
+    489          *
+    490          * Argument(s) : c           Character to examine.
+    491          *
+    492          * Return(s)   : DEF_YES, if character is     a punctuation character.
+    493          *
+    494          *               DEF_NO,	 if character is NOT a punctuation character.
+    495          *
+    496          * Caller(s)   : Application.
+    497          *
+    498          * Note(s)     : (1) ISO/IEC 9899:TC2, Section 7.4.1.9.(2) states that "ispunct() returns true for every
+    499          *                   printing character for which neither isspace() nor isalnum() is true".
+    500          *********************************************************************************************************
+    501          */
+    502          
+
+   \                                 In  segment CODE, align 1, keep-with-next
+    503          CPU_BOOLEAN  ASCII_IsPunct (CPU_CHAR  c)
+   \                     ASCII_IsPunct:
+    504          {
+   \   000000                       ; * Stack frame (at entry) *
+   \   000000                       ; Param size: 0
+   \   000000                       ; Auto size: 2
+   \   000000 C1                    PUSH      AX                 ;; 1 cycle
+   \   000001 70                    MOV       X, A               ;; 1 cycle
+    505              CPU_BOOLEAN  punct;
+    506          
+    507          
+    508              punct = ASCII_IS_PUNCT(c);
+   \   000002 0CE0                  ADD       A, #0xE0           ;; 1 cycle
+   \   000004 4C5F                  CMP       A, #0x5F           ;; 1 cycle
+   \   000006 DE40                  BNC       ??ASCII_Cmp_10     ;; 4 cycles
+   \   000008                       ; ------------------------------------- Block: 8 cycles
+   \   000008 60                    MOV       A, X               ;; 1 cycle
+   \   000009 4C20                  CMP       A, #0x20           ;; 1 cycle
+   \   00000B DD3B                  BZ        ??ASCII_Cmp_10     ;; 4 cycles
+   \   00000D                       ; ------------------------------------- Block: 6 cycles
+   \   00000D 4C0D                  CMP       A, #0xD            ;; 1 cycle
+   \   00000F DD37                  BZ        ??ASCII_Cmp_10     ;; 4 cycles
+   \   000011                       ; ------------------------------------- Block: 5 cycles
+   \   000011 4C0A                  CMP       A, #0xA            ;; 1 cycle
+   \   000013 DD33                  BZ        ??ASCII_Cmp_10     ;; 4 cycles
+   \   000015                       ; ------------------------------------- Block: 5 cycles
+   \   000015 4C0C                  CMP       A, #0xC            ;; 1 cycle
+   \   000017 DD2F                  BZ        ??ASCII_Cmp_10     ;; 4 cycles
+   \   000019                       ; ------------------------------------- Block: 5 cycles
+   \   000019 4C09                  CMP       A, #0x9            ;; 1 cycle
+   \   00001B DD2B                  BZ        ??ASCII_Cmp_10     ;; 4 cycles
+   \   00001D                       ; ------------------------------------- Block: 5 cycles
+   \   00001D 4C0B                  CMP       A, #0xB            ;; 1 cycle
+   \   00001F DD27                  BZ        ??ASCII_Cmp_10     ;; 4 cycles
+   \   000021                       ; ------------------------------------- Block: 5 cycles
+   \   000021 0CBF                  ADD       A, #0xBF           ;; 1 cycle
+   \   000023 4C1A                  CMP       A, #0x1A           ;; 1 cycle
+   \   000025 DC12                  BC        ??ASCII_Cmp_11     ;; 4 cycles
+   \   000027                       ; ------------------------------------- Block: 6 cycles
+   \   000027 60                    MOV       A, X               ;; 1 cycle
+   \   000028 0C9F                  ADD       A, #0x9F           ;; 1 cycle
+   \   00002A 4C1A                  CMP       A, #0x1A           ;; 1 cycle
+   \   00002C DC0B                  BC        ??ASCII_Cmp_11     ;; 4 cycles
+   \   00002E                       ; ------------------------------------- Block: 7 cycles
+   \   00002E 60                    MOV       A, X               ;; 1 cycle
+   \   00002F 0CD0                  ADD       A, #0xD0           ;; 1 cycle
+   \   000031 4C0A                  CMP       A, #0xA            ;; 1 cycle
+   \   000033 E6                    ONEW      AX                 ;; 1 cycle
+   \   000034 DC04                  BC        ??ASCII_Cmp_12     ;; 4 cycles
+   \   000036                       ; ------------------------------------- Block: 8 cycles
+   \   000036 F6                    CLRW      AX                 ;; 1 cycle
+   \   000037 EF01                  BR        S:??ASCII_Cmp_12   ;; 3 cycles
+   \   000039                       ; ------------------------------------- Block: 4 cycles
+   \                     ??ASCII_Cmp_11:
+   \   000039 E6                    ONEW      AX                 ;; 1 cycle
+   \   00003A                       ; ------------------------------------- Block: 1 cycles
+   \                     ??ASCII_Cmp_12:
+   \   00003A B800                  MOVW      [SP], AX           ;; 1 cycle
+   \   00003C AEF8                  MOVW      AX, SP             ;; 1 cycle
+   \   00003E 16                    MOVW      HL, AX             ;; 1 cycle
+   \   00003F 7184                  MOV1      CY, [HL].0         ;; 1 cycle
+   \   000041 71C0                  NOT1      CY                 ;; 1 cycle
+   \   000043 F1                    CLRB      A                  ;; 1 cycle
+   \   000044 61DC                  ROLC      A, 0x1             ;; 1 cycle
+   \   000046 EF01                  BR        S:??ASCII_Cmp_13   ;; 3 cycles
+   \   000048                       ; ------------------------------------- Block: 10 cycles
+   \                     ??ASCII_Cmp_10:
+   \   000048 F1                    CLRB      A                  ;; 1 cycle
+   \   000049                       ; ------------------------------------- Block: 1 cycles
+    509          
+    510              return (punct);
+   \                     ??ASCII_Cmp_13:
+   \   000049 1002                  ADDW      SP, #0x2           ;; 1 cycle
+   \   00004B D7                    RET                          ;; 6 cycles
+   \   00004C                       ; ------------------------------------- Block: 7 cycles
+   \   00004C                       ; ------------------------------------- Total: 83 cycles
+   \   00004C                       REQUIRE ?CLRL78_V1_0_L00
+    511          }
+    512          
+    513          
+    514          /*
+    515          *********************************************************************************************************
+    516          *                                           ASCII_IsCtrl()
+    517          *
+    518          * Description : Determine whether a character is a control character.
+    519          *
+    520          * Argument(s) : c           Character to examine.
+    521          *
+    522          * Return(s)   : DEF_YES, if character is     a control character.
+    523          *
+    524          *               DEF_NO,	 if character is NOT a control character.
+    525          *
+    526          * Caller(s)   : Application.
+    527          *
+    528          * Note(s)     : (1) (a) ISO/IEC 9899:TC2, Section 7.4.1.4.(2) states that "iscntrl() ... tests for any
+    529          *                       control character".
+    530          *
+    531          *                   (b) ISO/IEC 9899:TC2, Section 7.4.(3), Note 169, states that in "the seven-bit US
+    532          *                       ASCII character set, ... the control characters are those whose values lie from
+    533          *                       0 (NUL) through 0x1F (US), and the character 0x7F (DEL)".
+    534          *********************************************************************************************************
+    535          */
+    536          
+
+   \                                 In  segment CODE, align 1, keep-with-next
+    537          CPU_BOOLEAN  ASCII_IsCtrl (CPU_CHAR  c)
+   \                     ASCII_IsCtrl:
+    538          {
+   \   000000                       ; * Stack frame (at entry) *
+   \   000000                       ; Param size: 0
+   \   000000                       ; Auto size: 0
+   \   000000 70                    MOV       X, A               ;; 1 cycle
+    539              CPU_BOOLEAN  ctrl;
+    540          
+    541          
+    542              ctrl = ASCII_IS_CTRL(c);
+   \   000001 3119                  SHL       A, 0x1             ;; 1 cycle
+   \   000003 DC05                  BC        ??ASCII_Cmp_14     ;; 4 cycles
+   \   000005                       ; ------------------------------------- Block: 6 cycles
+   \   000005 60                    MOV       A, X               ;; 1 cycle
+   \   000006 4C20                  CMP       A, #0x20           ;; 1 cycle
+   \   000008 DC08                  BC        ??ASCII_Cmp_15     ;; 4 cycles
+   \   00000A                       ; ------------------------------------- Block: 6 cycles
+   \                     ??ASCII_Cmp_14:
+   \   00000A 60                    MOV       A, X               ;; 1 cycle
+   \   00000B 4C7F                  CMP       A, #0x7F           ;; 1 cycle
+   \   00000D E1                    ONEB      A                  ;; 1 cycle
+   \   00000E DD03                  BZ        ??ASCII_Cmp_16     ;; 4 cycles
+   \   000010                       ; ------------------------------------- Block: 7 cycles
+   \   000010 F1                    CLRB      A                  ;; 1 cycle
+   \   000011 D7                    RET                          ;; 6 cycles
+   \   000012                       ; ------------------------------------- Block: 7 cycles
+   \                     ??ASCII_Cmp_15:
+   \   000012 E1                    ONEB      A                  ;; 1 cycle
+   \   000013                       ; ------------------------------------- Block: 1 cycles
+    543          
+    544              return (ctrl);
+   \                     ??ASCII_Cmp_16:
+   \   000013 D7                    RET                          ;; 6 cycles
+   \   000014                       ; ------------------------------------- Block: 6 cycles
+   \   000014                       ; ------------------------------------- Total: 33 cycles
+   \   000014                       REQUIRE ?CLRL78_V1_0_L00
+    545          }
+    546          
+    547          
+    548          /*$PAGE*/
+    549          /*
+    550          *********************************************************************************************************
+    551          *                                           ASCII_ToLower()
+    552          *
+    553          * Description : Convert uppercase alphabetic character to its corresponding lowercase alphabetic character.
+    554          *
+    555          * Argument(s) : c           Character to convert.
+    556          *
+    557          * Return(s)   : Lowercase equivalent of 'c', if character 'c' is an uppercase character (see Note #1b1).
+    558          *
+    559          *               Character 'c',               otherwise                                  (see Note #1b2).
+    560          *
+    561          * Caller(s)   : Application.
+    562          *
+    563          * Note(s)     : (1) (a) ISO/IEC 9899:TC2, Section 7.4.2.1.(2) states that "tolower() ... converts an
+    564          *                       uppercase letter to a corresponding lowercase letter".
+    565          *
+    566          *                   (b) ISO/IEC 9899:TC2, Section 7.4.2.1.(3) states that :
+    567          *
+    568          *                       (1) (A) "if the argument is a character for which isupper() is true and there are
+    569          *                                one or more corresponding characters ... for which islower() is true," ...
+    570          *                           (B) "tolower() ... returns one of the corresponding characters;" ...
+    571          *
+    572          *                       (2) "otherwise, the argument is returned unchanged."
+    573          *********************************************************************************************************
+    574          */
+    575          
+
+   \                                 In  segment CODE, align 1, keep-with-next
+    576          CPU_CHAR  ASCII_ToLower (CPU_CHAR  c)
+   \                     ASCII_ToLower:
+    577          {
+   \   000000                       ; * Stack frame (at entry) *
+   \   000000                       ; Param size: 0
+   \   000000                       ; Auto size: 0
+   \   000000 70                    MOV       X, A               ;; 1 cycle
+    578              CPU_CHAR  lower;
+    579          
+    580          
+    581              lower = ASCII_TO_LOWER(c);
+   \   000001 0CBF                  ADD       A, #0xBF           ;; 1 cycle
+   \   000003 4C1A                  CMP       A, #0x1A           ;; 1 cycle
+   \   000005 DE04                  BNC       ??ASCII_Cmp_17     ;; 4 cycles
+   \   000007                       ; ------------------------------------- Block: 7 cycles
+   \   000007 60                    MOV       A, X               ;; 1 cycle
+   \   000008 0C20                  ADD       A, #0x20           ;; 1 cycle
+   \   00000A 70                    MOV       X, A               ;; 1 cycle
+   \   00000B                       ; ------------------------------------- Block: 3 cycles
+    582          
+    583              return (lower);
+   \                     ??ASCII_Cmp_17:
+   \   00000B 60                    MOV       A, X               ;; 1 cycle
+   \   00000C D7                    RET                          ;; 6 cycles
+   \   00000D                       ; ------------------------------------- Block: 7 cycles
+   \   00000D                       ; ------------------------------------- Total: 17 cycles
+   \   00000D                       REQUIRE ?CLRL78_V1_0_L00
+    584          }
+    585          
+    586          
+    587          /*
+    588          *********************************************************************************************************
+    589          *                                           ASCII_ToUpper()
+    590          *
+    591          * Description : Convert lowercase alphabetic character to its corresponding uppercase alphabetic character.
+    592          *
+    593          * Argument(s) : c           Character to convert.
+    594          *
+    595          * Return(s)   : Uppercase equivalent of 'c', if character 'c' is a lowercase character (see Note #1b1).
+    596          *
+    597          *               Character 'c',               otherwise                                 (see Note #1b2).
+    598          *
+    599          * Caller(s)   : Application.
+    600          *
+    601          * Note(s)     : (1) (a) ISO/IEC 9899:TC2, Section 7.4.2.2.(2) states that "toupper() ... converts a
+    602          *                       lowercase letter to a corresponding uppercase letter".
+    603          *
+    604          *                   (b) ISO/IEC 9899:TC2, Section 7.4.2.2.(3) states that :
+    605          *
+    606          *                       (1) (A) "if the argument is a character for which islower() is true and there are
+    607          *                                one or more corresponding characters ... for which isupper() is true," ...
+    608          *                           (B) "toupper() ... returns one of the corresponding characters;" ...
+    609          *
+    610          *                       (2) "otherwise, the argument is returned unchanged."
+    611          *********************************************************************************************************
+    612          */
+    613          
+
+   \                                 In  segment CODE, align 1, keep-with-next
+    614          CPU_CHAR  ASCII_ToUpper (CPU_CHAR  c)
+   \                     ASCII_ToUpper:
+    615          {
+   \   000000                       ; * Stack frame (at entry) *
+   \   000000                       ; Param size: 0
+   \   000000                       ; Auto size: 0
+   \   000000 70                    MOV       X, A               ;; 1 cycle
+    616              CPU_CHAR  upper;
+    617          
+    618          
+    619              upper = ASCII_TO_UPPER(c);
+   \   000001 0C9F                  ADD       A, #0x9F           ;; 1 cycle
+   \   000003 4C1A                  CMP       A, #0x1A           ;; 1 cycle
+   \   000005 DE04                  BNC       ??ASCII_Cmp_18     ;; 4 cycles
+   \   000007                       ; ------------------------------------- Block: 7 cycles
+   \   000007 60                    MOV       A, X               ;; 1 cycle
+   \   000008 0CE0                  ADD       A, #0xE0           ;; 1 cycle
+   \   00000A 70                    MOV       X, A               ;; 1 cycle
+   \   00000B                       ; ------------------------------------- Block: 3 cycles
+    620          
+    621              return (upper);
+   \                     ??ASCII_Cmp_18:
+   \   00000B 60                    MOV       A, X               ;; 1 cycle
+   \   00000C D7                    RET                          ;; 6 cycles
+   \   00000D                       ; ------------------------------------- Block: 7 cycles
+   \   00000D                       ; ------------------------------------- Total: 17 cycles
+   \   00000D                       REQUIRE ?CLRL78_V1_0_L00
+    622          }
+    623          
+    624          
+    625          /*$PAGE*/
+    626          /*
+    627          *********************************************************************************************************
+    628          *                                             ASCII_Cmp()
+    629          *
+    630          * Description : Determine if two characters are identical (case-insensitive).
+    631          *
+    632          * Argument(s) : c1          First  character.
+    633          *
+    634          *               c2          Second character.
+    635          *
+    636          * Return(s)   : DEF_YES, if the characters are     identical.
+    637          *
+    638          *               DEF_NO,  if the characters are NOT identical.
+    639          *
+    640          * Caller(s)   : Application.
+    641          *
+    642          * Note(s)     : none.
+    643          *********************************************************************************************************
+    644          */
+    645          
+
+   \                                 In  segment CODE, align 1, keep-with-next
+    646          CPU_BOOLEAN  ASCII_Cmp (CPU_CHAR  c1,
+   \                     ASCII_Cmp:
+    647                                  CPU_CHAR  c2)
+    648          {
+   \   000000                       ; * Stack frame (at entry) *
+   \   000000                       ; Param size: 0
+   \   000000 C3                    PUSH      BC                 ;; 1 cycle
+   \   000001                       ; Auto size: 0
+    649              CPU_CHAR     c1_upper;
+    650              CPU_CHAR     c2_upper;
+    651              CPU_BOOLEAN  cmp;
+    652          
+    653          
+    654              c1_upper =  ASCII_ToUpper(c1);
+   \   000001 FD....                CALL      ASCII_ToUpper      ;; 3 cycles
+   \   000004 72                    MOV       C, A               ;; 1 cycle
+    655              c2_upper =  ASCII_ToUpper(c2);
+    656              cmp      = (c1_upper == c2_upper) ? (DEF_YES) : (DEF_NO);
+   \   000005 63                    MOV       A, B               ;; 1 cycle
+   \   000006 FD....                CALL      ASCII_ToUpper      ;; 3 cycles
+   \   000009 6142                  CMP       C, A               ;; 1 cycle
+   \   00000B E1                    ONEB      A                  ;; 1 cycle
+   \   00000C 61E8                  SKZ                          ;; 4 cycles
+   \   00000E                       ; ------------------------------------- Block: 15 cycles
+   \   00000E F1                    CLRB      A                  ;; 1 cycle
+   \   00000F                       ; ------------------------------------- Block: 1 cycles
+    657          
+    658              return (cmp);
+   \                     ??ASCII_Cmp_19:
+   \   00000F C2                    POP       BC                 ;; 1 cycle
+   \   000010 D7                    RET                          ;; 6 cycles
+   \   000011                       ; ------------------------------------- Block: 7 cycles
+   \   000011                       ; ------------------------------------- Total: 23 cycles
+   \   000011                       REQUIRE ?CLRL78_V1_0_L00
+    659          }
+    660          
+
+   Maximum stack usage in bytes:
+
+   CSTACK Function
+   ------ --------
+      2   ASCII_Cmp
+        2   -> ASCII_ToUpper
+      0   ASCII_IsAlpha
+      0   ASCII_IsAlphaNum
+      0   ASCII_IsBlank
+      0   ASCII_IsCtrl
+      0   ASCII_IsDig
+      0   ASCII_IsDigHex
+      0   ASCII_IsDigOct
+      0   ASCII_IsGraph
+      0   ASCII_IsLower
+      0   ASCII_IsPrint
+      2   ASCII_IsPunct
+      0   ASCII_IsSpace
+      0   ASCII_IsUpper
+      0   ASCII_ToLower
+      0   ASCII_ToUpper
+
+
+   Segment part sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+      17  ASCII_Cmp
+      19  ASCII_IsAlpha
+      26  ASCII_IsAlphaNum
+      13  ASCII_IsBlank
+      20  ASCII_IsCtrl
+       9  ASCII_IsDig
+      26  ASCII_IsDigHex
+       9  ASCII_IsDigOct
+       9  ASCII_IsGraph
+       9  ASCII_IsLower
+       9  ASCII_IsPrint
+      76  ASCII_IsPunct
+      29  ASCII_IsSpace
+       9  ASCII_IsUpper
+      13  ASCII_ToLower
+      13  ASCII_ToUpper
+
+ 
+ 306 bytes in segment CODE
+ 
+ 306 bytes of CODE memory
+
+Errors: none
+Warnings: none

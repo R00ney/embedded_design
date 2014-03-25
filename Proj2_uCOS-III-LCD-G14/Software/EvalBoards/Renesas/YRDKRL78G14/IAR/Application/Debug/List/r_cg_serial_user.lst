@@ -1,0 +1,752 @@
+###############################################################################
+#                                                                             #
+# IAR C/C++ Compiler V1.30.5.50715 for RL78             23/Mar/2014  17:08:47 #
+# Copyright 2011-2013 IAR Systems AB.                                         #
+# Network license: ece-lic-19.ece.ncsu.edu (STD)                              #
+#                                                                             #
+#    Core         =  rl78_2                                                   #
+#    Code model   =  Near                                                     #
+#    Data model   =  Near                                                     #
+#                 =                                                           #
+#    Source file  =  C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\BSP\applilet3_src\r_cg_serial_user.c            #
+#    Command line =  C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\BSP\applilet3_src\r_cg_serial_user.c --core     #
+#                    rl78_2 --code_model near --data_model near               #
+#                    --near_const_location rom0 -o                            #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\Debug\Obj\ --dlib_config            #
+#                    "C:\Program Files\IAR Systems\Embedded Workbench         #
+#                    6.5\rl78\LIB\dlrl78nn2n.h" -e -Ohz --no_scheduling       #
+#                    --no_clustering --debug -lC                              #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\Debug\List\ -I                      #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\ -I C:\Users\Suddenlink\Dropbox\git #
+#                    _files\embedded_design\Proj2_uCOS-III-LCD-G14\Software\E #
+#                    valBoards\Renesas\YRDKRL78G14\IAR\Application\Source\    #
+#                    -I C:\Users\Suddenlink\Dropbox\git_files\embedded_design #
+#                    \Proj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDK #
+#                    RL78G14\IAR\Application\..\uCOS-III\ -I                  #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\..\BSP\ -I                          #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\..\BSP\applilet3_src\ -I            #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\..\BSP\Glyph\Drivers\ -I            #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\..\BSP\Glyph\glyph\ -I              #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\..\..\..\..\..\uC-CPU\ -I           #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\..\..\..\..\..\uC-CPU\RL78\IAR\ -I  #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\..\..\..\..\..\uC-LIB\ -I           #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\..\..\..\..\..\uCOS-III\Ports\Renes #
+#                    as\RL78\IAR\ -I C:\Users\Suddenlink\Dropbox\git_files\em #
+#                    bedded_design\Proj2_uCOS-III-LCD-G14\Software\EvalBoards #
+#                    \Renesas\YRDKRL78G14\IAR\Application\..\..\..\..\..\uCOS #
+#                    -III\Source\ --relaxed_fp                                #
+#    List file    =  C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\Debug\List\r_cg_serial_user.lst     #
+#    Object file  =  C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\Debug\Obj\r_cg_serial_user.r87      #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Proj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL78G14\IAR\BSP\applilet3_src\r_cg_serial_user.c
+      1          /***********************************************************************************************************************
+      2          * DISCLAIMER
+      3          * This software is supplied by Renesas Electronics Corporation and is only
+      4          * intended for use with Renesas products. No other uses are authorized. This
+      5          * software is owned by Renesas Electronics Corporation and is protected under
+      6          * all applicable laws, including copyright laws.
+      7          * THIS SOFTWARE IS PROVIDED "AS IS" AND RENESAS MAKES NO WARRANTIES REGARDING
+      8          * THIS SOFTWARE, WHETHER EXPRESS, IMPLIED OR STATUTORY, INCLUDING BUT NOT
+      9          * LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE
+     10          * AND NON-INFRINGEMENT.  ALL SUCH WARRANTIES ARE EXPRESSLY DISCLAIMED.
+     11          * TO THE MAXIMUM EXTENT PERMITTED NOT PROHIBITED BY LAW, NEITHER RENESAS
+     12          * ELECTRONICS CORPORATION NOR ANY OF ITS AFFILIATED COMPANIES SHALL BE LIABLE
+     13          * FOR ANY DIRECT, INDIRECT, SPECIAL, INCIDENTAL OR CONSEQUENTIAL DAMAGES FOR
+     14          * ANY REASON RELATED TO THIS SOFTWARE, EVEN IF RENESAS OR ITS AFFILIATES HAVE
+     15          * BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+     16          * Renesas reserves the right, without notice, to make changes to this software
+     17          * and to discontinue the availability of this software.  By using this software,
+     18          * you agree to the additional terms and conditions found by accessing the
+     19          * following link:
+     20          * http://www.renesas.com/disclaimer
+     21          *
+     22          * Copyright (C) 2011, 2013 Renesas Electronics Corporation. All rights reserved.
+     23          ***********************************************************************************************************************/
+     24          
+     25          /***********************************************************************************************************************
+     26          * File Name    : r_cg_serial_user.c
+     27          * Version      : Applilet3 for RL78/G14 V2.01.00.02 [09 Aug 2013]
+     28          * Device(s)    : R5F104PJ
+     29          * Tool-Chain   : IAR Systems iccrl78
+     30          * Description  : This file implements device driver for Serial module.
+     31          * Creation Date: 3/8/2014
+     32          ***********************************************************************************************************************/
+     33          
+     34          /***********************************************************************************************************************
+     35          Includes
+     36          ***********************************************************************************************************************/
+     37          #include "r_cg_macrodriver.h"
+
+   \                                 In  segment NEAR_A, at 0xfff4a
+   \   union <unnamed> volatile __sfr __no_bit_access _A_SDR11
+   \                     _A_SDR11:
+   \   000000                       DS 2
+
+   \                                 In  segment NEAR_A, at 0xfff50
+   \   union <unnamed> volatile __sfr __no_bit_access _A_IICA0
+   \                     _A_IICA0:
+   \   000000                       DS 1
+
+   \                                 In  segment NEAR_A, at 0xfff51
+   \   union <unnamed> const volatile __sfr _A_IICS0
+   \                     _A_IICS0:
+   \   000000                       DS 1
+
+   \                                 In  segment NEAR_A, at 0xfff52
+   \   union <unnamed> volatile __sfr _A_IICF0
+   \                     _A_IICF0:
+   \   000000                       DS 1
+
+   \                                 In  segment NEAR_A, at 0xf0142
+   \   union <unnamed> const volatile __no_bit_access _A_SSR11
+   \                     _A_SSR11:
+   \   000000                       DS 2
+
+   \                                 In  segment NEAR_A, at 0xf014a
+   \   union <unnamed> volatile __no_bit_access _A_SIR11
+   \                     _A_SIR11:
+   \   000000                       DS 2
+
+   \                                 In  segment NEAR_A, at 0xf0230
+   \   union <unnamed> volatile _A_IICCTL00
+   \                     _A_IICCTL00:
+   \   000000                       DS 1
+     38          #include "r_cg_serial.h"
+     39          /* Start user code for include. Do not edit comment generated here */
+     40          #include <includes.h> // AGD
+     41          /* End user code. Do not edit comment generated here */
+     42          #include "r_cg_userdefine.h"
+     43          
+     44          /***********************************************************************************************************************
+     45          Global variables and functions
+     46          ***********************************************************************************************************************/
+     47          extern uint8_t * gp_csi21_rx_address;         /* csi21 receive buffer address */
+     48          extern uint16_t  g_csi21_rx_length;           /* csi21 receive data length */
+     49          extern uint16_t  g_csi21_rx_count;            /* csi21 receive data count */
+     50          extern uint8_t * gp_csi21_tx_address;         /* csi21 send buffer address */
+     51          extern uint16_t  g_csi21_send_length;         /* csi21 send data length */
+     52          extern uint16_t  g_csi21_tx_count;            /* csi21 send data count */
+     53          extern uint8_t   g_iica0_master_status_flag;  /* iica0 master flag */
+     54          extern uint8_t   g_iica0_slave_status_flag;   /* iica0 slave flag */
+     55          extern uint8_t * gp_iica0_rx_address;         /* iica0 receive buffer address */
+     56          extern uint16_t  g_iica0_rx_cnt;              /* iica0 receive data length */
+     57          extern uint16_t  g_iica0_rx_len;              /* iica0 receive data count */
+     58          extern uint8_t * gp_iica0_tx_address;         /* iica0 send buffer address */
+     59          extern uint16_t  g_iica0_tx_cnt;              /* iica0 send data count */
+     60          /* Start user code for global. Do not edit comment generated here */
+
+   \                                 In  segment NEAR_Z, align 1, align-sorted
+     61          volatile uint8_t G_UART_SendingData = 0;
+   \                     G_UART_SendingData:
+   \   000000                       DS 1
+   \   000001                       REQUIRE __INIT_NEAR_Z
+
+   \                                 In  segment NEAR_Z, align 1, align-sorted
+     62          volatile uint8_t G_UART_ReceivingData = 0;
+   \                     G_UART_ReceivingData:
+   \   000000                       DS 1
+   \   000001                       REQUIRE __INIT_NEAR_Z
+
+   \                                 In  segment NEAR_Z, align 1, align-sorted
+     63          volatile uint8_t G_SPI_SendingData = 0;
+   \                     G_SPI_SendingData:
+   \   000000                       DS 1
+   \   000001                       REQUIRE __INIT_NEAR_Z
+
+   \                                 In  segment NEAR_Z, align 1, align-sorted
+     64          volatile uint8_t G_SPI_ReceivingData = 0;
+   \                     G_SPI_ReceivingData:
+   \   000000                       DS 1
+   \   000001                       REQUIRE __INIT_NEAR_Z
+
+   \                                 In  segment NEAR_Z, align 1, align-sorted
+     65          volatile uint8_t G_IIC_SendingData = 0;
+   \                     G_IIC_SendingData:
+   \   000000                       DS 1
+   \   000001                       REQUIRE __INIT_NEAR_Z
+
+   \                                 In  segment NEAR_Z, align 1, align-sorted
+     66          volatile uint8_t G_IIC_ReceivingData = 0;
+   \                     G_IIC_ReceivingData:
+   \   000000                       DS 1
+   \   000001                       REQUIRE __INIT_NEAR_Z
+     67          
+     68          /* End user code. Do not edit comment generated here */
+     69          
+     70          /***********************************************************************************************************************
+     71          * Function Name: r_csi21_interrupt
+     72          * Description  : This function is INTCSI21 interrupt service routine.
+     73          * Arguments    : None
+     74          * Return Value : None
+     75          ***********************************************************************************************************************/
+     76          #pragma vector = INTCSI21_vect
+
+   \                                 In  segment CODE, align 1, keep-with-next
+     77          __interrupt static void r_csi21_interrupt(void)
+   \                     r_csi21_interrupt:
+     78          {
+   \   000000                       ; * Stack frame (at entry) *
+   \   000000                       ; Param size: 0
+   \   000000 C1                    PUSH      AX                 ;; 1 cycle
+   \   000001 C7                    PUSH      HL                 ;; 1 cycle
+   \   000002                       ; Auto size: 2
+   \   000002 C1                    PUSH      AX                 ;; 1 cycle
+     79              uint8_t err_type;
+     80              uint8_t sio_dummy;
+                             ^
+Warning[Pe550]: variable "sio_dummy" was set but never used
+     81          
+     82              err_type = (uint8_t)(SSR11 & _0001_SAU_OVERRUN_ERROR);
+   \   000003 AF4201                MOVW      AX, 0x142          ;; 1 cycle
+   \   000006 60                    MOV       A, X               ;; 1 cycle
+   \   000007 5C01                  AND       A, #0x1            ;; 1 cycle
+   \   000009 9800                  MOV       [SP], A            ;; 1 cycle
+     83              SIR11 = (uint16_t)err_type;
+   \   00000B 70                    MOV       X, A               ;; 1 cycle
+   \   00000C F1                    CLRB      A                  ;; 1 cycle
+   \   00000D BF4A01                MOVW      0x14A, AX          ;; 1 cycle
+     84          
+     85              if (1U == err_type)
+   \   000010 AEF8                  MOVW      AX, SP             ;; 1 cycle
+   \   000012 16                    MOVW      HL, AX             ;; 1 cycle
+   \   000013 318344                BT        [HL].0, ??r_iica0_callback_master_sendend_0  ;; 5 cycles
+   \   000016                       ; ------------------------------------- Block: 17 cycles
+     86              {
+     87                  r_csi21_callback_error(err_type);    /* overrun error occurs */
+     88              }
+     89              else
+     90              {
+     91                  if (g_csi21_tx_count > 0U)
+   \   000016 F6                    CLRW      AX                 ;; 1 cycle
+   \   000017 42....                CMPW      AX, N:g_csi21_tx_count  ;; 1 cycle
+   \   00001A DD2D                  BZ        ??r_iica0_callback_master_sendend_1  ;; 4 cycles
+   \   00001C                       ; ------------------------------------- Block: 6 cycles
+     92                  {
+     93                      if (0U != gp_csi21_rx_address)
+   \   00001C 42....                CMPW      AX, N:gp_csi21_rx_address  ;; 1 cycle
+   \   00001F 8E4A                  MOV       A, 0xFFF4A         ;; 1 cycle
+   \   000021 DD0B                  BZ        ??r_iica0_callback_master_sendend_2  ;; 4 cycles
+   \   000023                       ; ------------------------------------- Block: 6 cycles
+     94                      {
+     95                          *gp_csi21_rx_address = SIO21;
+   \   000023 FB....                MOVW      HL, N:gp_csi21_rx_address  ;; 1 cycle
+   \   000026 9B                    MOV       [HL], A            ;; 1 cycle
+     96                          gp_csi21_rx_address++;
+   \   000027 AF....                MOVW      AX, N:gp_csi21_rx_address  ;; 1 cycle
+   \   00002A A1                    INCW      AX                 ;; 1 cycle
+   \   00002B BF....                MOVW      N:gp_csi21_rx_address, AX  ;; 1 cycle
+   \   00002E                       ; ------------------------------------- Block: 5 cycles
+     97                      }
+     98                      else
+     99                      {
+    100                          sio_dummy = SIO21;
+    101                      }
+    102          
+    103                      if (0U != gp_csi21_tx_address)
+   \                     ??r_iica0_callback_master_sendend_2:
+   \   00002E F6                    CLRW      AX                 ;; 1 cycle
+   \   00002F 42....                CMPW      AX, N:gp_csi21_tx_address  ;; 1 cycle
+   \   000032 DD0D                  BZ        ??r_iica0_callback_master_sendend_3  ;; 4 cycles
+   \   000034                       ; ------------------------------------- Block: 6 cycles
+    104                      {
+    105                          SIO21 = *gp_csi21_tx_address;
+   \   000034 FB....                MOVW      HL, N:gp_csi21_tx_address  ;; 1 cycle
+   \   000037 8B                    MOV       A, [HL]            ;; 1 cycle
+   \   000038 9E4A                  MOV       0xFFF4A, A         ;; 1 cycle
+    106                          gp_csi21_tx_address++;
+   \   00003A 17                    MOVW      AX, HL             ;; 1 cycle
+   \   00003B A1                    INCW      AX                 ;; 1 cycle
+   \   00003C BF....                MOVW      N:gp_csi21_tx_address, AX  ;; 1 cycle
+   \   00003F EF03                  BR        S:??r_iica0_callback_master_sendend_4  ;; 3 cycles
+   \   000041                       ; ------------------------------------- Block: 9 cycles
+    107                      }
+    108                      else
+    109                      {
+    110                          SIO21 = 0xFFU;
+   \                     ??r_iica0_callback_master_sendend_3:
+   \   000041 CE4AFF                MOV       0xFFF4A, #0xFF     ;; 1 cycle
+   \   000044                       ; ------------------------------------- Block: 1 cycles
+    111                      }
+    112          
+    113                      g_csi21_tx_count--;
+   \                     ??r_iica0_callback_master_sendend_4:
+   \   000044 B2....                DECW      N:g_csi21_tx_count  ;; 2 cycles
+   \   000047 EF11                  BR        S:??r_iica0_callback_master_sendend_0  ;; 3 cycles
+   \   000049                       ; ------------------------------------- Block: 5 cycles
+    114                  }
+    115                  else
+    116                  {
+    117                      if (0U == g_csi21_tx_count)
+    118                      {
+    119                          if (0U != gp_csi21_rx_address)
+   \                     ??r_iica0_callback_master_sendend_1:
+   \   000049 42....                CMPW      AX, N:gp_csi21_rx_address  ;; 1 cycle
+   \   00004C 8E4A                  MOV       A, 0xFFF4A         ;; 1 cycle
+   \   00004E DD04                  BZ        ??r_iica0_callback_master_sendend_5  ;; 4 cycles
+   \   000050                       ; ------------------------------------- Block: 6 cycles
+    120                          {
+    121                              *gp_csi21_rx_address = SIO21;
+   \   000050 FB....                MOVW      HL, N:gp_csi21_rx_address  ;; 1 cycle
+   \   000053 9B                    MOV       [HL], A            ;; 1 cycle
+   \   000054                       ; ------------------------------------- Block: 2 cycles
+    122                          }
+    123                          else
+    124                          {
+    125                              sio_dummy = SIO21;
+    126                          }
+    127                      }
+    128          
+    129                      r_csi21_callback_sendend();    /* complete send */
+   \                     ??r_iica0_callback_master_sendend_5:
+   \   000054 F5....                CLRB      N:G_SPI_SendingData  ;; 1 cycle
+    130                      r_csi21_callback_receiveend();    /* complete receive */
+   \   000057 F5....                CLRB      N:G_SPI_ReceivingData  ;; 1 cycle
+    131                  }
+    132              }
+   \   00005A                       ; ------------------------------------- Block: 2 cycles
+    133          }
+   \                     ??r_iica0_callback_master_sendend_0:
+   \   00005A 1002                  ADDW      SP, #0x2           ;; 1 cycle
+   \   00005C C6                    POP       HL                 ;; 1 cycle
+   \   00005D C0                    POP       AX                 ;; 1 cycle
+   \   00005E 61FC                  RETI                         ;; 6 cycles
+   \   000060                       ; ------------------------------------- Block: 9 cycles
+   \   000060                       ; ------------------------------------- Total: 74 cycles
+   \   000060                       REQUIRE ?CLRL78_V1_0_L00
+   \   000060                       REQUIRE _A_SSR11
+   \   000060                       REQUIRE _A_SIR11
+   \   000060                       REQUIRE _A_SDR11
+    134          
+    135          /***********************************************************************************************************************
+    136          * Function Name: r_csi21_callback_receiveend
+    137          * Description  : This function is a callback function when CSI21 finishes reception.
+    138          * Arguments    : None
+    139          * Return Value : None
+    140          ***********************************************************************************************************************/
+    141          static void r_csi21_callback_receiveend(void)
+    142          {
+    143              /* Start user code. Do not edit comment generated here */
+    144          	   G_SPI_ReceivingData = 0;
+    145              /* End user code. Do not edit comment generated here */
+    146          }
+    147          
+    148          /***********************************************************************************************************************
+    149          * Function Name: r_csi21_callback_error
+    150          * Description  : This function is a callback function when CSI21 reception error occurs.
+    151          * Arguments    : err_type -
+    152          *                    error type value
+    153          * Return Value : None
+    154          ***********************************************************************************************************************/
+    155          static void r_csi21_callback_error(uint8_t err_type)
+    156          {
+    157              /* Start user code. Do not edit comment generated here */
+    158              /* End user code. Do not edit comment generated here */
+    159          }
+    160          
+    161          /***********************************************************************************************************************
+    162          * Function Name: r_csi21_callback_sendend
+    163          * Description  : This function is a callback function when CSI21 finishes transmission.
+    164          * Arguments    : None
+    165          * Return Value : None
+    166          ***********************************************************************************************************************/
+    167          static void r_csi21_callback_sendend(void)
+    168          {
+    169              /* Start user code. Do not edit comment generated here */
+    170          	  G_SPI_SendingData = 0;
+    171          		/* End user code. Do not edit comment generated here */
+    172          }
+    173          
+    174          /***********************************************************************************************************************
+    175          * Function Name: r_iica0_interrupt
+    176          * Description  : This function is INTIICA0 interrupt service routine.
+    177          * Arguments    : None
+    178          * Return Value : None
+    179          ***********************************************************************************************************************/
+    180          #pragma vector = INTIICA0_vect
+
+   \                                 In  segment CODE, align 1, keep-with-next
+    181          __interrupt static void r_iica0_interrupt(void)
+   \                     r_iica0_interrupt:
+    182          {
+   \   000000                       ; * Stack frame (at entry) *
+   \   000000                       ; Param size: 0
+   \   000000 C1                    PUSH      AX                 ;; 1 cycle
+   \   000001 C7                    PUSH      HL                 ;; 1 cycle
+   \   000002 AEFC                  MOVW      AX, 0xFFFFC        ;; 1 cycle
+   \   000004 C1                    PUSH      AX                 ;; 1 cycle
+   \   000005                       ; Auto size: 0
+    183              if ((IICS0 & _80_IICA_STATUS_MASTER) == 0x80U)
+   \   000005 31F45103              BF        0xFFF51.7, ??r_iica0_callback_master_sendend_6  ;; 5 cycles
+   \   000009                       ; ------------------------------------- Block: 9 cycles
+    184              {
+    185                  iica0_master_handler();
+   \   000009 FD....                CALL      iica0_master_handler  ;; 3 cycles
+   \   00000C                       ; ------------------------------------- Block: 3 cycles
+    186              }
+    187          }
+   \                     ??r_iica0_callback_master_sendend_6:
+   \   00000C C0                    POP       AX                 ;; 1 cycle
+   \   00000D BEFC                  MOVW      0xFFFFC, AX        ;; 1 cycle
+   \   00000F C6                    POP       HL                 ;; 1 cycle
+   \   000010 C0                    POP       AX                 ;; 1 cycle
+   \   000011 61FC                  RETI                         ;; 6 cycles
+   \   000013                       ; ------------------------------------- Block: 10 cycles
+   \   000013                       ; ------------------------------------- Total: 22 cycles
+   \   000013                       REQUIRE ?CLRL78_V1_0_L00
+   \   000013                       REQUIRE _A_IICS0
+    188          
+    189          /***********************************************************************************************************************
+    190          * Function Name: iica0_master_handler
+    191          * Description  : This function is IICA0 master handler.
+    192          * Arguments    : None
+    193          * Return Value : None
+    194          ***********************************************************************************************************************/
+
+   \                                 In  segment CODE, align 1, keep-with-next
+    195          static void iica0_master_handler(void)
+   \                     iica0_master_handler:
+    196          {
+   \   000000                       ; * Stack frame (at entry) *
+   \   000000                       ; Param size: 0
+   \   000000                       ; Auto size: 0
+    197              /* Control for communication */
+    198              if ((0U == IICBSY0) && (g_iica0_tx_cnt != 0U))
+   \   000000 3652FF                MOVW      HL, #0xFFF52       ;; 1 cycle
+   \   000003 31E309                BT        [HL].6, ??r_iica0_callback_master_sendend_7  ;; 5 cycles
+   \   000006                       ; ------------------------------------- Block: 6 cycles
+   \   000006 F6                    CLRW      AX                 ;; 1 cycle
+   \   000007 42....                CMPW      AX, N:g_iica0_tx_cnt  ;; 1 cycle
+   \   00000A 61E8                  SKZ                          ;; 4 cycles
+   \   00000C ED....                BR        N:??r_iica0_callback_master_sendend_8  ;; 4 cycles
+   \   00000F                       ; ------------------------------------- Block: 6 cycles
+    199              {
+    200                  r_iica0_callback_master_error(MD_SPT);
+    201              }
+    202              /* Control for sended address */
+    203              else
+    204              {
+    205                  if ((g_iica0_master_status_flag & _80_IICA_ADDRESS_COMPLETE) == 0U)
+   \                     ??r_iica0_callback_master_sendend_7:
+   \   00000F 36....                MOVW      HL, #g_iica0_master_status_flag  ;; 1 cycle
+   \   000012 31F32C                BT        [HL].7, ??r_iica0_callback_master_sendend_9  ;; 5 cycles
+   \   000015                       ; ------------------------------------- Block: 6 cycles
+    206                  {
+    207                      if (1U == ACKD0)
+   \   000015 3651FF                MOVW      HL, #0xFFF51       ;; 1 cycle
+   \   000018 31A303                BT        [HL].2, $+6        ;; 5 cycles
+   \   00001B ED....                BR        N:??r_iica0_callback_master_sendend_8  ;; 5 cycles
+   \   00001E                       ; ------------------------------------- Block: 6 cycles
+    208                      {
+    209                          g_iica0_master_status_flag |= _80_IICA_ADDRESS_COMPLETE;
+   \   00001E 36....                MOVW      HL, #g_iica0_master_status_flag  ;; 1 cycle
+   \   000021 71F2                  SET1      [HL].7             ;; 2 cycles
+    210          
+    211                          if (1U == TRC0)
+   \   000023 3651FF                MOVW      HL, #0xFFF51       ;; 1 cycle
+   \   000026 31B50E                BF        [HL].3, ??r_iica0_callback_master_sendend_10  ;; 5 cycles
+   \   000029                       ; ------------------------------------- Block: 9 cycles
+    212                          {
+    213                              WTIM0 = 1U;
+   \   000029 363002                MOVW      HL, #0x230         ;; 1 cycle
+   \   00002C 71B2                  SET1      [HL].3             ;; 2 cycles
+    214          
+    215                              if (g_iica0_tx_cnt > 0U)
+   \   00002E F6                    CLRW      AX                 ;; 1 cycle
+   \   00002F 42....                CMPW      AX, N:g_iica0_tx_cnt  ;; 1 cycle
+   \   000032 DF24                  BNZ       ??r_iica0_callback_master_sendend_11  ;; 4 cycles
+   \   000034                       ; ------------------------------------- Block: 9 cycles
+    216                              {
+    217                                  IICA0 = *gp_iica0_tx_address;
+    218                                  gp_iica0_tx_address++;
+    219                                  g_iica0_tx_cnt--;
+    220                              }
+    221                              else
+    222                              {
+    223                                  r_iica0_callback_master_sendend();
+   \   000034 ED....                BR        N:r_iica0_callback_master_sendend  ;; 3 cycles
+   \   000037                       ; ------------------------------------- Block: 3 cycles
+    224                              }
+    225                          }
+    226                          else
+    227                          {
+    228                              ACKE0 = 1U;
+   \                     ??r_iica0_callback_master_sendend_10:
+   \   000037 363002                MOVW      HL, #0x230         ;; 1 cycle
+   \   00003A 71A2                  SET1      [HL].2             ;; 2 cycles
+    229                              WTIM0 = 0U;
+   \   00003C 71B3                  CLR1      [HL].3             ;; 2 cycles
+    230                              WREL0 = 1U;
+   \   00003E 71D2                  SET1      [HL].5             ;; 2 cycles
+   \   000040 D7                    RET                          ;; 6 cycles
+   \   000041                       ; ------------------------------------- Block: 13 cycles
+    231                          }
+    232                      }
+    233                      else
+    234                      {
+    235                          r_iica0_callback_master_error(MD_NACK);
+    236                      }
+    237                  }
+    238                  else
+    239                  {
+    240                      /* Master send control */
+    241                      if (1U == TRC0)
+   \                     ??r_iica0_callback_master_sendend_9:
+   \   000041 3651FF                MOVW      HL, #0xFFF51       ;; 1 cycle
+   \   000044 31B520                BF        [HL].3, ??r_iica0_callback_master_sendend_12  ;; 5 cycles
+   \   000047                       ; ------------------------------------- Block: 6 cycles
+    242                      {
+    243                          if ((0U == ACKD0) && (g_iica0_tx_cnt != 0U))
+   \   000047 F6                    CLRW      AX                 ;; 1 cycle
+   \   000048 31A308                BT        [HL].2, ??r_iica0_callback_master_sendend_13  ;; 5 cycles
+   \   00004B                       ; ------------------------------------- Block: 6 cycles
+   \   00004B 42....                CMPW      AX, N:g_iica0_tx_cnt  ;; 1 cycle
+   \   00004E DF4E                  BNZ       ??r_iica0_callback_master_sendend_8  ;; 4 cycles
+   \   000050                       ; ------------------------------------- Block: 5 cycles
+    244                          {
+    245                              r_iica0_callback_master_error(MD_NACK);
+    246                          }
+    247                          else
+    248                          {
+    249                              if (g_iica0_tx_cnt > 0U)
+    250                              {
+    251                                  IICA0 = *gp_iica0_tx_address;
+    252                                  gp_iica0_tx_address++;
+    253                                  g_iica0_tx_cnt--;
+    254                              }
+    255                              else
+    256                              {
+    257                                  r_iica0_callback_master_sendend();
+   \                     ??iica0_master_handler_0:
+   \   000050 ED....                BR        N:r_iica0_callback_master_sendend  ;; 3 cycles
+   \   000053                       ; ------------------------------------- Block: 3 cycles
+    258                              }
+   \                     ??r_iica0_callback_master_sendend_13:
+   \   000053 42....                CMPW      AX, N:g_iica0_tx_cnt  ;; 1 cycle
+   \   000056 DDF8                  BZ        ??iica0_master_handler_0  ;; 4 cycles
+   \   000058                       ; ------------------------------------- Block: 5 cycles
+   \                     ??r_iica0_callback_master_sendend_11:
+   \   000058 FB....                MOVW      HL, N:gp_iica0_tx_address  ;; 1 cycle
+   \   00005B 8B                    MOV       A, [HL]            ;; 1 cycle
+   \   00005C 9E50                  MOV       0xFFF50, A         ;; 1 cycle
+   \   00005E 17                    MOVW      AX, HL             ;; 1 cycle
+   \   00005F A1                    INCW      AX                 ;; 1 cycle
+   \   000060 BF....                MOVW      N:gp_iica0_tx_address, AX  ;; 1 cycle
+   \   000063 B2....                DECW      N:g_iica0_tx_cnt   ;; 2 cycles
+   \   000066 D7                    RET                          ;; 6 cycles
+   \   000067                       ; ------------------------------------- Block: 14 cycles
+    259                          }
+    260                      }
+    261                      /* Master receive control */
+    262                      else
+    263                      {
+    264                          if (g_iica0_rx_cnt < g_iica0_rx_len)
+   \                     ??r_iica0_callback_master_sendend_12:
+   \   000067 FB....                MOVW      HL, N:g_iica0_rx_len  ;; 1 cycle
+   \   00006A AF....                MOVW      AX, N:g_iica0_rx_cnt  ;; 1 cycle
+   \   00006D 47                    CMPW      AX, HL             ;; 1 cycle
+   \   00006E DE26                  BNC       ??r_iica0_callback_master_sendend_14  ;; 4 cycles
+   \   000070                       ; ------------------------------------- Block: 7 cycles
+    265                          {
+    266                              *gp_iica0_rx_address = IICA0;
+   \   000070 8E50                  MOV       A, 0xFFF50         ;; 1 cycle
+   \   000072 FB....                MOVW      HL, N:gp_iica0_rx_address  ;; 1 cycle
+   \   000075 9B                    MOV       [HL], A            ;; 1 cycle
+    267                              gp_iica0_rx_address++;
+   \   000076 AF....                MOVW      AX, N:gp_iica0_rx_address  ;; 1 cycle
+   \   000079 A1                    INCW      AX                 ;; 1 cycle
+   \   00007A BF....                MOVW      N:gp_iica0_rx_address, AX  ;; 1 cycle
+    268                              g_iica0_rx_cnt++;
+   \   00007D A2....                INCW      N:g_iica0_rx_cnt   ;; 2 cycles
+    269          
+    270                              if (g_iica0_rx_cnt == g_iica0_rx_len)
+   \   000080 FB....                MOVW      HL, N:g_iica0_rx_len  ;; 1 cycle
+   \   000083 AF....                MOVW      AX, N:g_iica0_rx_cnt  ;; 1 cycle
+   \   000086 47                    CMPW      AX, HL             ;; 1 cycle
+   \   000087 363002                MOVW      HL, #0x230         ;; 1 cycle
+   \   00008A DF07                  BNZ       ??r_iica0_callback_master_sendend_15  ;; 4 cycles
+   \   00008C                       ; ------------------------------------- Block: 16 cycles
+    271                              {
+    272                                  ACKE0 = 0U;
+   \   00008C 71A3                  CLR1      [HL].2             ;; 2 cycles
+    273                                  WREL0 = 1U;
+   \   00008E 71D2                  SET1      [HL].5             ;; 2 cycles
+    274                                  WTIM0 = 1U;
+   \   000090 71B2                  SET1      [HL].3             ;; 2 cycles
+   \   000092 D7                    RET                          ;; 6 cycles
+   \   000093                       ; ------------------------------------- Block: 12 cycles
+    275                              }
+    276                              else
+    277                              {
+    278                                  WREL0 = 1U;
+   \                     ??r_iica0_callback_master_sendend_15:
+   \   000093 71D2                  SET1      [HL].5             ;; 2 cycles
+   \   000095 D7                    RET                          ;; 6 cycles
+   \   000096                       ; ------------------------------------- Block: 8 cycles
+    279                              }
+    280                          }
+    281                          else
+    282                          {
+    283                              r_iica0_callback_master_receiveend();
+   \                     ??r_iica0_callback_master_sendend_14:
+   \   000096 363002                MOVW      HL, #0x230         ;; 1 cycle
+   \   000099 7182                  SET1      [HL].0             ;; 2 cycles
+   \   00009B F5....                CLRB      N:G_IIC_ReceivingData  ;; 1 cycle
+    284                          }
+    285                      }
+    286                  }
+    287              }
+   \   00009E                       ; ------------------------------------- Block: 4 cycles
+    288          }
+   \                     ??r_iica0_callback_master_sendend_8:
+   \   00009E D7                    RET                          ;; 6 cycles
+   \   00009F                       ; ------------------------------------- Block: 6 cycles
+   \   00009F                       ; ------------------------------------- Total: 150 cycles
+   \   00009F                       REQUIRE ?CLRL78_V1_0_L00
+   \   00009F                       REQUIRE _A_IICF0
+   \   00009F                       REQUIRE _A_IICS0
+   \   00009F                       REQUIRE _A_IICCTL00
+   \   00009F                       REQUIRE _A_IICA0
+    289          
+    290          /***********************************************************************************************************************
+    291          * Function Name: r_iica0_callback_master_error
+    292          * Description  : This function is a callback function when IICA0 master error occurs.
+    293          * Arguments    : None
+    294          * Return Value : None
+    295          ***********************************************************************************************************************/
+    296          static void r_iica0_callback_master_error(MD_STATUS flag)
+    297          {
+    298              /* Start user code. Do not edit comment generated here */
+    299              /* End user code. Do not edit comment generated here */
+    300          }
+    301          
+    302          /***********************************************************************************************************************
+    303          * Function Name: r_iica0_callback_master_receiveend
+    304          * Description  : This function is a callback function when IICA0 finishes master reception.
+    305          * Arguments    : None
+    306          * Return Value : None
+    307          ***********************************************************************************************************************/
+    308          static void r_iica0_callback_master_receiveend(void)
+    309          {
+    310              SPT0 = 1U;
+    311              /* Start user code. Do not edit comment generated here */
+    312          	G_IIC_ReceivingData = 0;
+    313          	/* End user code. Do not edit comment generated here */
+    314          }
+    315          
+    316          /***********************************************************************************************************************
+    317          * Function Name: r_iica0_callback_master_sendend
+    318          * Description  : This function is a callback function when IICA0 finishes master transmission.
+    319          * Arguments    : None
+    320          * Return Value : None
+    321          ***********************************************************************************************************************/
+
+   \                                 In  segment CODE, align 1, keep-with-next
+    322          static void r_iica0_callback_master_sendend(void)
+   \                     r_iica0_callback_master_sendend:
+    323          {
+   \   000000                       ; * Stack frame (at entry) *
+   \   000000                       ; Param size: 0
+   \   000000                       ; Auto size: 0
+    324              SPT0 = 1U;
+   \   000000 363002                MOVW      HL, #0x230         ;; 1 cycle
+   \   000003 7182                  SET1      [HL].0             ;; 2 cycles
+    325              /* Start user code. Do not edit comment generated here */
+    326              G_IIC_SendingData = 0;
+   \   000005 F5....                CLRB      N:G_IIC_SendingData  ;; 1 cycle
+    327          	/* End user code. Do not edit comment generated here */
+    328          }
+   \   000008 D7                    RET                          ;; 6 cycles
+   \   000009                       ; ------------------------------------- Block: 10 cycles
+   \   000009                       ; ------------------------------------- Total: 10 cycles
+   \   000009                       REQUIRE ?CLRL78_V1_0_L00
+   \   000009                       REQUIRE _A_IICCTL00
+
+   \                                 In  segment INTVEC, offset 0x16, root
+   \   000016 ....                  DW r_csi21_interrupt
+
+   \                                 In  segment INTVEC, offset 0x2a, root
+   \   00002A ....                  DW r_iica0_interrupt
+    329          
+    330          /* Start user code for adding. Do not edit comment generated here */
+    331          /* End user code. Do not edit comment generated here */
+
+   Maximum stack usage in bytes:
+
+   CSTACK Function
+   ------ --------
+      0   iica0_master_handler
+        0   -> r_iica0_callback_master_sendend
+      6   r_csi21_interrupt
+      0   r_iica0_callback_master_sendend
+      6   r_iica0_interrupt
+        6   -> iica0_master_handler
+
+
+   Segment part sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       2  ??r_csi21_interrupt??INTVEC 22
+       2  ??r_iica0_interrupt??INTVEC 42
+       1  G_IIC_ReceivingData
+       1  G_IIC_SendingData
+       1  G_SPI_ReceivingData
+       1  G_SPI_SendingData
+       1  G_UART_ReceivingData
+       1  G_UART_SendingData
+       1  _A_IICA0
+       1  _A_IICCTL00
+       1  _A_IICF0
+       1  _A_IICS0
+       2  _A_SDR11
+       2  _A_SIR11
+       2  _A_SSR11
+     159  iica0_master_handler
+      96  r_csi21_interrupt
+       9  r_iica0_callback_master_sendend
+      19  r_iica0_interrupt
+
+ 
+ 283 bytes in segment CODE
+   4 bytes in segment INTVEC
+  10 bytes in segment NEAR_A
+   6 bytes in segment NEAR_Z
+ 
+ 283 bytes of CODE memory (+  4 bytes shared)
+   6 bytes of DATA memory (+ 10 bytes shared)
+
+Errors: none
+Warnings: 1

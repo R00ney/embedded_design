@@ -1,0 +1,354 @@
+###############################################################################
+#                                                                             #
+# IAR C/C++ Compiler V1.30.5.50715 for RL78             23/Mar/2014  17:08:34 #
+# Copyright 2011-2013 IAR Systems AB.                                         #
+# Network license: ece-lic-19.ece.ncsu.edu (STD)                              #
+#                                                                             #
+#    Core         =  rl78_2                                                   #
+#    Code model   =  Near                                                     #
+#    Data model   =  Near                                                     #
+#                 =                                                           #
+#    Source file  =  C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\Source\accel.c                      #
+#    Command line =  C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\Source\accel.c --core rl78_2        #
+#                    --code_model near --data_model near                      #
+#                    --near_const_location rom0 -o                            #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\Debug\Obj\ --dlib_config            #
+#                    "C:\Program Files\IAR Systems\Embedded Workbench         #
+#                    6.5\rl78\LIB\dlrl78nn2n.h" -e -Ohz --no_scheduling       #
+#                    --no_clustering --debug -lC                              #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\Debug\List\ -I                      #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\ -I C:\Users\Suddenlink\Dropbox\git #
+#                    _files\embedded_design\Proj2_uCOS-III-LCD-G14\Software\E #
+#                    valBoards\Renesas\YRDKRL78G14\IAR\Application\Source\    #
+#                    -I C:\Users\Suddenlink\Dropbox\git_files\embedded_design #
+#                    \Proj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDK #
+#                    RL78G14\IAR\Application\..\uCOS-III\ -I                  #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\..\BSP\ -I                          #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\..\BSP\applilet3_src\ -I            #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\..\BSP\Glyph\Drivers\ -I            #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\..\BSP\Glyph\glyph\ -I              #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\..\..\..\..\..\uC-CPU\ -I           #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\..\..\..\..\..\uC-CPU\RL78\IAR\ -I  #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\..\..\..\..\..\uC-LIB\ -I           #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\..\..\..\..\..\uCOS-III\Ports\Renes #
+#                    as\RL78\IAR\ -I C:\Users\Suddenlink\Dropbox\git_files\em #
+#                    bedded_design\Proj2_uCOS-III-LCD-G14\Software\EvalBoards #
+#                    \Renesas\YRDKRL78G14\IAR\Application\..\..\..\..\..\uCOS #
+#                    -III\Source\ --relaxed_fp                                #
+#    List file    =  C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\Debug\List\accel.lst                #
+#    Object file  =  C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\Debug\Obj\accel.r87                 #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Proj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL78G14\IAR\Application\Source\accel.c
+      1          #include "r_cg_macrodriver.h"
+
+   \                                 In  segment NEAR_A, at 0xfff52
+   \   union <unnamed> volatile __sfr _A_IICF0
+   \                     _A_IICF0:
+   \   000000                       DS 1
+      2          #include "r_cg_serial.h"
+      3          #include "r_cg_userdefine.h"
+      4          #include <includes.h>
+      5          #include <string.h>
+      6          #include "accel.h"
+      7          #include "lcd.h"
+      8          
+      9          
+
+   \                                 In  segment CODE, align 1, keep-with-next
+     10          void InitializeAccelerometer(void) {
+   \                     InitializeAccelerometer:
+   \   000000                       ; * Stack frame (at entry) *
+   \   000000                       ; Param size: 0
+   \   000000 C3                    PUSH      BC                 ;; 1 cycle
+   \   000001 C5                    PUSH      DE                 ;; 1 cycle
+   \   000002                       ; Auto size: 2
+   \   000002 C1                    PUSH      AX                 ;; 1 cycle
+     11          	unsigned char i2cbuf[2];/* Buffer for I2C transactions */
+     12          
+     13          	LCDStringPosLine("Init Accel", 0, 1);
+   \   000003 E7                    ONEW      BC                 ;; 1 cycle
+   \   000004 30....                MOVW      AX, #`?<Constant "Init Accel">`  ;; 1 cycle
+   \   000007 FD....                CALL      LCDStringPosLine   ;; 3 cycles
+     14          
+     15          	// initialize accelerometer
+     16          	// Set the 'measure' bit to turn on accelerometer
+     17            	i2cbuf[0] = ACCEL_REG_PWRCTL;
+   \   00000A 512D                  MOV       A, #0x2D           ;; 1 cycle
+   \   00000C 9800                  MOV       [SP], A            ;; 1 cycle
+     18            	i2cbuf[1] = ACCEL_CTL_MEASURE;
+   \   00000E 5108                  MOV       A, #0x8            ;; 1 cycle
+   \   000010 9801                  MOV       [SP+0x01], A       ;; 1 cycle
+     19            	R_IICA0_Master_Send(ACCEL_WADDR, i2cbuf, 2, 32);
+   \   000012 340200                MOVW      DE, #0x2           ;; 1 cycle
+   \   000015 DBF8FF                MOVW      BC, SP             ;; 1 cycle
+   \   000018 5020                  MOV       X, #0x20           ;; 1 cycle
+   \   00001A 513A                  MOV       A, #0x3A           ;; 1 cycle
+   \   00001C FD....                CALL      R_IICA0_Master_Send  ;; 3 cycles
+   \   00001F                       ; ------------------------------------- Block: 19 cycles
+     20          
+     21            	while (IICBSY0)
+   \                     ??InitializeAccelerometer_0:
+   \   00001F 3652FF                MOVW      HL, #0xFFF52       ;; 1 cycle
+   \   000022 31E3FA                BT        [HL].6, ??InitializeAccelerometer_0  ;; 5 cycles
+   \   000025                       ; ------------------------------------- Block: 6 cycles
+     22          		;			/* Busy-wait until I2C TX is done */
+     23          
+     24          	LCDStringPosLine("Done", 0, 2);
+   \   000025 5202                  MOV       C, #0x2            ;; 1 cycle
+   \   000027 F3                    CLRB      B                  ;; 1 cycle
+   \   000028 30....                MOVW      AX, #`?<Constant "Done">`  ;; 1 cycle
+   \   00002B FD....                CALL      LCDStringPosLine   ;; 3 cycles
+     25          }
+   \   00002E 1002                  ADDW      SP, #0x2           ;; 1 cycle
+   \   000030 C4                    POP       DE                 ;; 1 cycle
+   \   000031 C2                    POP       BC                 ;; 1 cycle
+   \   000032 D7                    RET                          ;; 6 cycles
+   \   000033                       ; ------------------------------------- Block: 15 cycles
+   \   000033                       ; ------------------------------------- Total: 40 cycles
+   \   000033                       REQUIRE ?CLRL78_V1_0_L00
+   \   000033                       REQUIRE _A_IICF0
+     26          
+
+   \                                 In  segment CODE, align 1, keep-with-next
+     27          void App_TaskAccel (void * p_arg)
+   \                     App_TaskAccel:
+     28          {
+   \   000000                       ; * Stack frame (at entry) *
+   \   000000                       ; Param size: 0
+   \   000000 C3                    PUSH      BC                 ;; 1 cycle
+   \   000001 C5                    PUSH      DE                 ;; 1 cycle
+   \   000002                       ; Auto size: 12
+   \   000002 200C                  SUBW      SP, #0xC           ;; 1 cycle
+     29          	OS_ERR err;
+     30          	unsigned char i2cbuf[6]; /* Buffer for I2C transactions */
+     31            	signed int datax = 0;   /* x axis acceleration */
+     32            	signed int datay = 0;   /* y axis acceleration */
+     33            	signed int dataz = 0;   /* z axis acceleration */
+     34          
+     35          	p_arg = p_arg;
+     36          
+     37          	// clear initialization message from LCD
+     38          	LCDClearLine(1);
+   \   000004 E1                    ONEB      A                  ;; 1 cycle
+   \   000005 FD....                CALL      LCDClearLine       ;; 3 cycles
+     39          	LCDClearLine(2);
+   \   000008 5102                  MOV       A, #0x2            ;; 1 cycle
+   \   00000A FD....                CALL      LCDClearLine       ;; 3 cycles
+   \   00000D                       ; ------------------------------------- Block: 11 cycles
+     40          
+     41          	while (1) {
+     42            		/*** ACCELEROMETER HANDLING ***/
+     43          
+     44          		/* Inform accelerometer of starting address at which to read next */
+     45          		i2cbuf[0] = ACCEL_REG_DATASTART;
+   \                     ??App_TaskAccel_0:
+   \   00000D 5132                  MOV       A, #0x32           ;; 1 cycle
+   \   00000F 9800                  MOV       [SP], A            ;; 1 cycle
+     46          		R_IICA0_Master_Send(ACCEL_WADDR, i2cbuf, 1, 32);
+   \   000011 E6                    ONEW      AX                 ;; 1 cycle
+   \   000012 14                    MOVW      DE, AX             ;; 1 cycle
+   \   000013 DBF8FF                MOVW      BC, SP             ;; 1 cycle
+   \   000016 5020                  MOV       X, #0x20           ;; 1 cycle
+   \   000018 513A                  MOV       A, #0x3A           ;; 1 cycle
+   \   00001A FD....                CALL      R_IICA0_Master_Send  ;; 3 cycles
+   \   00001D                       ; ------------------------------------- Block: 10 cycles
+     47          		while (IICBSY0)
+   \                     ??App_TaskAccel_1:
+   \   00001D 3652FF                MOVW      HL, #0xFFF52       ;; 1 cycle
+   \   000020 31E3FA                BT        [HL].6, ??App_TaskAccel_1  ;; 5 cycles
+   \   000023                       ; ------------------------------------- Block: 6 cycles
+     48          			;    /* Busy-wait until I2C TX is done */
+     49          
+     50          		/* Read axis data (three at 2 bytes each) from the accelerometer */
+     51          		R_IICA0_Master_Receive(ACCEL_RADDR, i2cbuf, 6, 32);
+   \   000023 340600                MOVW      DE, #0x6           ;; 1 cycle
+   \   000026 DBF8FF                MOVW      BC, SP             ;; 1 cycle
+   \   000029 5020                  MOV       X, #0x20           ;; 1 cycle
+   \   00002B 513B                  MOV       A, #0x3B           ;; 1 cycle
+   \   00002D FD....                CALL      R_IICA0_Master_Receive  ;; 3 cycles
+   \   000030                       ; ------------------------------------- Block: 7 cycles
+     52          		while (IICBSY0)
+   \                     ??App_TaskAccel_2:
+   \   000030 3652FF                MOVW      HL, #0xFFF52       ;; 1 cycle
+   \   000033 31E3FA                BT        [HL].6, ??App_TaskAccel_2  ;; 5 cycles
+   \   000036                       ; ------------------------------------- Block: 6 cycles
+     53          			;    /* Busy-wait until I2C RX is done */
+     54          
+     55          		/* Convert the returned x and y data bytes into signed data */
+     56          		datax = ((signed int)i2cbuf[1] << 8) | i2cbuf[0];
+     57          		datay = ((signed int)i2cbuf[3] << 8) | i2cbuf[2];
+   \   000036 8802                  MOV       A, [SP+0x02]       ;; 1 cycle
+   \   000038 76                    MOV       L, A               ;; 1 cycle
+   \   000039 8803                  MOV       A, [SP+0x03]       ;; 1 cycle
+   \   00003B FD....                CALL      N:?Subroutine0     ;; 3 cycles
+   \   00003E                       ; ------------------------------------- Block: 6 cycles
+   \                     ??CrossCallReturnLabel_0:
+   \   00003E B808                  MOVW      [SP+0x08], AX      ;; 1 cycle
+     58          		dataz = ((signed int)i2cbuf[5] << 8) | i2cbuf[4];
+   \   000040 8804                  MOV       A, [SP+0x04]       ;; 1 cycle
+   \   000042 76                    MOV       L, A               ;; 1 cycle
+   \   000043 8805                  MOV       A, [SP+0x05]       ;; 1 cycle
+   \   000045 FD....                CALL      N:?Subroutine0     ;; 3 cycles
+   \   000048                       ; ------------------------------------- Block: 7 cycles
+   \                     ??CrossCallReturnLabel_1:
+   \   000048 B806                  MOVW      [SP+0x06], AX      ;; 1 cycle
+     59          
+     60          		/*** LCD HANDLING ***/
+     61          		LCDPrintf(1, 0, "X:%5d", datax);
+   \   00004A 8800                  MOV       A, [SP]            ;; 1 cycle
+   \   00004C 76                    MOV       L, A               ;; 1 cycle
+   \   00004D 8801                  MOV       A, [SP+0x01]       ;; 1 cycle
+   \   00004F FD....                CALL      N:?Subroutine0     ;; 3 cycles
+   \   000052                       ; ------------------------------------- Block: 7 cycles
+   \                     ??CrossCallReturnLabel_2:
+   \   000052 C1                    PUSH      AX                 ;; 1 cycle
+   \   000053 34....                MOVW      DE, #`?<Constant "X:%5d">`  ;; 1 cycle
+   \   000056 F3                    CLRB      B                  ;; 1 cycle
+   \   000057 E1                    ONEB      A                  ;; 1 cycle
+   \   000058 FD....                CALL      LCDPrintf          ;; 3 cycles
+     62          		LCDPrintf(2, 0, "Y:%5d", datay);
+   \   00005B A80A                  MOVW      AX, [SP+0x0A]      ;; 1 cycle
+   \   00005D C1                    PUSH      AX                 ;; 1 cycle
+   \   00005E 34....                MOVW      DE, #`?<Constant "Y:%5d">`  ;; 1 cycle
+   \   000061 F3                    CLRB      B                  ;; 1 cycle
+   \   000062 5102                  MOV       A, #0x2            ;; 1 cycle
+   \   000064 FD....                CALL      LCDPrintf          ;; 3 cycles
+     63          		LCDPrintf(3, 0, "Z:%5d", dataz);
+   \   000067 A80A                  MOVW      AX, [SP+0x0A]      ;; 1 cycle
+   \   000069 C1                    PUSH      AX                 ;; 1 cycle
+   \   00006A 34....                MOVW      DE, #`?<Constant "Z:%5d">`  ;; 1 cycle
+   \   00006D F3                    CLRB      B                  ;; 1 cycle
+   \   00006E 5103                  MOV       A, #0x3            ;; 1 cycle
+   \   000070 FD....                CALL      LCDPrintf          ;; 3 cycles
+     64          
+     65          	   	OSTimeDlyHMSM(0u, 0u, 0u, 250u, OS_OPT_TIME_HMSM_STRICT, &err);
+   \   000073 AEF8                  MOVW      AX, SP             ;; 1 cycle
+   \   000075 041000                ADDW      AX, #0x10          ;; 1 cycle
+   \   000078 C1                    PUSH      AX                 ;; 1 cycle
+   \   000079 F6                    CLRW      AX                 ;; 1 cycle
+   \   00007A C1                    PUSH      AX                 ;; 1 cycle
+   \   00007B C1                    PUSH      AX                 ;; 1 cycle
+   \   00007C 50FA                  MOV       X, #0xFA           ;; 1 cycle
+   \   00007E C1                    PUSH      AX                 ;; 1 cycle
+   \   00007F F6                    CLRW      AX                 ;; 1 cycle
+   \   000080 14                    MOVW      DE, AX             ;; 1 cycle
+   \   000081 F7                    CLRW      BC                 ;; 1 cycle
+   \   000082 FD....                CALL      OSTimeDlyHMSM      ;; 3 cycles
+   \   000085 1006                  ADDW      SP, #0x6           ;; 1 cycle
+   \   000087 EF84                  BR        S:??App_TaskAccel_0  ;; 3 cycles
+   \   000089                       ; ------------------------------------- Block: 41 cycles
+   \   000089                       ; ------------------------------------- Total: 101 cycles
+   \   000089                       REQUIRE ?CLRL78_V1_0_L00
+   \   000089                       REQUIRE _A_IICF0
+     66          	}
+     67          }
+
+   \                                 In  segment CODE, align 1, keep-with-next
+   \                     ?Subroutine0:
+   \   000000 70                    MOV       X, A               ;; 1 cycle
+   \   000001 318D                  SHLW      AX, 0x8            ;; 1 cycle
+   \   000003 08                    XCH       A, X               ;; 1 cycle
+   \   000004 616E                  OR        A, L               ;; 1 cycle
+   \   000006 08                    XCH       A, X               ;; 1 cycle
+   \   000007 D7                    RET                          ;; 6 cycles
+   \   000008                       ; ------------------------------------- Block: 11 cycles
+   \   000008                       ; ------------------------------------- Total: 11 cycles
+   \   000008                       REQUIRE ?CLRL78_V1_0_L00
+
+   \                                 In  segment NEAR_CONST, align 2
+   \                     `?<Constant "Init Accel">`:
+   \   000000 496E69742041          DB "Init Accel"
+   \   00000B 00                    DB 0
+
+   \                                 In  segment NEAR_CONST, align 2
+   \                     `?<Constant "Done">`:
+   \   000000 446F6E6500            DB "Done"
+   \   000005 00                    DB 0
+
+   \                                 In  segment NEAR_CONST, align 2
+   \                     `?<Constant "X:%5d">`:
+   \   000000 583A25356400          DB "X:%5d"
+
+   \                                 In  segment NEAR_CONST, align 2
+   \                     `?<Constant "Y:%5d">`:
+   \   000000 593A25356400          DB "Y:%5d"
+
+   \                                 In  segment NEAR_CONST, align 2
+   \                     `?<Constant "Z:%5d">`:
+   \   000000 5A3A25356400          DB "Z:%5d"
+
+   Maximum stack usage in bytes:
+
+   CSTACK Function
+   ------ --------
+     30   App_TaskAccel
+       16   -> LCDClearLine
+       18   -> LCDPrintf
+       20   -> LCDPrintf
+       22   -> LCDPrintf
+       30   -> OSTimeDlyHMSM
+       16   -> R_IICA0_Master_Receive
+       16   -> R_IICA0_Master_Send
+      6   InitializeAccelerometer
+        6   -> LCDStringPosLine
+        6   -> R_IICA0_Master_Send
+
+
+   Segment part sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       6  ?<Constant "Done">
+      12  ?<Constant "Init Accel">
+       6  ?<Constant "X:%5d">
+       6  ?<Constant "Y:%5d">
+       6  ?<Constant "Z:%5d">
+       8  ?Subroutine0
+     137  App_TaskAccel
+      51  InitializeAccelerometer
+       1  _A_IICF0
+
+ 
+ 196 bytes in segment CODE
+   1 byte  in segment NEAR_A
+  36 bytes in segment NEAR_CONST
+ 
+ 196 bytes of CODE  memory
+  36 bytes of CONST memory
+   0 bytes of DATA  memory (+ 1 byte shared)
+
+Errors: none
+Warnings: none

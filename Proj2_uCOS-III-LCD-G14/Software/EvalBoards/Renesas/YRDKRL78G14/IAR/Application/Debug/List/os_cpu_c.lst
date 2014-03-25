@@ -1,0 +1,585 @@
+###############################################################################
+#                                                                             #
+# IAR C/C++ Compiler V1.30.5.50715 for RL78             23/Mar/2014  17:08:41 #
+# Copyright 2011-2013 IAR Systems AB.                                         #
+# Network license: ece-lic-19.ece.ncsu.edu (STD)                              #
+#                                                                             #
+#    Core         =  rl78_2                                                   #
+#    Code model   =  Near                                                     #
+#    Data model   =  Near                                                     #
+#                 =                                                           #
+#    Source file  =  C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\uCOS-III\Ports\Renesas\RL7 #
+#                    8\IAR\os_cpu_c.c                                         #
+#    Command line =  C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\uCOS-III\Ports\Renesas\RL7 #
+#                    8\IAR\os_cpu_c.c --core rl78_2 --code_model near         #
+#                    --data_model near --near_const_location rom0 -o          #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\Debug\Obj\ --dlib_config            #
+#                    "C:\Program Files\IAR Systems\Embedded Workbench         #
+#                    6.5\rl78\LIB\dlrl78nn2n.h" -e -Ohz --no_scheduling       #
+#                    --no_clustering --debug -lC                              #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\Debug\List\ -I                      #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\ -I C:\Users\Suddenlink\Dropbox\git #
+#                    _files\embedded_design\Proj2_uCOS-III-LCD-G14\Software\E #
+#                    valBoards\Renesas\YRDKRL78G14\IAR\Application\Source\    #
+#                    -I C:\Users\Suddenlink\Dropbox\git_files\embedded_design #
+#                    \Proj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDK #
+#                    RL78G14\IAR\Application\..\uCOS-III\ -I                  #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\..\BSP\ -I                          #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\..\BSP\applilet3_src\ -I            #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\..\BSP\Glyph\Drivers\ -I            #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\..\BSP\Glyph\glyph\ -I              #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\..\..\..\..\..\uC-CPU\ -I           #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\..\..\..\..\..\uC-CPU\RL78\IAR\ -I  #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\..\..\..\..\..\uC-LIB\ -I           #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\..\..\..\..\..\uCOS-III\Ports\Renes #
+#                    as\RL78\IAR\ -I C:\Users\Suddenlink\Dropbox\git_files\em #
+#                    bedded_design\Proj2_uCOS-III-LCD-G14\Software\EvalBoards #
+#                    \Renesas\YRDKRL78G14\IAR\Application\..\..\..\..\..\uCOS #
+#                    -III\Source\ --relaxed_fp                                #
+#    List file    =  C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\Debug\List\os_cpu_c.lst             #
+#    Object file  =  C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\Debug\Obj\os_cpu_c.r87              #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Proj2_uCOS-III-LCD-G14\Software\uCOS-III\Ports\Renesas\RL78\IAR\os_cpu_c.c
+      1          /*
+      2          *********************************************************************************************************
+      3          *                                                uC/OS-III
+      4          *                                          The Real-Time Kernel
+      5          *
+      6          *
+      7          *                           (c) Copyright 2009-2011; Micrium, Inc.; Weston, FL
+      8          *                    All rights reserved.  Protected by international copyright laws.
+      9          *
+     10          *                                        NEC 78K0R Specific code
+     11          *                                IAR C/C++ Compiler for NEC 78K0R 4.60A
+     12          *
+     13          * File      : OS_CPU_C.C
+     14          * Version   : V3.01.2
+     15          * By        : JJL
+     16          *             BAN
+     17          *
+     18          * LICENSING TERMS:
+     19          * ---------------
+     20          *           uC/OS-III is provided in source form for FREE short-term evaluation, for educational use or 
+     21          *           for peaceful research.  If you plan or intend to use uC/OS-III in a commercial application/
+     22          *           product then, you need to contact Micrium to properly license uC/OS-III for its use in your 
+     23          *           application/product.   We provide ALL the source code for your convenience and to help you 
+     24          *           experience uC/OS-III.  The fact that the source is provided does NOT mean that you can use 
+     25          *           it commercially without paying a licensing fee.
+     26          *
+     27          *           Knowledge of the source code may NOT be used to develop a similar product.
+     28          *
+     29          *           Please help us continue to provide the embedded community with the finest software available.
+     30          *           Your honesty is greatly appreciated.
+     31          *
+     32          *           You can contact us at www.micrium.com, or by phone at +1 (954) 217-2036.
+     33          *
+     34          *********************************************************************************************************
+     35          */
+     36          
+     37          
+     38          #define  OS_CPU_GLOBALS
+     39          #include <os.h>
+     40          
+     41          /*
+     42          *********************************************************************************************************
+     43          *                                            GLOBAL DATA
+     44          *********************************************************************************************************
+     45          */
+     46          
+     47          
+     48          /*
+     49          *********************************************************************************************************
+     50          *                                          LOCAL VARIABLES
+     51          *********************************************************************************************************
+     52          */
+     53          
+     54          #if (OS_VERSION >= 281) && (OS_TMR_EN > 0)
+     55          static  INT16U  OSTmrCtr;
+     56          #endif
+     57          
+     58          /*
+     59          *********************************************************************************************************
+     60          *                                       OS INITIALIZATION HOOK
+     61          *                                            (BEGINNING)
+     62          *
+     63          * Description: This function is called by OSInit() at the beginning of OSInit().
+     64          *
+     65          * Arguments  : none
+     66          *
+     67          * Note(s)    : 1) Interrupts should be disabled during this call.
+     68          *********************************************************************************************************
+     69          */
+     70          
+
+   \                                 In  segment CODE, align 1, keep-with-next
+     71          void  OSInitHook (void)
+   \                     OSInitHook:
+     72          {
+   \   000000                       ; * Stack frame (at entry) *
+   \   000000                       ; Param size: 0
+   \   000000                       ; Auto size: 0
+     73          }
+   \   000000 D7                    RET                          ;; 6 cycles
+   \   000001                       ; ------------------------------------- Block: 6 cycles
+   \   000001                       ; ------------------------------------- Total: 6 cycles
+   \   000001                       REQUIRE ?CLRL78_V1_0_L00
+     74          
+     75          /*$PAGE*/
+     76          /*
+     77          *********************************************************************************************************
+     78          *                                          TASK CREATION HOOK
+     79          *
+     80          * Description: This function is called when a task is created.
+     81          *
+     82          * Arguments  : p_tcb        Pointer to the task control block of the task being created.
+     83          *
+     84          * Note(s)    : 1) Interrupts are disabled during this call.
+     85          *********************************************************************************************************
+     86          */
+     87          
+
+   \                                 In  segment CODE, align 1, keep-with-next
+     88          void  OSTaskCreateHook (OS_TCB  *p_tcb)
+   \                     OSTaskCreateHook:
+     89          {
+   \   000000                       ; * Stack frame (at entry) *
+   \   000000                       ; Param size: 0
+   \   000000                       ; Auto size: 0
+     90          #if OS_CFG_APP_HOOKS_EN > 0u
+     91              if (OS_AppTaskCreateHookPtr != (OS_APP_HOOK_TCB)0) {
+     92                  (*OS_AppTaskCreateHookPtr)(p_tcb);
+     93              }
+     94          #else
+     95              (void)p_tcb;                                            /* Prevent compiler warning                               */
+     96          #endif
+     97          }
+   \   000000 D7                    RET                          ;; 6 cycles
+   \   000001                       ; ------------------------------------- Block: 6 cycles
+   \   000001                       ; ------------------------------------- Total: 6 cycles
+   \   000001                       REQUIRE ?CLRL78_V1_0_L00
+     98          
+     99          /*$PAGE*/
+    100          /*
+    101          *********************************************************************************************************
+    102          *                                           TASK DELETION HOOK
+    103          *
+    104          * Description: This function is called when a task is deleted.
+    105          *
+    106          * Arguments  : p_tcb        Pointer to the task control block of the task being deleted.
+    107          *
+    108          * Note(s)    : 1) Interrupts are disabled during this call.
+    109          *********************************************************************************************************
+    110          */
+    111          
+
+   \                                 In  segment CODE, align 1, keep-with-next
+    112          void  OSTaskDelHook (OS_TCB  *p_tcb)
+   \                     OSTaskDelHook:
+    113          {
+   \   000000                       ; * Stack frame (at entry) *
+   \   000000                       ; Param size: 0
+   \   000000                       ; Auto size: 0
+    114          #if OS_CFG_APP_HOOKS_EN > 0u
+    115              if (OS_AppTaskDelHookPtr != (OS_APP_HOOK_TCB)0) {
+    116                  (*OS_AppTaskDelHookPtr)(p_tcb);
+    117              }
+    118          #else
+    119              (void)p_tcb;                                            /* Prevent compiler warning                               */
+    120          #endif
+    121          }
+   \   000000 D7                    RET                          ;; 6 cycles
+   \   000001                       ; ------------------------------------- Block: 6 cycles
+   \   000001                       ; ------------------------------------- Total: 6 cycles
+   \   000001                       REQUIRE ?CLRL78_V1_0_L00
+    122          
+    123          /*
+    124          *********************************************************************************************************
+    125          *                                           IDLE TASK HOOK
+    126          *
+    127          * Description: This function is called by the idle task.  This hook has been added to allow you to do
+    128          *              such things as STOP the CPU to conserve power.
+    129          *
+    130          * Arguments  : None.
+    131          *
+    132          * Note(s)    : None.
+    133          *********************************************************************************************************
+    134          */
+    135          
+
+   \                                 In  segment CODE, align 1, keep-with-next
+    136          void  OSIdleTaskHook (void)
+   \                     OSIdleTaskHook:
+    137          {
+   \   000000                       ; * Stack frame (at entry) *
+   \   000000                       ; Param size: 0
+   \   000000                       ; Auto size: 0
+    138          #if OS_CFG_APP_HOOKS_EN > 0u
+    139              if (OS_AppIdleTaskHookPtr != (OS_APP_HOOK_VOID)0) {
+    140                  (*OS_AppIdleTaskHookPtr)();
+    141              }
+    142          #endif
+    143          }
+   \   000000 D7                    RET                          ;; 6 cycles
+   \   000001                       ; ------------------------------------- Block: 6 cycles
+   \   000001                       ; ------------------------------------- Total: 6 cycles
+   \   000001                       REQUIRE ?CLRL78_V1_0_L00
+    144          
+    145          /*$PAGE*/
+    146          /*
+    147          *********************************************************************************************************
+    148          *                                         STATISTIC TASK HOOK
+    149          *
+    150          * Description: This function is called every second by uC/OS-III's statistics task.  This allows your
+    151          *              application to add functionality to the statistics task.
+    152          *
+    153          * Arguments  : None.
+    154          *
+    155          * Note(s)    : None.
+    156          *********************************************************************************************************
+    157          */
+    158          
+
+   \                                 In  segment CODE, align 1, keep-with-next
+    159          void  OSStatTaskHook (void)
+   \                     OSStatTaskHook:
+    160          {
+   \   000000                       ; * Stack frame (at entry) *
+   \   000000                       ; Param size: 0
+   \   000000                       ; Auto size: 0
+    161          #if OS_CFG_APP_HOOKS_EN > 0u
+    162              if (OS_AppStatTaskHookPtr != (OS_APP_HOOK_VOID)0) {
+    163                  (*OS_AppStatTaskHookPtr)();
+    164              }
+    165          #endif
+    166          }
+   \   000000 D7                    RET                          ;; 6 cycles
+   \   000001                       ; ------------------------------------- Block: 6 cycles
+   \   000001                       ; ------------------------------------- Total: 6 cycles
+   \   000001                       REQUIRE ?CLRL78_V1_0_L00
+    167          
+    168          /*$PAGE*/
+    169          /*
+    170          **********************************************************************************************************
+    171          *                                       INITIALIZE A TASK'S STACK
+    172          *
+    173          * Description: This function is called by OS_Task_Create() or OSTaskCreateExt() to initialize the stack
+    174          *              frame of the task being created. This function is highly processor specific.
+    175          *
+    176          * Arguments  : p_task       Pointer to the task entry point address.
+    177          *
+    178          *              p_arg        Pointer to a user supplied data area that will be passed to the task
+    179          *                               when the task first executes.
+    180          *
+    181          *              p_stk_base   Pointer to the base address of the stack.
+    182          *
+    183          *              stk_size     Size of the stack, in number of CPU_STK elements.
+    184          *
+    185          *              opt          Options used to alter the behavior of OS_Task_StkInit().
+    186          *                            (see OS.H for OS_TASK_OPT_xxx).
+    187          *
+    188          * Returns    : Always returns the location of the new top-of-stack' once the processor registers have
+    189          *              been placed on the stack in the proper order.
+    190          **********************************************************************************************************
+    191          */
+    192          
+
+   \                                 In  segment CODE, align 1, keep-with-next
+    193          CPU_STK  *OSTaskStkInit (OS_TASK_PTR    p_task,
+   \                     OSTaskStkInit:
+    194                                   void          *p_arg,
+    195                                   CPU_STK       *p_stk_base,
+    196                                   CPU_STK       *p_stk_limit,
+    197                                   CPU_STK_SIZE   stk_size,
+    198                                   OS_OPT         opt)
+    199          {
+   \   000000                       ; * Stack frame (at entry) *
+   \   000000                       ; Param size: 6
+   \   000000 C1                    PUSH      AX                 ;; 1 cycle
+   \   000001 C3                    PUSH      BC                 ;; 1 cycle
+   \   000002                       ; Auto size: 4
+    200              CPU_STK  *stk;
+    201          
+    202              
+    203              opt    = opt;                                                       /* 'opt' is not used, prevent warning                       */
+    204              stk    = (CPU_STK *)(p_stk_base + stk_size);                         /* Load stack pointer                                       */
+   \   000002 A80A                  MOVW      AX, [SP+0x0A]      ;; 1 cycle
+   \   000004 01                    ADDW      AX, AX             ;; 1 cycle
+   \   000005 05                    ADDW      AX, DE             ;; 1 cycle
+   \   000006 14                    MOVW      DE, AX             ;; 1 cycle
+    205              *stk-- = (CPU_STK)((CPU_INT32U)p_arg >> 16);
+   \   000007 13                    MOVW      AX, BC             ;; 1 cycle
+   \   000008 410F                  MOV       ES, #0xF           ;; 1 cycle
+   \   00000A F7                    CLRW      BC                 ;; 1 cycle
+   \   00000B 43                    CMPW      AX, BC             ;; 1 cycle
+   \   00000C 61F8                  SKNZ                         ;; 4 cycles
+   \   00000E                       ; ------------------------------------- Block: 14 cycles
+   \   00000E 4100                  MOV       ES, #0x0           ;; 1 cycle
+   \   000010                       ; ------------------------------------- Block: 1 cycles
+   \                     ??OSTaskStkInit_0:
+   \   000010 F0                    CLRB      X                  ;; 1 cycle
+   \   000011 8EFD                  MOV       A, ES              ;; 1 cycle
+   \   000013 08                    XCH       A, X               ;; 1 cycle
+   \   000014 B9                    MOVW      [DE], AX           ;; 1 cycle
+   \   000015 B5                    DECW      DE                 ;; 1 cycle
+   \   000016 B5                    DECW      DE                 ;; 1 cycle
+    206              *stk-- = (CPU_STK)p_arg;
+   \   000017 A800                  MOVW      AX, [SP]           ;; 1 cycle
+   \   000019 B9                    MOVW      [DE], AX           ;; 1 cycle
+   \   00001A B5                    DECW      DE                 ;; 1 cycle
+   \   00001B B5                    DECW      DE                 ;; 1 cycle
+    207              *stk-- = (CPU_STK)(((CPU_INT32U)p_task >> 16) & 0x000F) | 0x8600;        /* PC bits 16-19 in lower 8 bits, psw in upper 16 bits      */
+   \   00001C F6                    CLRW      AX                 ;; 1 cycle
+   \   00001D 5186                  MOV       A, #0x86           ;; 1 cycle
+   \   00001F B9                    MOVW      [DE], AX           ;; 1 cycle
+   \   000020 B5                    DECW      DE                 ;; 1 cycle
+   \   000021 B5                    DECW      DE                 ;; 1 cycle
+    208              *stk-- = (CPU_STK)p_task;                                            /* PC bits 0-15                                             */
+   \   000022 A802                  MOVW      AX, [SP+0x02]      ;; 1 cycle
+   \   000024 B9                    MOVW      [DE], AX           ;; 1 cycle
+   \   000025 B5                    DECW      DE                 ;; 1 cycle
+   \   000026 B5                    DECW      DE                 ;; 1 cycle
+    209              *stk-- = 0x1100;                                                    /* RP0                                                      */
+   \   000027 300011                MOVW      AX, #0x1100        ;; 1 cycle
+   \   00002A B9                    MOVW      [DE], AX           ;; 1 cycle
+   \   00002B B5                    DECW      DE                 ;; 1 cycle
+   \   00002C B5                    DECW      DE                 ;; 1 cycle
+    210              *stk-- = 0x3322;                                                    /* RP1                                                      */
+   \   00002D 302233                MOVW      AX, #0x3322        ;; 1 cycle
+   \   000030 B9                    MOVW      [DE], AX           ;; 1 cycle
+   \   000031 B5                    DECW      DE                 ;; 1 cycle
+   \   000032 B5                    DECW      DE                 ;; 1 cycle
+    211              *stk-- = 0x5544;                                                    /* RP2                                                      */
+   \   000033 304455                MOVW      AX, #0x5544        ;; 1 cycle
+   \   000036 B9                    MOVW      [DE], AX           ;; 1 cycle
+   \   000037 B5                    DECW      DE                 ;; 1 cycle
+   \   000038 B5                    DECW      DE                 ;; 1 cycle
+    212              *stk   = 0x7766;                                                    /* RP3                                                      */
+   \   000039 306677                MOVW      AX, #0x7766        ;; 1 cycle
+   \   00003C B9                    MOVW      [DE], AX           ;; 1 cycle
+    213              
+    214              return ((CPU_STK *)stk);
+   \   00003D 15                    MOVW      AX, DE             ;; 1 cycle
+   \   00003E 1004                  ADDW      SP, #0x4           ;; 1 cycle
+   \   000040 FD....                CALL      N:?FUNC_LEAVE_L06
+   \   000043 0600                  DW        0x6                ;; 3 cycles
+   \   000045                       ; ------------------------------------- Block: 38 cycles
+   \   000045                       ; ------------------------------------- Total: 53 cycles
+   \   000045                       REQUIRE ?CLRL78_V1_0_L00
+    215          }
+    216          
+    217          /*$PAGE*/
+    218          /*
+    219          *********************************************************************************************************
+    220          *                                           TASK SWITCH HOOK
+    221          *
+    222          * Description: This function is called when a task switch is performed.  This allows you to perform other
+    223          *              operations during a context switch.
+    224          *
+    225          * Arguments  : None.
+    226          *
+    227          * Note(s)    : 1) Interrupts are disabled during this call.
+    228          *              2) It is assumed that the global pointer 'OSTCBHighRdyPtr' points to the TCB of the task
+    229          *                 that will be 'switched in' (i.e. the highest priority task) and, 'OSTCBCurPtr' points
+    230          *                 to the task being switched out (i.e. the preempted task).
+    231          *********************************************************************************************************
+    232          */
+    233          
+
+   \                                 In  segment CODE, align 1, keep-with-next
+    234          void  OSTaskSwHook (void)
+   \                     OSTaskSwHook:
+    235          {
+   \   000000                       ; * Stack frame (at entry) *
+   \   000000                       ; Param size: 0
+   \   000000 C3                    PUSH      BC                 ;; 1 cycle
+   \   000001                       ; Auto size: 4
+   \   000001 2004                  SUBW      SP, #0x4           ;; 1 cycle
+    236          #if OS_CFG_TASK_PROFILE_EN > 0u
+    237              CPU_TS  ts;
+    238          #endif
+    239          #ifdef  CPU_CFG_INT_DIS_MEAS_EN
+    240              CPU_TS  int_dis_time;
+    241          #endif
+    242          
+    243          
+    244          
+    245          #if OS_CFG_APP_HOOKS_EN > 0u
+    246              if (OS_AppTaskSwHookPtr != (OS_APP_HOOK_VOID)0) {
+    247                  (*OS_AppTaskSwHookPtr)();
+    248              }
+    249          #endif
+    250          
+    251          #if OS_CFG_TASK_PROFILE_EN > 0u
+    252              ts = OS_TS_GET();
+    253              if (OSTCBCurPtr != OSTCBHighRdyPtr) {
+    254                  OSTCBCurPtr->CyclesDelta  = ts - OSTCBCurPtr->CyclesStart;
+    255                  OSTCBCurPtr->CyclesTotal += (OS_CYCLES)OSTCBCurPtr->CyclesDelta;
+    256              }
+    257          
+    258              OSTCBHighRdyPtr->CyclesStart = ts;
+    259          #endif
+    260          
+    261          #ifdef  CPU_CFG_INT_DIS_MEAS_EN
+    262              int_dis_time = CPU_IntDisMeasMaxCurReset();             /* Keep track of per-task interrupt disable time          */
+   \   000003 FD....                CALL      CPU_IntDisMeasMaxCurReset  ;; 3 cycles
+   \   000006 1004                  ADDW      SP, #0x4           ;; 1 cycle
+   \   000008 C3                    PUSH      BC                 ;; 1 cycle
+   \   000009 C1                    PUSH      AX                 ;; 1 cycle
+    263              if (OSTCBCurPtr->IntDisTimeMax < int_dis_time) {
+   \   00000A C3                    PUSH      BC                 ;; 1 cycle
+   \   00000B C1                    PUSH      AX                 ;; 1 cycle
+   \   00000C FB....                MOVW      HL, N:OSTCBCurPtr  ;; 1 cycle
+   \   00000F AC46                  MOVW      AX, [HL+0x46]      ;; 1 cycle
+   \   000011 12                    MOVW      BC, AX             ;; 1 cycle
+   \   000012 AC44                  MOVW      AX, [HL+0x44]      ;; 1 cycle
+   \   000014 FD....                CALL      N:?UL_CMP_L03      ;; 3 cycles
+   \   000017 DE0A                  BNC       ??OSTimeTickHook_0  ;; 4 cycles
+   \   000019                       ; ------------------------------------- Block: 21 cycles
+    264                  OSTCBCurPtr->IntDisTimeMax = int_dis_time;
+   \   000019 A802                  MOVW      AX, [SP+0x02]      ;; 1 cycle
+   \   00001B 12                    MOVW      BC, AX             ;; 1 cycle
+   \   00001C A800                  MOVW      AX, [SP]           ;; 1 cycle
+   \   00001E BC44                  MOVW      [HL+0x44], AX      ;; 1 cycle
+   \   000020 13                    MOVW      AX, BC             ;; 1 cycle
+   \   000021 BC46                  MOVW      [HL+0x46], AX      ;; 1 cycle
+   \   000023                       ; ------------------------------------- Block: 6 cycles
+    265              }
+    266          #endif
+    267          
+    268          #if OS_CFG_SCHED_LOCK_TIME_MEAS_EN > 0u
+    269                                                                      /* Keep track of per-task scheduler lock time             */
+    270              if (OSTCBCurPtr->SchedLockTimeMax < OSSchedLockTimeMaxCur) {
+    271                  OSTCBCurPtr->SchedLockTimeMax = OSSchedLockTimeMaxCur;
+    272              }
+    273              OSSchedLockTimeMaxCur = (CPU_TS)0;                      /* Reset the per-task value                               */
+    274          #endif
+    275          }
+   \                     ??OSTimeTickHook_0:
+   \   000023 1004                  ADDW      SP, #0x4           ;; 1 cycle
+   \   000025 C2                    POP       BC                 ;; 1 cycle
+   \   000026 D7                    RET                          ;; 6 cycles
+   \   000027                       ; ------------------------------------- Block: 8 cycles
+   \   000027                       ; ------------------------------------- Total: 35 cycles
+   \   000027                       REQUIRE ?CLRL78_V1_0_L00
+    276          
+    277          /*
+    278          *********************************************************************************************************
+    279          *                                           OS_TCBInit() HOOK
+    280          *
+    281          * Description: This function is called by OS_TCBInit() after setting up most of the TCB.
+    282          *
+    283          * Arguments  : ptcb    is a pointer to the TCB of the task being created.
+    284          *
+    285          * Note(s)    : 1) Interrupts may or may not be ENABLED during this call.
+    286          *********************************************************************************************************
+    287          */
+    288          #if OS_CPU_HOOKS_EN > 0 && OS_VERSION > 203
+    289          void  OSTCBInitHook (OS_TCB  *ptcb)
+    290          {
+    291          #if OS_APP_HOOKS_EN > 0
+    292              App_TCBInitHook(ptcb);
+    293          #else
+    294              (void)ptcb;                                                         /* Prevent compiler warning                                 */
+    295          #endif
+    296          }
+    297          #endif
+    298          
+    299          
+    300          /*$PAGE*/
+    301          /*
+    302          *********************************************************************************************************
+    303          *                                              TICK HOOK
+    304          *
+    305          * Description: This function is called every tick.
+    306          *
+    307          * Arguments  : None.
+    308          *
+    309          * Note(s)    : 1) This function is assumed to be called from the Tick ISR.
+    310          *********************************************************************************************************
+    311          */
+    312          
+
+   \                                 In  segment CODE, align 1, keep-with-next
+    313          void  OSTimeTickHook (void)
+   \                     OSTimeTickHook:
+    314          {
+   \   000000                       ; * Stack frame (at entry) *
+   \   000000                       ; Param size: 0
+   \   000000                       ; Auto size: 0
+    315          #if OS_CFG_APP_HOOKS_EN > 0u
+    316              if (OS_AppTimeTickHookPtr != (OS_APP_HOOK_VOID)0) {
+    317                  (*OS_AppTimeTickHookPtr)();
+    318              }
+    319          #endif
+    320          }
+   \   000000 D7                    RET                          ;; 6 cycles
+   \   000001                       ; ------------------------------------- Block: 6 cycles
+   \   000001                       ; ------------------------------------- Total: 6 cycles
+   \   000001                       REQUIRE ?CLRL78_V1_0_L00
+
+   Maximum stack usage in bytes:
+
+   CSTACK Function
+   ------ --------
+      0   OSIdleTaskHook
+      0   OSInitHook
+      0   OSStatTaskHook
+      0   OSTaskCreateHook
+      0   OSTaskDelHook
+     10   OSTaskStkInit
+     10   OSTaskSwHook
+        6   -> CPU_IntDisMeasMaxCurReset
+      0   OSTimeTickHook
+
+
+   Segment part sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       1  OSIdleTaskHook
+       1  OSInitHook
+       1  OSStatTaskHook
+       1  OSTaskCreateHook
+       1  OSTaskDelHook
+      69  OSTaskStkInit
+      39  OSTaskSwHook
+       1  OSTimeTickHook
+
+ 
+ 114 bytes in segment CODE
+ 
+ 114 bytes of CODE memory
+
+Errors: none
+Warnings: none

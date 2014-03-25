@@ -1,0 +1,426 @@
+###############################################################################
+#                                                                             #
+# IAR C/C++ Compiler V1.30.5.50715 for RL78             23/Mar/2014  17:08:34 #
+# Copyright 2011-2013 IAR Systems AB.                                         #
+# Network license: ece-lic-19.ece.ncsu.edu (STD)                              #
+#                                                                             #
+#    Core         =  rl78_2                                                   #
+#    Code model   =  Near                                                     #
+#    Data model   =  Near                                                     #
+#                 =                                                           #
+#    Source file  =  C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\BSP\Glyph\Fonts\bitmap_font.c                   #
+#    Command line =  C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\BSP\Glyph\Fonts\bitmap_font.c --core rl78_2     #
+#                    --code_model near --data_model near                      #
+#                    --near_const_location rom0 -o                            #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\Debug\Obj\ --dlib_config            #
+#                    "C:\Program Files\IAR Systems\Embedded Workbench         #
+#                    6.5\rl78\LIB\dlrl78nn2n.h" -e -Ohz --no_scheduling       #
+#                    --no_clustering --debug -lC                              #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\Debug\List\ -I                      #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\ -I C:\Users\Suddenlink\Dropbox\git #
+#                    _files\embedded_design\Proj2_uCOS-III-LCD-G14\Software\E #
+#                    valBoards\Renesas\YRDKRL78G14\IAR\Application\Source\    #
+#                    -I C:\Users\Suddenlink\Dropbox\git_files\embedded_design #
+#                    \Proj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDK #
+#                    RL78G14\IAR\Application\..\uCOS-III\ -I                  #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\..\BSP\ -I                          #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\..\BSP\applilet3_src\ -I            #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\..\BSP\Glyph\Drivers\ -I            #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\..\BSP\Glyph\glyph\ -I              #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\..\..\..\..\..\uC-CPU\ -I           #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\..\..\..\..\..\uC-CPU\RL78\IAR\ -I  #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\..\..\..\..\..\uC-LIB\ -I           #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\..\..\..\..\..\uCOS-III\Ports\Renes #
+#                    as\RL78\IAR\ -I C:\Users\Suddenlink\Dropbox\git_files\em #
+#                    bedded_design\Proj2_uCOS-III-LCD-G14\Software\EvalBoards #
+#                    \Renesas\YRDKRL78G14\IAR\Application\..\..\..\..\..\uCOS #
+#                    -III\Source\ --relaxed_fp                                #
+#    List file    =  C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\Debug\List\bitmap_font.lst          #
+#    Object file  =  C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\Debug\Obj\bitmap_font.r87           #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Proj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL78G14\IAR\BSP\Glyph\Fonts\bitmap_font.c
+      1          /*-------------------------------------------------------------------------*
+      2           * File:  font_bitmap.c
+      3           *-------------------------------------------------------------------------*
+      4           * Description:
+      5           *      Overrides the glyph library bitmap font for custom use
+      6           *-------------------------------------------------------------------------*/
+      7          
+      8          /*--------------------------------------------------------------------------
+      9           * Copyright (C) 2011 Future Designs, Inc.
+     10           *--------------------------------------------------------------------------
+     11           *
+     12           *    *===============================================================*
+     13           *    |  Future Designs, Inc. can port uEZ(tm) to your own hardware!  |
+     14           *    |             We can get you up and running fast!               |
+     15           *    |      See http://www.teamfdi.com/uez for more details.         |
+     16           *    *===============================================================*
+     17           *
+     18           *-------------------------------------------------------------------------*/
+     19          #include "glyph_cfg.h"
+     20          
+
+   \                                 In  segment NEAR_CONST, align 2
+     21          const uint8_t Bitmap_LoadingBar_Left[] = {
+   \                     Bitmap_LoadingBar_Left:
+   \   000000 0408187EFF81          DB 4, 8, 24, 126, 255, 129
+     22              0x04, 0x08, // width=4, height=8
+     23              0x18, 0x7E, 0xFF, 0x81
+     24          };
+     25          
+
+   \                                 In  segment NEAR_CONST, align 2
+     26          const uint8_t Bitmap_LoadingBar_Right[] = {
+   \                     Bitmap_LoadingBar_Right:
+   \   000000 040881FF7E18          DB 4, 8, 129, 255, 126, 24
+     27              0x04, 0x08, // width=4, height=8
+     28              0x81, 0xFF, 0x7E, 0x18
+     29          };
+     30          
+
+   \                                 In  segment NEAR_CONST, align 2
+     31          const uint8_t Bitmap_LoadingBar_Empty[] = {
+   \                     Bitmap_LoadingBar_Empty:
+   \   000000 01088100              DB 1, 8, 129, 0
+     32              0x01, 0x08, // width=1, height=8
+     33              0x81
+     34          };
+     35          
+
+   \                                 In  segment NEAR_CONST, align 2
+     36          const uint8_t Bitmap_LoadingBar_Fill[] = {
+   \                     Bitmap_LoadingBar_Fill:
+   \   000000 0108BD00              DB 1, 8, 189, 0
+     37              0x01, 0x08, // width=1, height=8
+     38              0xBD
+     39          };
+     40          
+
+   \                                 In  segment NEAR_CONST, align 2
+     41          const unsigned char * const Bitmaps_table[256] = {
+   \                     Bitmaps_table:
+   \   000000 ........              DW Bitmap_LoadingBar_Left, Bitmap_LoadingBar_Right
+   \   000004 ........0000          DW Bitmap_LoadingBar_Empty, Bitmap_LoadingBar_Fill, 0H, 0H, 0H, 0H, 0H
+   \   000012 000000000000          DW 0H, 0H, 0H, 0H, 0H, 0H, 0H, 0H, 0H, 0H, 0H, 0H, 0H, 0H, 0H, 0H, 0H
+   \   000034 000000000000          DW 0H, 0H, 0H, 0H, 0H, 0H, 0H, 0H, 0H, 0H, 0H, 0H, 0H, 0H, 0H, 0H, 0H
+   \   000056 000000000000          DW 0H, 0H, 0H, 0H, 0H, 0H, 0H, 0H, 0H, 0H, 0H, 0H, 0H, 0H, 0H, 0H, 0H
+   \   000078 000000000000          DW 0H, 0H, 0H, 0H, 0H, 0H, 0H, 0H, 0H, 0H, 0H, 0H, 0H, 0H, 0H, 0H, 0H
+   \   00009A 000000000000          DW 0H, 0H, 0H, 0H, 0H, 0H, 0H, 0H, 0H, 0H, 0H, 0H, 0H, 0H, 0H, 0H, 0H
+   \   0000BC 000000000000          DW 0H, 0H, 0H, 0H, 0H, 0H, 0H, 0H, 0H, 0H, 0H, 0H, 0H, 0H, 0H, 0H, 0H
+   \   0000DE 000000000000          DW 0H, 0H, 0H, 0H, 0H, 0H, 0H, 0H, 0H, 0H, 0H, 0H, 0H, 0H, 0H, 0H, 0H
+   \   000100 000000000000          DW 0H, 0H, 0H, 0H, 0H, 0H, 0H, 0H, 0H, 0H, 0H, 0H, 0H, 0H, 0H, 0H, 0H
+   \   000122 000000000000          DW 0H, 0H, 0H, 0H, 0H, 0H, 0H, 0H, 0H, 0H, 0H, 0H, 0H, 0H, 0H, 0H, 0H
+   \   000144 000000000000          DW 0H, 0H, 0H, 0H, 0H, 0H, 0H, 0H, 0H, 0H, 0H, 0H, 0H, 0H, 0H, 0H, 0H
+   \   000166 000000000000          DW 0H, 0H, 0H, 0H, 0H, 0H, 0H, 0H, 0H, 0H, 0H, 0H, 0H, 0H, 0H, 0H, 0H
+   \   000188 000000000000          DW 0H, 0H, 0H, 0H, 0H, 0H, 0H, 0H, 0H, 0H, 0H, 0H, 0H, 0H, 0H, 0H, 0H
+   \   0001AA 000000000000          DW 0H, 0H, 0H, 0H, 0H, 0H, 0H, 0H, 0H, 0H, 0H, 0H, 0H, 0H, 0H, 0H, 0H
+   \   0001CC 000000000000          DW 0H, 0H, 0H, 0H, 0H, 0H, 0H, 0H, 0H, 0H, 0H, 0H, 0H, 0H, 0H, 0H, 0H
+   \   0001EE 000000000000          DW 0H, 0H, 0H, 0H, 0H, 0H, 0H
+   \   0001FC 00000000              DB 0, 0, 0, 0
+     42          	Bitmap_LoadingBar_Left,
+     43              Bitmap_LoadingBar_Right,
+     44              Bitmap_LoadingBar_Empty,
+     45              Bitmap_LoadingBar_Fill,
+     46              0,
+     47          	0,
+     48          	0,
+     49          	0,
+     50          	0,
+     51          	0,
+     52              0,
+     53              0,
+     54          	0,
+     55              0,
+     56              0,
+     57              0,
+     58              0,
+     59              0,
+     60              0,
+     61              0,
+     62              0,
+     63              0,
+     64              0,
+     65              0,
+     66              0,
+     67              0,
+     68              0,
+     69              0,
+     70              0,
+     71              0,
+     72              0,
+     73              0,
+     74              0,
+     75              0,
+     76              0,
+     77              0,
+     78              0,
+     79              0,
+     80              0,
+     81              0,
+     82              0,
+     83              0,
+     84              0,
+     85              0,
+     86              0,
+     87              0,
+     88              0,
+     89              0,
+     90              0,
+     91              0,
+     92              0,
+     93              0,
+     94              0,
+     95              0,
+     96              0,
+     97              0,
+     98              0,
+     99              0,
+    100              0,
+    101              0,
+    102              0,
+    103              0,
+    104              0,
+    105              0,
+    106              0,
+    107              0,
+    108              0,
+    109              0,
+    110              0,
+    111              0,
+    112              0,
+    113              0,
+    114              0,
+    115              0,
+    116              0,
+    117              0,
+    118              0,
+    119              0,
+    120              0,
+    121              0,
+    122              0,
+    123              0,
+    124              0,
+    125              0,
+    126              0,
+    127              0,
+    128              0,
+    129              0,
+    130              0,
+    131              0,
+    132              0,
+    133              0,
+    134              0,
+    135              0,
+    136              0,
+    137              0,
+    138              0,
+    139              0,
+    140              0,
+    141              0,
+    142              0,
+    143              0,
+    144              0,
+    145              0,
+    146              0,
+    147              0,
+    148              0,
+    149              0,
+    150              0,
+    151              0,
+    152              0,
+    153              0,
+    154              0,
+    155              0,
+    156              0,
+    157              0,
+    158              0,
+    159              0,
+    160              0,
+    161              0,
+    162              0,
+    163              0,
+    164              0,
+    165              0,
+    166              0,
+    167              0,
+    168              0,
+    169              0,
+    170              0,
+    171              0,
+    172              0,
+    173              0,
+    174              0,
+    175              0,
+    176              0,
+    177              0,
+    178              0,
+    179              0,
+    180              0,
+    181              0,
+    182              0,
+    183              0,
+    184              0,
+    185              0,
+    186              0,
+    187              0,
+    188              0,
+    189              0,
+    190              0,
+    191              0,
+    192              0,
+    193              0,
+    194              0,
+    195              0,
+    196              0,
+    197              0,
+    198              0,
+    199              0,
+    200              0,
+    201              0,
+    202              0,
+    203              0,
+    204              0,
+    205              0,
+    206              0,
+    207              0,
+    208              0,
+    209              0,
+    210              0,
+    211              0,
+    212              0,
+    213              0,
+    214              0,
+    215              0,
+    216              0,
+    217              0,
+    218              0,
+    219              0,
+    220              0,
+    221              0,
+    222              0,
+    223              0,
+    224              0,
+    225              0,
+    226              0,
+    227              0,
+    228              0,
+    229              0,
+    230              0,
+    231              0,
+    232              0,
+    233              0,
+    234              0,
+    235              0,
+    236              0,
+    237              0,
+    238              0,
+    239              0,
+    240              0,
+    241              0,
+    242              0,
+    243              0,
+    244              0,
+    245              0,
+    246              0,
+    247              0,
+    248              0,
+    249              0,
+    250              0,
+    251              0,
+    252              0,
+    253              0,
+    254              0,
+    255              0,
+    256              0,
+    257              0,
+    258              0,
+    259              0,
+    260              0,
+    261              0,
+    262              0,
+    263              0,
+    264              0,
+    265              0,
+    266              0,
+    267              0,
+    268              0,
+    269              0,
+    270              0,
+    271              0,
+    272              0,
+    273              0,
+    274              0,
+    275              0,
+    276              0,
+    277              0,
+    278              0,
+    279              0,
+    280              0,
+    281              0,
+    282              0,
+    283              0,
+    284              0,
+    285              0,
+    286              0,
+    287              0,
+    288              0,
+    289              0,
+    290              0,
+    291              0,
+    292              0,
+    293              0,
+    294              0,
+    295              0,
+    296          };
+
+
+   Segment part sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  Bitmap_LoadingBar_Empty
+       4  Bitmap_LoadingBar_Fill
+       6  Bitmap_LoadingBar_Left
+       6  Bitmap_LoadingBar_Right
+     512  Bitmaps_table
+
+ 
+ 532 bytes in segment NEAR_CONST
+ 
+ 532 bytes of CONST memory
+
+Errors: none
+Warnings: none

@@ -1,0 +1,362 @@
+###############################################################################
+#                                                                             #
+# IAR C/C++ Compiler V1.30.5.50715 for RL78             23/Mar/2014  17:08:47 #
+# Copyright 2011-2013 IAR Systems AB.                                         #
+# Network license: ece-lic-19.ece.ncsu.edu (STD)                              #
+#                                                                             #
+#    Core         =  rl78_2                                                   #
+#    Code model   =  Near                                                     #
+#    Data model   =  Near                                                     #
+#                 =                                                           #
+#    Source file  =  C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\BSP\applilet3_src\r_cg_timer.c                  #
+#    Command line =  C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\BSP\applilet3_src\r_cg_timer.c --core rl78_2    #
+#                    --code_model near --data_model near                      #
+#                    --near_const_location rom0 -o                            #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\Debug\Obj\ --dlib_config            #
+#                    "C:\Program Files\IAR Systems\Embedded Workbench         #
+#                    6.5\rl78\LIB\dlrl78nn2n.h" -e -Ohz --no_scheduling       #
+#                    --no_clustering --debug -lC                              #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\Debug\List\ -I                      #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\ -I C:\Users\Suddenlink\Dropbox\git #
+#                    _files\embedded_design\Proj2_uCOS-III-LCD-G14\Software\E #
+#                    valBoards\Renesas\YRDKRL78G14\IAR\Application\Source\    #
+#                    -I C:\Users\Suddenlink\Dropbox\git_files\embedded_design #
+#                    \Proj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDK #
+#                    RL78G14\IAR\Application\..\uCOS-III\ -I                  #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\..\BSP\ -I                          #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\..\BSP\applilet3_src\ -I            #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\..\BSP\Glyph\Drivers\ -I            #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\..\BSP\Glyph\glyph\ -I              #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\..\..\..\..\..\uC-CPU\ -I           #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\..\..\..\..\..\uC-CPU\RL78\IAR\ -I  #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\..\..\..\..\..\uC-LIB\ -I           #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\..\..\..\..\..\uCOS-III\Ports\Renes #
+#                    as\RL78\IAR\ -I C:\Users\Suddenlink\Dropbox\git_files\em #
+#                    bedded_design\Proj2_uCOS-III-LCD-G14\Software\EvalBoards #
+#                    \Renesas\YRDKRL78G14\IAR\Application\..\..\..\..\..\uCOS #
+#                    -III\Source\ --relaxed_fp                                #
+#    List file    =  C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\Debug\List\r_cg_timer.lst           #
+#    Object file  =  C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\Debug\Obj\r_cg_timer.r87            #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Proj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL78G14\IAR\BSP\applilet3_src\r_cg_timer.c
+      1          /***********************************************************************************************************************
+      2          * DISCLAIMER
+      3          * This software is supplied by Renesas Electronics Corporation and is only 
+      4          * intended for use with Renesas products. No other uses are authorized. This 
+      5          * software is owned by Renesas Electronics Corporation and is protected under 
+      6          * all applicable laws, including copyright laws.
+      7          * THIS SOFTWARE IS PROVIDED "AS IS" AND RENESAS MAKES NO WARRANTIES REGARDING 
+      8          * THIS SOFTWARE, WHETHER EXPRESS, IMPLIED OR STATUTORY, INCLUDING BUT NOT 
+      9          * LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE 
+     10          * AND NON-INFRINGEMENT.  ALL SUCH WARRANTIES ARE EXPRESSLY DISCLAIMED.
+     11          * TO THE MAXIMUM EXTENT PERMITTED NOT PROHIBITED BY LAW, NEITHER RENESAS 
+     12          * ELECTRONICS CORPORATION NOR ANY OF ITS AFFILIATED COMPANIES SHALL BE LIABLE 
+     13          * FOR ANY DIRECT, INDIRECT, SPECIAL, INCIDENTAL OR CONSEQUENTIAL DAMAGES FOR 
+     14          * ANY REASON RELATED TO THIS SOFTWARE, EVEN IF RENESAS OR ITS AFFILIATES HAVE 
+     15          * BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+     16          * Renesas reserves the right, without notice, to make changes to this software 
+     17          * and to discontinue the availability of this software.  By using this software, 
+     18          * you agree to the additional terms and conditions found by accessing the 
+     19          * following link:
+     20          * http://www.renesas.com/disclaimer
+     21          *
+     22          * Copyright (C) 2011, 2013 Renesas Electronics Corporation. All rights reserved.
+     23          ***********************************************************************************************************************/
+     24          
+     25          /***********************************************************************************************************************
+     26          * File Name    : r_cg_timer.c
+     27          * Version      : Applilet3 for RL78/G14 V2.01.00.02 [09 Aug 2013]
+     28          * Device(s)    : R5F104PJ
+     29          * Tool-Chain   : IAR Systems iccrl78
+     30          * Description  : This file implements device driver for TAU module.
+     31          * Creation Date: 3/8/2014
+     32          ***********************************************************************************************************************/
+     33          
+     34          /***********************************************************************************************************************
+     35          Includes
+     36          ***********************************************************************************************************************/
+     37          #include "r_cg_macrodriver.h"
+
+   \                                 In  segment SADDR_A, at 0xfff18
+   \   union <unnamed> volatile __saddr __no_bit_access _A_TDR00
+   \                     _A_TDR00:
+   \   000000                       DS 2
+
+   \                                 In  segment NEAR_A, at 0xfffe0
+   \   union <unnamed> volatile __sfr _A_IF0
+   \                     _A_IF0:
+   \   000000                       DS 2
+
+   \                                 In  segment NEAR_A, at 0xfffe2
+   \   union <unnamed> volatile __sfr _A_IF1
+   \                     _A_IF1:
+   \   000000                       DS 2
+
+   \                                 In  segment NEAR_A, at 0xfffe4
+   \   union <unnamed> volatile __sfr _A_MK0
+   \                     _A_MK0:
+   \   000000                       DS 2
+
+   \                                 In  segment NEAR_A, at 0xfffe6
+   \   union <unnamed> volatile __sfr _A_MK1
+   \                     _A_MK1:
+   \   000000                       DS 2
+
+   \                                 In  segment NEAR_A, at 0xf00f0
+   \   union <unnamed> volatile _A_PER0
+   \                     _A_PER0:
+   \   000000                       DS 1
+
+   \                                 In  segment NEAR_A, at 0xf0190
+   \   union <unnamed> volatile __no_bit_access _A_TMR00
+   \                     _A_TMR00:
+   \   000000                       DS 2
+
+   \                                 In  segment NEAR_A, at 0xf01b2
+   \   union <unnamed> volatile _A_TS0
+   \                     _A_TS0:
+   \   000000                       DS 2
+
+   \                                 In  segment NEAR_A, at 0xf01b4
+   \   union <unnamed> volatile _A_TT0
+   \                     _A_TT0:
+   \   000000                       DS 2
+
+   \                                 In  segment NEAR_A, at 0xf01b6
+   \   union <unnamed> volatile __no_bit_access _A_TPS0
+   \                     _A_TPS0:
+   \   000000                       DS 2
+
+   \                                 In  segment NEAR_A, at 0xf01b8
+   \   union <unnamed> volatile __no_bit_access _A_TO0
+   \                     _A_TO0:
+   \   000000                       DS 2
+
+   \                                 In  segment NEAR_A, at 0xf01ba
+   \   union <unnamed> volatile _A_TOE0
+   \                     _A_TOE0:
+   \   000000                       DS 2
+     38          #include "r_cg_timer.h"
+     39          /* Start user code for include. Do not edit comment generated here */
+     40          /* End user code. Do not edit comment generated here */
+     41          #include "r_cg_userdefine.h"
+     42          
+     43          /***********************************************************************************************************************
+     44          Global variables and functions
+     45          ***********************************************************************************************************************/
+     46          /* Start user code for global. Do not edit comment generated here */
+     47          /* End user code. Do not edit comment generated here */
+     48          
+     49          /***********************************************************************************************************************
+     50          * Function Name: R_TAU0_Create
+     51          * Description  : This function initializes the TAU0 module.
+     52          * Arguments    : None
+     53          * Return Value : None
+     54          ***********************************************************************************************************************/
+
+   \                                 In  segment CODE, align 1, keep-with-next
+     55          void R_TAU0_Create(void)
+   \                     R_TAU0_Create:
+     56          {
+   \   000000                       ; * Stack frame (at entry) *
+   \   000000                       ; Param size: 0
+   \   000000                       ; Auto size: 0
+     57              TAU0EN = 1U;    /* supplies input clock */
+   \   000000 36F000                MOVW      HL, #0xF0          ;; 1 cycle
+   \   000003 7182                  SET1      [HL].0             ;; 2 cycles
+     58              TPS0 = _0000_TAU_CKM0_FCLK_0 | _0000_TAU_CKM1_FCLK_0 | _0000_TAU_CKM2_FCLK_1 | _0000_TAU_CKM3_FCLK_8;
+   \   000005 F6                    CLRW      AX                 ;; 1 cycle
+   \   000006 BFB601                MOVW      0x1B6, AX          ;; 1 cycle
+     59              /* Stop all channels */
+     60              TT0 = _0001_TAU_CH0_STOP_TRG_ON | _0002_TAU_CH1_STOP_TRG_ON | _0004_TAU_CH2_STOP_TRG_ON |
+     61                    _0008_TAU_CH3_STOP_TRG_ON | _0200_TAU_CH1_H8_STOP_TRG_ON | _0800_TAU_CH3_H8_STOP_TRG_ON;
+   \   000009 300F0A                MOVW      AX, #0xA0F         ;; 1 cycle
+   \   00000C BFB401                MOVW      0x1B4, AX          ;; 1 cycle
+     62              /* Mask channel 0 interrupt */
+     63              TMMK00 = 1U;    /* disable INTTM00 interrupt */
+   \   00000F 714AE6                SET1      0xFFFE6.4          ;; 2 cycles
+     64              TMIF00 = 0U;    /* clear INTTM00 interrupt flag */
+   \   000012 714BE2                CLR1      0xFFFE2.4          ;; 2 cycles
+     65              /* Mask channel 1 interrupt */
+     66              TMMK01 = 1U;    /* disable INTTM01 interrupt */
+   \   000015 715AE6                SET1      0xFFFE6.5          ;; 2 cycles
+     67              TMIF01 = 0U;    /* clear INTTM01 interrupt flag */
+   \   000018 715BE2                CLR1      0xFFFE2.5          ;; 2 cycles
+     68              /* Mask channel 1 higher 8 bits interrupt */
+     69              TMMK01H = 1U;    /* disable INTTM01H interrupt */
+   \   00001B 717AE5                SET1      0xFFFE5.7          ;; 2 cycles
+     70              TMIF01H = 0U;    /* clear INTTM01H interrupt flag */
+   \   00001E 717BE1                CLR1      0xFFFE1.7          ;; 2 cycles
+     71              /* Mask channel 2 interrupt */
+     72              TMMK02 = 1U;    /* disable INTTM02 interrupt */
+   \   000021 716AE6                SET1      0xFFFE6.6          ;; 2 cycles
+     73              TMIF02 = 0U;    /* clear INTTM02 interrupt flag */
+   \   000024 716BE2                CLR1      0xFFFE2.6          ;; 2 cycles
+     74              /* Mask channel 3 interrupt */
+     75              TMMK03 = 1U;    /* disable INTTM03 interrupt */
+   \   000027 717AE6                SET1      0xFFFE6.7          ;; 2 cycles
+     76              TMIF03 = 0U;    /* clear INTTM03 interrupt flag */
+   \   00002A 717BE2                CLR1      0xFFFE2.7          ;; 2 cycles
+     77              /* Mask channel 3 higher 8 bits interrupt */
+     78              TMMK03H = 1U;    /* disable INTTM03H interrupt */
+   \   00002D 712AE6                SET1      0xFFFE6.2          ;; 2 cycles
+     79              TMIF03H = 0U;    /* clear INTTM03H interrupt flag */
+   \   000030 712BE2                CLR1      0xFFFE2.2          ;; 2 cycles
+     80              /* Channel 0 used as interval timer */
+     81              TMR00 = _0000_TAU_CLOCK_SELECT_CKM0 | _0000_TAU_CLOCK_MODE_CKS | _0000_TAU_COMBINATION_SLAVE |
+     82                      _0000_TAU_TRIGGER_SOFTWARE | _0000_TAU_MODE_INTERVAL_TIMER | _0000_TAU_START_INT_UNUSED;
+   \   000033 F6                    CLRW      AX                 ;; 1 cycle
+   \   000034 BF9001                MOVW      0x190, AX          ;; 1 cycle
+     83              TDR00 = _7CFF_TAU_TDR00_VALUE;
+   \   000037 C918FF7C              MOVW      S:0xFFF18, #0x7CFF  ;; 1 cycle
+     84              TO0 &= ~_0001_TAU_CH0_OUTPUT_VALUE_1;
+   \   00003B AFB801                MOVW      AX, 0x1B8          ;; 1 cycle
+   \   00003E 08                    XCH       A, X               ;; 1 cycle
+   \   00003F 5CFE                  AND       A, #0xFE           ;; 1 cycle
+   \   000041 08                    XCH       A, X               ;; 1 cycle
+   \   000042 BFB801                MOVW      0x1B8, AX          ;; 1 cycle
+     85              TOE0 &= ~_0001_TAU_CH0_OUTPUT_ENABLE;
+   \   000045 36BA01                MOVW      HL, #0x1BA         ;; 1 cycle
+   \   000048 7183                  CLR1      [HL].0             ;; 2 cycles
+     86          }
+   \   00004A D7                    RET                          ;; 6 cycles
+   \   00004B                       ; ------------------------------------- Block: 48 cycles
+   \   00004B                       ; ------------------------------------- Total: 48 cycles
+   \   00004B                       REQUIRE ?CLRL78_V1_0_L00
+   \   00004B                       REQUIRE _A_PER0
+   \   00004B                       REQUIRE _A_TPS0
+   \   00004B                       REQUIRE _A_TT0
+   \   00004B                       REQUIRE _A_MK1
+   \   00004B                       REQUIRE _A_IF1
+   \   00004B                       REQUIRE _A_MK0
+   \   00004B                       REQUIRE _A_IF0
+   \   00004B                       REQUIRE _A_TMR00
+   \   00004B                       REQUIRE _A_TDR00
+   \   00004B                       REQUIRE _A_TO0
+   \   00004B                       REQUIRE _A_TOE0
+     87          
+     88          /***********************************************************************************************************************
+     89          * Function Name: R_TAU0_Channel0_Start
+     90          * Description  : This function starts TAU0 channel 0 counter.
+     91          * Arguments    : None
+     92          * Return Value : None
+     93          ***********************************************************************************************************************/
+
+   \                                 In  segment CODE, align 1, keep-with-next
+     94          void R_TAU0_Channel0_Start(void)
+   \                     R_TAU0_Channel0_Start:
+     95          {
+   \   000000                       ; * Stack frame (at entry) *
+   \   000000                       ; Param size: 0
+   \   000000                       ; Auto size: 0
+     96              TS0 |= _0001_TAU_CH0_START_TRG_ON;
+   \   000000 36B201                MOVW      HL, #0x1B2         ;; 1 cycle
+   \   000003 7182                  SET1      [HL].0             ;; 2 cycles
+     97          }
+   \   000005 D7                    RET                          ;; 6 cycles
+   \   000006                       ; ------------------------------------- Block: 9 cycles
+   \   000006                       ; ------------------------------------- Total: 9 cycles
+   \   000006                       REQUIRE ?CLRL78_V1_0_L00
+   \   000006                       REQUIRE _A_TS0
+     98          
+     99          /***********************************************************************************************************************
+    100          * Function Name: R_TAU0_Channel0_Stop
+    101          * Description  : This function stops TAU0 channel 0 counter.
+    102          * Arguments    : None
+    103          * Return Value : None
+    104          ***********************************************************************************************************************/
+
+   \                                 In  segment CODE, align 1, keep-with-next
+    105          void R_TAU0_Channel0_Stop(void)
+   \                     R_TAU0_Channel0_Stop:
+    106          {
+   \   000000                       ; * Stack frame (at entry) *
+   \   000000                       ; Param size: 0
+   \   000000                       ; Auto size: 0
+    107              TT0 |= _0001_TAU_CH0_STOP_TRG_ON;
+   \   000000 36B401                MOVW      HL, #0x1B4         ;; 1 cycle
+   \   000003 7182                  SET1      [HL].0             ;; 2 cycles
+    108          }
+   \   000005 D7                    RET                          ;; 6 cycles
+   \   000006                       ; ------------------------------------- Block: 9 cycles
+   \   000006                       ; ------------------------------------- Total: 9 cycles
+   \   000006                       REQUIRE ?CLRL78_V1_0_L00
+   \   000006                       REQUIRE _A_TT0
+    109          
+    110          /* Start user code for adding. Do not edit comment generated here */
+    111          // AGD: void R_TAU0_Channel0_Enable_Interrupt(void); // Clear TMM00 to enable interrupt. ;
+    112          
+    113          /* End user code. Do not edit comment generated here */
+
+   Maximum stack usage in bytes:
+
+   CSTACK Function
+   ------ --------
+      0   R_TAU0_Channel0_Start
+      0   R_TAU0_Channel0_Stop
+      0   R_TAU0_Create
+
+
+   Segment part sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       6  R_TAU0_Channel0_Start
+       6  R_TAU0_Channel0_Stop
+      75  R_TAU0_Create
+       2  _A_IF0
+       2  _A_IF1
+       2  _A_MK0
+       2  _A_MK1
+       1  _A_PER0
+       2  _A_TDR00
+       2  _A_TMR00
+       2  _A_TO0
+       2  _A_TOE0
+       2  _A_TPS0
+       2  _A_TS0
+       2  _A_TT0
+
+ 
+ 87 bytes in segment CODE
+ 21 bytes in segment NEAR_A
+  2 bytes in segment SADDR_A
+ 
+ 87 bytes of CODE memory
+  0 bytes of DATA memory (+ 23 bytes shared)
+
+Errors: none
+Warnings: none

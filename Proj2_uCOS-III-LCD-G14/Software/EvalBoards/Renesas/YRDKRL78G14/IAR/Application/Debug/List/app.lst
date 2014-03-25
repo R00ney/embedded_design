@@ -1,0 +1,674 @@
+###############################################################################
+#                                                                             #
+# IAR C/C++ Compiler V1.30.5.50715 for RL78             25/Mar/2014  11:42:12 #
+# Copyright 2011-2013 IAR Systems AB.                                         #
+# Network license: ece-lic-19.ece.ncsu.edu (STD)                              #
+#                                                                             #
+#    Core         =  rl78_2                                                   #
+#    Code model   =  Near                                                     #
+#    Data model   =  Near                                                     #
+#                 =                                                           #
+#    Source file  =  C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\Source\app.c                        #
+#    Command line =  C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\Source\app.c --core rl78_2          #
+#                    --code_model near --data_model near                      #
+#                    --near_const_location rom0 -o                            #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\Debug\Obj\ --dlib_config            #
+#                    "C:\Program Files\IAR Systems\Embedded Workbench         #
+#                    6.5\rl78\LIB\dlrl78nn2n.h" -e -Ohz --no_scheduling       #
+#                    --no_clustering --debug -lC                              #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\Debug\List\ -I                      #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\ -I C:\Users\Suddenlink\Dropbox\git #
+#                    _files\embedded_design\Proj2_uCOS-III-LCD-G14\Software\E #
+#                    valBoards\Renesas\YRDKRL78G14\IAR\Application\Source\    #
+#                    -I C:\Users\Suddenlink\Dropbox\git_files\embedded_design #
+#                    \Proj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDK #
+#                    RL78G14\IAR\Application\..\uCOS-III\ -I                  #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\..\BSP\ -I                          #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\..\BSP\applilet3_src\ -I            #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\..\BSP\Glyph\Drivers\ -I            #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\..\BSP\Glyph\glyph\ -I              #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\..\..\..\..\..\uC-CPU\ -I           #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\..\..\..\..\..\uC-CPU\RL78\IAR\ -I  #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\..\..\..\..\..\uC-LIB\ -I           #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\..\..\..\..\..\uCOS-III\Ports\Renes #
+#                    as\RL78\IAR\ -I C:\Users\Suddenlink\Dropbox\git_files\em #
+#                    bedded_design\Proj2_uCOS-III-LCD-G14\Software\EvalBoards #
+#                    \Renesas\YRDKRL78G14\IAR\Application\..\..\..\..\..\uCOS #
+#                    -III\Source\ --relaxed_fp                                #
+#    List file    =  C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\Debug\List\app.lst                  #
+#    Object file  =  C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\Debug\Obj\app.r87                   #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Proj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL78G14\IAR\Application\Source\app.c
+      1          /*
+      2          *********************************************************************************************************
+      3          *                                              EXAMPLE CODE
+      4          *
+      5          *                            (c) Copyright 2010-2011; Micrium, Inc.; Weston, FL
+      6          *
+      7          *               All rights reserved.  Protected by international copyright laws.
+      8          *               Knowledge of the source code may NOT be used to develop a similar product.
+      9          *               Please help us continue to provide the Embedded community with the finest
+     10          *               software available.  Your honesty is greatly appreciated.
+     11          *********************************************************************************************************
+     12          */
+     13          
+     14          /*
+     15          *********************************************************************************************************
+     16          *
+     17          *                                           EXAMPLE CODE
+     18          *
+     19          *                                           Renesas RL78
+     20          *                                               on the
+     21          *                                     YRDKRL78G13 Evaluation Board
+     22          *
+     23          * Filename      : app.c
+     24          * Version       : V1.00
+     25          * Programmer(s) : FT
+     26          *********************************************************************************************************
+     27          */
+     28          
+     29          /*
+     30          *********************************************************************************************************
+     31          *                                             INCLUDE FILES
+     32          *********************************************************************************************************
+     33          */
+     34          
+     35          #include "r_cg_macrodriver.h"
+     36          #include "r_cg_serial.h"
+     37          #include <includes.h>
+     38          #include <string.h>
+     39          #include "accel.h"
+     40          #include "lcd.h"
+     41          
+     42          /*
+     43          *********************************************************************************************************
+     44          *                                             LOCAL DEFINES
+     45          *********************************************************************************************************
+     46          */
+     47          
+     48          
+     49          /*
+     50          *********************************************************************************************************
+     51          *                                            LOCAL VARIABLES
+     52          *********************************************************************************************************
+     53          */
+     54          
+
+   \                                 In  segment NEAR_Z, align 2, align-sorted
+     55          static  OS_TCB    App_TaskStart_TCB;
+   \                     App_TaskStart_TCB:
+   \   000000                       DS 72
+   \   000048                       REQUIRE __INIT_NEAR_Z
+
+   \                                 In  segment NEAR_Z, align 2, align-sorted
+     56          static  OS_TCB    App_TaskAccel_TCB;
+   \                     App_TaskAccel_TCB:
+   \   000000                       DS 72
+   \   000048                       REQUIRE __INIT_NEAR_Z
+
+   \                                 In  segment NEAR_Z, align 2, align-sorted
+     57          static  OS_TCB    App_Task1_TCB;
+   \                     App_Task1_TCB:
+   \   000000                       DS 72
+   \   000048                       REQUIRE __INIT_NEAR_Z
+     58          
+
+   \                                 In  segment NEAR_Z, align 2, align-sorted
+     59          static  CPU_STK   App_TaskStart_Stk[APP_CFG_TASK_START_STK_SIZE];
+   \                     App_TaskStart_Stk:
+   \   000000                       DS 1024
+   \   000400                       REQUIRE __INIT_NEAR_Z
+
+   \                                 In  segment NEAR_Z, align 2, align-sorted
+     60          static  CPU_STK   App_TaskAccel_Stk[APP_CFG_TASKACCEL_STK_SIZE];
+   \                     App_TaskAccel_Stk:
+   \   000000                       DS 1024
+   \   000400                       REQUIRE __INIT_NEAR_Z
+
+   \                                 In  segment NEAR_Z, align 2, align-sorted
+     61          static  CPU_STK   App_Task1_Stk[APP_CFG_TASK1_STK_SIZE];
+   \                     App_Task1_Stk:
+   \   000000                       DS 512
+   \   000200                       REQUIRE __INIT_NEAR_Z
+     62          
+     63          /*
+     64          *********************************************************************************************************
+     65          *                                         FUNCTION PROTOTYPES
+     66          *********************************************************************************************************
+     67          */
+     68          
+     69          static  void  App_TaskCreate(void);
+     70          static  void  App_ObjCreate (void);
+     71          
+     72          static  void  App_TaskStart (void  *p_arg);
+     73          
+     74          static  void  App_Task1 (void  *p_arg);
+     75          
+     76          
+     77          /*
+     78          *********************************************************************************************************
+     79          *                                                main()
+     80          *
+     81          * Description : This is the standard entry point for C code.  It is assumed that your code will call
+     82          *               main() once you have performed all necessary initialization.
+     83          *
+     84          * Argument(s) : none
+     85          *
+     86          * Return(s)   : none
+     87          *
+     88          * Caller(s)   : Startup Code.
+     89          *
+     90          * Note(s)     : none.
+     91          *********************************************************************************************************
+     92          */
+     93          
+     94          // AGD: was main, but applilet generates own main function. Added call from main to ucosIII_main.
+
+   \                                 In  segment CODE, align 1, keep-with-next
+     95          int  ucosIII_main (void)
+   \                     ucosIII_main:
+     96          {
+   \   000000                       ; * Stack frame (at entry) *
+   \   000000                       ; Param size: 0
+   \   000000 C3                    PUSH      BC                 ;; 1 cycle
+   \   000001 C5                    PUSH      DE                 ;; 1 cycle
+   \   000002                       ; Auto size: 2
+   \   000002 C1                    PUSH      AX                 ;; 1 cycle
+     97              OS_ERR   os_err;
+     98          
+     99              CPU_Init();                                                 /* Initialize the uC/CPU services                       */
+   \   000003 FD....                CALL      CPU_Init           ;; 3 cycles
+    100          
+    101              BSP_PreInit();
+   \   000006 FD....                CALL      BSP_PreInit        ;; 3 cycles
+    102          
+    103              OSInit(&os_err);                                            /* Init uC/OS-III.                                      */
+   \   000009 AEF8                  MOVW      AX, SP             ;; 1 cycle
+   \   00000B FD....                CALL      OSInit             ;; 3 cycles
+    104          
+    105              OSTaskCreate((OS_TCB      *)&App_TaskStart_TCB,              /* Create the start task                                */
+    106                           (CPU_CHAR    *)"Start",
+    107                           (OS_TASK_PTR  )App_TaskStart,
+    108                           (void        *)0,
+    109                           (OS_PRIO      )APP_CFG_TASK_START_PRIO,
+    110                           (CPU_STK     *)&App_TaskStart_Stk[0],
+    111                           (CPU_STK_SIZE )APP_CFG_TASK_START_STK_SIZE_LIMIT,
+    112                           (CPU_STK_SIZE )APP_CFG_TASK_START_STK_SIZE,
+    113                           (OS_MSG_QTY   )0u,
+    114                           (OS_TICK      )0u,
+    115                           (void        *)0,
+    116                           (OS_OPT       )(OS_OPT_TASK_STK_CHK | OS_OPT_TASK_STK_CLR),
+    117                           (OS_ERR      *)&os_err);
+   \   00000E AEF8                  MOVW      AX, SP             ;; 1 cycle
+   \   000010 C1                    PUSH      AX                 ;; 1 cycle
+   \   000011 300300                MOVW      AX, #0x3           ;; 1 cycle
+   \   000014 C1                    PUSH      AX                 ;; 1 cycle
+   \   000015 F6                    CLRW      AX                 ;; 1 cycle
+   \   000016 C1                    PUSH      AX                 ;; 1 cycle
+   \   000017 C1                    PUSH      AX                 ;; 1 cycle
+   \   000018 C1                    PUSH      AX                 ;; 1 cycle
+   \   000019 C1                    PUSH      AX                 ;; 1 cycle
+   \   00001A 5102                  MOV       A, #0x2            ;; 1 cycle
+   \   00001C C1                    PUSH      AX                 ;; 1 cycle
+   \   00001D 303300                MOVW      AX, #0x33          ;; 1 cycle
+   \   000020 C1                    PUSH      AX                 ;; 1 cycle
+   \   000021 30....                MOVW      AX, #App_TaskStart_Stk  ;; 1 cycle
+   \   000024 C1                    PUSH      AX                 ;; 1 cycle
+   \   000025 300200                MOVW      AX, #0x2           ;; 1 cycle
+   \   000028 C1                    PUSH      AX                 ;; 1 cycle
+   \   000029 F6                    CLRW      AX                 ;; 1 cycle
+   \   00002A C1                    PUSH      AX                 ;; 1 cycle
+   \   00002B 34....                MOVW      DE, #App_TaskStart  ;; 1 cycle
+   \   00002E 32....                MOVW      BC, #`?<Constant "Start">`  ;; 1 cycle
+   \   000031 30....                MOVW      AX, #App_TaskStart_TCB  ;; 1 cycle
+   \   000034 FD....                CALL      OSTaskCreate       ;; 3 cycles
+    118          
+    119          	OSStart(&os_err);                                           /* Start multitasking (i.e. give control to uC/OS-III).*/
+   \   000037 AEF8                  MOVW      AX, SP             ;; 1 cycle
+   \   000039 FD....                CALL      OSStart            ;; 3 cycles
+    120          
+    121              return (0);
+   \   00003C F6                    CLRW      AX                 ;; 1 cycle
+   \   00003D                       ; ------------------------------------- Block: 43 cycles
+   \   00003D                       ; ------------------------------------- Total: 43 cycles
+   \   00003D                       REQUIRE ?CLRL78_V1_0_L00
+   \   00003D                       REQUIRE ?Subroutine0
+   \   00003D                       ; // Fall through to label ?Subroutine0
+    122          }
+
+   \                                 In  segment CODE, align 1, keep-with-next
+   \                     ?Subroutine0:
+   \   000000 1002                  ADDW      SP, #0x2           ;; 1 cycle
+   \   000002 C4                    POP       DE                 ;; 1 cycle
+   \   000003 C2                    POP       BC                 ;; 1 cycle
+   \   000004 D7                    RET                          ;; 6 cycles
+   \   000005                       ; ------------------------------------- Block: 9 cycles
+   \   000005                       ; ------------------------------------- Total: 9 cycles
+   \   000005                       REQUIRE ?CLRL78_V1_0_L00
+    123          
+    124          
+    125          /*
+    126          *********************************************************************************************************
+    127          *                                          STARTUP TASK
+    128          *
+    129          * Description : This is an example of a startup task.  As mentioned in the book's text, you MUST
+    130          *               initialize the ticker only once multitasking has started.
+    131          *
+    132          * Arguments   : p_arg   is the argument passed to 'AppTaskStart()' by 'OSTaskCreate()'.
+    133          *
+    134          * Returns     : none
+    135          *
+    136          * Notes       : 1) The first line of code is used to prevent a compiler warning because 'p_arg' is not
+    137          *                  used.  The compiler should not generate any code for this statement.
+    138          *********************************************************************************************************
+    139          */
+    140          
+
+   \                                 In  segment CODE, align 1, keep-with-next
+    141          static  void  App_TaskStart (void *p_arg)
+   \                     App_TaskStart:
+    142          {
+   \   000000                       ; * Stack frame (at entry) *
+   \   000000                       ; Param size: 0
+   \   000000 C3                    PUSH      BC                 ;; 1 cycle
+   \   000001 C5                    PUSH      DE                 ;; 1 cycle
+   \   000002                       ; Auto size: 4
+   \   000002 2004                  SUBW      SP, #0x4           ;; 1 cycle
+    143              OS_ERR  err;
+    144          	uint8_t x=0;
+   \   000004 F1                    CLRB      A                  ;; 1 cycle
+   \   000005 9800                  MOV       [SP], A            ;; 1 cycle
+    145          	char c;
+    146          
+    147              (void)p_arg;						/* prevent compiler warning */
+    148          
+    149              BSP_PostInit();                                             /* Initialize BSP functions                             */
+   \   000007 FD....                CALL      BSP_PostInit       ;; 3 cycles
+    150          
+    151          #if (OS_CFG_STAT_TASK_EN > 0u)
+    152              OSStatTaskCPUUsageInit(&err);                               /* Determine CPU capacity                               */
+    153          #endif
+    154          
+    155              App_TaskCreate();                                           /* Create Application tasks                             */
+   \   00000A FD....                CALL      App_TaskCreate     ;; 3 cycles
+    156              App_ObjCreate();                                            /* Create Application kernel objects                    */
+    157          
+    158          #ifdef CPU_CFG_INT_DIS_MEAS_EN
+    159              CPU_IntDisMeasMaxCurReset();
+   \   00000D FD....                CALL      CPU_IntDisMeasMaxCurReset  ;; 3 cycles
+    160          #endif
+    161          
+    162          #if (OS_CFG_STAT_TASK_EN > 0u)
+    163              OSStatReset(&err);
+    164          #endif
+    165          
+    166          	LCDInit();
+   \   000010 FD....                CALL      LCDInit            ;; 3 cycles
+    167          
+    168          	InitializeAccelerometer(); 				// Accel init uses LCD/Glyph
+   \   000013 FD....                CALL      InitializeAccelerometer  ;; 3 cycles
+   \   000016 EF27                  BR        S:??App_Task1_0    ;; 3 cycles
+   \   000018                       ; ------------------------------------- Block: 23 cycles
+    169          
+    170              while (DEF_TRUE) {                                          /* Task body, always written as an infinite loop.       */
+    171          		LCDClearLine(0);
+    172          
+    173          		if (x&0x08) {
+    174          			c = '-';
+    175          		} else {
+    176          			c = '<';
+   \                     ??App_TaskStart_0:
+   \   000018 503C                  MOV       X, #0x3C           ;; 1 cycle
+   \   00001A                       ; ------------------------------------- Block: 1 cycles
+    177          		}
+    178          		LCDChar(c, x++, 0);
+   \                     ??App_TaskStart_1:
+   \   00001A F2                    CLRB      C                  ;; 1 cycle
+   \   00001B 8800                  MOV       A, [SP]            ;; 1 cycle
+   \   00001D 73                    MOV       B, A               ;; 1 cycle
+   \   00001E 60                    MOV       A, X               ;; 1 cycle
+   \   00001F FD....                CALL      LCDChar            ;; 3 cycles
+   \   000022 8800                  MOV       A, [SP]            ;; 1 cycle
+   \   000024 81                    INC       A                  ;; 1 cycle
+   \   000025 9800                  MOV       [SP], A            ;; 1 cycle
+    179          		if (x >= LCD_W-8)
+   \   000027 4C58                  CMP       A, #0x58           ;; 1 cycle
+   \   000029 DC03                  BC        ??App_Task1_1      ;; 4 cycles
+   \   00002B                       ; ------------------------------------- Block: 15 cycles
+    180          			x = 0;
+   \   00002B F1                    CLRB      A                  ;; 1 cycle
+   \   00002C 9800                  MOV       [SP], A            ;; 1 cycle
+   \   00002E                       ; ------------------------------------- Block: 2 cycles
+    181          
+    182          	   	OSTimeDlyHMSM(0u, 0u, 0u, 100u, OS_OPT_TIME_HMSM_STRICT, &err);
+   \                     ??App_Task1_1:
+   \   00002E AEF8                  MOVW      AX, SP             ;; 1 cycle
+   \   000030 A1                    INCW      AX                 ;; 1 cycle
+   \   000031 A1                    INCW      AX                 ;; 1 cycle
+   \   000032 C1                    PUSH      AX                 ;; 1 cycle
+   \   000033 F6                    CLRW      AX                 ;; 1 cycle
+   \   000034 C1                    PUSH      AX                 ;; 1 cycle
+   \   000035 C1                    PUSH      AX                 ;; 1 cycle
+   \   000036 5064                  MOV       X, #0x64           ;; 1 cycle
+   \   000038 C1                    PUSH      AX                 ;; 1 cycle
+   \   000039 F6                    CLRW      AX                 ;; 1 cycle
+   \   00003A 14                    MOVW      DE, AX             ;; 1 cycle
+   \   00003B F7                    CLRW      BC                 ;; 1 cycle
+   \   00003C FD....                CALL      OSTimeDlyHMSM      ;; 3 cycles
+   \   00003F                       ; ------------------------------------- Block: 15 cycles
+   \                     ??App_Task1_0:
+   \   00003F F1                    CLRB      A                  ;; 1 cycle
+   \   000040 FD....                CALL      LCDClearLine       ;; 3 cycles
+   \   000043 FBF8FF                MOVW      HL, SP             ;; 1 cycle
+   \   000046 31B5CF                BF        [HL].3, ??App_TaskStart_0  ;; 5 cycles
+   \   000049                       ; ------------------------------------- Block: 10 cycles
+   \   000049 502D                  MOV       X, #0x2D           ;; 1 cycle
+   \   00004B EFCD                  BR        S:??App_TaskStart_1  ;; 3 cycles
+   \   00004D                       ; ------------------------------------- Block: 4 cycles
+   \   00004D                       ; ------------------------------------- Total: 70 cycles
+   \   00004D                       REQUIRE ?CLRL78_V1_0_L00
+    183              }
+    184          }
+    185          
+    186          
+    187          /*
+    188          *********************************************************************************************************
+    189          *                                          AppTaskCreate()
+    190          *
+    191          * Description : Create application tasks.
+    192          *
+    193          * Argument(s) : none
+    194          *
+    195          * Return(s)   : none
+    196          *
+    197          * Caller(s)   : AppTaskStart()
+    198          *
+    199          * Note(s)     : none.
+    200          *********************************************************************************************************
+    201          */
+    202          
+
+   \                                 In  segment CODE, align 1, keep-with-next
+    203          static  void  App_TaskCreate (void)
+   \                     App_TaskCreate:
+    204          {
+   \   000000                       ; * Stack frame (at entry) *
+   \   000000                       ; Param size: 0
+   \   000000 C3                    PUSH      BC                 ;; 1 cycle
+   \   000001 C5                    PUSH      DE                 ;; 1 cycle
+   \   000002                       ; Auto size: 2
+   \   000002 C1                    PUSH      AX                 ;; 1 cycle
+    205            OS_ERR  os_err;
+    206          
+    207          		OSTaskCreate((OS_TCB 	*)&App_Task1_TCB,              /* Create task 1                               */
+    208                           (CPU_CHAR    *)"Task1",
+    209                           (OS_TASK_PTR  )App_Task1,
+    210                           (void        *)0,
+    211                           (OS_PRIO      )APP_CFG_TASK1_PRIO,
+    212                           (CPU_STK     *)&App_Task1_Stk[0],
+    213                           (CPU_STK_SIZE )APP_CFG_TASK1_STK_SIZE_LIMIT,
+    214                           (CPU_STK_SIZE )APP_CFG_TASK1_STK_SIZE,
+    215                           (OS_MSG_QTY   )0u,
+    216                           (OS_TICK      )0u,
+    217                           (void        *)0,
+    218                           (OS_OPT       )(OS_OPT_TASK_STK_CHK | OS_OPT_TASK_STK_CLR),
+    219                           (OS_ERR      *)&os_err);
+   \   000003 AEF8                  MOVW      AX, SP             ;; 1 cycle
+   \   000005 C1                    PUSH      AX                 ;; 1 cycle
+   \   000006 300300                MOVW      AX, #0x3           ;; 1 cycle
+   \   000009 C1                    PUSH      AX                 ;; 1 cycle
+   \   00000A F6                    CLRW      AX                 ;; 1 cycle
+   \   00000B C1                    PUSH      AX                 ;; 1 cycle
+   \   00000C C1                    PUSH      AX                 ;; 1 cycle
+   \   00000D C1                    PUSH      AX                 ;; 1 cycle
+   \   00000E C1                    PUSH      AX                 ;; 1 cycle
+   \   00000F E1                    ONEB      A                  ;; 1 cycle
+   \   000010 C1                    PUSH      AX                 ;; 1 cycle
+   \   000011 301900                MOVW      AX, #0x19          ;; 1 cycle
+   \   000014 C1                    PUSH      AX                 ;; 1 cycle
+   \   000015 30....                MOVW      AX, #App_Task1_Stk  ;; 1 cycle
+   \   000018 C1                    PUSH      AX                 ;; 1 cycle
+   \   000019 300400                MOVW      AX, #0x4           ;; 1 cycle
+   \   00001C C1                    PUSH      AX                 ;; 1 cycle
+   \   00001D F6                    CLRW      AX                 ;; 1 cycle
+   \   00001E C1                    PUSH      AX                 ;; 1 cycle
+   \   00001F 34....                MOVW      DE, #App_Task1     ;; 1 cycle
+   \   000022 32....                MOVW      BC, #`?<Constant "Task1">`  ;; 1 cycle
+   \   000025 30....                MOVW      AX, #App_Task1_TCB  ;; 1 cycle
+   \   000028 FD....                CALL      OSTaskCreate       ;; 3 cycles
+    220          
+    221          		OSTaskCreate((OS_TCB     *)&App_TaskAccel_TCB,        /* Create accelerometer task                                */
+    222                           (CPU_CHAR    *)"TaskAccel",
+    223                           (OS_TASK_PTR  )App_TaskAccel,
+    224                           (void        *)0,
+    225                           (OS_PRIO      )APP_CFG_TASKACCEL_PRIO,
+    226                           (CPU_STK     *)&App_TaskAccel_Stk[0],
+    227                           (CPU_STK_SIZE )APP_CFG_TASKACCEL_STK_SIZE_LIMIT,
+    228                           (CPU_STK_SIZE )APP_CFG_TASKACCEL_STK_SIZE,
+    229                           (OS_MSG_QTY   )0u,
+    230                           (OS_TICK      )0u,
+    231                           (void        *)0,
+    232                           (OS_OPT       )(OS_OPT_TASK_STK_CHK | OS_OPT_TASK_STK_CLR),
+    233                           (OS_ERR      *)&os_err);
+   \   00002B AEF8                  MOVW      AX, SP             ;; 1 cycle
+   \   00002D C1                    PUSH      AX                 ;; 1 cycle
+   \   00002E 300300                MOVW      AX, #0x3           ;; 1 cycle
+   \   000031 C1                    PUSH      AX                 ;; 1 cycle
+   \   000032 F6                    CLRW      AX                 ;; 1 cycle
+   \   000033 C1                    PUSH      AX                 ;; 1 cycle
+   \   000034 C1                    PUSH      AX                 ;; 1 cycle
+   \   000035 C1                    PUSH      AX                 ;; 1 cycle
+   \   000036 C1                    PUSH      AX                 ;; 1 cycle
+   \   000037 5102                  MOV       A, #0x2            ;; 1 cycle
+   \   000039 C1                    PUSH      AX                 ;; 1 cycle
+   \   00003A 303300                MOVW      AX, #0x33          ;; 1 cycle
+   \   00003D C1                    PUSH      AX                 ;; 1 cycle
+   \   00003E 30....                MOVW      AX, #App_TaskAccel_Stk  ;; 1 cycle
+   \   000041 C1                    PUSH      AX                 ;; 1 cycle
+   \   000042 300300                MOVW      AX, #0x3           ;; 1 cycle
+   \   000045 C1                    PUSH      AX                 ;; 1 cycle
+   \   000046 F6                    CLRW      AX                 ;; 1 cycle
+   \   000047 C1                    PUSH      AX                 ;; 1 cycle
+   \   000048 34....                MOVW      DE, #App_TaskAccel  ;; 1 cycle
+   \   00004B 32....                MOVW      BC, #`?<Constant "TaskAccel">`  ;; 1 cycle
+   \   00004E 30....                MOVW      AX, #App_TaskAccel_TCB  ;; 1 cycle
+   \   000051 FD....                CALL      OSTaskCreate       ;; 3 cycles
+    234          }
+   \   000054 ED....                BR        N:?Subroutine0     ;; 3 cycles
+   \   000057                       ; ------------------------------------- Block: 56 cycles
+   \   000057                       ; ------------------------------------- Total: 56 cycles
+   \   000057                       REQUIRE ?CLRL78_V1_0_L00
+    235          
+    236          
+    237          /*
+    238          *********************************************************************************************************
+    239          *                                          App_ObjCreate()
+    240          *
+    241          * Description : Create application kernel objects tasks.
+    242          *
+    243          * Argument(s) : none
+    244          *
+    245          * Return(s)   : none
+    246          *
+    247          * Caller(s)   : AppTaskStart()
+    248          *
+    249          * Note(s)     : none.
+    250          *********************************************************************************************************
+    251          */
+    252          
+    253          static  void  App_ObjCreate (void)
+    254          {
+    255          }
+    256          
+
+   \                                 In  segment CODE, align 1, keep-with-next
+    257          static void App_Task1 (void * p_arg)
+   \                     App_Task1:
+    258          {
+   \   000000                       ; * Stack frame (at entry) *
+   \   000000                       ; Param size: 0
+   \   000000 C3                    PUSH      BC                 ;; 1 cycle
+   \   000001 C5                    PUSH      DE                 ;; 1 cycle
+   \   000002                       ; Auto size: 6
+   \   000002 2006                  SUBW      SP, #0x6           ;; 1 cycle
+    259          	OS_ERR os_err;
+    260            	uint32_t n=0;
+   \   000004 F6                    CLRW      AX                 ;; 1 cycle
+   \   000005 B800                  MOVW      [SP], AX           ;; 1 cycle
+   \   000007 B802                  MOVW      [SP+0x02], AX      ;; 1 cycle
+   \   000009                       ; ------------------------------------- Block: 6 cycles
+    261          
+    262          	p_arg = p_arg;
+    263          	while (1) {
+    264          		LCDPrintf(7, 0, "T1:%6ld", n++);
+   \                     ??App_Task1_2:
+   \   000009 A802                  MOVW      AX, [SP+0x02]      ;; 1 cycle
+   \   00000B 12                    MOVW      BC, AX             ;; 1 cycle
+   \   00000C A800                  MOVW      AX, [SP]           ;; 1 cycle
+   \   00000E C3                    PUSH      BC                 ;; 1 cycle
+   \   00000F C1                    PUSH      AX                 ;; 1 cycle
+   \   000010 34....                MOVW      DE, #`?<Constant "T1:%6ld">`  ;; 1 cycle
+   \   000013 F3                    CLRB      B                  ;; 1 cycle
+   \   000014 5107                  MOV       A, #0x7            ;; 1 cycle
+   \   000016 FD....                CALL      LCDPrintf          ;; 3 cycles
+   \   000019 1004                  ADDW      SP, #0x4           ;; 1 cycle
+   \   00001B A802                  MOVW      AX, [SP+0x02]      ;; 1 cycle
+   \   00001D 12                    MOVW      BC, AX             ;; 1 cycle
+   \   00001E A800                  MOVW      AX, [SP]           ;; 1 cycle
+   \   000020 040100                ADDW      AX, #0x1           ;; 1 cycle
+   \   000023 61D8                  SKNC
+   \   000025 A3                    INCW      BC                 ;; 5 cycles
+   \   000026 B800                  MOVW      [SP], AX           ;; 1 cycle
+   \   000028 13                    MOVW      AX, BC             ;; 1 cycle
+   \   000029 B802                  MOVW      [SP+0x02], AX      ;; 1 cycle
+    265                	OSTimeDlyHMSM(0u, 0u, 0u, 51u,
+    266                               OS_OPT_TIME_HMSM_STRICT,
+    267                                &os_err);
+   \   00002B AEF8                  MOVW      AX, SP             ;; 1 cycle
+   \   00002D 040400                ADDW      AX, #0x4           ;; 1 cycle
+   \   000030 C1                    PUSH      AX                 ;; 1 cycle
+   \   000031 F6                    CLRW      AX                 ;; 1 cycle
+   \   000032 C1                    PUSH      AX                 ;; 1 cycle
+   \   000033 C1                    PUSH      AX                 ;; 1 cycle
+   \   000034 5033                  MOV       X, #0x33           ;; 1 cycle
+   \   000036 C1                    PUSH      AX                 ;; 1 cycle
+   \   000037 F6                    CLRW      AX                 ;; 1 cycle
+   \   000038 14                    MOVW      DE, AX             ;; 1 cycle
+   \   000039 F7                    CLRW      BC                 ;; 1 cycle
+   \   00003A FD....                CALL      OSTimeDlyHMSM      ;; 3 cycles
+   \   00003D EFCA                  BR        S:??App_Task1_2    ;; 3 cycles
+   \   00003F                       ; ------------------------------------- Block: 41 cycles
+   \   00003F                       ; ------------------------------------- Total: 47 cycles
+   \   00003F                       REQUIRE ?CLRL78_V1_0_L00
+    268          
+    269          	}
+    270          }
+
+   \                                 In  segment NEAR_CONST, align 2
+   \                     `?<Constant "Start">`:
+   \   000000 537461727400          DB "Start"
+
+   \                                 In  segment NEAR_CONST, align 2
+   \                     `?<Constant "Task1">`:
+   \   000000 5461736B3100          DB "Task1"
+
+   \                                 In  segment NEAR_CONST, align 2
+   \                     `?<Constant "TaskAccel">`:
+   \   000000 5461736B4163          DB "TaskAccel"
+
+   \                                 In  segment NEAR_CONST, align 2
+   \                     `?<Constant "T1:%6ld">`:
+   \   000000 54313A25366C          DB "T1:%6ld"
+    271          
+    272          
+
+   Maximum stack usage in bytes:
+
+   CSTACK Function
+   ------ --------
+     18   App_Task1
+       14   -> LCDPrintf
+       18   -> OSTimeDlyHMSM
+     28   App_TaskCreate
+       28   -> OSTaskCreate
+     16   App_TaskStart
+        8   -> App_TaskCreate
+        8   -> BSP_PostInit
+        8   -> CPU_IntDisMeasMaxCurReset
+        8   -> InitializeAccelerometer
+        8   -> LCDChar
+        8   -> LCDClearLine
+        8   -> LCDInit
+       16   -> OSTimeDlyHMSM
+     28   ucosIII_main
+        6   -> BSP_PreInit
+        6   -> CPU_Init
+        6   -> OSInit
+        6   -> OSStart
+       28   -> OSTaskCreate
+
+
+   Segment part sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       6  ?<Constant "Start">
+       8  ?<Constant "T1:%6ld">
+       6  ?<Constant "Task1">
+      10  ?<Constant "TaskAccel">
+       5  ?Subroutine0
+      63  App_Task1
+     512  App_Task1_Stk
+      72  App_Task1_TCB
+    1024  App_TaskAccel_Stk
+      72  App_TaskAccel_TCB
+      87  App_TaskCreate
+      77  App_TaskStart
+    1024  App_TaskStart_Stk
+      72  App_TaskStart_TCB
+      61  ucosIII_main
+
+ 
+   293 bytes in segment CODE
+    30 bytes in segment NEAR_CONST
+ 2 776 bytes in segment NEAR_Z
+ 
+   293 bytes of CODE  memory
+    30 bytes of CONST memory
+ 2 776 bytes of DATA  memory
+
+Errors: none
+Warnings: none

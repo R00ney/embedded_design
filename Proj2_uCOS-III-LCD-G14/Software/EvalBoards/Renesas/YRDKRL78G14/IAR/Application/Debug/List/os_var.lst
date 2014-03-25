@@ -1,0 +1,272 @@
+###############################################################################
+#                                                                             #
+# IAR C/C++ Compiler V1.30.5.50715 for RL78             23/Mar/2014  17:08:46 #
+# Copyright 2011-2013 IAR Systems AB.                                         #
+# Network license: ece-lic-19.ece.ncsu.edu (STD)                              #
+#                                                                             #
+#    Core         =  rl78_2                                                   #
+#    Code model   =  Near                                                     #
+#    Data model   =  Near                                                     #
+#                 =                                                           #
+#    Source file  =  C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\uCOS-III\Source\os_var.c   #
+#    Command line =  C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\uCOS-III\Source\os_var.c   #
+#                    --core rl78_2 --code_model near --data_model near        #
+#                    --near_const_location rom0 -o                            #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\Debug\Obj\ --dlib_config            #
+#                    "C:\Program Files\IAR Systems\Embedded Workbench         #
+#                    6.5\rl78\LIB\dlrl78nn2n.h" -e -Ohz --no_scheduling       #
+#                    --no_clustering --debug -lC                              #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\Debug\List\ -I                      #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\ -I C:\Users\Suddenlink\Dropbox\git #
+#                    _files\embedded_design\Proj2_uCOS-III-LCD-G14\Software\E #
+#                    valBoards\Renesas\YRDKRL78G14\IAR\Application\Source\    #
+#                    -I C:\Users\Suddenlink\Dropbox\git_files\embedded_design #
+#                    \Proj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDK #
+#                    RL78G14\IAR\Application\..\uCOS-III\ -I                  #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\..\BSP\ -I                          #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\..\BSP\applilet3_src\ -I            #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\..\BSP\Glyph\Drivers\ -I            #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\..\BSP\Glyph\glyph\ -I              #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\..\..\..\..\..\uC-CPU\ -I           #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\..\..\..\..\..\uC-CPU\RL78\IAR\ -I  #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\..\..\..\..\..\uC-LIB\ -I           #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\..\..\..\..\..\uCOS-III\Ports\Renes #
+#                    as\RL78\IAR\ -I C:\Users\Suddenlink\Dropbox\git_files\em #
+#                    bedded_design\Proj2_uCOS-III-LCD-G14\Software\EvalBoards #
+#                    \Renesas\YRDKRL78G14\IAR\Application\..\..\..\..\..\uCOS #
+#                    -III\Source\ --relaxed_fp                                #
+#    List file    =  C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\Debug\List\os_var.lst               #
+#    Object file  =  C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\Debug\Obj\os_var.r87                #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Proj2_uCOS-III-LCD-G14\Software\uCOS-III\Source\os_var.c
+      1          /*
+      2          ************************************************************************************************************************
+      3          *                                                      uC/OS-III
+      4          *                                                 The Real-Time Kernel
+      5          *
+      6          *                                  (c) Copyright 2009-2011; Micrium, Inc.; Weston, FL
+      7          *                           All rights reserved.  Protected by international copyright laws.
+      8          *
+      9          *                                                      VARIABLES
+     10          *
+     11          * File    : OS_VAR.C
+     12          * By      : JJL
+     13          * Version : V3.02.00
+     14          *
+     15          * LICENSING TERMS:
+     16          * ---------------
+     17          *           uC/OS-III is provided in source form for FREE short-term evaluation, for educational use or 
+     18          *           for peaceful research.  If you plan or intend to use uC/OS-III in a commercial application/
+     19          *           product then, you need to contact Micrium to properly license uC/OS-III for its use in your 
+     20          *           application/product.   We provide ALL the source code for your convenience and to help you 
+     21          *           experience uC/OS-III.  The fact that the source is provided does NOT mean that you can use 
+     22          *           it commercially without paying a licensing fee.
+     23          *
+     24          *           Knowledge of the source code may NOT be used to develop a similar product.
+     25          *
+     26          *           Please help us continue to provide the embedded community with the finest software available.
+     27          *           Your honesty is greatly appreciated.
+     28          *
+     29          *           You can contact us at www.micrium.com, or by phone at +1 (954) 217-2036.
+     30          ************************************************************************************************************************
+     31          */
+     32          
+     33          #define   OS_GLOBALS
+     34          
+     35          #include  <os.h>
+
+   \                                 In  segment NEAR_Z, align 2, align-sorted
+   \   CPU_INT32U OSIdleTaskCtr
+   \                     OSIdleTaskCtr:
+   \   000000                       DS 4
+   \   000004                       REQUIRE __INIT_NEAR_Z
+
+   \                                 In  segment NEAR_Z, align 2, align-sorted
+   \   OS_TCB OSIdleTaskTCB
+   \                     OSIdleTaskTCB:
+   \   000000                       DS 72
+   \   000048                       REQUIRE __INIT_NEAR_Z
+
+   \                                 In  segment NEAR_Z, align 1, align-sorted
+   \   CPU_INT08U OSIntNestingCtr
+   \                     OSIntNestingCtr:
+   \   000000                       DS 1
+   \   000001                       REQUIRE __INIT_NEAR_Z
+
+   \                                 In  segment NEAR_Z, align 2, align-sorted
+   \   CPU_TS OSIntDisTimeMax
+   \                     OSIntDisTimeMax:
+   \   000000                       DS 4
+   \   000004                       REQUIRE __INIT_NEAR_Z
+
+   \                                 In  segment NEAR_Z, align 1, align-sorted
+   \   OS_STATE OSRunning
+   \                     OSRunning:
+   \   000000                       DS 1
+   \   000001                       REQUIRE __INIT_NEAR_Z
+
+   \                                 In  segment NEAR_Z, align 2, align-sorted
+   \   OS_MSG_POOL OSMsgPool
+   \                     OSMsgPool:
+   \   000000                       DS 6
+   \   000006                       REQUIRE __INIT_NEAR_Z
+
+   \                                 In  segment NEAR_Z, align 2, align-sorted
+   \   OS_OBJ_QTY OSMutexQty
+   \                     OSMutexQty:
+   \   000000                       DS 2
+   \   000002                       REQUIRE __INIT_NEAR_Z
+
+   \                                 In  segment NEAR_Z, align 1, align-sorted
+   \   OS_PRIO OSPrioCur
+   \                     OSPrioCur:
+   \   000000                       DS 1
+   \   000001                       REQUIRE __INIT_NEAR_Z
+
+   \                                 In  segment NEAR_Z, align 1, align-sorted
+   \   OS_PRIO OSPrioHighRdy
+   \                     OSPrioHighRdy:
+   \   000000                       DS 1
+   \   000001                       REQUIRE __INIT_NEAR_Z
+
+   \                                 In  segment NEAR_Z, align 1, align-sorted
+   \   OS_PRIO OSPrioSaved
+   \                     OSPrioSaved:
+   \   000000                       DS 1
+   \   000001                       REQUIRE __INIT_NEAR_Z
+
+   \                                 In  segment NEAR_Z, align 2, align-sorted
+   \   OS_OBJ_QTY OSQQty
+   \                     OSQQty:
+   \   000000                       DS 2
+   \   000002                       REQUIRE __INIT_NEAR_Z
+
+   \                                 In  segment NEAR_Z, align 2, align-sorted
+   \   OS_RDY_LIST OSRdyList[8U]
+   \                     OSRdyList:
+   \   000000                       DS 48
+   \   000030                       REQUIRE __INIT_NEAR_Z
+
+   \                                 In  segment NEAR_Z, align 1, align-sorted
+   \   CPU_INT08U OSSchedLockNestingCtr
+   \                     OSSchedLockNestingCtr:
+   \   000000                       DS 1
+   \   000001                       REQUIRE __INIT_NEAR_Z
+
+   \                                 In  segment NEAR_Z, align 2, align-sorted
+   \   OS_OBJ_QTY OSSemQty
+   \                     OSSemQty:
+   \   000000                       DS 2
+   \   000002                       REQUIRE __INIT_NEAR_Z
+
+   \                                 In  segment NEAR_Z, align 2, align-sorted
+   \   CPU_INT32U OSTaskCtxSwCtr
+   \                     OSTaskCtxSwCtr:
+   \   000000                       DS 4
+   \   000004                       REQUIRE __INIT_NEAR_Z
+
+   \                                 In  segment NEAR_Z, align 2, align-sorted
+   \   OS_OBJ_QTY OSTaskQty
+   \                     OSTaskQty:
+   \   000000                       DS 2
+   \   000002                       REQUIRE __INIT_NEAR_Z
+
+   \                                 In  segment NEAR_Z, align 2, align-sorted
+   \   OS_TICK OSTickCtr
+   \                     OSTickCtr:
+   \   000000                       DS 4
+   \   000004                       REQUIRE __INIT_NEAR_Z
+
+   \                                 In  segment NEAR_Z, align 2, align-sorted
+   \   OS_TCB OSTickTaskTCB
+   \                     OSTickTaskTCB:
+   \   000000                       DS 72
+   \   000048                       REQUIRE __INIT_NEAR_Z
+
+   \                                 In  segment NEAR_Z, align 2, align-sorted
+   \   CPU_TS OSTickTaskTimeMax
+   \                     OSTickTaskTimeMax:
+   \   000000                       DS 4
+   \   000004                       REQUIRE __INIT_NEAR_Z
+
+   \                                 In  segment NEAR_Z, align 2, align-sorted
+   \   OS_TCB *__near OSTCBCurPtr
+   \                     OSTCBCurPtr:
+   \   000000                       DS 2
+   \   000002                       REQUIRE __INIT_NEAR_Z
+
+   \                                 In  segment NEAR_Z, align 2, align-sorted
+   \   OS_TCB *__near OSTCBHighRdyPtr
+   \                     OSTCBHighRdyPtr:
+   \   000000                       DS 2
+   \   000002                       REQUIRE __INIT_NEAR_Z
+     36          
+     37          #ifdef VSC_INCLUDE_SOURCE_FILE_NAMES
+     38          const  CPU_CHAR  *os_var__c = "$Id: $";
+     39          #endif
+
+
+   Segment part sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  OSIdleTaskCtr
+      72  OSIdleTaskTCB
+       4  OSIntDisTimeMax
+       1  OSIntNestingCtr
+       6  OSMsgPool
+       2  OSMutexQty
+       1  OSPrioCur
+       1  OSPrioHighRdy
+       1  OSPrioSaved
+       2  OSQQty
+      48  OSRdyList
+       1  OSRunning
+       1  OSSchedLockNestingCtr
+       2  OSSemQty
+       2  OSTCBCurPtr
+       2  OSTCBHighRdyPtr
+       4  OSTaskCtxSwCtr
+       2  OSTaskQty
+       4  OSTickCtr
+      72  OSTickTaskTCB
+       4  OSTickTaskTimeMax
+
+ 
+ 236 bytes in segment NEAR_Z
+ 
+ 236 bytes of DATA memory
+
+Errors: none
+Warnings: none

@@ -1,0 +1,458 @@
+###############################################################################
+#                                                                             #
+# IAR C/C++ Compiler V1.30.5.50715 for RL78             23/Mar/2014  17:08:39 #
+# Copyright 2011-2013 IAR Systems AB.                                         #
+# Network license: ece-lic-19.ece.ncsu.edu (STD)                              #
+#                                                                             #
+#    Core         =  rl78_2                                                   #
+#    Code model   =  Near                                                     #
+#    Data model   =  Near                                                     #
+#                 =                                                           #
+#    Source file  =  C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\uCOS-III\os_app_hooks.c                         #
+#    Command line =  C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\uCOS-III\os_app_hooks.c --core rl78_2           #
+#                    --code_model near --data_model near                      #
+#                    --near_const_location rom0 -o                            #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\Debug\Obj\ --dlib_config            #
+#                    "C:\Program Files\IAR Systems\Embedded Workbench         #
+#                    6.5\rl78\LIB\dlrl78nn2n.h" -e -Ohz --no_scheduling       #
+#                    --no_clustering --debug -lC                              #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\Debug\List\ -I                      #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\ -I C:\Users\Suddenlink\Dropbox\git #
+#                    _files\embedded_design\Proj2_uCOS-III-LCD-G14\Software\E #
+#                    valBoards\Renesas\YRDKRL78G14\IAR\Application\Source\    #
+#                    -I C:\Users\Suddenlink\Dropbox\git_files\embedded_design #
+#                    \Proj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDK #
+#                    RL78G14\IAR\Application\..\uCOS-III\ -I                  #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\..\BSP\ -I                          #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\..\BSP\applilet3_src\ -I            #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\..\BSP\Glyph\Drivers\ -I            #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\..\BSP\Glyph\glyph\ -I              #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\..\..\..\..\..\uC-CPU\ -I           #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\..\..\..\..\..\uC-CPU\RL78\IAR\ -I  #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\..\..\..\..\..\uC-LIB\ -I           #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\..\..\..\..\..\uCOS-III\Ports\Renes #
+#                    as\RL78\IAR\ -I C:\Users\Suddenlink\Dropbox\git_files\em #
+#                    bedded_design\Proj2_uCOS-III-LCD-G14\Software\EvalBoards #
+#                    \Renesas\YRDKRL78G14\IAR\Application\..\..\..\..\..\uCOS #
+#                    -III\Source\ --relaxed_fp                                #
+#    List file    =  C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\Debug\List\os_app_hooks.lst         #
+#    Object file  =  C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\Debug\Obj\os_app_hooks.r87          #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Proj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL78G14\IAR\uCOS-III\os_app_hooks.c
+      1          /*
+      2          ************************************************************************************************************************
+      3          *                                                     uC/OS-III
+      4          *                                                The Real-Time Kernel
+      5          *
+      6          *                                  (c) Copyright 2009-2011; Micrium, Inc.; Weston, FL
+      7          *                          All rights reserved.  Protected by international copyright laws.
+      8          *
+      9          *                                                  APPLICATION HOOKS
+     10          *
+     11          * File    : OS_APP_HOOKS.C
+     12          * By      : JJL
+     13          * Version : V3.01.1
+     14          *
+     15          * LICENSING TERMS:
+     16          * ---------------
+     17          *               uC/OS-III is provided in source form to registered licensees ONLY.  It is 
+     18          *               illegal to distribute this source code to any third party unless you receive 
+     19          *               written permission by an authorized Micrium representative.  Knowledge of 
+     20          *               the source code may NOT be used to develop a similar product.
+     21          *
+     22          *               Please help us continue to provide the Embedded community with the finest
+     23          *               software available.  Your honesty is greatly appreciated.
+     24          *
+     25          *               You can contact us at www.micrium.com.
+     26          ************************************************************************************************************************
+     27          */
+     28          
+     29          #include <os.h>
+     30          #include <os_app_hooks.h>
+     31          
+     32          /*$PAGE*/
+     33          /*
+     34          ************************************************************************************************************************
+     35          *                                              SET ALL APPLICATION HOOKS
+     36          *
+     37          * Description: Set ALL application hooks.
+     38          *
+     39          * Arguments  : none.
+     40          *
+     41          * Note(s)    : none
+     42          ************************************************************************************************************************
+     43          */
+     44          
+
+   \                                 In  segment CODE, align 1, keep-with-next
+     45          void  App_OS_SetAllHooks (void)
+   \                     App_OS_SetAllHooks:
+     46          {
+   \   000000                       ; * Stack frame (at entry) *
+   \   000000                       ; Param size: 0
+   \   000000                       ; Auto size: 0
+     47          #if OS_CFG_APP_HOOKS_EN > 0u
+     48              CPU_SR_ALLOC();
+     49          
+     50          
+     51              CPU_CRITICAL_ENTER();
+     52              OS_AppTaskCreateHookPtr = App_OS_TaskCreateHook;
+     53              OS_AppTaskDelHookPtr    = App_OS_TaskDelHook;
+     54              OS_AppTaskReturnHookPtr = App_OS_TaskReturnHook;
+     55          
+     56              OS_AppIdleTaskHookPtr   = App_OS_IdleTaskHook;
+     57              OS_AppStatTaskHookPtr   = App_OS_StatTaskHook;
+     58              OS_AppTaskSwHookPtr     = App_OS_TaskSwHook;
+     59              OS_AppTimeTickHookPtr   = App_OS_TimeTickHook;
+     60              CPU_CRITICAL_EXIT();
+     61          #endif
+     62          }
+   \   000000 D7                    RET                          ;; 6 cycles
+   \   000001                       ; ------------------------------------- Block: 6 cycles
+   \   000001                       ; ------------------------------------- Total: 6 cycles
+   \   000001                       REQUIRE ?CLRL78_V1_0_L00
+     63          
+     64          /*$PAGE*/
+     65          /*
+     66          ************************************************************************************************************************
+     67          *                                             CLEAR ALL APPLICATION HOOKS
+     68          *
+     69          * Description: Clear ALL application hooks.
+     70          *
+     71          * Arguments  : none.
+     72          *
+     73          * Note(s)    : none
+     74          ************************************************************************************************************************
+     75          */
+     76          
+
+   \                                 In  segment CODE, align 1, keep-with-next
+     77          void  App_OS_ClrAllHooks (void)
+   \                     App_OS_ClrAllHooks:
+     78          {
+   \   000000                       ; * Stack frame (at entry) *
+   \   000000                       ; Param size: 0
+   \   000000                       ; Auto size: 0
+     79          #if OS_CFG_APP_HOOKS_EN > 0u
+     80              CPU_SR_ALLOC();
+     81          
+     82          
+     83              CPU_CRITICAL_ENTER();
+     84              OS_AppTaskCreateHookPtr = (OS_APP_HOOK_TCB)0;
+     85              OS_AppTaskDelHookPtr    = (OS_APP_HOOK_TCB)0;
+     86              OS_AppTaskReturnHookPtr = (OS_APP_HOOK_TCB)0;
+     87          
+     88              OS_AppIdleTaskHookPtr   = (OS_APP_HOOK_VOID)0;
+     89              OS_AppStatTaskHookPtr   = (OS_APP_HOOK_VOID)0;
+     90              OS_AppTaskSwHookPtr     = (OS_APP_HOOK_VOID)0;
+     91              OS_AppTimeTickHookPtr   = (OS_APP_HOOK_VOID)0;
+     92              CPU_CRITICAL_EXIT();
+     93          #endif
+     94          }
+   \   000000 D7                    RET                          ;; 6 cycles
+   \   000001                       ; ------------------------------------- Block: 6 cycles
+   \   000001                       ; ------------------------------------- Total: 6 cycles
+   \   000001                       REQUIRE ?CLRL78_V1_0_L00
+     95          
+     96          /*$PAGE*/
+     97          /*
+     98          ************************************************************************************************************************
+     99          *                                            APPLICATION TASK CREATION HOOK
+    100          *
+    101          * Description: This function is called when a task is created.
+    102          *
+    103          * Arguments  : p_tcb   is a pointer to the task control block of the task being created.
+    104          *
+    105          * Note(s)    : none
+    106          ************************************************************************************************************************
+    107          */
+    108          
+
+   \                                 In  segment CODE, align 1, keep-with-next
+    109          void  App_OS_TaskCreateHook (OS_TCB  *p_tcb)
+   \                     App_OS_TaskCreateHook:
+    110          {
+   \   000000                       ; * Stack frame (at entry) *
+   \   000000                       ; Param size: 0
+   \   000000                       ; Auto size: 0
+    111              (void)&p_tcb;
+    112          }
+   \   000000 D7                    RET                          ;; 6 cycles
+   \   000001                       ; ------------------------------------- Block: 6 cycles
+   \   000001                       ; ------------------------------------- Total: 6 cycles
+   \   000001                       REQUIRE ?CLRL78_V1_0_L00
+    113          
+    114          /*$PAGE*/
+    115          /*
+    116          ************************************************************************************************************************
+    117          *                                            APPLICATION TASK DELETION HOOK
+    118          *
+    119          * Description: This function is called when a task is deleted.
+    120          *
+    121          * Arguments  : p_tcb   is a pointer to the task control block of the task being deleted.
+    122          *
+    123          * Note(s)    : none
+    124          ************************************************************************************************************************
+    125          */
+    126          
+
+   \                                 In  segment CODE, align 1, keep-with-next
+    127          void  App_OS_TaskDelHook (OS_TCB  *p_tcb)
+   \                     App_OS_TaskDelHook:
+    128          {
+   \   000000                       ; * Stack frame (at entry) *
+   \   000000                       ; Param size: 0
+   \   000000                       ; Auto size: 0
+    129              (void)&p_tcb;
+    130          }
+   \   000000 D7                    RET                          ;; 6 cycles
+   \   000001                       ; ------------------------------------- Block: 6 cycles
+   \   000001                       ; ------------------------------------- Total: 6 cycles
+   \   000001                       REQUIRE ?CLRL78_V1_0_L00
+    131          
+    132          /*$PAGE*/
+    133          /*
+    134          ************************************************************************************************************************
+    135          *                                             APPLICATION TASK RETURN HOOK
+    136          *
+    137          * Description: This function is called if a task accidentally returns.  In other words, a task should either be an
+    138          *              infinite loop or delete itself when done.
+    139          *
+    140          * Arguments  : p_tcb     is a pointer to the OS_TCB of the task that is returning.
+    141          *
+    142          * Note(s)    : none
+    143          ************************************************************************************************************************
+    144          */
+    145          
+
+   \                                 In  segment CODE, align 1, keep-with-next
+    146          void  App_OS_TaskReturnHook (OS_TCB  *p_tcb)
+   \                     App_OS_TaskReturnHook:
+    147          {
+   \   000000                       ; * Stack frame (at entry) *
+   \   000000                       ; Param size: 0
+   \   000000                       ; Auto size: 0
+    148              (void)&p_tcb;
+    149          }
+   \   000000 D7                    RET                          ;; 6 cycles
+   \   000001                       ; ------------------------------------- Block: 6 cycles
+   \   000001                       ; ------------------------------------- Total: 6 cycles
+   \   000001                       REQUIRE ?CLRL78_V1_0_L00
+    150          
+    151          /*$PAGE*/
+    152          /*
+    153          ************************************************************************************************************************
+    154          *                                              APPLICATION IDLE TASK HOOK
+    155          *
+    156          * Description: This function is called by the idle task.  This hook has been added to allow you to do such things as
+    157          *              STOP the CPU to conserve power.
+    158          *
+    159          * Arguments  : none
+    160          *
+    161          * Note(s)    : none
+    162          ************************************************************************************************************************
+    163          */
+    164          
+
+   \                                 In  segment CODE, align 1, keep-with-next
+    165          void  App_OS_IdleTaskHook (void)
+   \                     App_OS_IdleTaskHook:
+    166          {
+   \   000000                       ; * Stack frame (at entry) *
+   \   000000                       ; Param size: 0
+   \   000000                       ; Auto size: 0
+    167          
+    168          }
+   \   000000 D7                    RET                          ;; 6 cycles
+   \   000001                       ; ------------------------------------- Block: 6 cycles
+   \   000001                       ; ------------------------------------- Total: 6 cycles
+   \   000001                       REQUIRE ?CLRL78_V1_0_L00
+    169          
+    170          /*$PAGE*/
+    171          /*
+    172          ************************************************************************************************************************
+    173          *                                          APPLICATION OS INITIALIZATION HOOK
+    174          *
+    175          * Description: This function is called by OSInit() at the beginning of OSInit().
+    176          *
+    177          * Arguments  : none
+    178          *
+    179          * Note(s)    : none
+    180          ************************************************************************************************************************
+    181          */
+    182          
+
+   \                                 In  segment CODE, align 1, keep-with-next
+    183          void  App_OS_InitHook (void)
+   \                     App_OS_InitHook:
+    184          {
+   \   000000                       ; * Stack frame (at entry) *
+   \   000000                       ; Param size: 0
+   \   000000                       ; Auto size: 0
+    185          
+    186          }
+   \   000000 D7                    RET                          ;; 6 cycles
+   \   000001                       ; ------------------------------------- Block: 6 cycles
+   \   000001                       ; ------------------------------------- Total: 6 cycles
+   \   000001                       REQUIRE ?CLRL78_V1_0_L00
+    187          
+    188          /*$PAGE*/
+    189          /*
+    190          ************************************************************************************************************************
+    191          *                                           APPLICATION STATISTIC TASK HOOK
+    192          *
+    193          * Description: This function is called every second by uC/OS-III's statistics task.  This allows your application to add
+    194          *              functionality to the statistics task.
+    195          *
+    196          * Arguments  : none
+    197          *
+    198          * Note(s)    : none
+    199          ************************************************************************************************************************
+    200          */
+    201          
+
+   \                                 In  segment CODE, align 1, keep-with-next
+    202          void  App_OS_StatTaskHook (void)
+   \                     App_OS_StatTaskHook:
+    203          {
+   \   000000                       ; * Stack frame (at entry) *
+   \   000000                       ; Param size: 0
+   \   000000                       ; Auto size: 0
+    204          
+    205          }
+   \   000000 D7                    RET                          ;; 6 cycles
+   \   000001                       ; ------------------------------------- Block: 6 cycles
+   \   000001                       ; ------------------------------------- Total: 6 cycles
+   \   000001                       REQUIRE ?CLRL78_V1_0_L00
+    206          
+    207          /*$PAGE*/
+    208          /*
+    209          ************************************************************************************************************************
+    210          *                                             APPLICATION TASK SWITCH HOOK
+    211          *
+    212          * Description: This function is called when a task switch is performed.  This allows you to perform other operations
+    213          *              during a context switch.
+    214          *
+    215          * Arguments  : none
+    216          *
+    217          * Note(s)    : 1) Interrupts are disabled during this call.
+    218          *              2) It is assumed that the global pointer 'OSTCBHighRdyPtr' points to the TCB of the task that will be
+    219          *                 'switched in' (i.e. the highest priority task) and, 'OSTCBCurPtr' points to the task being switched out
+    220          *                 (i.e. the preempted task).
+    221          ************************************************************************************************************************
+    222          */
+    223          
+
+   \                                 In  segment CODE, align 1, keep-with-next
+    224          void  App_OS_TaskSwHook (void)
+   \                     App_OS_TaskSwHook:
+    225          {
+   \   000000                       ; * Stack frame (at entry) *
+   \   000000                       ; Param size: 0
+   \   000000                       ; Auto size: 0
+    226          
+    227          }
+   \   000000 D7                    RET                          ;; 6 cycles
+   \   000001                       ; ------------------------------------- Block: 6 cycles
+   \   000001                       ; ------------------------------------- Total: 6 cycles
+   \   000001                       REQUIRE ?CLRL78_V1_0_L00
+    228          
+    229          /*$PAGE*/
+    230          /*
+    231          ************************************************************************************************************************
+    232          *                                                APPLICATION TICK HOOK
+    233          *
+    234          * Description: This function is called every tick.
+    235          *
+    236          * Arguments  : none
+    237          *
+    238          * Note(s)    : 1) This function is assumed to be called from the Tick ISR.
+    239          ************************************************************************************************************************
+    240          */
+    241          
+
+   \                                 In  segment CODE, align 1, keep-with-next
+    242          void  App_OS_TimeTickHook (void)
+   \                     App_OS_TimeTickHook:
+    243          {
+   \   000000                       ; * Stack frame (at entry) *
+   \   000000                       ; Param size: 0
+   \   000000                       ; Auto size: 0
+    244          
+    245          }
+   \   000000 D7                    RET                          ;; 6 cycles
+   \   000001                       ; ------------------------------------- Block: 6 cycles
+   \   000001                       ; ------------------------------------- Total: 6 cycles
+   \   000001                       REQUIRE ?CLRL78_V1_0_L00
+
+   Maximum stack usage in bytes:
+
+   CSTACK Function
+   ------ --------
+      0   App_OS_ClrAllHooks
+      0   App_OS_IdleTaskHook
+      0   App_OS_InitHook
+      0   App_OS_SetAllHooks
+      0   App_OS_StatTaskHook
+      0   App_OS_TaskCreateHook
+      0   App_OS_TaskDelHook
+      0   App_OS_TaskReturnHook
+      0   App_OS_TaskSwHook
+      0   App_OS_TimeTickHook
+
+
+   Segment part sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       1  App_OS_ClrAllHooks
+       1  App_OS_IdleTaskHook
+       1  App_OS_InitHook
+       1  App_OS_SetAllHooks
+       1  App_OS_StatTaskHook
+       1  App_OS_TaskCreateHook
+       1  App_OS_TaskDelHook
+       1  App_OS_TaskReturnHook
+       1  App_OS_TaskSwHook
+       1  App_OS_TimeTickHook
+
+ 
+ 10 bytes in segment CODE
+ 
+ 10 bytes of CODE memory
+
+Errors: none
+Warnings: none

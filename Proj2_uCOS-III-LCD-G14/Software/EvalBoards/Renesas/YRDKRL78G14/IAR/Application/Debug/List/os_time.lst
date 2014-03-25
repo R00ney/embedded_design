@@ -1,0 +1,1129 @@
+###############################################################################
+#                                                                             #
+# IAR C/C++ Compiler V1.30.5.50715 for RL78             23/Mar/2014  17:08:46 #
+# Copyright 2011-2013 IAR Systems AB.                                         #
+# Network license: ece-lic-19.ece.ncsu.edu (STD)                              #
+#                                                                             #
+#    Core         =  rl78_2                                                   #
+#    Code model   =  Near                                                     #
+#    Data model   =  Near                                                     #
+#                 =                                                           #
+#    Source file  =  C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\uCOS-III\Source\os_time.c  #
+#    Command line =  C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\uCOS-III\Source\os_time.c  #
+#                    --core rl78_2 --code_model near --data_model near        #
+#                    --near_const_location rom0 -o                            #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\Debug\Obj\ --dlib_config            #
+#                    "C:\Program Files\IAR Systems\Embedded Workbench         #
+#                    6.5\rl78\LIB\dlrl78nn2n.h" -e -Ohz --no_scheduling       #
+#                    --no_clustering --debug -lC                              #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\Debug\List\ -I                      #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\ -I C:\Users\Suddenlink\Dropbox\git #
+#                    _files\embedded_design\Proj2_uCOS-III-LCD-G14\Software\E #
+#                    valBoards\Renesas\YRDKRL78G14\IAR\Application\Source\    #
+#                    -I C:\Users\Suddenlink\Dropbox\git_files\embedded_design #
+#                    \Proj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDK #
+#                    RL78G14\IAR\Application\..\uCOS-III\ -I                  #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\..\BSP\ -I                          #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\..\BSP\applilet3_src\ -I            #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\..\BSP\Glyph\Drivers\ -I            #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\..\BSP\Glyph\glyph\ -I              #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\..\..\..\..\..\uC-CPU\ -I           #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\..\..\..\..\..\uC-CPU\RL78\IAR\ -I  #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\..\..\..\..\..\uC-LIB\ -I           #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\..\..\..\..\..\uCOS-III\Ports\Renes #
+#                    as\RL78\IAR\ -I C:\Users\Suddenlink\Dropbox\git_files\em #
+#                    bedded_design\Proj2_uCOS-III-LCD-G14\Software\EvalBoards #
+#                    \Renesas\YRDKRL78G14\IAR\Application\..\..\..\..\..\uCOS #
+#                    -III\Source\ --relaxed_fp                                #
+#    List file    =  C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\Debug\List\os_time.lst              #
+#    Object file  =  C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\Debug\Obj\os_time.r87               #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Proj2_uCOS-III-LCD-G14\Software\uCOS-III\Source\os_time.c
+      1          /*
+      2          ************************************************************************************************************************
+      3          *                                                      uC/OS-III
+      4          *                                                 The Real-Time Kernel
+      5          *
+      6          *                                  (c) Copyright 2009-2011; Micrium, Inc.; Weston, FL
+      7          *                           All rights reserved.  Protected by international copyright laws.
+      8          *
+      9          *                                                   TIME MANAGEMENT
+     10          *
+     11          * File    : OS_TIME.C
+     12          * By      : JJL
+     13          * Version : V3.02.00
+     14          *
+     15          * LICENSING TERMS:
+     16          * ---------------
+     17          *           uC/OS-III is provided in source form for FREE short-term evaluation, for educational use or 
+     18          *           for peaceful research.  If you plan or intend to use uC/OS-III in a commercial application/
+     19          *           product then, you need to contact Micrium to properly license uC/OS-III for its use in your 
+     20          *           application/product.   We provide ALL the source code for your convenience and to help you 
+     21          *           experience uC/OS-III.  The fact that the source is provided does NOT mean that you can use 
+     22          *           it commercially without paying a licensing fee.
+     23          *
+     24          *           Knowledge of the source code may NOT be used to develop a similar product.
+     25          *
+     26          *           Please help us continue to provide the embedded community with the finest software available.
+     27          *           Your honesty is greatly appreciated.
+     28          *
+     29          *           You can contact us at www.micrium.com, or by phone at +1 (954) 217-2036.
+     30          ************************************************************************************************************************
+     31          */
+     32          
+     33          #include <os.h>
+     34          
+     35          #ifdef VSC_INCLUDE_SOURCE_FILE_NAMES
+     36          const  CPU_CHAR  *os_time__c = "$Id: $";
+     37          #endif
+     38          
+     39          /*
+     40          ************************************************************************************************************************
+     41          *                                                  DELAY TASK 'n' TICKS
+     42          *
+     43          * Description: This function is called to delay execution of the currently running task until the specified number of
+     44          *              system ticks expires.  This, of course, directly equates to delaying the current task for some time to
+     45          *              expire.  No delay will result if the specified delay is 0.  If the specified delay is greater than 0
+     46          *              then, a context switch will result.
+     47          *
+     48          * Arguments  : dly       is a value in 'clock ticks' that the task will either delay for or, the target match value
+     49          *                        of the tick counter (OSTickCtr).  Note that specifying 0 means the task is not to delay.
+     50          *
+     51          *                        depending on the option argument, the task will wake up when OSTickCtr reaches:
+     52          *
+     53          *                            OS_OPT_TIME_DLY      : OSTickCtr + dly
+     54          *                            OS_OPT_TIME_TIMEOUT  : OSTickCtr + dly
+     55          *                            OS_OPT_TIME_MATCH    : dly
+     56          *                            OS_OPT_TIME_PERIODIC : OSTCBCurPtr->TickCtrPrev + dly
+     57          *
+     58          *              opt       specifies whether 'dly' represents absolute or relative time; default option marked with *** :
+     59          *
+     60          *                        *** OS_OPT_TIME_DLY        specifies a relative time from the current value of OSTickCtr.
+     61          *                            OS_OPT_TIME_TIMEOUT    same as OS_OPT_TIME_DLY.
+     62          *                            OS_OPT_TIME_MATCH      indicates that 'dly' specifies the absolute value that OSTickCtr
+     63          *                                                   must reach before the task will be resumed.
+     64          *                            OS_OPT_TIME_PERIODIC   indicates that 'dly' specifies the periodic value that OSTickCtr
+     65          *                                                   must reach before the task will be resumed.
+     66          *
+     67          *              p_err     is a pointer to a variable that will contain an error code from this call.
+     68          *
+     69          *                            OS_ERR_NONE            the call was successful and the delay occurred.
+     70          *                            OS_ERR_OPT_INVALID     if you specified an invalid option for this function.
+     71          *                            OS_ERR_SCHED_LOCKED    can't delay when the scheduler is locked.
+     72          *                            OS_ERR_TIME_DLY_ISR    if you called this function from an ISR.
+     73          *                            OS_ERR_TIME_ZERO_DLY   if you specified a delay of zero.
+     74          *
+     75          * Returns    : none
+     76          ************************************************************************************************************************
+     77          */
+     78          
+
+   \                                 In  segment CODE, align 1, keep-with-next
+     79          void  OSTimeDly (OS_TICK   dly,
+   \                     OSTimeDly:
+     80                           OS_OPT    opt,
+     81                           OS_ERR   *p_err)
+     82          {
+   \   000000                       ; * Stack frame (at entry) *
+   \   000000                       ; Param size: 2
+   \   000000 C3                    PUSH      BC                 ;; 1 cycle
+   \   000001 C1                    PUSH      AX                 ;; 1 cycle
+   \   000002 C5                    PUSH      DE                 ;; 1 cycle
+   \   000003                       ; Auto size: 10
+   \   000003 2004                  SUBW      SP, #0x4           ;; 1 cycle
+     83              CPU_SR_ALLOC();
+     84          
+     85          
+     86          
+     87          #ifdef OS_SAFETY_CRITICAL
+     88              if (p_err == (OS_ERR *)0) {
+     89                  OS_SAFETY_CRITICAL_EXCEPTION();
+     90                  return;
+     91              }
+     92          #endif
+     93          
+     94          #if OS_CFG_CALLED_FROM_ISR_CHK_EN > 0u
+     95              if (OSIntNestingCtr > (OS_NESTING_CTR)0u) {             /* Not allowed to call from an ISR                        */
+     96                 *p_err = OS_ERR_TIME_DLY_ISR;
+     97                  return;
+     98              }
+     99          #endif
+    100          
+    101              if (OSSchedLockNestingCtr > (OS_NESTING_CTR)0u) {       /* Can't delay when the scheduler is locked               */
+   \   000005 D5....                CMP0      N:OSSchedLockNestingCtr  ;; 1 cycle
+   \   000008 DD09                  BZ        ??OSTimeTick_0     ;; 4 cycles
+   \   00000A                       ; ------------------------------------- Block: 9 cycles
+    102                 *p_err = OS_ERR_SCHED_LOCKED;
+   \   00000A A80E                  MOVW      AX, [SP+0x0E]      ;; 1 cycle
+   \   00000C 16                    MOVW      HL, AX             ;; 1 cycle
+   \   00000D 30636D                MOVW      AX, #0x6D63        ;; 1 cycle
+   \   000010 ED....                BR        N:??OSTimeTick_1   ;; 3 cycles
+   \   000013                       ; ------------------------------------- Block: 6 cycles
+    103                  return;
+    104              }
+    105          
+    106              switch (opt) {
+   \                     ??OSTimeTick_0:
+   \   000013 15                    MOVW      AX, DE             ;; 1 cycle
+   \   000014 240000                SUBW      AX, #0x0           ;; 1 cycle
+   \   000017 DD0F                  BZ        ??OSTimeTick_2     ;; 4 cycles
+   \   000019                       ; ------------------------------------- Block: 6 cycles
+   \   000019 240200                SUBW      AX, #0x2           ;; 1 cycle
+   \   00001C DD0A                  BZ        ??OSTimeTick_2     ;; 4 cycles
+   \   00001E                       ; ------------------------------------- Block: 5 cycles
+   \   00001E 240200                SUBW      AX, #0x2           ;; 1 cycle
+   \   000021 DD22                  BZ        ??OSTimeTick_3     ;; 4 cycles
+   \   000023                       ; ------------------------------------- Block: 5 cycles
+   \   000023 240400                SUBW      AX, #0x4           ;; 1 cycle
+   \   000026 DF15                  BNZ       ??OSTimeTick_4     ;; 4 cycles
+   \   000028                       ; ------------------------------------- Block: 5 cycles
+    107                  case OS_OPT_TIME_DLY:
+    108                  case OS_OPT_TIME_TIMEOUT:
+    109                  case OS_OPT_TIME_PERIODIC:
+    110                       if (dly == (OS_TICK)0u) {                      /* 0 means no delay!                                      */
+   \                     ??OSTimeTick_2:
+   \   000028 A806                  MOVW      AX, [SP+0x06]      ;; 1 cycle
+   \   00002A 33                    XCHW      AX, BC             ;; 1 cycle
+   \   00002B 440000                CMPW      AX, #0x0           ;; 1 cycle
+   \   00002E 13                    MOVW      AX, BC             ;; 1 cycle
+   \   00002F DF02                  BNZ       ??OSTimeTick_5     ;; 4 cycles
+   \   000031                       ; ------------------------------------- Block: 8 cycles
+   \   000031 F7                    CLRW      BC                 ;; 1 cycle
+   \   000032 43                    CMPW      AX, BC             ;; 1 cycle
+   \   000033                       ; ------------------------------------- Block: 2 cycles
+   \                     ??OSTimeTick_5:
+   \   000033 DF10                  BNZ       ??OSTimeTick_3     ;; 4 cycles
+   \   000035                       ; ------------------------------------- Block: 4 cycles
+    111                          *p_err = OS_ERR_TIME_ZERO_DLY;
+   \   000035 A80E                  MOVW      AX, [SP+0x0E]      ;; 1 cycle
+   \   000037 16                    MOVW      HL, AX             ;; 1 cycle
+   \   000038 307E72                MOVW      AX, #0x727E        ;; 1 cycle
+   \   00003B EF57                  BR        S:??OSTimeTick_1   ;; 3 cycles
+   \   00003D                       ; ------------------------------------- Block: 6 cycles
+    112                           return;
+    113                       }
+    114                       break;
+    115          
+    116                  case OS_OPT_TIME_MATCH:
+    117                       break;
+    118          
+    119                  default:
+    120                      *p_err = OS_ERR_OPT_INVALID;
+   \                     ??OSTimeTick_4:
+   \   00003D A80E                  MOVW      AX, [SP+0x0E]      ;; 1 cycle
+   \   00003F 16                    MOVW      HL, AX             ;; 1 cycle
+   \   000040 30255E                MOVW      AX, #0x5E25        ;; 1 cycle
+   \   000043 EF4F                  BR        S:??OSTimeTick_1   ;; 3 cycles
+   \   000045                       ; ------------------------------------- Block: 6 cycles
+    121                       return;
+    122              }
+    123          
+    124              OS_CRITICAL_ENTER();
+   \                     ??OSTimeTick_3:
+   \   000045 8EFA                  MOV       A, PSW             ;; 1 cycle
+   \   000047 70                    MOV       X, A               ;; 1 cycle
+   \   000048 F1                    CLRB      A                  ;; 1 cycle
+   \   000049 B800                  MOVW      [SP], AX           ;; 1 cycle
+   \   00004B F6                    CLRW      AX                 ;; 1 cycle
+   \   00004C B802                  MOVW      [SP+0x02], AX      ;; 1 cycle
+   \   00004E 717BFA                DI                           ;; 2 cycles
+   \   000051 FD....                CALL      CPU_IntDisMeasStart  ;; 3 cycles
+    125              OSTCBCurPtr->TaskState = OS_TASK_STATE_DLY;
+   \   000054 FB....                MOVW      HL, N:OSTCBCurPtr  ;; 1 cycle
+   \   000057 E1                    ONEB      A                  ;; 1 cycle
+   \   000058 9C1C                  MOV       [HL+0x1C], A       ;; 1 cycle
+    126              OS_TickListInsert(OSTCBCurPtr,
+    127                                dly,
+    128                                opt,
+    129                                p_err);
+   \   00005A A808                  MOVW      AX, [SP+0x08]      ;; 1 cycle
+   \   00005C 12                    MOVW      BC, AX             ;; 1 cycle
+   \   00005D A806                  MOVW      AX, [SP+0x06]      ;; 1 cycle
+   \   00005F C3                    PUSH      BC                 ;; 1 cycle
+   \   000060 C1                    PUSH      AX                 ;; 1 cycle
+   \   000061 A812                  MOVW      AX, [SP+0x12]      ;; 1 cycle
+   \   000063 14                    MOVW      DE, AX             ;; 1 cycle
+   \   000064 A808                  MOVW      AX, [SP+0x08]      ;; 1 cycle
+   \   000066 12                    MOVW      BC, AX             ;; 1 cycle
+   \   000067 AF....                MOVW      AX, N:OSTCBCurPtr  ;; 1 cycle
+   \   00006A FD....                CALL      OS_TickListInsert  ;; 3 cycles
+    130              if (*p_err != OS_ERR_NONE) {
+   \   00006D A80E                  MOVW      AX, [SP+0x0E]      ;; 1 cycle
+   \   00006F 16                    MOVW      HL, AX             ;; 1 cycle
+   \   000070 AB                    MOVW      AX, [HL]           ;; 1 cycle
+   \   000071 F7                    CLRW      BC                 ;; 1 cycle
+   \   000072 43                    CMPW      AX, BC             ;; 1 cycle
+   \   000073 DD0A                  BZ        ??OSTimeTick_6     ;; 4 cycles
+   \   000075                       ; ------------------------------------- Block: 36 cycles
+    131                   OS_CRITICAL_EXIT_NO_SCHED();
+   \   000075 FD....                CALL      CPU_IntDisMeasStop  ;; 3 cycles
+   \   000078 8800                  MOV       A, [SP]            ;; 1 cycle
+   \   00007A FD....                CALL      N:??Subroutine1_0  ;; 3 cycles
+   \   00007D                       ; ------------------------------------- Block: 7 cycles
+    132                   return;
+   \                     ??CrossCallReturnLabel_0:
+   \   00007D EF16                  BR        S:??OSTimeTick_7   ;; 3 cycles
+   \   00007F                       ; ------------------------------------- Block: 3 cycles
+    133              }
+    134              OS_RdyListRemove(OSTCBCurPtr);                          /* Remove current task from ready list                    */
+   \                     ??OSTimeTick_6:
+   \   00007F AF....                MOVW      AX, N:OSTCBCurPtr  ;; 1 cycle
+   \   000082 FD....                CALL      OS_RdyListRemove   ;; 3 cycles
+    135              OS_CRITICAL_EXIT_NO_SCHED();
+   \   000085 FD....                CALL      CPU_IntDisMeasStop  ;; 3 cycles
+   \   000088 8800                  MOV       A, [SP]            ;; 1 cycle
+   \   00008A FD....                CALL      N:??Subroutine1_0  ;; 3 cycles
+   \   00008D                       ; ------------------------------------- Block: 11 cycles
+    136              OSSched();                                              /* Find next task to run!                                 */
+   \                     ??CrossCallReturnLabel_1:
+   \   00008D FD....                CALL      OSSched            ;; 3 cycles
+    137             *p_err = OS_ERR_NONE;
+   \   000090 A80E                  MOVW      AX, [SP+0x0E]      ;; 1 cycle
+   \   000092 16                    MOVW      HL, AX             ;; 1 cycle
+   \   000093 F6                    CLRW      AX                 ;; 1 cycle
+   \   000094                       ; ------------------------------------- Block: 6 cycles
+   \                     ??OSTimeTick_1:
+   \   000094 BB                    MOVW      [HL], AX           ;; 1 cycle
+    138          }
+   \   000095                       ; ------------------------------------- Block: 1 cycles
+   \                     ??OSTimeTick_7:
+   \   000095 100A                  ADDW      SP, #0xA           ;; 1 cycle
+   \   000097 FD....                CALL      N:?FUNC_LEAVE_L06
+   \   00009A 0200                  DW        0x2                ;; 3 cycles
+   \   00009C                       ; ------------------------------------- Block: 4 cycles
+   \   00009C                       ; ------------------------------------- Total: 130 cycles
+   \   00009C                       REQUIRE ?CLRL78_V1_0_L00
+
+   \                                 In  segment CODE, align 1, keep-with-next
+   \                     ??Subroutine1_0:
+   \   000000 71FC                  MOV1      CY, A.7            ;; 1 cycle
+   \   000002 7179FA                MOV1      PSW.7, CY          ;; 4 cycles
+   \   000005 D7                    RET                          ;; 6 cycles
+   \   000006                       ; ------------------------------------- Block: 11 cycles
+   \   000006                       ; ------------------------------------- Total: 11 cycles
+   \   000006                       REQUIRE ?CLRL78_V1_0_L00
+    139          
+    140          /*$PAGE*/
+    141          /*
+    142          ************************************************************************************************************************
+    143          *                                             DELAY TASK FOR SPECIFIED TIME
+    144          *
+    145          * Description: This function is called to delay execution of the currently running task until some time expires.  This
+    146          *              call allows you to specify the delay time in HOURS, MINUTES, SECONDS and MILLISECONDS instead of ticks.
+    147          *
+    148          * Arguments  : hours     specifies the number of hours that the task will be delayed (max. is 999 if the tick rate is
+    149          *                        1000 Hz or less otherwise, a higher value would overflow a 32-bit unsigned counter).
+    150          *
+    151          *              minutes   specifies the number of minutes (max. 59 if 'opt' is OS_OPT_TIME_HMSM_STRICT)
+    152          *
+    153          *              seconds   specifies the number of seconds (max. 59 if 'opt' is OS_OPT_TIME_HMSM_STRICT)
+    154          *
+    155          *              milli     specifies the number of milliseconds (max. 999 if 'opt' is OS_OPT_TIME_HMSM_STRICT)
+    156          *
+    157          *              opt       specifies time delay bit-field options logically OR'd; default options marked with *** :
+    158          *
+    159          *                        *** OS_OPT_TIME_DLY        specifies a relative time from the current value of OSTickCtr.
+    160          *                            OS_OPT_TIME_TIMEOUT    same as OS_OPT_TIME_DLY.
+    161          *                            OS_OPT_TIME_MATCH      indicates that the delay specifies the absolute value that OSTickCtr
+    162          *                                                   must reach before the task will be resumed.
+    163          *                            OS_OPT_TIME_PERIODIC   indicates that the delay specifies the periodic value that OSTickCtr
+    164          *                                                   must reach before the task will be resumed.
+    165          *
+    166          *                        *** OS_OPT_TIME_HMSM_STRICT            strictly allow only hours        (0...99)
+    167          *                                                                                   minutes      (0...59)
+    168          *                                                                                   seconds      (0...59)
+    169          *                                                                                   milliseconds (0...999)
+    170          *                            OS_OPT_TIME_HMSM_NON_STRICT        allow any value of  hours        (0...999)
+    171          *                                                                                   minutes      (0...9999)
+    172          *                                                                                   seconds      (0...65535)
+    173          *                                                                                   milliseconds (0...4294967295)
+    174          *
+    175          *              p_err     is a pointer to a variable that will receive an error code from this call.
+    176          *
+    177          *                            OS_ERR_NONE                        If the function returns from the desired delay
+    178          *                            OS_ERR_OPT_INVALID                 If you specified an invalid option for 'opt'
+    179          *                            OS_ERR_SCHED_LOCKED                Can't delay when the scheduler is locked
+    180          *                            OS_ERR_TIME_DLY_ISR                If called from an ISR
+    181          *                            OS_ERR_TIME_INVALID_HOURS          If you didn't specify a valid value for 'hours'
+    182          *                            OS_ERR_TIME_INVALID_MINUTES        If you didn't specify a valid value for 'minutes'
+    183          *                            OS_ERR_TIME_INVALID_SECONDS        If you didn't specify a valid value for 'seconds'
+    184          *                            OS_ERR_TIME_INVALID_MILLISECONDS   If you didn't specify a valid value for 'milli'
+    185          *                            OS_ERR_TIME_ZERO_DLY               If hours, minutes, seconds and milli are all 0
+    186          *
+    187          * Returns    : none
+    188          *
+    189          * Note(s)    : 1) The resolution on the milliseconds depends on the tick rate.  For example, you can't do a 10 mS delay
+    190          *                 if the ticker interrupts every 100 mS.  In this case, the delay would be set to 0.  The actual delay
+    191          *                 is rounded to the nearest tick.
+    192          *
+    193          *              2) Although this function allows you to delay a task for many, many hours, it's not recommended to put
+    194          *                 a task to sleep for that long.
+    195          ************************************************************************************************************************
+    196          */
+    197          
+    198          #if OS_CFG_TIME_DLY_HMSM_EN > 0u
+
+   \                                 In  segment CODE, align 1, keep-with-next
+    199          void  OSTimeDlyHMSM (CPU_INT16U  hours,
+   \                     OSTimeDlyHMSM:
+    200                               CPU_INT16U  minutes,
+    201                               CPU_INT16U  seconds,
+    202                               CPU_INT32U  milli,
+    203                               OS_OPT      opt,
+    204                               OS_ERR     *p_err)
+    205          {
+   \   000000                       ; * Stack frame (at entry) *
+   \   000000                       ; Param size: 8
+   \   000000 C1                    PUSH      AX                 ;; 1 cycle
+   \   000001 C3                    PUSH      BC                 ;; 1 cycle
+   \   000002 C5                    PUSH      DE                 ;; 1 cycle
+   \   000003                       ; Auto size: 16
+   \   000003 200A                  SUBW      SP, #0xA           ;; 1 cycle
+    206          #if OS_CFG_ARG_CHK_EN > 0u
+    207              CPU_BOOLEAN  opt_invalid;
+    208              CPU_BOOLEAN  opt_non_strict;
+    209          #endif
+    210              OS_OPT       opt_time;
+    211              OS_RATE_HZ   tick_rate;
+    212              OS_TICK      ticks;
+    213              CPU_SR_ALLOC();
+    214          
+    215          
+    216          
+    217          #ifdef OS_SAFETY_CRITICAL
+    218              if (p_err == (OS_ERR *)0) {
+    219                  OS_SAFETY_CRITICAL_EXCEPTION();
+    220                  return;
+    221              }
+    222          #endif
+    223          
+    224          #if OS_CFG_CALLED_FROM_ISR_CHK_EN > 0u
+    225              if (OSIntNestingCtr > (OS_NESTING_CTR)0u) {             /* Not allowed to call from an ISR                        */
+    226                 *p_err = OS_ERR_TIME_DLY_ISR;
+    227                  return;
+    228              }
+    229          #endif
+    230          
+    231              if (OSSchedLockNestingCtr > (OS_NESTING_CTR)0u) {       /* Can't delay when the scheduler is locked               */
+   \   000005 D5....                CMP0      N:OSSchedLockNestingCtr  ;; 1 cycle
+   \   000008 DD09                  BZ        ??OSTimeTick_8     ;; 4 cycles
+   \   00000A                       ; ------------------------------------- Block: 9 cycles
+    232                 *p_err = OS_ERR_SCHED_LOCKED;
+   \   00000A A81A                  MOVW      AX, [SP+0x1A]      ;; 1 cycle
+   \   00000C 16                    MOVW      HL, AX             ;; 1 cycle
+   \   00000D 30636D                MOVW      AX, #0x6D63        ;; 1 cycle
+   \   000010 ED....                BR        N:??OSTimeTick_9   ;; 3 cycles
+   \   000013                       ; ------------------------------------- Block: 6 cycles
+    233                  return;
+    234              }
+    235          
+    236              opt_time = opt & OS_OPT_TIME_MASK;                      /* Retrieve time options only.                            */
+   \                     ??OSTimeTick_8:
+   \   000013 A818                  MOVW      AX, [SP+0x18]      ;; 1 cycle
+   \   000015 60                    MOV       A, X               ;; 1 cycle
+   \   000016 F0                    CLRB      X                  ;; 1 cycle
+   \   000017 5C0E                  AND       A, #0xE            ;; 1 cycle
+   \   000019 08                    XCH       A, X               ;; 1 cycle
+   \   00001A B800                  MOVW      [SP], AX           ;; 1 cycle
+    237              switch (opt_time) {
+   \   00001C 60                    MOV       A, X               ;; 1 cycle
+   \   00001D DD0C                  BZ        ??OSTimeTick_10    ;; 4 cycles
+   \   00001F                       ; ------------------------------------- Block: 11 cycles
+   \   00001F 2C02                  SUB       A, #0x2            ;; 1 cycle
+   \   000021 DD08                  BZ        ??OSTimeTick_10    ;; 4 cycles
+   \   000023                       ; ------------------------------------- Block: 5 cycles
+   \   000023 2C02                  SUB       A, #0x2            ;; 1 cycle
+   \   000025 DD2F                  BZ        ??OSTimeTick_11    ;; 4 cycles
+   \   000027                       ; ------------------------------------- Block: 5 cycles
+   \   000027 2C04                  SUB       A, #0x4            ;; 1 cycle
+   \   000029 DF22                  BNZ       ??OSTimeTick_12    ;; 4 cycles
+   \   00002B                       ; ------------------------------------- Block: 5 cycles
+    238                  case OS_OPT_TIME_DLY:
+    239                  case OS_OPT_TIME_TIMEOUT:
+    240                  case OS_OPT_TIME_PERIODIC:
+    241                       if (milli == (CPU_INT32U)0u) {                 /* Make sure we didn't specify a 0 delay                  */
+   \                     ??OSTimeTick_10:
+   \   00002B A816                  MOVW      AX, [SP+0x16]      ;; 1 cycle
+   \   00002D 12                    MOVW      BC, AX             ;; 1 cycle
+   \   00002E A814                  MOVW      AX, [SP+0x14]      ;; 1 cycle
+   \   000030 33                    XCHW      AX, BC             ;; 1 cycle
+   \   000031 440000                CMPW      AX, #0x0           ;; 1 cycle
+   \   000034 13                    MOVW      AX, BC             ;; 1 cycle
+   \   000035 DF02                  BNZ       ??OSTimeTick_13    ;; 4 cycles
+   \   000037                       ; ------------------------------------- Block: 10 cycles
+   \   000037 F7                    CLRW      BC                 ;; 1 cycle
+   \   000038 43                    CMPW      AX, BC             ;; 1 cycle
+   \   000039                       ; ------------------------------------- Block: 2 cycles
+   \                     ??OSTimeTick_13:
+   \   000039 DF1B                  BNZ       ??OSTimeTick_11    ;; 4 cycles
+   \   00003B                       ; ------------------------------------- Block: 4 cycles
+    242                           if (seconds == (CPU_INT16U)0u) {
+   \   00003B 15                    MOVW      AX, DE             ;; 1 cycle
+   \   00003C F7                    CLRW      BC                 ;; 1 cycle
+   \   00003D 43                    CMPW      AX, BC             ;; 1 cycle
+   \   00003E DF16                  BNZ       ??OSTimeTick_11    ;; 4 cycles
+   \   000040                       ; ------------------------------------- Block: 7 cycles
+    243                               if (minutes == (CPU_INT16U)0u) {
+   \   000040 A80C                  MOVW      AX, [SP+0x0C]      ;; 1 cycle
+   \   000042 43                    CMPW      AX, BC             ;; 1 cycle
+   \   000043 DF11                  BNZ       ??OSTimeTick_11    ;; 4 cycles
+   \   000045                       ; ------------------------------------- Block: 6 cycles
+    244                                   if (hours == (CPU_INT16U)0u) {
+   \   000045 A80E                  MOVW      AX, [SP+0x0E]      ;; 1 cycle
+   \   000047 43                    CMPW      AX, BC             ;; 1 cycle
+   \   000048 DF0C                  BNZ       ??OSTimeTick_11    ;; 4 cycles
+   \   00004A                       ; ------------------------------------- Block: 6 cycles
+    245                                      *p_err = OS_ERR_TIME_ZERO_DLY;
+   \   00004A ED....                BR        N:??OSTimeTick_14  ;; 3 cycles
+   \   00004D                       ; ------------------------------------- Block: 3 cycles
+    246                                       return;
+    247                                   }
+    248                               }
+    249                           }
+    250                       }
+    251                       break;
+    252          
+    253                  case OS_OPT_TIME_MATCH:
+    254                       break;
+    255          
+    256                  default:
+    257                      *p_err = OS_ERR_OPT_INVALID;
+   \                     ??OSTimeTick_12:
+   \   00004D A81A                  MOVW      AX, [SP+0x1A]      ;; 1 cycle
+   \   00004F 16                    MOVW      HL, AX             ;; 1 cycle
+   \   000050 30255E                MOVW      AX, #0x5E25        ;; 1 cycle
+   \   000053 ED....                BR        N:??OSTimeTick_9   ;; 3 cycles
+   \   000056                       ; ------------------------------------- Block: 6 cycles
+    258                       return;
+    259              }
+    260          
+    261          #if OS_CFG_ARG_CHK_EN > 0u                                  /* Validate arguments to be within range                  */
+    262              opt_invalid = DEF_BIT_IS_SET_ANY(opt, ~OS_OPT_TIME_OPTS_MASK);
+    263              if (opt_invalid == DEF_YES) {
+    264                 *p_err = OS_ERR_OPT_INVALID;
+    265                  return;
+    266              }
+    267          
+    268              opt_non_strict = DEF_BIT_IS_SET(opt, OS_OPT_TIME_HMSM_NON_STRICT);
+    269              if (opt_non_strict != DEF_YES) {
+    270                   if (milli   > (CPU_INT32U)999u) {
+    271                      *p_err = OS_ERR_TIME_INVALID_MILLISECONDS;
+    272                       return;
+    273                   }
+    274                   if (seconds > (CPU_INT16U)59u) {
+    275                      *p_err = OS_ERR_TIME_INVALID_SECONDS;
+    276                       return;
+    277                   }
+    278                   if (minutes > (CPU_INT16U)59u) {
+    279                      *p_err = OS_ERR_TIME_INVALID_MINUTES;
+    280                       return;
+    281                   }
+    282                   if (hours   > (CPU_INT16U)99u) {
+    283                      *p_err = OS_ERR_TIME_INVALID_HOURS;
+    284                       return;
+    285                   }
+    286              } else {
+    287                   if (minutes > (CPU_INT16U)9999u) {
+    288                      *p_err = OS_ERR_TIME_INVALID_MINUTES;
+    289                       return;
+    290                   }
+    291                   if (hours   > (CPU_INT16U)999u) {
+    292                      *p_err = OS_ERR_TIME_INVALID_HOURS;
+    293                       return;
+    294                   }
+    295              }
+    296          #endif
+    297          
+    298                                                                      /* Compute the total number of clock ticks required..     */
+    299                                                                      /* .. (rounded to the nearest tick)                       */
+    300              tick_rate = OSCfg_TickRate_Hz;
+    301              ticks     = ((OS_TICK)hours * (OS_TICK)3600u + (OS_TICK)minutes * (OS_TICK)60u + (OS_TICK)seconds) * tick_rate
+    302                        + (tick_rate * ((OS_TICK)milli + (OS_TICK)500u / tick_rate)) / (OS_TICK)1000u;
+   \                     ??OSTimeTick_11:
+   \   000056 34E803                MOVW      DE, #0x3E8         ;; 1 cycle
+   \   000059 F6                    CLRW      AX                 ;; 1 cycle
+   \   00005A 16                    MOVW      HL, AX             ;; 1 cycle
+   \   00005B C7                    PUSH      HL                 ;; 1 cycle
+   \   00005C C5                    PUSH      DE                 ;; 1 cycle
+   \   00005D FB....                MOVW      HL, N:OSCfg_TickRate_Hz+2  ;; 1 cycle
+   \   000060 EB....                MOVW      DE, N:OSCfg_TickRate_Hz  ;; 1 cycle
+   \   000063 30F401                MOVW      AX, #0x1F4         ;; 1 cycle
+   \   000066 F7                    CLRW      BC                 ;; 1 cycle
+   \   000067 CEFB0B                DIVWU                        ;; 17 cycles
+   \   00006A C3                    PUSH      BC                 ;; 1 cycle
+   \   00006B C1                    PUSH      AX                 ;; 1 cycle
+   \   00006C A81E                  MOVW      AX, [SP+0x1E]      ;; 1 cycle
+   \   00006E 12                    MOVW      BC, AX             ;; 1 cycle
+   \   00006F A81C                  MOVW      AX, [SP+0x1C]      ;; 1 cycle
+   \   000071 C4                    POP       DE                 ;; 1 cycle
+   \   000072 C6                    POP       HL                 ;; 1 cycle
+   \   000073 05                    ADDW      AX, DE             ;; 1 cycle
+   \   000074 61D8                  SKNC
+   \   000076 A3                    INCW      BC                 ;; 5 cycles
+   \   000077 33                    XCHW      AX, BC             ;; 1 cycle
+   \   000078 07                    ADDW      AX, HL             ;; 1 cycle
+   \   000079 33                    XCHW      AX, BC             ;; 1 cycle
+   \   00007A C3                    PUSH      BC                 ;; 1 cycle
+   \   00007B C1                    PUSH      AX                 ;; 1 cycle
+   \   00007C DB....                MOVW      BC, N:OSCfg_TickRate_Hz+2  ;; 1 cycle
+   \   00007F AF....                MOVW      AX, N:OSCfg_TickRate_Hz  ;; 1 cycle
+   \   000082 FD....                CALL      N:?L_MUL_FAST_L03  ;; 3 cycles
+   \   000085 1004                  ADDW      SP, #0x4           ;; 1 cycle
+   \   000087 C4                    POP       DE                 ;; 1 cycle
+   \   000088 C6                    POP       HL                 ;; 1 cycle
+   \   000089 CEFB0B                DIVWU                        ;; 17 cycles
+   \   00008C C3                    PUSH      BC                 ;; 1 cycle
+   \   00008D C1                    PUSH      AX                 ;; 1 cycle
+   \   00008E AF....                MOVW      AX, N:OSCfg_TickRate_Hz+2  ;; 1 cycle
+   \   000091 C1                    PUSH      AX                 ;; 1 cycle
+   \   000092 AF....                MOVW      AX, N:OSCfg_TickRate_Hz  ;; 1 cycle
+   \   000095 C1                    PUSH      AX                 ;; 1 cycle
+   \   000096 A812                  MOVW      AX, [SP+0x12]      ;; 1 cycle
+   \   000098 F7                    CLRW      BC                 ;; 1 cycle
+   \   000099 C3                    PUSH      BC                 ;; 1 cycle
+   \   00009A C1                    PUSH      AX                 ;; 1 cycle
+   \   00009B A818                  MOVW      AX, [SP+0x18]      ;; 1 cycle
+   \   00009D 523C                  MOV       C, #0x3C           ;; 1 cycle
+   \   00009F CEFB01                MULHU                        ;; 2 cycles
+   \   0000A2 14                    MOVW      DE, AX             ;; 1 cycle
+   \   0000A3 C3                    PUSH      BC                 ;; 1 cycle
+   \   0000A4 C6                    POP       HL                 ;; 1 cycle
+   \   0000A5 A81A                  MOVW      AX, [SP+0x1A]      ;; 1 cycle
+   \   0000A7 32100E                MOVW      BC, #0xE10         ;; 1 cycle
+   \   0000AA CEFB01                MULHU                        ;; 2 cycles
+   \   0000AD 05                    ADDW      AX, DE             ;; 1 cycle
+   \   0000AE 61D8                  SKNC
+   \   0000B0 A3                    INCW      BC                 ;; 5 cycles
+   \   0000B1 33                    XCHW      AX, BC             ;; 1 cycle
+   \   0000B2 07                    ADDW      AX, HL             ;; 1 cycle
+   \   0000B3 33                    XCHW      AX, BC             ;; 1 cycle
+   \   0000B4 C4                    POP       DE                 ;; 1 cycle
+   \   0000B5 C6                    POP       HL                 ;; 1 cycle
+   \   0000B6 05                    ADDW      AX, DE             ;; 1 cycle
+   \   0000B7 61D8                  SKNC
+   \   0000B9 A3                    INCW      BC                 ;; 5 cycles
+   \   0000BA FD....                CALL      N:?L_MUL_FAST_L03  ;; 3 cycles
+   \   0000BD 1004                  ADDW      SP, #0x4           ;; 1 cycle
+   \   0000BF C4                    POP       DE                 ;; 1 cycle
+   \   0000C0 C6                    POP       HL                 ;; 1 cycle
+   \   0000C1 05                    ADDW      AX, DE             ;; 1 cycle
+   \   0000C2 61D8                  SKNC
+   \   0000C4 A3                    INCW      BC                 ;; 5 cycles
+   \   0000C5 33                    XCHW      AX, BC             ;; 1 cycle
+   \   0000C6 07                    ADDW      AX, HL             ;; 1 cycle
+   \   0000C7 33                    XCHW      AX, BC             ;; 1 cycle
+   \   0000C8 16                    MOVW      HL, AX             ;; 1 cycle
+   \   0000C9 B806                  MOVW      [SP+0x06], AX      ;; 1 cycle
+   \   0000CB 13                    MOVW      AX, BC             ;; 1 cycle
+   \   0000CC B808                  MOVW      [SP+0x08], AX      ;; 1 cycle
+    303          
+    304              if (ticks > (OS_TICK)0u) {
+   \   0000CE 17                    MOVW      AX, HL             ;; 1 cycle
+   \   0000CF 33                    XCHW      AX, BC             ;; 1 cycle
+   \   0000D0 440000                CMPW      AX, #0x0           ;; 1 cycle
+   \   0000D3 13                    MOVW      AX, BC             ;; 1 cycle
+   \   0000D4 DF02                  BNZ       ??OSTimeTick_15    ;; 4 cycles
+   \   0000D6                       ; ------------------------------------- Block: 134 cycles
+   \   0000D6 F7                    CLRW      BC                 ;; 1 cycle
+   \   0000D7 43                    CMPW      AX, BC             ;; 1 cycle
+   \   0000D8                       ; ------------------------------------- Block: 2 cycles
+   \                     ??OSTimeTick_15:
+   \   0000D8 DD51                  BZ        ??OSTimeTick_14    ;; 4 cycles
+   \   0000DA                       ; ------------------------------------- Block: 4 cycles
+    305                  OS_CRITICAL_ENTER();
+   \   0000DA 8EFA                  MOV       A, PSW             ;; 1 cycle
+   \   0000DC 70                    MOV       X, A               ;; 1 cycle
+   \   0000DD F1                    CLRB      A                  ;; 1 cycle
+   \   0000DE B802                  MOVW      [SP+0x02], AX      ;; 1 cycle
+   \   0000E0 F6                    CLRW      AX                 ;; 1 cycle
+   \   0000E1 B804                  MOVW      [SP+0x04], AX      ;; 1 cycle
+   \   0000E3 717BFA                DI                           ;; 2 cycles
+   \   0000E6 FD....                CALL      CPU_IntDisMeasStart  ;; 3 cycles
+    306                  OSTCBCurPtr->TaskState = OS_TASK_STATE_DLY;
+   \   0000E9 FB....                MOVW      HL, N:OSTCBCurPtr  ;; 1 cycle
+   \   0000EC E1                    ONEB      A                  ;; 1 cycle
+   \   0000ED 9C1C                  MOV       [HL+0x1C], A       ;; 1 cycle
+    307                  OS_TickListInsert(OSTCBCurPtr,
+    308                                    ticks,
+    309                                    opt_time,
+    310                                    p_err);
+   \   0000EF A808                  MOVW      AX, [SP+0x08]      ;; 1 cycle
+   \   0000F1 12                    MOVW      BC, AX             ;; 1 cycle
+   \   0000F2 A806                  MOVW      AX, [SP+0x06]      ;; 1 cycle
+   \   0000F4 C3                    PUSH      BC                 ;; 1 cycle
+   \   0000F5 C1                    PUSH      AX                 ;; 1 cycle
+   \   0000F6 A81E                  MOVW      AX, [SP+0x1E]      ;; 1 cycle
+   \   0000F8 14                    MOVW      DE, AX             ;; 1 cycle
+   \   0000F9 A804                  MOVW      AX, [SP+0x04]      ;; 1 cycle
+   \   0000FB 12                    MOVW      BC, AX             ;; 1 cycle
+   \   0000FC AF....                MOVW      AX, N:OSTCBCurPtr  ;; 1 cycle
+   \   0000FF FD....                CALL      OS_TickListInsert  ;; 3 cycles
+    311                  if (*p_err != OS_ERR_NONE) {
+   \   000102 A81A                  MOVW      AX, [SP+0x1A]      ;; 1 cycle
+   \   000104 16                    MOVW      HL, AX             ;; 1 cycle
+   \   000105 AB                    MOVW      AX, [HL]           ;; 1 cycle
+   \   000106 F7                    CLRW      BC                 ;; 1 cycle
+   \   000107 43                    CMPW      AX, BC             ;; 1 cycle
+   \   000108 DD0A                  BZ        ??OSTimeTick_16    ;; 4 cycles
+   \   00010A                       ; ------------------------------------- Block: 36 cycles
+    312                       OS_CRITICAL_EXIT_NO_SCHED();
+   \   00010A FD....                CALL      CPU_IntDisMeasStop  ;; 3 cycles
+   \   00010D 8802                  MOV       A, [SP+0x02]       ;; 1 cycle
+   \   00010F FD....                CALL      N:??Subroutine1_0  ;; 3 cycles
+   \   000112                       ; ------------------------------------- Block: 7 cycles
+    313                       return;
+   \                     ??CrossCallReturnLabel_2:
+   \   000112 EF1E                  BR        S:??OSTimeTick_17  ;; 3 cycles
+   \   000114                       ; ------------------------------------- Block: 3 cycles
+    314                  }
+    315                  OS_RdyListRemove(OSTCBCurPtr);                      /* Remove current task from ready list                    */
+   \                     ??OSTimeTick_16:
+   \   000114 AF....                MOVW      AX, N:OSTCBCurPtr  ;; 1 cycle
+   \   000117 FD....                CALL      OS_RdyListRemove   ;; 3 cycles
+    316                  OS_CRITICAL_EXIT_NO_SCHED();
+   \   00011A FD....                CALL      CPU_IntDisMeasStop  ;; 3 cycles
+   \   00011D 8802                  MOV       A, [SP+0x02]       ;; 1 cycle
+   \   00011F FD....                CALL      N:??Subroutine1_0  ;; 3 cycles
+   \   000122                       ; ------------------------------------- Block: 11 cycles
+    317                  OSSched();                                          /* Find next task to run!                                 */
+   \                     ??CrossCallReturnLabel_3:
+   \   000122 FD....                CALL      OSSched            ;; 3 cycles
+    318                 *p_err = OS_ERR_NONE;
+   \   000125 A81A                  MOVW      AX, [SP+0x1A]      ;; 1 cycle
+   \   000127 16                    MOVW      HL, AX             ;; 1 cycle
+   \   000128 F6                    CLRW      AX                 ;; 1 cycle
+   \   000129 EF06                  BR        S:??OSTimeTick_9   ;; 3 cycles
+   \   00012B                       ; ------------------------------------- Block: 9 cycles
+    319              } else {
+    320                 *p_err = OS_ERR_TIME_ZERO_DLY;
+   \                     ??OSTimeTick_14:
+   \   00012B A81A                  MOVW      AX, [SP+0x1A]      ;; 1 cycle
+   \   00012D 16                    MOVW      HL, AX             ;; 1 cycle
+   \   00012E 307E72                MOVW      AX, #0x727E        ;; 1 cycle
+   \   000131                       ; ------------------------------------- Block: 3 cycles
+   \                     ??OSTimeTick_9:
+   \   000131 BB                    MOVW      [HL], AX           ;; 1 cycle
+   \   000132                       ; ------------------------------------- Block: 1 cycles
+    321              }
+    322          }
+   \                     ??OSTimeTick_17:
+   \   000132 1010                  ADDW      SP, #0x10          ;; 1 cycle
+   \   000134 FD....                CALL      N:?FUNC_LEAVE_L06
+   \   000137 0800                  DW        0x8                ;; 3 cycles
+   \   000139                       ; ------------------------------------- Block: 4 cycles
+   \   000139                       ; ------------------------------------- Total: 299 cycles
+   \   000139                       REQUIRE ?CLRL78_V1_0_L00
+    323          #endif
+    324          /*$PAGE*/
+    325          /*
+    326          ************************************************************************************************************************
+    327          *                                                RESUME A DELAYED TASK
+    328          *
+    329          * Description: This function is used resume a task that has been delayed through a call to either OSTimeDly() or
+    330          *              OSTimeDlyHMSM().  Note that cannot call this function to resume a task that is waiting for an event
+    331          *              with timeout.
+    332          *
+    333          * Arguments  : p_tcb    is a pointer to the TCB of the task to resume.
+    334          *
+    335          *              p_err    is a pointer to a variable that will receive an error code
+    336          *
+    337          *                           OS_ERR_NONE                  Task has been resumed
+    338          *                           OS_ERR_STATE_INVALID         Task is in an invalid state
+    339          *                           OS_ERR_TIME_DLY_RESUME_ISR   Task is not waiting for time to expire
+    340          *                           OS_ERR_TIME_NOT_DLY          Task is not waiting for time to expire
+    341          *                           OS_ERR_TASK_SUSPENDED        Task cannot be resumed, it was suspended by OSTaskSuspend()
+    342          *
+    343          * Note(s)    : none
+    344          ************************************************************************************************************************
+    345          */
+    346          
+    347          #if OS_CFG_TIME_DLY_RESUME_EN > 0u
+    348          void  OSTimeDlyResume (OS_TCB  *p_tcb,
+    349                                 OS_ERR  *p_err)
+    350          {
+    351              CPU_SR_ALLOC();
+    352          
+    353          
+    354          
+    355          #ifdef OS_SAFETY_CRITICAL
+    356              if (p_err == (OS_ERR *)0) {
+    357                  OS_SAFETY_CRITICAL_EXCEPTION();
+    358                  return;
+    359              }
+    360          #endif
+    361          
+    362          #if OS_CFG_CALLED_FROM_ISR_CHK_EN > 0u
+    363              if (OSIntNestingCtr > (OS_NESTING_CTR)0u) {             /* Not allowed to call from an ISR                        */
+    364                  *p_err = OS_ERR_TIME_DLY_RESUME_ISR;
+    365                  return;
+    366              }
+    367          #endif
+    368          
+    369          #if OS_CFG_ARG_CHK_EN > 0u
+    370              if (p_tcb == (OS_TCB *)0) {                             /* Not possible for the running task to be delayed!       */
+    371                 *p_err = OS_ERR_TASK_NOT_DLY;
+    372                  return;
+    373              }
+    374          #endif
+    375          
+    376              CPU_CRITICAL_ENTER();
+    377              switch (p_tcb->TaskState) {
+    378                  case OS_TASK_STATE_RDY:                             /* Cannot Abort delay if task is ready                    */
+    379                       CPU_CRITICAL_EXIT();
+    380                      *p_err = OS_ERR_TASK_NOT_DLY;
+    381                       break;
+    382          
+    383                  case OS_TASK_STATE_DLY:
+    384                       OS_CRITICAL_ENTER_CPU_CRITICAL_EXIT();
+    385                       p_tcb->TaskState = OS_TASK_STATE_RDY;
+    386                       OS_TickListRemove(p_tcb);                      /* Remove task from tick list                             */
+    387                       OS_RdyListInsert(p_tcb);                       /* Add to ready list                                      */
+    388                       OS_CRITICAL_EXIT_NO_SCHED();
+    389                      *p_err = OS_ERR_NONE;
+    390                       break;
+    391          
+    392                  case OS_TASK_STATE_PEND:
+    393                       CPU_CRITICAL_EXIT();
+    394                      *p_err = OS_ERR_TASK_NOT_DLY;
+    395                       break;
+    396          
+    397                  case OS_TASK_STATE_PEND_TIMEOUT:
+    398                       CPU_CRITICAL_EXIT();
+    399                      *p_err = OS_ERR_TASK_NOT_DLY;
+    400                       break;
+    401          
+    402                  case OS_TASK_STATE_SUSPENDED:
+    403                       CPU_CRITICAL_EXIT();
+    404                      *p_err = OS_ERR_TASK_NOT_DLY;
+    405                       break;
+    406          
+    407                  case OS_TASK_STATE_DLY_SUSPENDED:
+    408                       OS_CRITICAL_ENTER_CPU_CRITICAL_EXIT();
+    409                       p_tcb->TaskState = OS_TASK_STATE_SUSPENDED;
+    410                       OS_TickListRemove(p_tcb);                      /* Remove task from tick list                             */
+    411                       OS_CRITICAL_EXIT_NO_SCHED();
+    412                      *p_err            = OS_ERR_TASK_SUSPENDED;
+    413                       break;
+    414          
+    415                  case OS_TASK_STATE_PEND_SUSPENDED:
+    416                       CPU_CRITICAL_EXIT();
+    417                      *p_err = OS_ERR_TASK_NOT_DLY;
+    418                       break;
+    419          
+    420                  case OS_TASK_STATE_PEND_TIMEOUT_SUSPENDED:
+    421                       CPU_CRITICAL_EXIT();
+    422                      *p_err = OS_ERR_TASK_NOT_DLY;
+    423                       break;
+    424          
+    425                  default:
+    426                       CPU_CRITICAL_EXIT();
+    427                      *p_err = OS_ERR_STATE_INVALID;
+    428                       break;
+    429              }
+    430          
+    431              OSSched();
+    432          }
+    433          #endif
+    434          /*$PAGE*/
+    435          /*
+    436          ************************************************************************************************************************
+    437          *                                               GET CURRENT SYSTEM TIME
+    438          *
+    439          * Description: This function is used by your application to obtain the current value of the counter which keeps track of
+    440          *              the number of clock ticks.
+    441          *
+    442          * Arguments  : p_err    is a pointer to a variable that will receive an error code
+    443          *
+    444          *                           OS_ERR_NONE           If the call was successful
+    445          *
+    446          * Returns    : The current value of OSTickCtr
+    447          ************************************************************************************************************************
+    448          */
+    449          
+
+   \                                 In  segment CODE, align 1, keep-with-next
+    450          OS_TICK  OSTimeGet (OS_ERR  *p_err)
+   \                     OSTimeGet:
+    451          {
+   \   000000                       ; * Stack frame (at entry) *
+   \   000000                       ; Param size: 0
+   \   000000 C5                    PUSH      DE                 ;; 1 cycle
+   \   000001 C1                    PUSH      AX                 ;; 1 cycle
+   \   000002                       ; Auto size: 6
+   \   000002 2004                  SUBW      SP, #0x4           ;; 1 cycle
+    452              OS_TICK  ticks;
+    453              CPU_SR_ALLOC();
+    454          
+    455          
+    456          
+    457          #ifdef OS_SAFETY_CRITICAL
+    458              if (p_err == (OS_ERR *)0) {
+    459                  OS_SAFETY_CRITICAL_EXCEPTION();
+    460                  return ((OS_TICK)0);
+    461              }
+    462          #endif
+    463          
+    464              CPU_CRITICAL_ENTER();
+   \   000004 8EFA                  MOV       A, PSW             ;; 1 cycle
+   \   000006 75                    MOV       D, A               ;; 1 cycle
+   \   000007 717BFA                DI                           ;; 2 cycles
+   \   00000A FD....                CALL      CPU_IntDisMeasStart  ;; 3 cycles
+    465              ticks = OSTickCtr;
+   \   00000D DB....                MOVW      BC, N:OSTickCtr+2  ;; 1 cycle
+   \   000010 AF....                MOVW      AX, N:OSTickCtr    ;; 1 cycle
+   \   000013 B800                  MOVW      [SP], AX           ;; 1 cycle
+   \   000015 13                    MOVW      AX, BC             ;; 1 cycle
+   \   000016 B802                  MOVW      [SP+0x02], AX      ;; 1 cycle
+    466              CPU_CRITICAL_EXIT();
+   \   000018 FD....                CALL      CPU_IntDisMeasStop  ;; 3 cycles
+   \   00001B FD....                CALL      N:?Subroutine0     ;; 3 cycles
+   \   00001E                       ; ------------------------------------- Block: 21 cycles
+    467             *p_err = OS_ERR_NONE;
+   \                     ??CrossCallReturnLabel_4:
+   \   00001E A804                  MOVW      AX, [SP+0x04]      ;; 1 cycle
+   \   000020 16                    MOVW      HL, AX             ;; 1 cycle
+   \   000021 F6                    CLRW      AX                 ;; 1 cycle
+   \   000022 BB                    MOVW      [HL], AX           ;; 1 cycle
+    468              return (ticks);
+   \   000023 A800                  MOVW      AX, [SP]           ;; 1 cycle
+   \   000025 1006                  ADDW      SP, #0x6           ;; 1 cycle
+   \   000027 C4                    POP       DE                 ;; 1 cycle
+   \   000028 D7                    RET                          ;; 6 cycles
+   \   000029                       ; ------------------------------------- Block: 13 cycles
+   \   000029                       ; ------------------------------------- Total: 34 cycles
+   \   000029                       REQUIRE ?CLRL78_V1_0_L00
+    469          }
+
+   \                                 In  segment CODE, align 1, keep-with-next
+   \                     ?Subroutine0:
+   \   000000 65                    MOV       A, D               ;; 1 cycle
+   \   000001                       ; ------------------------------------- Block: 1 cycles
+   \   000001                       ; ------------------------------------- Total: 1 cycles
+   \   000001                       REQUIRE ?CLRL78_V1_0_L00
+   \   000001                       REQUIRE ??Subroutine1_0
+   \   000001                       ; // Fall through to label ??Subroutine1_0
+    470          
+    471          /*
+    472          ************************************************************************************************************************
+    473          *                                                   SET SYSTEM CLOCK
+    474          *
+    475          * Description: This function sets the counter which keeps track of the number of clock ticks.
+    476          *
+    477          * Arguments  : ticks    is the desired tick value
+    478          *
+    479          *              p_err    is a pointer to a variable that will receive an error code
+    480          *
+    481          *                           OS_ERR_NONE           If the call was successful
+    482          *
+    483          * Returns    : none
+    484          ************************************************************************************************************************
+    485          */
+    486          
+
+   \                                 In  segment CODE, align 1, keep-with-next
+    487          void  OSTimeSet (OS_TICK   ticks,
+   \                     OSTimeSet:
+    488                           OS_ERR   *p_err)
+    489          {
+   \   000000                       ; * Stack frame (at entry) *
+   \   000000                       ; Param size: 0
+   \   000000 C3                    PUSH      BC                 ;; 1 cycle
+   \   000001 C1                    PUSH      AX                 ;; 1 cycle
+   \   000002 C5                    PUSH      DE                 ;; 1 cycle
+   \   000003                       ; Auto size: 6
+    490              CPU_SR_ALLOC();
+    491          
+    492          
+    493          
+    494          #ifdef OS_SAFETY_CRITICAL
+    495              if (p_err == (OS_ERR *)0) {
+    496                  OS_SAFETY_CRITICAL_EXCEPTION();
+    497                  return;
+    498              }
+    499          #endif
+    500          
+    501              CPU_CRITICAL_ENTER();
+   \   000003 8EFA                  MOV       A, PSW             ;; 1 cycle
+   \   000005 75                    MOV       D, A               ;; 1 cycle
+   \   000006 717BFA                DI                           ;; 2 cycles
+   \   000009 FD....                CALL      CPU_IntDisMeasStart  ;; 3 cycles
+    502              OSTickCtr = ticks;
+   \   00000C A802                  MOVW      AX, [SP+0x02]      ;; 1 cycle
+   \   00000E BF....                MOVW      N:OSTickCtr, AX    ;; 1 cycle
+   \   000011 13                    MOVW      AX, BC             ;; 1 cycle
+   \   000012 BF....                MOVW      N:OSTickCtr+2, AX  ;; 1 cycle
+    503              CPU_CRITICAL_EXIT();
+   \   000015 FD....                CALL      CPU_IntDisMeasStop  ;; 3 cycles
+   \   000018 FD....                CALL      N:?Subroutine0     ;; 3 cycles
+   \   00001B                       ; ------------------------------------- Block: 20 cycles
+    504             *p_err     = OS_ERR_NONE;
+   \                     ??CrossCallReturnLabel_5:
+   \   00001B A800                  MOVW      AX, [SP]           ;; 1 cycle
+   \   00001D 16                    MOVW      HL, AX             ;; 1 cycle
+   \   00001E F6                    CLRW      AX                 ;; 1 cycle
+   \   00001F BB                    MOVW      [HL], AX           ;; 1 cycle
+    505          }
+   \   000020 1006                  ADDW      SP, #0x6           ;; 1 cycle
+   \   000022 D7                    RET                          ;; 6 cycles
+   \   000023                       ; ------------------------------------- Block: 11 cycles
+   \   000023                       ; ------------------------------------- Total: 31 cycles
+   \   000023                       REQUIRE ?CLRL78_V1_0_L00
+    506          
+    507          /*$PAGE*/
+    508          /*
+    509          ************************************************************************************************************************
+    510          *                                                 PROCESS SYSTEM TICK
+    511          *
+    512          * Description: This function is used to signal to uC/OS-III the occurrence of a 'system tick' (also known as a
+    513          *              'clock tick').  This function should be called by the tick ISR.
+    514          *
+    515          * Arguments  : none
+    516          *
+    517          * Returns    : none
+    518          ************************************************************************************************************************
+    519          */
+    520          
+
+   \                                 In  segment CODE, align 1, keep-with-next
+    521          void  OSTimeTick (void)
+   \                     OSTimeTick:
+    522          {
+   \   000000                       ; * Stack frame (at entry) *
+   \   000000                       ; Param size: 0
+   \   000000 C3                    PUSH      BC                 ;; 1 cycle
+   \   000001 C5                    PUSH      DE                 ;; 1 cycle
+   \   000002                       ; Auto size: 2
+   \   000002 C1                    PUSH      AX                 ;; 1 cycle
+    523              OS_ERR  err;
+    524          #if OS_CFG_ISR_POST_DEFERRED_EN > 0u
+    525              CPU_TS  ts;
+    526          #endif
+    527          
+    528          
+    529              OSTimeTickHook();                                       /* Call user definable hook                               */
+   \   000003 FD....                CALL      OSTimeTickHook     ;; 3 cycles
+    530          
+    531          #if OS_CFG_ISR_POST_DEFERRED_EN > 0u
+    532          
+    533              ts = OS_TS_GET();                                       /* Get timestamp                                          */
+    534              OS_IntQPost((OS_OBJ_TYPE) OS_OBJ_TYPE_TICK,             /* Post to ISR queue                                      */
+    535                          (void      *)&OSRdyList[OSPrioCur],
+    536                          (void      *) 0,
+    537                          (OS_MSG_SIZE) 0u,
+    538                          (OS_FLAGS   ) 0u,
+    539                          (OS_OPT     ) 0u,
+    540                          (CPU_TS     ) ts,
+    541                          (OS_ERR    *)&err);
+    542          
+    543          #else
+    544          
+    545             (void)OSTaskSemPost((OS_TCB *)&OSTickTaskTCB,            /* Signal tick task                                       */
+    546                                 (OS_OPT  ) OS_OPT_POST_NONE,
+    547                                 (OS_ERR *)&err);
+   \   000006 EBF8FF                MOVW      DE, SP             ;; 1 cycle
+   \   000009 F7                    CLRW      BC                 ;; 1 cycle
+   \   00000A 30....                MOVW      AX, #OSTickTaskTCB  ;; 1 cycle
+   \   00000D FD....                CALL      OSTaskSemPost      ;; 3 cycles
+    548          
+    549          
+    550          #if OS_CFG_SCHED_ROUND_ROBIN_EN > 0u
+    551              OS_SchedRoundRobin(&OSRdyList[OSPrioCur]);
+    552          #endif
+    553          
+    554          #if OS_CFG_TMR_EN > 0u
+    555              OSTmrUpdateCtr--;
+    556              if (OSTmrUpdateCtr == (OS_CTR)0u) {
+    557                  OSTmrUpdateCtr = OSTmrUpdateCnt;
+    558                  OSTaskSemPost((OS_TCB *)&OSTmrTaskTCB,              /* Signal timer task                                      */
+    559                                (OS_OPT  ) OS_OPT_POST_NONE,
+    560                                (OS_ERR *)&err);
+    561              }
+    562          #endif
+    563          
+    564          #endif
+    565          }
+   \   000010 1002                  ADDW      SP, #0x2           ;; 1 cycle
+   \   000012 C4                    POP       DE                 ;; 1 cycle
+   \   000013 C2                    POP       BC                 ;; 1 cycle
+   \   000014 D7                    RET                          ;; 6 cycles
+   \   000015                       ; ------------------------------------- Block: 21 cycles
+   \   000015                       ; ------------------------------------- Total: 21 cycles
+   \   000015                       REQUIRE ?CLRL78_V1_0_L00
+
+   Maximum stack usage in bytes:
+
+   CSTACK Function
+   ------ --------
+     16   OSTimeDly
+       10   -> CPU_IntDisMeasStart
+       10   -> CPU_IntDisMeasStop
+       10   -> OSSched
+       10   -> OS_RdyListRemove
+       14   -> OS_TickListInsert
+     36   OSTimeDlyHMSM
+       16   -> CPU_IntDisMeasStart
+       16   -> CPU_IntDisMeasStop
+       16   -> OSSched
+       16   -> OS_RdyListRemove
+       20   -> OS_TickListInsert
+      8   OSTimeGet
+        8   -> CPU_IntDisMeasStart
+        8   -> CPU_IntDisMeasStop
+      6   OSTimeSet
+        6   -> CPU_IntDisMeasStart
+        6   -> CPU_IntDisMeasStop
+      6   OSTimeTick
+        6   -> OSTaskSemPost
+        6   -> OSTimeTickHook
+
+
+   Segment part sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       6  ??Subroutine1_0
+       1  ?Subroutine0
+     156  OSTimeDly
+     313  OSTimeDlyHMSM
+      41  OSTimeGet
+      35  OSTimeSet
+      21  OSTimeTick
+
+ 
+ 573 bytes in segment CODE
+ 
+ 573 bytes of CODE memory
+
+Errors: none
+Warnings: none

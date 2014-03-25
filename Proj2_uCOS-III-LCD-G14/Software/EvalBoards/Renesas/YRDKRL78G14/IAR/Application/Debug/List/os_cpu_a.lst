@@ -1,0 +1,43 @@
+###############################################################################
+#                                                                             #
+# IAR Assembler V1.30.4.50715 for RL78                  23/Mar/2014  17:08:40 #
+# Copyright 2011-2013 IAR Systems AB.                                         #
+#                                                                             #
+#    Core         =  rl78_2                                                   #
+#    Source file  =  C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\uCOS-III\Ports\Renesas\RL7 #
+#                    8\IAR\os_cpu_a.asm                                       #
+#    Command line =  C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\uCOS-III\Ports\Renesas\RL7 #
+#                    8\IAR\os_cpu_a.asm --core rl78_2 -o                      #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\Debug\Obj\ -M<> -r -ld              #
+#                    C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\Debug\List\ -D__NEAR_MODEL__        #
+#                    -D__NEAR_DATA_MODEL__ --code_model near --data_model     #
+#                    near                                                     #
+#    List file    =  C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\Debug\List\os_cpu_a.lst             #
+#    Object file  =  C:\Users\Suddenlink\Dropbox\git_files\embedded_design\Pr #
+#                    oj2_uCOS-III-LCD-G14\Software\EvalBoards\Renesas\YRDKRL7 #
+#                    8G14\IAR\Application\Debug\Obj\os_cpu_a.r87              #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+##############################################################################
+# Module os_cpu_a                                                            #
+##############################################################################
+
+ 
+ 119 bytes in segment CODE   , module os_cpu_a
+ 128 bytes in segment INTVEC , module os_cpu_a
+ 
+ 119 bytes of UNTYPED memory  in module os_cpu_a
+ 128 bytes of CODE    memory  in module os_cpu_a
+
+Errors: none
+Warnings: none
